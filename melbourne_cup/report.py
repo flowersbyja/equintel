@@ -48,15 +48,15 @@ def build_report(pred: Prediction, scenarios: dict | None = None) -> str:
         lines.append("*Re-run on the day: `--track soft6` (or good4 / soft7) once the rating is posted, and `--bias on-pace` or `--bias closers` after watching how the early races at Flemington are being won.*\n")
 
     lines.append("## Full field\n")
-    lines.append("| Rank | No | Horse | Bar | Wt | Odds | Market | Model win | Place | Top-4 | Win edge | Form (tempo adj) | Pattern z | Prior | Going | Pace |")
-    lines.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+    lines.append("| Rank | No | Horse | Bar | Wt | Odds | Market | Model win | Place | Top-4 | Win edge | Form (tempo adj) | Pattern z | Trainer done it? | Prior | Going | Pace |")
+    lines.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
     for rank, i in enumerate(order, 1):
         r = rs[i]
         c = pred.components[i]
         edge = pred.win_prob[i] * r["odds"] - 1
         lines.append(f"| {rank} | {r['no']} | {r['horse']} | {r['barrier']} | {r['weight']} | ${r['odds']:.1f} | {_pct(c['market_prob'])} | "
                      f"**{_pct(pred.win_prob[i])}** | {_pct(pred.place_prob[i])} | {_pct(pred.top4_prob[i])} | {100 * edge:+.0f}% | "
-                     f"{c['form_rating']:+.2f} | {c['pattern_z']:+.2f} | {c['prior']:+.2f} | {c['going_adj']:+.2f} | {c['pace_adj']:+.2f} |")
+                     f"{c['form_rating']:+.2f} | {c['pattern_z']:+.2f} | {c['trainer_type_adj']:+.2f} | {c['prior']:+.2f} | {c['going_adj']:+.2f} | {c['pace_adj']:+.2f} |")
     lines.append("")
     lines.append("*Win edge = model probability x fixed odds - 1 (equintel value definition). Positive means the market is longer than the model.*\n")
 
@@ -89,11 +89,12 @@ def build_report(pred: Prediction, scenarios: dict | None = None) -> str:
         lines.append(f"\nForm rating {c['form_rating']:+.2f} (z {c['form_z']:+.2f}). Structural prior {c['prior']:+.2f}: {'; '.join(c['prior_notes']) or 'none'}. "
                      f"Going {c['going_adj']:+.2f} ({c['going_note']}). Pace/shape {c['pace_adj']:+.2f} ({'; '.join(c['pace_notes']) or 'none'}).\n")
         lines.append(f"Trainer method: {pred.idx.trainer_method(r['trainer'])} This campaign: {r.get('campaign', '')} (departure from the trainer's norm {p['campaign_departure']:.2f}).\n")
+        lines.append(f"**Has this trainer done this before?** ({c['trainer_type_adj']:+.2f}) " + " ".join(c['trainer_type_notes']) + "\n")
         lines.append(f"Closest historical preps (pattern z {c['pattern_z']:+.2f}; {_pct(p['own_formula_share'])} of the pattern score comes from the trainer's own past Cup preps, "
                      f"{_pct(p['winner_template_share'])} from winners rather than placegetters):\n")
         for m in p["best_matches"]:
             feats = ", ".join(f"{k} {v:.2f}" for k, v in m["top_feature_matches"])
-            own = " **(same trainer's formula)**" if m["same_trainer"] else f" (different trainer; method similarity {m['trainer_style_similarity']:.2f}, credit x{m['trainer_multiplier']:.2f})"
+            own = f" **(same trainer's formula; {m['gate_note']}, credit x{m['trainer_multiplier']:.2f})**" if m["same_trainer"] else f" (different trainer; {m['gate_note']}, credit x{m['trainer_multiplier']:.2f})"
             lines.append(f"- {m['horse']} {m['year']} ({'won' if m['pos'] == 1 else str(m['pos']) + 'th' if m['pos'] > 3 else ['', '', '2nd', '3rd'][m['pos']]}, {m['trainer']}, {m['archetype']}) "
                          f"similarity {m['similarity']:.2f}{own} - strongest matches: {feats}")
         lines.append("")
@@ -116,6 +117,11 @@ def build_report(pred: Prediction, scenarios: dict | None = None) -> str:
             lines.append(f"- {r['horse']} ({p['archetype']}): {own_txt}{cross_txt}")
         lines.append("")
 
+    lines.append("## How the trainer layer works now\n")
+    lines.append("- A past Cup horse only counts as a template for a 2026 runner if the two trainers' methods (blended with how each horse was actually campaigned) are alike: zero credit below 0.62 similarity, ramping to full credit at 1.0, and halved again when the trainers belong to different method schools.")
+    lines.append("- The same trainer's own past Cup horse only counts if this campaign was run the same way (Maher's Point Of Law gets no Gold Trip credit because the campaign shape is different).")
+    lines.append("- Separately, each runner carries a 'has this trainer done this before' term from the trainer's own record with this preparation type; a trainer with no such record inherits the method school's base rate with a first-attempt penalty.")
+    lines.append("- Trainer type records and school base rates are approximate counts compiled from published Cup results (2010-2025) and are listed in melbourne_cup/cup_data/trainer_styles.json for checking.\n")
     lines.append("## Caveats\n")
     lines.append("- Historical prep templates for 2000-2009 and for some 2nd-4th placegetters are reconstructed from form memory and down-weighted via a confidence field; treat named similarities as indicative.")
     lines.append("- Lead-up tempo ratings are categorical (slow / moderate / fast) and were set to be consistent with Racelab's published count that only 11 of the 24 runners came through a moderate-or-faster lead-up.")

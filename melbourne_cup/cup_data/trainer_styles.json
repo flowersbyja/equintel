@@ -1,132 +1,1338 @@
 {
-  "_notes": [
-    "Trainer methodology profiles used for trainer-style similarity. Dimensions are 0-1 scores:",
-    "  fresh          - runs Cup horses fresh off long gaps (1) vs races them hard through the spring (0)",
-    "  aus_runs       - typical number of Australian runs before the Cup, divided by 5",
-    "  euro_base      - fitness base built in Europe / from quarantine rather than through Australian racing",
-    "  wfa_sharpener  - uses shorter weight-for-age races (Cox Plate, Turnbull, Underwood, Crystal Mile) as sharpeners",
-    "  forward        - Cup runners usually ridden forward / on the speed",
-    "  young_light    - targets lightly raced 3-4yo classic-generation horses on light weights",
-    "  ticket_target  - plans the campaign around winning a ballot-exempt Golden Ticket race",
-    "  data_driven    - heavy use of GPS / heart-rate / sectional analytics in the preparation",
-    "cup_record is 2000-2025: runners (approximate), wins, placings (2nd-4th). Evidence notes cite what the profile is built on.",
-    "Campaign-level overrides: a trainer can run ONE horse in a style unlike their norm (Maher with Point Of Law from Werribee quarantine);",
-    "the engine therefore blends the trainer profile with the actual campaign shape of each horse (see patterns.campaign_vector)."
-  ],
-  "dimensions": ["fresh", "aus_runs", "euro_base", "wfa_sharpener", "forward", "young_light", "ticket_target", "data_driven"],
-  "default": {"fresh": 0.4, "aus_runs": 0.6, "euro_base": 0.2, "wfa_sharpener": 0.4, "forward": 0.5, "young_light": 0.3, "ticket_target": 0.4, "data_driven": 0.4},
-  "trainers": {
-    "Joseph O'Brien": {
-      "style": {"fresh": 0.95, "aus_runs": 0.05, "euro_base": 1.0, "wfa_sharpener": 0.05, "forward": 0.65, "young_light": 0.75, "ticket_target": 0.2, "data_driven": 0.6},
-      "cup_record": {"runners": 22, "wins": 2, "placings": 4},
-      "method": "Builds the whole base in Ireland: a mid-summer break, one or two September preparation runs (Curragh Cup / Irish St Leger / Kilternan), then straight on the plane and into the Cup from Werribee with no Australian run. Both winners (Rekindling 2017, Twilight Payment 2020) won the Curragh Cup earlier in the year. Horses are kept to a simple routine at Werribee and ridden positively - Twilight Payment led throughout, Master Of Reality raced on the pace. Happy to run lightly raced classic-generation horses (Rekindling, Master Of Reality, James J Braddock) and to bring back older horses year after year (Twilight Payment, Goodie Two Shoes). Big teams of four or five runners.",
-      "evidence": ["Rekindling 2017: St Leger 4th -> Cup, 52 days, 3yo 51.5kg", "Twilight Payment 2020: Irish St Leger 2nd -> Cup, 52 days, led all the way", "2026: James J Braddock 'had a mid-summer break and a nice preparation run before he got on the plane' (JOB, Racing & Sports 2 Nov 2026)", "Goodie Two Shoes 2nd 2025 off a direct fly-in"]
+ "_notes": [
+  "Trainer methodology profiles used for trainer-style similarity. Dimensions are 0-1 scores:",
+  "  fresh          - runs Cup horses fresh off long gaps (1) vs races them hard through the spring (0)",
+  "  aus_runs       - typical number of Australian runs before the Cup, divided by 5",
+  "  euro_base      - fitness base built in Europe / from quarantine rather than through Australian racing",
+  "  wfa_sharpener  - uses shorter weight-for-age races (Cox Plate, Turnbull, Underwood, Crystal Mile) as sharpeners",
+  "  forward        - Cup runners usually ridden forward / on the speed",
+  "  young_light    - targets lightly raced 3-4yo classic-generation horses on light weights",
+  "  ticket_target  - plans the campaign around winning a ballot-exempt Golden Ticket race",
+  "  data_driven    - heavy use of GPS / heart-rate / sectional analytics in the preparation",
+  "cup_record is 2000-2025: runners (approximate), wins, placings (2nd-4th). Evidence notes cite what the profile is built on.",
+  "Campaign-level overrides: a trainer can run ONE horse in a style unlike their norm (Maher with Point Of Law from Werribee quarantine);",
+  "the engine therefore blends the trainer profile with the actual campaign shape of each horse (see patterns.campaign_vector).",
+  "cluster: method family. DIRECT_FLYIN = base built in Europe, no Australian run; ONE_RUN_IMPORT = European base plus one Australian lead-up from quarantine;",
+  "AUS_BIG_STABLE = large Australian stable race-hardening settled imports through weight-for-age and Cups; AUS_BOUTIQUE = smaller Australian stable, hardened local via second-tier staying races;",
+  "MACEDON_FRESH = Lloyd Williams-era fresh-import school (Bart Cummings / Mackinnon / Cox Plate, few runs).",
+  "type_record: this trainer's OWN Melbourne Cup runners by preparation archetype (runners / wins / placings 2nd-4th, examples). Approximate counts from published results; 'untested' = never done it.",
+  "cluster_records: the method family's record with each archetype 2010-2025 (approximate), used as the base rate for trainers with no history of that type."
+ ],
+ "dimensions": [
+  "fresh",
+  "aus_runs",
+  "euro_base",
+  "wfa_sharpener",
+  "forward",
+  "young_light",
+  "ticket_target",
+  "data_driven"
+ ],
+ "default": {
+  "fresh": 0.4,
+  "aus_runs": 0.6,
+  "euro_base": 0.2,
+  "wfa_sharpener": 0.4,
+  "forward": 0.5,
+  "young_light": 0.3,
+  "ticket_target": 0.4,
+  "data_driven": 0.4
+ },
+ "trainers": {
+  "Joseph O'Brien": {
+   "style": {
+    "fresh": 0.95,
+    "aus_runs": 0.05,
+    "euro_base": 1.0,
+    "wfa_sharpener": 0.05,
+    "forward": 0.65,
+    "young_light": 0.75,
+    "ticket_target": 0.2,
+    "data_driven": 0.6
+   },
+   "cup_record": {
+    "runners": 22,
+    "wins": 2,
+    "placings": 4
+   },
+   "method": "Builds the whole base in Ireland: a mid-summer break, one or two September preparation runs (Curragh Cup / Irish St Leger / Kilternan), then straight on the plane and into the Cup from Werribee with no Australian run. Both winners (Rekindling 2017, Twilight Payment 2020) won the Curragh Cup earlier in the year. Horses are kept to a simple routine at Werribee and ridden positively - Twilight Payment led throughout, Master Of Reality raced on the pace. Happy to run lightly raced classic-generation horses (Rekindling, Master Of Reality, James J Braddock) and to bring back older horses year after year (Twilight Payment, Goodie Two Shoes). Big teams of four or five runners.",
+   "evidence": [
+    "Rekindling 2017: St Leger 4th -> Cup, 52 days, 3yo 51.5kg",
+    "Twilight Payment 2020: Irish St Leger 2nd -> Cup, 52 days, led all the way",
+    "2026: James J Braddock 'had a mid-summer break and a nice preparation run before he got on the plane' (JOB, Racing & Sports 2 Nov 2026)",
+    "Goodie Two Shoes 2nd 2025 off a direct fly-in"
+   ],
+   "cluster": "DIRECT_FLYIN",
+   "type_record": {
+    "EURO_DIRECT_FLYIN": {
+     "runners": 16,
+     "wins": 2,
+     "placings": 3,
+     "examples": "Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 & 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan",
+     "sub": {
+      "forward": {
+       "runners": 5,
+       "wins": 1,
+       "placings": 1,
+       "examples": "Twilight Payment x3 (won 2020), Master Of Reality x2 (4th 2019)"
+      },
+      "closer": {
+       "runners": 11,
+       "wins": 1,
+       "placings": 2,
+       "examples": "Rekindling won 2017, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025, Yucatan, Latrobe, Al Riffa unplaced"
+      },
+      "young_light": {
+       "runners": 5,
+       "wins": 1,
+       "placings": 1,
+       "examples": "Rekindling (3yo) won, Master Of Reality (4yo) 4th, Yucatan (4yo) 11th, Latrobe (4yo), Downdraft (4yo)"
+      },
+      "topweight_57plus": {
+       "runners": 2,
+       "wins": 0,
+       "placings": 0,
+       "examples": "Twilight Payment 57.5kg 11th 2021; Al Riffa 2025"
+      }
+     }
     },
-    "Ciaron Maher": {
-      "style": {"fresh": 0.2, "aus_runs": 0.8, "euro_base": 0.25, "wfa_sharpener": 0.9, "forward": 0.4, "young_light": 0.35, "ticket_target": 1.0, "data_driven": 0.9},
-      "cup_record": {"runners": 26, "wins": 1, "placings": 5},
-      "method": "Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in.",
-      "evidence": ["Gold Trip 2022: Turnbull, Caulfield Cup, Cox Plate 2nd -> Cup", "Sir Dragonet 2020 4th: Cox Plate win first-up -> Cup", "High Emocean 3rd 2022 and Ashrun 4th 2023 via MV Cup", "2026: seven runners, four via Golden Tickets", "Point Of Law 'prepared for the Geelong Cup from quarantine at Werribee after arriving on the first shipment of spring horses from the UK'"]
+    "HARDENED_LOCAL_STAYER": {
+     "runners": 0,
+     "wins": 0,
+     "placings": 0,
+     "examples": "untested: Kizlyar 2026 is O'Brien's first Cup runner with an Australian lead-up"
     },
-    "Chris Waller": {
-      "style": {"fresh": 0.15, "aus_runs": 0.9, "euro_base": 0.1, "wfa_sharpener": 0.9, "forward": 0.35, "young_light": 0.25, "ticket_target": 0.4, "data_driven": 0.8},
-      "cup_record": {"runners": 36, "wins": 1, "placings": 6},
-      "method": "Races horses into peak fitness with a long Sydney-then-Melbourne spring: 4-6 runs, high-class weight-for-age races as sharpeners (Verry Elleegant: Turnbull win, Caulfield Cup 4th, Cox Plate 7th -> Cup). Groups his Cup team into 'form stayers' and 'weight-for-age horses'. Settled imports ridden midfield to back; many runners, high place strike rate.",
-      "evidence": ["Verry Elleegant 2021", "Soulcombe 2nd / Sheraz 3rd 2023", "Who Shot Thebarman 3rd 2014", "Kelinni 4th 2012 via Lexus 3-day backup"]
+    "GEELONG_CUP_IMPORT": {
+     "runners": 0,
+     "wins": 0,
+     "placings": 0,
+     "examples": "untested"
+    }
+   }
+  },
+  "Ciaron Maher": {
+   "style": {
+    "fresh": 0.2,
+    "aus_runs": 0.8,
+    "euro_base": 0.25,
+    "wfa_sharpener": 0.9,
+    "forward": 0.4,
+    "young_light": 0.35,
+    "ticket_target": 1.0,
+    "data_driven": 0.9
+   },
+   "cup_record": {
+    "runners": 26,
+    "wins": 1,
+    "placings": 5
+   },
+   "method": "Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in.",
+   "evidence": [
+    "Gold Trip 2022: Turnbull, Caulfield Cup, Cox Plate 2nd -> Cup",
+    "Sir Dragonet 2020 4th: Cox Plate win first-up -> Cup",
+    "High Emocean 3rd 2022 and Ashrun 4th 2023 via MV Cup",
+    "2026: seven runners, four via Golden Tickets",
+    "Point Of Law 'prepared for the Geelong Cup from quarantine at Werribee after arriving on the first shipment of spring horses from the UK'"
+   ],
+   "cluster": "AUS_BIG_STABLE",
+   "type_record": {
+    "COX_PLATE_SHARPENER": {
+     "runners": 3,
+     "wins": 1,
+     "placings": 1,
+     "examples": "Gold Trip won 2022, Sir Dragonet 4th 2020, Gold Trip 17th 2023 (58kg)"
     },
-    "Gai Waterhouse & Adrian Bott": {
-      "style": {"fresh": 0.35, "aus_runs": 0.6, "euro_base": 0.3, "wfa_sharpener": 0.7, "forward": 0.8, "young_light": 0.3, "ticket_target": 0.3, "data_driven": 0.35},
-      "cup_record": {"runners": 14, "wins": 1, "placings": 1},
-      "method": "Forward-racing, fit horses; 'balance and momentum'. Fiorente 2013 via Dato Tan Chin Nam win and Cox Plate 3rd. Adapts imports quickly (Fiorente 2nd in 2012 after three weeks in the stable). Vauban has been campaigned lightly this spring: one run (Geelong Cup under 60.5kg) since May.",
-      "evidence": ["Fiorente 2013 win, 2012 2nd", "Vauban 6th 2025"]
+    "CAULFIELD_CUP_FORM": {
+     "runners": 6,
+     "wins": 0,
+     "placings": 0,
+     "examples": "Jameka 15th 2016 (fav), Smokin' Romans 2022, Royal Supremacy 15th 2025"
     },
-    "Roger Varian": {
-      "style": {"fresh": 0.7, "aus_runs": 0.2, "euro_base": 0.95, "wfa_sharpener": 0.1, "forward": 0.75, "young_light": 0.3, "ticket_target": 0.3, "data_driven": 0.5},
-      "cup_record": {"runners": 0, "wins": 0, "placings": 0},
-      "method": "Newmarket trainer, first Cup runner. Classic European method: base built at home, one Australian run from quarantine (Caulfield Cup 3rd first-up after three months) into the Cup. Enfjaar is a front-running stayer (led all the way in the Glorious Stakes, raced on speed at Caulfield).",
-      "evidence": ["Enfjaar Caulfield Cup 3rd first-up", "Glorious Stakes win leading"]
+    "HARDENED_LOCAL_STAYER": {
+     "runners": 9,
+     "wins": 0,
+     "placings": 3,
+     "examples": "High Emocean 3rd 2022, Ashrun 4th 2023, Middle Earth 3rd 2025; Future History 15th 2023, Grand Promenade, Land Legend unplaced"
     },
-    "George Boughey": {
-      "style": {"fresh": 0.9, "aus_runs": 0.0, "euro_base": 1.0, "wfa_sharpener": 0.0, "forward": 0.5, "young_light": 0.6, "ticket_target": 0.0, "data_driven": 0.9},
-      "cup_record": {"runners": 0, "wins": 0, "placings": 0},
-      "method": "Young Newmarket trainer with a strongly analytical, target-driven operation (Wathnan Racing). Hopewell Rock: Goodwood handicap win, Ebor 2nd (head) in August, then no run for 73 days and straight to the Cup from quarantine - the Cross Counter / Heartbreak City fly-in shape. No prior Cup runner.",
-      "evidence": ["Ebor 2nd 22 Aug 2026, rating 109", "no Australian lead-up"]
+    "LEXUS_3DAY_BACKUP": {
+     "runners": 1,
+     "wins": 0,
+     "placings": 1,
+     "examples": "Floating Artist 4th 2021"
     },
-    "Harry Charlton": {
-      "style": {"fresh": 0.6, "aus_runs": 0.2, "euro_base": 0.95, "wfa_sharpener": 0.1, "forward": 0.75, "young_light": 0.4, "ticket_target": 0.3, "data_driven": 0.5},
-      "cup_record": {"runners": 0, "wins": 0, "placings": 0},
-      "method": "Beckhampton (took over from Roger Charlton). First Cup runner. Wine Dark Sea built his base in England (3 wins from 4 in 2026), one Australian run first-up in the Caulfield Cup where he was ridden forward.",
-      "evidence": ["Geoffrey Freer win", "Caulfield Cup 11th first-up, wide"]
+    "GEELONG_CUP_IMPORT": {
+     "runners": 0,
+     "wins": 0,
+     "placings": 0,
+     "examples": "untested: Point Of Law 2026 is the first horse Maher has trained from Werribee quarantine with one run"
     },
-    "John Symons & Sheila Laxon": {
-      "style": {"fresh": 0.15, "aus_runs": 0.8, "euro_base": 0.0, "wfa_sharpener": 0.4, "forward": 0.2, "young_light": 0.2, "ticket_target": 0.6, "data_driven": 0.3},
-      "cup_record": {"runners": 4, "wins": 2, "placings": 0},
-      "method": "Old-school race-hardening (Laxon won with Ethereal 2001 via the Caulfield Cup). Knight's Choice 2024: four lead-up runs rising in distance (Turnbull 16th, Caulfield Cup 14th, Bendigo Cup 5th) because 'if we didn't run, we wouldn't get a run'; ridden from the back. Same shape again in 2026 (Naturalism, Herbert Power 3rd, Caulfield Cup) but now based at Ballarat / Sunshine Coast after leaving Macedon Lodge.",
-      "evidence": ["Knight's Choice 2024 $91 winner", "Ethereal 2001"]
+    "EURO_DIRECT_FLYIN": {
+     "runners": 0,
+     "wins": 0,
+     "placings": 0,
+     "examples": "untested"
+    }
+   }
+  },
+  "Chris Waller": {
+   "style": {
+    "fresh": 0.15,
+    "aus_runs": 0.9,
+    "euro_base": 0.1,
+    "wfa_sharpener": 0.9,
+    "forward": 0.35,
+    "young_light": 0.25,
+    "ticket_target": 0.4,
+    "data_driven": 0.8
+   },
+   "cup_record": {
+    "runners": 36,
+    "wins": 1,
+    "placings": 6
+   },
+   "method": "Races horses into peak fitness with a long Sydney-then-Melbourne spring: 4-6 runs, high-class weight-for-age races as sharpeners (Verry Elleegant: Turnbull win, Caulfield Cup 4th, Cox Plate 7th -> Cup). Groups his Cup team into 'form stayers' and 'weight-for-age horses'. Settled imports ridden midfield to back; many runners, high place strike rate.",
+   "evidence": [
+    "Verry Elleegant 2021",
+    "Soulcombe 2nd / Sheraz 3rd 2023",
+    "Who Shot Thebarman 3rd 2014",
+    "Kelinni 4th 2012 via Lexus 3-day backup"
+   ],
+   "cluster": "AUS_BIG_STABLE",
+   "type_record": {
+    "CAULFIELD_CUP_FORM": {
+     "runners": 14,
+     "wins": 0,
+     "placings": 3,
+     "examples": "Soulcombe 2nd 2023, Finche 4th 2018, River Of Stars 4th 2025; Youngstar, Finche 2019, Buckaroo, Valiant King, Kalapour, Stockman, Montefilia unplaced"
     },
-    "Bjorn Baker": {
-      "style": {"fresh": 0.1, "aus_runs": 1.0, "euro_base": 0.0, "wfa_sharpener": 0.2, "forward": 0.7, "young_light": 0.4, "ticket_target": 0.7, "data_driven": 0.5},
-      "cup_record": {"runners": 0, "wins": 0, "placings": 0},
-      "method": "Sydney trainer, first Cup runner. So You Are has been raced into form through the second-tier Sydney staying races (Colin Stephen, St Leger series, Tatts Cup) then backed up six days out via the Bendigo Cup - a Knight's Choice 2024 / Prince Of Penzance style hardened-local campaign, ridden on the speed.",
-      "evidence": ["four straight wins", "Bendigo Cup 28 Oct -> Cup 3 Nov"]
+    "COX_PLATE_SHARPENER": {
+     "runners": 2,
+     "wins": 1,
+     "placings": 0,
+     "examples": "Verry Elleegant won 2021"
     },
-    "Grahame Begg": {
-      "style": {"fresh": 0.3, "aus_runs": 0.7, "euro_base": 0.0, "wfa_sharpener": 0.8, "forward": 0.3, "young_light": 0.3, "ticket_target": 1.0, "data_driven": 0.4},
-      "cup_record": {"runners": 0, "wins": 0, "placings": 0},
-      "method": "First Cup runner. Planned the whole year around the Andrew Ramsden Golden Ticket (won in May), then a short break and a conventional Naturalism / Herbert Power build, with an unusual Crystal Mile (1600m) sharpener ten days out instead of a 2500m race.",
-      "evidence": ["Andrew Ramsden win 16 May", "Crystal Mile 24 Oct 'warm-up'"]
+    "HARDENED_LOCAL_STAYER": {
+     "runners": 10,
+     "wins": 0,
+     "placings": 2,
+     "examples": "Who Shot Thebarman 3rd 2014, Sheraz 3rd 2023; Grand Marshal, Preferment, Who Shot Thebarman 2015-17 unplaced"
     },
-    "Gregory Hickman": {
-      "style": {"fresh": 0.2, "aus_runs": 0.8, "euro_base": 0.0, "wfa_sharpener": 0.3, "forward": 0.4, "young_light": 0.1, "ticket_target": 0.3, "data_driven": 0.3},
-      "cup_record": {"runners": 0, "wins": 0, "placings": 0},
-      "method": "Sydney trainer, first Cup runner; took over the nine-year-old Future History this year and raced him through JRA Plate, Herbert Power and MV Cup.",
-      "evidence": ["Future History got in after late scratchings"]
+    "LEXUS_3DAY_BACKUP": {
+     "runners": 1,
+     "wins": 0,
+     "placings": 1,
+     "examples": "Kelinni 4th 2012"
+    }
+   }
+  },
+  "Gai Waterhouse & Adrian Bott": {
+   "style": {
+    "fresh": 0.35,
+    "aus_runs": 0.6,
+    "euro_base": 0.3,
+    "wfa_sharpener": 0.7,
+    "forward": 0.8,
+    "young_light": 0.3,
+    "ticket_target": 0.3,
+    "data_driven": 0.35
+   },
+   "cup_record": {
+    "runners": 14,
+    "wins": 1,
+    "placings": 1
+   },
+   "method": "Forward-racing, fit horses; 'balance and momentum'. Fiorente 2013 via Dato Tan Chin Nam win and Cox Plate 3rd. Adapts imports quickly (Fiorente 2nd in 2012 after three weeks in the stable). Vauban has been campaigned lightly this spring: one run (Geelong Cup under 60.5kg) since May.",
+   "evidence": [
+    "Fiorente 2013 win, 2012 2nd",
+    "Vauban 6th 2025"
+   ],
+   "cluster": "AUS_BIG_STABLE",
+   "type_record": {
+    "COX_PLATE_SHARPENER": {
+     "runners": 1,
+     "wins": 1,
+     "placings": 0,
+     "examples": "Fiorente won 2013"
     },
-    "Tim Fitzsimmons": {
-      "style": {"fresh": 0.3, "aus_runs": 0.6, "euro_base": 0.0, "wfa_sharpener": 0.2, "forward": 0.6, "young_light": 0.1, "ticket_target": 0.6, "data_driven": 0.4},
-      "cup_record": {"runners": 0, "wins": 0, "placings": 0},
-      "method": "Took over Onesmoothoperator from Brian Ellison after the 2025 Cup; Herbert Power and Geelong Cup lead-ups.",
-      "evidence": []
+    "EURO_DIRECT_FLYIN": {
+     "runners": 1,
+     "wins": 0,
+     "placings": 1,
+     "examples": "Fiorente 2nd 2012 three weeks after arriving"
     },
-    "Thomas Carberry": {
-      "style": {"fresh": 0.3, "aus_runs": 0.6, "euro_base": 0.0, "wfa_sharpener": 0.3, "forward": 0.5, "young_light": 0.6, "ticket_target": 0.4, "data_driven": 0.3},
-      "cup_record": {"runners": 0, "wins": 0, "placings": 0},
-      "method": "First Cup runner with a four-year-old mare off an SA Derby second.",
-      "evidence": []
+    "CAULFIELD_CUP_FORM": {
+     "runners": 4,
+     "wins": 0,
+     "placings": 0,
+     "examples": "Glencadam Gold 2013, Tres Blue 2014, Vauban 6th 2025"
     },
-
-    "Charlie Appleby": {"style": {"fresh": 0.9, "aus_runs": 0.1, "euro_base": 1.0, "wfa_sharpener": 0.05, "forward": 0.35, "young_light": 0.9, "ticket_target": 0.2, "data_driven": 0.8}, "cup_record": {"runners": 10, "wins": 1, "placings": 1}, "method": "Godolphin fly-in: lightly raced 3yo (Cross Counter) direct from the Great Voltigeur, 75 days; also Geelong Cup with Qewy.", "evidence": []},
-    "Aidan O'Brien": {"style": {"fresh": 0.9, "aus_runs": 0.1, "euro_base": 1.0, "wfa_sharpener": 0.05, "forward": 0.5, "young_light": 0.85, "ticket_target": 0.1, "data_driven": 0.6}, "cup_record": {"runners": 12, "wins": 0, "placings": 3}, "method": "Ballydoyle fly-ins, often 3yos direct (Tiger Moth, Il Paradiso) or via the Caulfield Cup (Johannes Vermeer).", "evidence": []},
-    "Willie Mullins": {"style": {"fresh": 0.95, "aus_runs": 0.0, "euro_base": 1.0, "wfa_sharpener": 0.0, "forward": 0.2, "young_light": 0.2, "ticket_target": 0.0, "data_driven": 0.3}, "cup_record": {"runners": 9, "wins": 0, "placings": 3}, "method": "Dual-purpose Irish stayers direct, ridden from the back (Max Dynamite, Simenon).", "evidence": []},
-    "Ed Dunlop": {"style": {"fresh": 0.85, "aus_runs": 0.2, "euro_base": 1.0, "wfa_sharpener": 0.05, "forward": 0.25, "young_light": 0.2, "ticket_target": 0.1, "data_driven": 0.4}, "cup_record": {"runners": 8, "wins": 0, "placings": 4}, "method": "Red Cadeaux direct from Europe three times; Trip To Paris via Caulfield Cup.", "evidence": []},
-    "Charlie Fellowes": {"style": {"fresh": 0.4, "aus_runs": 0.4, "euro_base": 0.8, "wfa_sharpener": 0.1, "forward": 0.4, "young_light": 0.2, "ticket_target": 0.9, "data_driven": 0.5}, "cup_record": {"runners": 3, "wins": 0, "placings": 3}, "method": "Prince Of Arran: Geelong Cup / Hotham Saturday backup into the Cup, three placings.", "evidence": []},
-    "Hughie Morrison": {"style": {"fresh": 0.9, "aus_runs": 0.0, "euro_base": 1.0, "wfa_sharpener": 0.0, "forward": 0.4, "young_light": 0.3, "ticket_target": 0.0, "data_driven": 0.3}, "cup_record": {"runners": 2, "wins": 0, "placings": 1}, "method": "Marmelo direct from the Prix Kergorlay.", "evidence": []},
-    "Tony Martin": {"style": {"fresh": 0.9, "aus_runs": 0.0, "euro_base": 1.0, "wfa_sharpener": 0.0, "forward": 0.2, "young_light": 0.2, "ticket_target": 0.0, "data_driven": 0.3}, "cup_record": {"runners": 1, "wins": 0, "placings": 1}, "method": "Heartbreak City direct from the Ebor.", "evidence": []},
-    "James Ferguson": {"style": {"fresh": 0.9, "aus_runs": 0.0, "euro_base": 1.0, "wfa_sharpener": 0.0, "forward": 0.5, "young_light": 0.9, "ticket_target": 0.0, "data_driven": 0.5}, "cup_record": {"runners": 1, "wins": 0, "placings": 1}, "method": "Deauville Legend, 3yo direct from the Great Voltigeur.", "evidence": []},
-    "Luca Cumani": {"style": {"fresh": 0.8, "aus_runs": 0.2, "euro_base": 1.0, "wfa_sharpener": 0.05, "forward": 0.4, "young_light": 0.3, "ticket_target": 0.1, "data_driven": 0.3}, "cup_record": {"runners": 8, "wins": 0, "placings": 3}, "method": "Bauer, Mount Athos direct.", "evidence": []},
-    "Marco Botti": {"style": {"fresh": 0.5, "aus_runs": 0.3, "euro_base": 0.9, "wfa_sharpener": 0.1, "forward": 0.5, "young_light": 0.3, "ticket_target": 0.3, "data_driven": 0.4}, "cup_record": {"runners": 3, "wins": 0, "placings": 1}, "method": "Jakkalberry via Caulfield Cup.", "evidence": []},
-    "Andrew Balding": {"style": {"fresh": 0.5, "aus_runs": 0.3, "euro_base": 0.9, "wfa_sharpener": 0.1, "forward": 0.7, "young_light": 0.3, "ticket_target": 0.5, "data_driven": 0.5}, "cup_record": {"runners": 2, "wins": 0, "placings": 1}, "method": "Spanish Mission via Geelong Cup 2nd, ridden forward.", "evidence": []},
-    "Noriyuki Hori": {"style": {"fresh": 0.5, "aus_runs": 0.3, "euro_base": 0.9, "wfa_sharpener": 0.1, "forward": 0.3, "young_light": 0.4, "ticket_target": 0.3, "data_driven": 0.6}, "cup_record": {"runners": 1, "wins": 0, "placings": 1}, "method": "Warp Speed via Caulfield Cup.", "evidence": []},
-    "Katsuhiko Sumii": {"style": {"fresh": 0.5, "aus_runs": 0.3, "euro_base": 0.9, "wfa_sharpener": 0.1, "forward": 0.7, "young_light": 0.4, "ticket_target": 0.3, "data_driven": 0.5}, "cup_record": {"runners": 2, "wins": 1, "placings": 1}, "method": "Delta Blues / Pop Rock via Caulfield Cup, Japanese stayers ridden forward.", "evidence": []},
-    "Andreas Wohler": {"style": {"fresh": 0.5, "aus_runs": 0.3, "euro_base": 0.9, "wfa_sharpener": 0.1, "forward": 0.2, "young_light": 0.5, "ticket_target": 0.3, "data_driven": 0.4}, "cup_record": {"runners": 2, "wins": 1, "placings": 0}, "method": "Protectionist via Herbert Power, ridden from the back.", "evidence": []},
-    "Mikel Delzangles": {"style": {"fresh": 0.6, "aus_runs": 0.3, "euro_base": 0.95, "wfa_sharpener": 0.0, "forward": 0.4, "young_light": 0.4, "ticket_target": 0.9, "data_driven": 0.3}, "cup_record": {"runners": 2, "wins": 1, "placings": 0}, "method": "Dunaden via Geelong Cup at first Australian start.", "evidence": []},
-    "Alain de Royer-Dupre": {"style": {"fresh": 0.6, "aus_runs": 0.3, "euro_base": 0.95, "wfa_sharpener": 0.0, "forward": 0.3, "young_light": 0.3, "ticket_target": 0.9, "data_driven": 0.3}, "cup_record": {"runners": 3, "wins": 1, "placings": 1}, "method": "Americain via Geelong Cup at first Australian start.", "evidence": []},
-    "Dermot Weld": {"style": {"fresh": 0.6, "aus_runs": 0.3, "euro_base": 0.95, "wfa_sharpener": 0.0, "forward": 0.4, "young_light": 0.3, "ticket_target": 0.9, "data_driven": 0.3}, "cup_record": {"runners": 6, "wins": 2, "placings": 0}, "method": "Vintage Crop 1993, Media Puzzle via Geelong Cup 2002.", "evidence": []},
-    "Robert Hickmott": {"style": {"fresh": 0.5, "aus_runs": 0.6, "euro_base": 0.3, "wfa_sharpener": 0.6, "forward": 0.4, "young_light": 0.4, "ticket_target": 0.9, "data_driven": 0.5}, "cup_record": {"runners": 20, "wins": 2, "placings": 2}, "method": "Lloyd Williams' Macedon Lodge: settled European imports kept fresh, Bart Cummings / Cox Plate / Mackinnon lead-ups (Almandin, Green Moon, Zipping).", "evidence": []},
-    "Darren Weir": {"style": {"fresh": 0.15, "aus_runs": 0.9, "euro_base": 0.0, "wfa_sharpener": 0.4, "forward": 0.4, "young_light": 0.3, "ticket_target": 0.8, "data_driven": 0.4}, "cup_record": {"runners": 10, "wins": 1, "placings": 2}, "method": "Race-hardened locals via MV Cup / Lexus (Prince Of Penzance, Signoff, Big Duke).", "evidence": []},
-    "Freedman": {"style": {"fresh": 0.3, "aus_runs": 0.7, "euro_base": 0.1, "wfa_sharpener": 0.6, "forward": 0.55, "young_light": 0.3, "ticket_target": 0.4, "data_driven": 0.5}, "cup_record": {"runners": 18, "wins": 3, "placings": 2}, "method": "Caulfield Cup / Cox Plate form lines (Makybe Diva 2004-05, Without A Fight 2023, Lucas Cranach 3rd).", "evidence": []},
-    "McEvoy": {"style": {"fresh": 0.25, "aus_runs": 0.8, "euro_base": 0.0, "wfa_sharpener": 0.5, "forward": 0.5, "young_light": 0.4, "ticket_target": 0.4, "data_driven": 0.5}, "cup_record": {"runners": 4, "wins": 1, "placings": 0}, "method": "Half Yours 2025: Caulfield Cup win -> Cup.", "evidence": []},
-    "Danny O'Brien": {"style": {"fresh": 0.3, "aus_runs": 0.7, "euro_base": 0.0, "wfa_sharpener": 0.5, "forward": 0.7, "young_light": 0.6, "ticket_target": 0.4, "data_driven": 0.5}, "cup_record": {"runners": 6, "wins": 1, "placings": 0}, "method": "Vow And Declare 2019: local 4yo via Turnbull and Caulfield Cup 2nd, ridden forward.", "evidence": []},
-    "Peter Moody": {"style": {"fresh": 0.2, "aus_runs": 0.8, "euro_base": 0.0, "wfa_sharpener": 0.5, "forward": 0.9, "young_light": 0.4, "ticket_target": 0.4, "data_driven": 0.5}, "cup_record": {"runners": 3, "wins": 0, "placings": 1}, "method": "Incentivise 2021: front-running local via Caulfield Cup win.", "evidence": []},
-    "James Cummings": {"style": {"fresh": 0.3, "aus_runs": 0.8, "euro_base": 0.0, "wfa_sharpener": 0.6, "forward": 0.5, "young_light": 0.6, "ticket_target": 0.3, "data_driven": 0.8}, "cup_record": {"runners": 6, "wins": 0, "placings": 1}, "method": "Godolphin Australia; Zardozi 4th 2024 via Caulfield Cup.", "evidence": []},
-    "John O'Shea": {"style": {"fresh": 0.2, "aus_runs": 0.8, "euro_base": 0.1, "wfa_sharpener": 0.9, "forward": 0.6, "young_light": 0.3, "ticket_target": 0.2, "data_driven": 0.7}, "cup_record": {"runners": 4, "wins": 0, "placings": 1}, "method": "Hartnell 3rd 2016 via Cox Plate.", "evidence": []},
-    "David Hayes": {"style": {"fresh": 0.3, "aus_runs": 0.8, "euro_base": 0.1, "wfa_sharpener": 0.8, "forward": 0.5, "young_light": 0.3, "ticket_target": 0.4, "data_driven": 0.5}, "cup_record": {"runners": 12, "wins": 0, "placings": 1}, "method": "Criterion 3rd 2015 via Cox Plate.", "evidence": []},
-    "Bart Cummings": {"style": {"fresh": 0.3, "aus_runs": 0.8, "euro_base": 0.0, "wfa_sharpener": 0.8, "forward": 0.6, "young_light": 0.5, "ticket_target": 0.3, "data_driven": 0.1}, "cup_record": {"runners": 20, "wins": 1, "placings": 2}, "method": "The classic Cups King formula: race into the Cup through the Caulfield Cup / Mackinnon / Cox Plate (Viewed 2008, So You Think 3rd 2010).", "evidence": []},
-    "Mark Kavanagh": {"style": {"fresh": 0.2, "aus_runs": 0.9, "euro_base": 0.0, "wfa_sharpener": 0.5, "forward": 0.5, "young_light": 0.6, "ticket_target": 0.9, "data_driven": 0.3}, "cup_record": {"runners": 3, "wins": 1, "placings": 0}, "method": "Shocking 2009: Lexus Stakes Saturday win -> Cup.", "evidence": []},
-    "Graeme Rogerson": {"style": {"fresh": 0.6, "aus_runs": 0.4, "euro_base": 0.0, "wfa_sharpener": 0.7, "forward": 0.2, "young_light": 0.6, "ticket_target": 0.2, "data_driven": 0.2}, "cup_record": {"runners": 4, "wins": 1, "placings": 0}, "method": "Efficient 2007: fresh off an unplaced Turnbull.", "evidence": []},
-    "David Hall": {"style": {"fresh": 0.2, "aus_runs": 0.9, "euro_base": 0.0, "wfa_sharpener": 0.5, "forward": 0.4, "young_light": 0.3, "ticket_target": 0.3, "data_driven": 0.3}, "cup_record": {"runners": 2, "wins": 1, "placings": 0}, "method": "Makybe Diva 2003 via Caulfield Cup 4th.", "evidence": []},
-    "Sheila Laxon": {"style": {"fresh": 0.15, "aus_runs": 0.8, "euro_base": 0.0, "wfa_sharpener": 0.4, "forward": 0.4, "young_light": 0.4, "ticket_target": 0.5, "data_driven": 0.3}, "cup_record": {"runners": 4, "wins": 2, "placings": 0}, "method": "Ethereal 2001 via Caulfield Cup win; later Knight's Choice with John Symons.", "evidence": []},
-    "Moroney": {"style": {"fresh": 0.2, "aus_runs": 0.9, "euro_base": 0.1, "wfa_sharpener": 0.4, "forward": 0.4, "young_light": 0.3, "ticket_target": 0.8, "data_driven": 0.4}, "cup_record": {"runners": 12, "wins": 1, "placings": 1}, "method": "Brew 2000 via MV Cup 2nd and Saab Quality win three days out; Emissary 2nd 2022 via Caulfield Cup.", "evidence": []},
-    "John Hawkes": {"style": {"fresh": 0.2, "aus_runs": 0.9, "euro_base": 0.0, "wfa_sharpener": 0.5, "forward": 0.5, "young_light": 0.6, "ticket_target": 0.9, "data_driven": 0.4}, "cup_record": {"runners": 5, "wins": 0, "placings": 1}, "method": "Maluckyday 2nd 2010 via Lexus win.", "evidence": []}
+    "GEELONG_CUP_IMPORT": {
+     "runners": 0,
+     "wins": 0,
+     "placings": 0,
+     "examples": "untested: Vauban 2026 is the first Waterhouse/Bott runner off a Geelong Cup lead-up"
+    }
+   }
+  },
+  "Roger Varian": {
+   "style": {
+    "fresh": 0.7,
+    "aus_runs": 0.2,
+    "euro_base": 0.95,
+    "wfa_sharpener": 0.1,
+    "forward": 0.75,
+    "young_light": 0.3,
+    "ticket_target": 0.3,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 0,
+    "wins": 0,
+    "placings": 0
+   },
+   "method": "Newmarket trainer, first Cup runner. Classic European method: base built at home, one Australian run from quarantine (Caulfield Cup 3rd first-up after three months) into the Cup. Enfjaar is a front-running stayer (led all the way in the Glorious Stakes, raced on speed at Caulfield).",
+   "evidence": [
+    "Enfjaar Caulfield Cup 3rd first-up",
+    "Glorious Stakes win leading"
+   ],
+   "cluster": "ONE_RUN_IMPORT"
+  },
+  "George Boughey": {
+   "style": {
+    "fresh": 0.9,
+    "aus_runs": 0.0,
+    "euro_base": 1.0,
+    "wfa_sharpener": 0.0,
+    "forward": 0.5,
+    "young_light": 0.6,
+    "ticket_target": 0.0,
+    "data_driven": 0.9
+   },
+   "cup_record": {
+    "runners": 0,
+    "wins": 0,
+    "placings": 0
+   },
+   "method": "Young Newmarket trainer with a strongly analytical, target-driven operation (Wathnan Racing). Hopewell Rock: Goodwood handicap win, Ebor 2nd (head) in August, then no run for 73 days and straight to the Cup from quarantine - the Cross Counter / Heartbreak City fly-in shape. No prior Cup runner.",
+   "evidence": [
+    "Ebor 2nd 22 Aug 2026, rating 109",
+    "no Australian lead-up"
+   ],
+   "cluster": "DIRECT_FLYIN"
+  },
+  "Harry Charlton": {
+   "style": {
+    "fresh": 0.6,
+    "aus_runs": 0.2,
+    "euro_base": 0.95,
+    "wfa_sharpener": 0.1,
+    "forward": 0.75,
+    "young_light": 0.4,
+    "ticket_target": 0.3,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 0,
+    "wins": 0,
+    "placings": 0
+   },
+   "method": "Beckhampton (took over from Roger Charlton). First Cup runner. Wine Dark Sea built his base in England (3 wins from 4 in 2026), one Australian run first-up in the Caulfield Cup where he was ridden forward.",
+   "evidence": [
+    "Geoffrey Freer win",
+    "Caulfield Cup 11th first-up, wide"
+   ],
+   "cluster": "ONE_RUN_IMPORT"
+  },
+  "John Symons & Sheila Laxon": {
+   "style": {
+    "fresh": 0.15,
+    "aus_runs": 0.8,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.4,
+    "forward": 0.2,
+    "young_light": 0.2,
+    "ticket_target": 0.6,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 4,
+    "wins": 2,
+    "placings": 0
+   },
+   "method": "Old-school race-hardening (Laxon won with Ethereal 2001 via the Caulfield Cup). Knight's Choice 2024: four lead-up runs rising in distance (Turnbull 16th, Caulfield Cup 14th, Bendigo Cup 5th) because 'if we didn't run, we wouldn't get a run'; ridden from the back. Same shape again in 2026 (Naturalism, Herbert Power 3rd, Caulfield Cup) but now based at Ballarat / Sunshine Coast after leaving Macedon Lodge.",
+   "evidence": [
+    "Knight's Choice 2024 $91 winner",
+    "Ethereal 2001"
+   ],
+   "cluster": "AUS_BOUTIQUE",
+   "type_record": {
+    "HARDENED_LOCAL_STAYER": {
+     "runners": 1,
+     "wins": 1,
+     "placings": 0,
+     "examples": "Knight's Choice won 2024 off Turnbull / Caulfield Cup / Bendigo Cup"
+    },
+    "CAULFIELD_CUP_FORM": {
+     "runners": 2,
+     "wins": 1,
+     "placings": 0,
+     "examples": "Ethereal won 2001 (Laxon); Knight's Choice 2026 comes off the Caulfield Cup again"
+    }
+   }
+  },
+  "Bjorn Baker": {
+   "style": {
+    "fresh": 0.1,
+    "aus_runs": 1.0,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.2,
+    "forward": 0.7,
+    "young_light": 0.4,
+    "ticket_target": 0.7,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 0,
+    "wins": 0,
+    "placings": 0
+   },
+   "method": "Sydney trainer, first Cup runner. So You Are has been raced into form through the second-tier Sydney staying races (Colin Stephen, St Leger series, Tatts Cup) then backed up six days out via the Bendigo Cup - a Knight's Choice 2024 / Prince Of Penzance style hardened-local campaign, ridden on the speed.",
+   "evidence": [
+    "four straight wins",
+    "Bendigo Cup 28 Oct -> Cup 3 Nov"
+   ],
+   "cluster": "AUS_BOUTIQUE"
+  },
+  "Grahame Begg": {
+   "style": {
+    "fresh": 0.3,
+    "aus_runs": 0.7,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.8,
+    "forward": 0.3,
+    "young_light": 0.3,
+    "ticket_target": 1.0,
+    "data_driven": 0.4
+   },
+   "cup_record": {
+    "runners": 0,
+    "wins": 0,
+    "placings": 0
+   },
+   "method": "First Cup runner. Planned the whole year around the Andrew Ramsden Golden Ticket (won in May), then a short break and a conventional Naturalism / Herbert Power build, with an unusual Crystal Mile (1600m) sharpener ten days out instead of a 2500m race.",
+   "evidence": [
+    "Andrew Ramsden win 16 May",
+    "Crystal Mile 24 Oct 'warm-up'"
+   ],
+   "cluster": "AUS_BOUTIQUE"
+  },
+  "Gregory Hickman": {
+   "style": {
+    "fresh": 0.2,
+    "aus_runs": 0.8,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.3,
+    "forward": 0.4,
+    "young_light": 0.1,
+    "ticket_target": 0.3,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 0,
+    "wins": 0,
+    "placings": 0
+   },
+   "method": "Sydney trainer, first Cup runner; took over the nine-year-old Future History this year and raced him through JRA Plate, Herbert Power and MV Cup.",
+   "evidence": [
+    "Future History got in after late scratchings"
+   ],
+   "cluster": "AUS_BOUTIQUE"
+  },
+  "Tim Fitzsimmons": {
+   "style": {
+    "fresh": 0.3,
+    "aus_runs": 0.6,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.2,
+    "forward": 0.6,
+    "young_light": 0.1,
+    "ticket_target": 0.6,
+    "data_driven": 0.4
+   },
+   "cup_record": {
+    "runners": 0,
+    "wins": 0,
+    "placings": 0
+   },
+   "method": "Took over Onesmoothoperator from Brian Ellison after the 2025 Cup; Herbert Power and Geelong Cup lead-ups.",
+   "evidence": [],
+   "cluster": "AUS_BOUTIQUE"
+  },
+  "Thomas Carberry": {
+   "style": {
+    "fresh": 0.3,
+    "aus_runs": 0.6,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.3,
+    "forward": 0.5,
+    "young_light": 0.6,
+    "ticket_target": 0.4,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 0,
+    "wins": 0,
+    "placings": 0
+   },
+   "method": "First Cup runner with a four-year-old mare off an SA Derby second.",
+   "evidence": [],
+   "cluster": "AUS_BOUTIQUE"
+  },
+  "Charlie Appleby": {
+   "style": {
+    "fresh": 0.9,
+    "aus_runs": 0.1,
+    "euro_base": 1.0,
+    "wfa_sharpener": 0.05,
+    "forward": 0.35,
+    "young_light": 0.9,
+    "ticket_target": 0.2,
+    "data_driven": 0.8
+   },
+   "cup_record": {
+    "runners": 10,
+    "wins": 1,
+    "placings": 1
+   },
+   "method": "Godolphin fly-in: lightly raced 3yo (Cross Counter) direct from the Great Voltigeur, 75 days; also Geelong Cup with Qewy.",
+   "evidence": [],
+   "cluster": "DIRECT_FLYIN"
+  },
+  "Aidan O'Brien": {
+   "style": {
+    "fresh": 0.9,
+    "aus_runs": 0.1,
+    "euro_base": 1.0,
+    "wfa_sharpener": 0.05,
+    "forward": 0.5,
+    "young_light": 0.85,
+    "ticket_target": 0.1,
+    "data_driven": 0.6
+   },
+   "cup_record": {
+    "runners": 12,
+    "wins": 0,
+    "placings": 3
+   },
+   "method": "Ballydoyle fly-ins, often 3yos direct (Tiger Moth, Il Paradiso) or via the Caulfield Cup (Johannes Vermeer).",
+   "evidence": [],
+   "cluster": "DIRECT_FLYIN"
+  },
+  "Willie Mullins": {
+   "style": {
+    "fresh": 0.95,
+    "aus_runs": 0.0,
+    "euro_base": 1.0,
+    "wfa_sharpener": 0.0,
+    "forward": 0.2,
+    "young_light": 0.2,
+    "ticket_target": 0.0,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 9,
+    "wins": 0,
+    "placings": 3
+   },
+   "method": "Dual-purpose Irish stayers direct, ridden from the back (Max Dynamite, Simenon).",
+   "evidence": [],
+   "cluster": "DIRECT_FLYIN"
+  },
+  "Ed Dunlop": {
+   "style": {
+    "fresh": 0.85,
+    "aus_runs": 0.2,
+    "euro_base": 1.0,
+    "wfa_sharpener": 0.05,
+    "forward": 0.25,
+    "young_light": 0.2,
+    "ticket_target": 0.1,
+    "data_driven": 0.4
+   },
+   "cup_record": {
+    "runners": 8,
+    "wins": 0,
+    "placings": 4
+   },
+   "method": "Red Cadeaux direct from Europe three times; Trip To Paris via Caulfield Cup.",
+   "evidence": [],
+   "cluster": "DIRECT_FLYIN"
+  },
+  "Charlie Fellowes": {
+   "style": {
+    "fresh": 0.4,
+    "aus_runs": 0.4,
+    "euro_base": 0.8,
+    "wfa_sharpener": 0.1,
+    "forward": 0.4,
+    "young_light": 0.2,
+    "ticket_target": 0.9,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 3,
+    "wins": 0,
+    "placings": 3
+   },
+   "method": "Prince Of Arran: Geelong Cup / Hotham Saturday backup into the Cup, three placings.",
+   "evidence": [],
+   "cluster": "ONE_RUN_IMPORT"
+  },
+  "Hughie Morrison": {
+   "style": {
+    "fresh": 0.9,
+    "aus_runs": 0.0,
+    "euro_base": 1.0,
+    "wfa_sharpener": 0.0,
+    "forward": 0.4,
+    "young_light": 0.3,
+    "ticket_target": 0.0,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 2,
+    "wins": 0,
+    "placings": 1
+   },
+   "method": "Marmelo direct from the Prix Kergorlay.",
+   "evidence": [],
+   "cluster": "DIRECT_FLYIN"
+  },
+  "Tony Martin": {
+   "style": {
+    "fresh": 0.9,
+    "aus_runs": 0.0,
+    "euro_base": 1.0,
+    "wfa_sharpener": 0.0,
+    "forward": 0.2,
+    "young_light": 0.2,
+    "ticket_target": 0.0,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 1,
+    "wins": 0,
+    "placings": 1
+   },
+   "method": "Heartbreak City direct from the Ebor.",
+   "evidence": [],
+   "cluster": "DIRECT_FLYIN"
+  },
+  "James Ferguson": {
+   "style": {
+    "fresh": 0.9,
+    "aus_runs": 0.0,
+    "euro_base": 1.0,
+    "wfa_sharpener": 0.0,
+    "forward": 0.5,
+    "young_light": 0.9,
+    "ticket_target": 0.0,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 1,
+    "wins": 0,
+    "placings": 1
+   },
+   "method": "Deauville Legend, 3yo direct from the Great Voltigeur.",
+   "evidence": [],
+   "cluster": "DIRECT_FLYIN"
+  },
+  "Luca Cumani": {
+   "style": {
+    "fresh": 0.8,
+    "aus_runs": 0.2,
+    "euro_base": 1.0,
+    "wfa_sharpener": 0.05,
+    "forward": 0.4,
+    "young_light": 0.3,
+    "ticket_target": 0.1,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 8,
+    "wins": 0,
+    "placings": 3
+   },
+   "method": "Bauer, Mount Athos direct.",
+   "evidence": [],
+   "cluster": "DIRECT_FLYIN"
+  },
+  "Marco Botti": {
+   "style": {
+    "fresh": 0.5,
+    "aus_runs": 0.3,
+    "euro_base": 0.9,
+    "wfa_sharpener": 0.1,
+    "forward": 0.5,
+    "young_light": 0.3,
+    "ticket_target": 0.3,
+    "data_driven": 0.4
+   },
+   "cup_record": {
+    "runners": 3,
+    "wins": 0,
+    "placings": 1
+   },
+   "method": "Jakkalberry via Caulfield Cup.",
+   "evidence": [],
+   "cluster": "ONE_RUN_IMPORT"
+  },
+  "Andrew Balding": {
+   "style": {
+    "fresh": 0.5,
+    "aus_runs": 0.3,
+    "euro_base": 0.9,
+    "wfa_sharpener": 0.1,
+    "forward": 0.7,
+    "young_light": 0.3,
+    "ticket_target": 0.5,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 2,
+    "wins": 0,
+    "placings": 1
+   },
+   "method": "Spanish Mission via Geelong Cup 2nd, ridden forward.",
+   "evidence": [],
+   "cluster": "ONE_RUN_IMPORT"
+  },
+  "Noriyuki Hori": {
+   "style": {
+    "fresh": 0.5,
+    "aus_runs": 0.3,
+    "euro_base": 0.9,
+    "wfa_sharpener": 0.1,
+    "forward": 0.3,
+    "young_light": 0.4,
+    "ticket_target": 0.3,
+    "data_driven": 0.6
+   },
+   "cup_record": {
+    "runners": 1,
+    "wins": 0,
+    "placings": 1
+   },
+   "method": "Warp Speed via Caulfield Cup.",
+   "evidence": [],
+   "cluster": "ONE_RUN_IMPORT"
+  },
+  "Katsuhiko Sumii": {
+   "style": {
+    "fresh": 0.5,
+    "aus_runs": 0.3,
+    "euro_base": 0.9,
+    "wfa_sharpener": 0.1,
+    "forward": 0.7,
+    "young_light": 0.4,
+    "ticket_target": 0.3,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 2,
+    "wins": 1,
+    "placings": 1
+   },
+   "method": "Delta Blues / Pop Rock via Caulfield Cup, Japanese stayers ridden forward.",
+   "evidence": [],
+   "cluster": "ONE_RUN_IMPORT"
+  },
+  "Andreas Wohler": {
+   "style": {
+    "fresh": 0.5,
+    "aus_runs": 0.3,
+    "euro_base": 0.9,
+    "wfa_sharpener": 0.1,
+    "forward": 0.2,
+    "young_light": 0.5,
+    "ticket_target": 0.3,
+    "data_driven": 0.4
+   },
+   "cup_record": {
+    "runners": 2,
+    "wins": 1,
+    "placings": 0
+   },
+   "method": "Protectionist via Herbert Power, ridden from the back.",
+   "evidence": [],
+   "cluster": "ONE_RUN_IMPORT"
+  },
+  "Mikel Delzangles": {
+   "style": {
+    "fresh": 0.6,
+    "aus_runs": 0.3,
+    "euro_base": 0.95,
+    "wfa_sharpener": 0.0,
+    "forward": 0.4,
+    "young_light": 0.4,
+    "ticket_target": 0.9,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 2,
+    "wins": 1,
+    "placings": 0
+   },
+   "method": "Dunaden via Geelong Cup at first Australian start.",
+   "evidence": [],
+   "cluster": "ONE_RUN_IMPORT"
+  },
+  "Alain de Royer-Dupre": {
+   "style": {
+    "fresh": 0.6,
+    "aus_runs": 0.3,
+    "euro_base": 0.95,
+    "wfa_sharpener": 0.0,
+    "forward": 0.3,
+    "young_light": 0.3,
+    "ticket_target": 0.9,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 3,
+    "wins": 1,
+    "placings": 1
+   },
+   "method": "Americain via Geelong Cup at first Australian start.",
+   "evidence": [],
+   "cluster": "ONE_RUN_IMPORT"
+  },
+  "Dermot Weld": {
+   "style": {
+    "fresh": 0.6,
+    "aus_runs": 0.3,
+    "euro_base": 0.95,
+    "wfa_sharpener": 0.0,
+    "forward": 0.4,
+    "young_light": 0.3,
+    "ticket_target": 0.9,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 6,
+    "wins": 2,
+    "placings": 0
+   },
+   "method": "Vintage Crop 1993, Media Puzzle via Geelong Cup 2002.",
+   "evidence": [],
+   "cluster": "ONE_RUN_IMPORT"
+  },
+  "Robert Hickmott": {
+   "style": {
+    "fresh": 0.5,
+    "aus_runs": 0.6,
+    "euro_base": 0.3,
+    "wfa_sharpener": 0.6,
+    "forward": 0.4,
+    "young_light": 0.4,
+    "ticket_target": 0.9,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 20,
+    "wins": 2,
+    "placings": 2
+   },
+   "method": "Lloyd Williams' Macedon Lodge: settled European imports kept fresh, Bart Cummings / Cox Plate / Mackinnon lead-ups (Almandin, Green Moon, Zipping).",
+   "evidence": [],
+   "cluster": "MACEDON_FRESH",
+   "type_record": {
+    "BART_CUMMINGS_TICKET": {
+     "runners": 2,
+     "wins": 1,
+     "placings": 0,
+     "examples": "Almandin won 2016"
+    },
+    "COX_PLATE_SHARPENER": {
+     "runners": 3,
+     "wins": 1,
+     "placings": 0,
+     "examples": "Green Moon won 2012"
+    }
+   }
+  },
+  "Darren Weir": {
+   "style": {
+    "fresh": 0.15,
+    "aus_runs": 0.9,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.4,
+    "forward": 0.4,
+    "young_light": 0.3,
+    "ticket_target": 0.8,
+    "data_driven": 0.4
+   },
+   "cup_record": {
+    "runners": 10,
+    "wins": 1,
+    "placings": 2
+   },
+   "method": "Race-hardened locals via MV Cup / Lexus (Prince Of Penzance, Signoff, Big Duke).",
+   "evidence": [],
+   "cluster": "AUS_BOUTIQUE",
+   "type_record": {
+    "HARDENED_LOCAL_STAYER": {
+     "runners": 6,
+     "wins": 1,
+     "placings": 0,
+     "examples": "Prince Of Penzance won 2015"
+    },
+    "LEXUS_3DAY_BACKUP": {
+     "runners": 2,
+     "wins": 0,
+     "placings": 1,
+     "examples": "Signoff 4th 2014"
+    }
+   }
+  },
+  "Freedman": {
+   "style": {
+    "fresh": 0.3,
+    "aus_runs": 0.7,
+    "euro_base": 0.1,
+    "wfa_sharpener": 0.6,
+    "forward": 0.55,
+    "young_light": 0.3,
+    "ticket_target": 0.4,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 18,
+    "wins": 3,
+    "placings": 2
+   },
+   "method": "Caulfield Cup / Cox Plate form lines (Makybe Diva 2004-05, Without A Fight 2023, Lucas Cranach 3rd).",
+   "evidence": [],
+   "cluster": "AUS_BIG_STABLE"
+  },
+  "McEvoy": {
+   "style": {
+    "fresh": 0.25,
+    "aus_runs": 0.8,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.5,
+    "forward": 0.5,
+    "young_light": 0.4,
+    "ticket_target": 0.4,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 4,
+    "wins": 1,
+    "placings": 0
+   },
+   "method": "Half Yours 2025: Caulfield Cup win -> Cup.",
+   "evidence": [],
+   "cluster": "AUS_BIG_STABLE"
+  },
+  "Danny O'Brien": {
+   "style": {
+    "fresh": 0.3,
+    "aus_runs": 0.7,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.5,
+    "forward": 0.7,
+    "young_light": 0.6,
+    "ticket_target": 0.4,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 6,
+    "wins": 1,
+    "placings": 0
+   },
+   "method": "Vow And Declare 2019: local 4yo via Turnbull and Caulfield Cup 2nd, ridden forward.",
+   "evidence": [],
+   "cluster": "AUS_BIG_STABLE"
+  },
+  "Peter Moody": {
+   "style": {
+    "fresh": 0.2,
+    "aus_runs": 0.8,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.5,
+    "forward": 0.9,
+    "young_light": 0.4,
+    "ticket_target": 0.4,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 3,
+    "wins": 0,
+    "placings": 1
+   },
+   "method": "Incentivise 2021: front-running local via Caulfield Cup win.",
+   "evidence": [],
+   "cluster": "AUS_BIG_STABLE"
+  },
+  "James Cummings": {
+   "style": {
+    "fresh": 0.3,
+    "aus_runs": 0.8,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.6,
+    "forward": 0.5,
+    "young_light": 0.6,
+    "ticket_target": 0.3,
+    "data_driven": 0.8
+   },
+   "cup_record": {
+    "runners": 6,
+    "wins": 0,
+    "placings": 1
+   },
+   "method": "Godolphin Australia; Zardozi 4th 2024 via Caulfield Cup.",
+   "evidence": [],
+   "cluster": "AUS_BIG_STABLE"
+  },
+  "John O'Shea": {
+   "style": {
+    "fresh": 0.2,
+    "aus_runs": 0.8,
+    "euro_base": 0.1,
+    "wfa_sharpener": 0.9,
+    "forward": 0.6,
+    "young_light": 0.3,
+    "ticket_target": 0.2,
+    "data_driven": 0.7
+   },
+   "cup_record": {
+    "runners": 4,
+    "wins": 0,
+    "placings": 1
+   },
+   "method": "Hartnell 3rd 2016 via Cox Plate.",
+   "evidence": [],
+   "cluster": "AUS_BIG_STABLE"
+  },
+  "David Hayes": {
+   "style": {
+    "fresh": 0.3,
+    "aus_runs": 0.8,
+    "euro_base": 0.1,
+    "wfa_sharpener": 0.8,
+    "forward": 0.5,
+    "young_light": 0.3,
+    "ticket_target": 0.4,
+    "data_driven": 0.5
+   },
+   "cup_record": {
+    "runners": 12,
+    "wins": 0,
+    "placings": 1
+   },
+   "method": "Criterion 3rd 2015 via Cox Plate.",
+   "evidence": [],
+   "cluster": "AUS_BIG_STABLE"
+  },
+  "Bart Cummings": {
+   "style": {
+    "fresh": 0.3,
+    "aus_runs": 0.8,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.8,
+    "forward": 0.6,
+    "young_light": 0.5,
+    "ticket_target": 0.3,
+    "data_driven": 0.1
+   },
+   "cup_record": {
+    "runners": 20,
+    "wins": 1,
+    "placings": 2
+   },
+   "method": "The classic Cups King formula: race into the Cup through the Caulfield Cup / Mackinnon / Cox Plate (Viewed 2008, So You Think 3rd 2010).",
+   "evidence": [],
+   "cluster": "AUS_BIG_STABLE"
+  },
+  "Mark Kavanagh": {
+   "style": {
+    "fresh": 0.2,
+    "aus_runs": 0.9,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.5,
+    "forward": 0.5,
+    "young_light": 0.6,
+    "ticket_target": 0.9,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 3,
+    "wins": 1,
+    "placings": 0
+   },
+   "method": "Shocking 2009: Lexus Stakes Saturday win -> Cup.",
+   "evidence": [],
+   "cluster": "AUS_BOUTIQUE"
+  },
+  "Graeme Rogerson": {
+   "style": {
+    "fresh": 0.6,
+    "aus_runs": 0.4,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.7,
+    "forward": 0.2,
+    "young_light": 0.6,
+    "ticket_target": 0.2,
+    "data_driven": 0.2
+   },
+   "cup_record": {
+    "runners": 4,
+    "wins": 1,
+    "placings": 0
+   },
+   "method": "Efficient 2007: fresh off an unplaced Turnbull.",
+   "evidence": [],
+   "cluster": "MACEDON_FRESH"
+  },
+  "David Hall": {
+   "style": {
+    "fresh": 0.2,
+    "aus_runs": 0.9,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.5,
+    "forward": 0.4,
+    "young_light": 0.3,
+    "ticket_target": 0.3,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 2,
+    "wins": 1,
+    "placings": 0
+   },
+   "method": "Makybe Diva 2003 via Caulfield Cup 4th.",
+   "evidence": [],
+   "cluster": "AUS_BIG_STABLE"
+  },
+  "Sheila Laxon": {
+   "style": {
+    "fresh": 0.15,
+    "aus_runs": 0.8,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.4,
+    "forward": 0.4,
+    "young_light": 0.4,
+    "ticket_target": 0.5,
+    "data_driven": 0.3
+   },
+   "cup_record": {
+    "runners": 4,
+    "wins": 2,
+    "placings": 0
+   },
+   "method": "Ethereal 2001 via Caulfield Cup win; later Knight's Choice with John Symons.",
+   "evidence": [],
+   "cluster": "AUS_BOUTIQUE"
+  },
+  "Moroney": {
+   "style": {
+    "fresh": 0.2,
+    "aus_runs": 0.9,
+    "euro_base": 0.1,
+    "wfa_sharpener": 0.4,
+    "forward": 0.4,
+    "young_light": 0.3,
+    "ticket_target": 0.8,
+    "data_driven": 0.4
+   },
+   "cup_record": {
+    "runners": 12,
+    "wins": 1,
+    "placings": 1
+   },
+   "method": "Brew 2000 via MV Cup 2nd and Saab Quality win three days out; Emissary 2nd 2022 via Caulfield Cup.",
+   "evidence": [],
+   "cluster": "AUS_BOUTIQUE"
+  },
+  "John Hawkes": {
+   "style": {
+    "fresh": 0.2,
+    "aus_runs": 0.9,
+    "euro_base": 0.0,
+    "wfa_sharpener": 0.5,
+    "forward": 0.5,
+    "young_light": 0.6,
+    "ticket_target": 0.9,
+    "data_driven": 0.4
+   },
+   "cup_record": {
+    "runners": 5,
+    "wins": 0,
+    "placings": 1
+   },
+   "method": "Maluckyday 2nd 2010 via Lexus win.",
+   "evidence": [],
+   "cluster": "AUS_BOUTIQUE"
   }
+ },
+ "cluster_records": {
+  "_note": "Approximate 2010-2025 record of each method family with each preparation archetype: runners / wins / placings (2nd-4th).",
+  "DIRECT_FLYIN": {
+   "EURO_DIRECT_FLYIN": {
+    "runners": 75,
+    "wins": 3,
+    "placings": 14
+   },
+   "GEELONG_CUP_IMPORT": {
+    "runners": 4,
+    "wins": 0,
+    "placings": 1
+   },
+   "CAULFIELD_CUP_FORM": {
+    "runners": 6,
+    "wins": 0,
+    "placings": 1
+   },
+   "HARDENED_LOCAL_STAYER": {
+    "runners": 4,
+    "wins": 0,
+    "placings": 0
+   },
+   "LEXUS_3DAY_BACKUP": {
+    "runners": 2,
+    "wins": 0,
+    "placings": 0
+   }
+  },
+  "ONE_RUN_IMPORT": {
+   "GEELONG_CUP_IMPORT": {
+    "runners": 20,
+    "wins": 2,
+    "placings": 3
+   },
+   "CAULFIELD_CUP_FORM": {
+    "runners": 18,
+    "wins": 0,
+    "placings": 5
+   },
+   "HARDENED_LOCAL_STAYER": {
+    "runners": 10,
+    "wins": 1,
+    "placings": 1
+   },
+   "EURO_DIRECT_FLYIN": {
+    "runners": 8,
+    "wins": 0,
+    "placings": 2
+   },
+   "LEXUS_3DAY_BACKUP": {
+    "runners": 4,
+    "wins": 0,
+    "placings": 2
+   }
+  },
+  "AUS_BIG_STABLE": {
+   "CAULFIELD_CUP_FORM": {
+    "runners": 60,
+    "wins": 3,
+    "placings": 12
+   },
+   "COX_PLATE_SHARPENER": {
+    "runners": 15,
+    "wins": 3,
+    "placings": 5
+   },
+   "HARDENED_LOCAL_STAYER": {
+    "runners": 40,
+    "wins": 0,
+    "placings": 8
+   },
+   "LEXUS_3DAY_BACKUP": {
+    "runners": 10,
+    "wins": 0,
+    "placings": 3
+   },
+   "GEELONG_CUP_IMPORT": {
+    "runners": 6,
+    "wins": 0,
+    "placings": 0
+   },
+   "BART_CUMMINGS_TICKET": {
+    "runners": 6,
+    "wins": 0,
+    "placings": 0
+   },
+   "EURO_DIRECT_FLYIN": {
+    "runners": 2,
+    "wins": 0,
+    "placings": 1
+   },
+   "TURNBULL_FRESH": {
+    "runners": 4,
+    "wins": 0,
+    "placings": 0
+   }
+  },
+  "AUS_BOUTIQUE": {
+   "HARDENED_LOCAL_STAYER": {
+    "runners": 40,
+    "wins": 2,
+    "placings": 6
+   },
+   "LEXUS_3DAY_BACKUP": {
+    "runners": 12,
+    "wins": 0,
+    "placings": 4
+   },
+   "CAULFIELD_CUP_FORM": {
+    "runners": 20,
+    "wins": 0,
+    "placings": 2
+   },
+   "GEELONG_CUP_IMPORT": {
+    "runners": 8,
+    "wins": 0,
+    "placings": 0
+   },
+   "BART_CUMMINGS_TICKET": {
+    "runners": 5,
+    "wins": 0,
+    "placings": 0
+   },
+   "COX_PLATE_SHARPENER": {
+    "runners": 3,
+    "wins": 0,
+    "placings": 0
+   }
+  },
+  "MACEDON_FRESH": {
+   "BART_CUMMINGS_TICKET": {
+    "runners": 5,
+    "wins": 1,
+    "placings": 1
+   },
+   "COX_PLATE_SHARPENER": {
+    "runners": 6,
+    "wins": 1,
+    "placings": 1
+   },
+   "CAULFIELD_CUP_FORM": {
+    "runners": 6,
+    "wins": 0,
+    "placings": 1
+   },
+   "HARDENED_LOCAL_STAYER": {
+    "runners": 8,
+    "wins": 0,
+    "placings": 2
+   },
+   "TURNBULL_FRESH": {
+    "runners": 3,
+    "wins": 1,
+    "placings": 0
+   }
+  }
+ }
 }

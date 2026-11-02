@@ -29,6 +29,15 @@ def _going_word(fit: float) -> str:
     return "Loves wet" if fit >= 0.7 else "Handles wet" if fit > 0.1 else "Wants firm" if fit <= -0.7 else "Prefers dry" if fit < -0.1 else "Unknown"
 
 
+def _done_it(pred: Prediction, r: dict) -> str:
+    tr = pred.pattern[r["horse"]]["type_record"]
+    arch = pred.pattern[r["horse"]]["archetype"] or "OTHER"
+    own = pred.idx.trainer_type_record(r["trainer"], arch)
+    if own and own["runners"] > 0:
+        return f"Yes: {own['runners']} runs, {own['wins']}W {own['placings']}P ({tr['term']:+.2f})"
+    return f"First time ({tr['term']:+.2f})"
+
+
 def build_printable(pred: Prediction, scenarios: dict | None = None) -> str:
     rs = pred.runners
     order = list(np.argsort(-pred.win_prob))
@@ -82,7 +91,8 @@ def build_printable(pred: Prediction, scenarios: dict | None = None) -> str:
           <td>{STYLE_LABEL[r['style']]}<small>settles ~{r.get('settle', '?')}</small></td>
           <td>{e(lu['race'].replace(' G1', '').replace(' G2', '').replace(' G3', ''))} {lu['finish']}/{lu['field']}<small>{lu['tempo'].lower()} tempo · {r['days_since']}d</small></td>
           <td class="going g{'p' if gf > 0.1 else 'n' if gf < -0.1 else 'z'}">{_going_word(gf)}</td>
-          <td class="small">{e(best['horse'])} {best['year']}<small>method {best['trainer_style_similarity']:.2f}{' · own' if best['same_trainer'] else ''}</small></td>
+          <td class="small">{e(best['horse'])} {best['year']}<small>credit x{best['trainer_multiplier']:.2f}{' · own' if best['same_trainer'] else ''}</small></td>
+          <td class="small done">{e(_done_it(pred, r))}</td>
           <td class="num model"><b>{_pct(pred.win_prob[i])}</b><small>top-4 {_pct(pred.top4_prob[i])}</small></td>
           <td class="num">${r['odds']:.1f}<small class="{'pos' if edge > 0.1 else 'neg' if edge < -0.3 else ''}">{100 * edge:+.0f}%</small></td>
           <td class="stars">{_stars(pred.win_prob[i])}</td>
@@ -171,6 +181,7 @@ td.going.gp {{ color: var(--pos); font-weight: 600; }} td.going.gn {{ color: var
 small.pos {{ color: var(--pos); font-weight: 600; }} small.neg {{ color: var(--neg); }}
 td.stars {{ color: var(--gold); letter-spacing: .05em; white-space: nowrap; font-size: 13px; }}
 td.verdict {{ min-width: 220px; font-size: 12px; }}
+td.done {{ white-space: nowrap; font-size: 11.5px; }}
 .scen td, .scen th {{ text-align: right; }} .scen td.horse, .scen th:first-child {{ text-align: left; }}
 .legend {{ display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 11.5px; color: var(--muted); margin-top: 8px; }}
 .legend i {{ display: inline-block; width: 14px; height: 12px; vertical-align: -2px; border: 1px solid var(--rule); margin-right: 4px; }}
@@ -234,14 +245,15 @@ footer {{ margin-top: 18px; color: var(--muted); font-size: 11px; border-top: 1p
   <h2>The field, ranked by the model</h2>
   <div class="scroll">
   <table>
-    <thead><tr><th>#</th><th>No</th><th>Horse / rider / trainer</th><th>Bar</th><th>Kg</th><th>Style</th><th>Last start</th><th>Going</th><th>Modelled on</th><th>Model</th><th>Odds / edge</th><th>Rating</th><th>Verdict</th></tr></thead>
+    <thead><tr><th>#</th><th>No</th><th>Horse / rider / trainer</th><th>Bar</th><th>Kg</th><th>Style</th><th>Last start</th><th>Going</th><th>Modelled on</th><th>Trainer done it?</th><th>Model</th><th>Odds / edge</th><th>Rating</th><th>Verdict</th></tr></thead>
     <tbody>{''.join(rows)}</tbody>
   </table>
   </div>
   <div class="legend">
     <span><i style="background:var(--t1)"></i>Top four</span><span><i style="background:var(--t2)"></i>Next four</span><span><i style="background:var(--t3)"></i>Place hopes</span><span><i style="background:var(--t4)"></i>Outsiders</span>
     <span>Rating: ★★★★★ 12%+ win chance, ★★★★ 8%+, ★★★ 5%+, ★★ 2.5%+</span>
-    <span>"Modelled on" = closest past first-four prep and how alike that trainer's method is (0-1).</span>
+    <span>"Modelled on" = closest past first-four prep; credit is gated by how alike the two trainers' methods are (x0 = different school, x1 = same method).</span>
+    <span>"Trainer done it?" = this trainer's own Cup record with this type of preparation (runners / wins / placings); 'first time' uses the method school's record.</span>
   </div>
 </section>
 

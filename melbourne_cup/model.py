@@ -52,9 +52,10 @@ def derive_leadup_group(runner: dict) -> str:
 
 @dataclass
 class Weights:
-    market: float = 0.75
+    market: float = 0.70
     form: float = 0.30
-    pattern: float = 0.30
+    pattern: float = 0.35
+    trainer_type: float = 1.0      # multiplier on the 'has this trainer done this before' log-odds term
     slow_leadup_penalty: float = 0.30
     going_scale: float = 0.45
     bias: str = "neutral"          # neutral | on-pace | closers  (Cup Day track bias switch)
@@ -145,7 +146,7 @@ def predict(weights: Weights | None = None, sims: int = 20000, seed: int = 7,
     pattern_vals = np.array([pattern[r["horse"]]["pattern_total"] for r in runners])
 
     form_z = _z(form_vals)
-    pattern_z = _z(np.log(pattern_vals + 1e-9))
+    pattern_z = np.clip(_z(np.log(pattern_vals + 0.02)), -2.0, 2.0)
 
     track_dist = PRESETS.get(w.track) or field_doc["race"].get("track_distribution", {"GOOD": 1.0})
     pressure, pressure_note = pace_pressure(runners)
@@ -157,13 +158,15 @@ def predict(weights: Weights | None = None, sims: int = 20000, seed: int = 7,
         prior, notes = structural_priors(r, field_doc["race"], w, form[r["horse"]]["last_leadup_tempo"], idx.trainer_record(r["trainer"]))
         g_adj, g_note = going_adjustment(r, track_dist, scale=w.going_scale)
         p_adj, p_notes = pace_adjustment(r, pressure, w.bias, w.bias_strength, style_prior)
-        logit = w.market * math.log(market[i]) + w.form * form_z[i] + w.pattern * pattern_z[i] + prior + g_adj + p_adj
+        t_adj = w.trainer_type * pattern[r["horse"]]["type_record"]["term"]
+        logit = w.market * math.log(market[i]) + w.form * form_z[i] + w.pattern * pattern_z[i] + prior + g_adj + p_adj + t_adj
         logits[i] = logit
         components.append({
             "horse": r["horse"], "market_prob": float(market[i]), "form_rating": float(form_vals[i]),
             "form_z": float(form_z[i]), "pattern_total": float(pattern_vals[i]), "pattern_z": float(pattern_z[i]),
             "prior": prior, "prior_notes": notes, "going_adj": g_adj, "going_note": g_note,
-            "pace_adj": p_adj, "pace_notes": p_notes, "logit": float(logit),
+            "pace_adj": p_adj, "pace_notes": p_notes, "trainer_type_adj": t_adj,
+            "trainer_type_notes": pattern[r["horse"]]["type_record"]["notes"], "logit": float(logit),
         })
     win = np.exp(logits - logits.max())
     win = win / win.sum()

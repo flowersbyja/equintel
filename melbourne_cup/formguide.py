@@ -70,11 +70,12 @@ def build_form_guide(pred: Prediction) -> str:
         L.append(f"**Running style / shape:** {r['style'].lower().replace('_', '-')}, predicted to settle about {r.get('settle', '?')}th. Pace adjustment {c['pace_adj']:+.2f} ({'; '.join(c['pace_notes']) or 'none'}).\n")
         L.append(f"**Going:** wet record {_wet(r.get('wet_record'))}, connections prior {r.get('wet_rating', 0):+.1f}. {c['going_note']}.\n")
         L.append(f"**Gear:** {r.get('gear', 'none reported')}. **Jockey:** {r['jockey']} ({r.get('jockey_cup_wins', 0)} Cup wins).\n")
-        L.append("**Who it is modelled on (method-weighted):**\n")
+        L.append(f"**Has this trainer done this before?** ({c['trainer_type_adj']:+.2f}) " + " ".join(c['trainer_type_notes']) + "\n")
+        L.append("**Who it is modelled on (method-gated):**\n")
         for m in p["best_matches"]:
-            own = " - same trainer" if m["same_trainer"] else f" - different trainer, method similarity {m['trainer_style_similarity']:.2f} -> credit x{m['trainer_multiplier']:.2f}"
+            own = f" - same trainer, {m['gate_note']} -> credit x{m['trainer_multiplier']:.2f}" if m["same_trainer"] else f" - different trainer, {m['gate_note']} -> credit x{m['trainer_multiplier']:.2f}"
             L.append(f"- {m['horse']} {m['year']} ({m['trainer']}, finished {m['pos']}, {m['archetype']}), horse-prep similarity {m['similarity']:.2f}{own}")
         L.append(f"\nMethod vectors (fresh, aus_runs, euro_base, wfa_sharpener, forward, young_light, ticket_target, data_driven): trainer {_vec(p['trainer_profile'])}; this campaign {_vec(p['campaign_style'])}.\n")
-        L.append(f"**Model components:** market {_pct(c['market_prob'])}, form z {c['form_z']:+.2f}, pattern z {c['pattern_z']:+.2f}, structural {c['prior']:+.2f} ({'; '.join(c['prior_notes']) or 'none'}), going {c['going_adj']:+.2f}, pace {c['pace_adj']:+.2f}.\n")
+        L.append(f"**Model components:** market {_pct(c['market_prob'])}, form z {c['form_z']:+.2f}, pattern z {c['pattern_z']:+.2f}, trainer-done-it {c['trainer_type_adj']:+.2f}, structural {c['prior']:+.2f} ({'; '.join(c['prior_notes']) or 'none'}), going {c['going_adj']:+.2f}, pace {c['pace_adj']:+.2f}.\n")
         L.append(r["notes"] + "\n")
     return "\n".join(L) + "\n"

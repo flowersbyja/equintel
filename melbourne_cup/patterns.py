@@ -44,9 +44,27 @@ FEATURE_WEIGHTS = {
 STYLE_ORDER = {"LEADER": 0, "ON_PACE": 1, "MIDFIELD": 2, "BACKMARKER": 3}
 FORWARD_SCORE = {"LEADER": 1.0, "ON_PACE": 0.75, "MIDFIELD": 0.4, "BACKMARKER": 0.1}
 TICKET_GROUPS = {"GEELONG_CUP", "MV_CUP", "BART_CUMMINGS", "LEXUS_HOTHAM"}
-# How much the cross-trainer credit depends on methodology similarity:
-#   multiplier = CROSS_BASE + (1 - CROSS_BASE) * trainer_style_similarity   (same trainer -> 1.0)
-CROSS_BASE = 0.35
+# Method gate. A template from a trainer whose method (and that campaign) is unlike this horse's trainer
+# method (and this campaign) earns NOTHING below GATE_FLOOR similarity and ramps sharply above it.
+#   gate(sim) = ((sim - GATE_FLOOR) / (1 - GATE_FLOOR)) ** GATE_POWER, clipped to [0, 1]
+# Same trainer: the gate is applied to CAMPAIGN similarity instead (did they do it the same way as when it worked?).
+# A template from a different method cluster is additionally halved unless the similarity is very high.
+GATE_FLOOR = 0.62
+GATE_POWER = 1.6
+CROSS_CLUSTER_PENALTY = 0.5
+CROSS_CLUSTER_WAIVER = 0.85
+
+# Base first-four rate per runner for the type-record log-odds (a win counts 1, a 2nd-4th 0.5; ~2.5 points per 24 runners)
+BASE_RATE = 2.5 / 24.0
+SHRINK_OWN = 6.0
+SHRINK_CLUSTER = 12.0
+FIRST_ATTEMPT_PENALTY = -0.12
+
+
+def method_gate(sim: float) -> float:
+    if sim <= GATE_FLOOR:
+        return 0.0
+    return min(1.0, ((sim - GATE_FLOOR) / (1.0 - GATE_FLOOR)) ** GATE_POWER)
 
 
 def _fresh_from_days(days: float) -> float:
@@ -85,6 +103,66 @@ def campaign_vector(h: dict, dims: list[str], trainer_profile: dict) -> dict:
     return {d: vec[d] for d in dims}
 
 
+def campaign_cluster(h: dict) -> str:
+    """Which method family this particular campaign resembles, from its shape alone."""
+    if h["origin"] == "FLYIN_DIRECT" or (h["aus_prep_runs"] == 0 and h["days_since"] >= 40):
+        return "DIRECT_FLYIN"
+    if h["origin"] == "FLYIN_RUN" or (h["origin"] == "SETTLED_IMPORT" and h["aus_prep_runs"] <= 1 and h["days_since"] <= 20):
+        return "ONE_RUN_IMPORT"
+    return "AUS_RACE_HARDENED"
+
+
+def _rate(rec: dict, shrink: float) -> float:
+    return (rec["wins"] + 0.5 * rec["placings"] + shrink * BASE_RATE) / (rec["runners"] + shrink)
+
+
+def trainer_type_term(runner: dict, archetype: str, idx: "ArchetypeIndex", weight: float = 0.55, cap: float = 0.60) -> dict:
+    """Has THIS trainer done THIS type of preparation before, and how did it go?
+    Returns a log-odds style term (damped, capped) plus the evidence used."""
+    own = idx.trainer_type_record(runner["trainer"], archetype)
+    own_cluster = idx.trainer_cluster(runner["trainer"])
+    camp_cluster = campaign_cluster(runner)
+    lookup_cluster = own_cluster if own_cluster in idx.cluster_records else camp_cluster
+    if camp_cluster in idx.cluster_records and camp_cluster != own_cluster:
+        lookup_cluster = camp_cluster
+    clus = idx.cluster_record(lookup_cluster, archetype)
+    notes = []
+    if own and own["runners"] > 0:
+        rate = _rate(own, SHRINK_OWN)
+        term = weight * math.log(rate / BASE_RATE)
+        notes.append(f"{runner['trainer']} with this type: {own['runners']} runners, {own['wins']} wins, {own['placings']} placings ({own['examples']})")
+        basis = "own"
+        # trainers who have done it but only with forward/closer sub-types: refine when sub-records exist
+        sub = own.get("sub")
+        if sub:
+            key = "forward" if runner["style"] in ("LEADER", "ON_PACE") else "closer"
+            if key in sub:
+                sr = sub[key]
+                srate = _rate(sr, SHRINK_OWN)
+                term = 0.5 * term + 0.5 * weight * math.log(srate / BASE_RATE)
+                notes.append(f"as a {key}: {sr['runners']} runners, {sr['wins']} wins, {sr['placings']} placings ({sr['examples']})")
+            if runner["age"] <= 4 and "young_light" in sub:
+                sr = sub["young_light"]
+                term = 0.7 * term + 0.3 * weight * math.log(_rate(sr, SHRINK_OWN) / BASE_RATE)
+                notes.append(f"with lightly raced 3-4yos: {sr['runners']} runners, {sr['wins']} wins, {sr['placings']} placings")
+            if runner["weight"] >= 57 and "topweight_57plus" in sub:
+                sr = sub["topweight_57plus"]
+                term = 0.7 * term + 0.3 * weight * math.log(_rate(sr, SHRINK_OWN) / BASE_RATE)
+                notes.append(f"carrying 57kg+: {sr['runners']} runners, {sr['wins']} wins, {sr['placings']} placings")
+    else:
+        basis = "cluster"
+        if clus and clus["runners"] > 0:
+            rate = _rate(clus, SHRINK_CLUSTER)
+            term = weight * math.log(rate / BASE_RATE) + FIRST_ATTEMPT_PENALTY
+            notes.append(f"{runner['trainer']} has never taken this type into the Cup ({(own or {}).get('examples', 'no record')}); "
+                         f"trainers of the {lookup_cluster.replace('_', ' ').lower()} school with this type: {clus['runners']} runners, {clus['wins']} wins, {clus['placings']} placings")
+        else:
+            term = FIRST_ATTEMPT_PENALTY
+            notes.append(f"no record for this trainer or method family with this type of preparation")
+    term = max(-cap, min(cap, term))
+    return {"term": term, "basis": basis, "notes": notes, "own_cluster": own_cluster, "campaign_cluster": camp_cluster}
+
+
 def blended_style(h: dict, idx: "ArchetypeIndex", campaign_weight: float = 0.6) -> dict:
     prof = idx.trainer_profile(h["trainer"])
     camp = campaign_vector(h, idx.dims, prof)
@@ -109,6 +187,7 @@ class ArchetypeIndex:
         self.dims = ts["dimensions"]
         self.trainer_styles = ts["trainers"]
         self.default_style = ts["default"]
+        self.cluster_records = {k: v for k, v in ts.get("cluster_records", {}).items() if not k.startswith("_")}
         self.group_to_arch = {}
         for arch_id, arch in self.archetypes.items():
             for g in arch["leadup_groups"]:
@@ -146,6 +225,21 @@ class ArchetypeIndex:
             if key in self.trainer_styles:
                 return self.trainer_styles[key].get("cup_record", {"runners": 0, "wins": 0, "placings": 0})
         return {"runners": 0, "wins": 0, "placings": 0}
+
+    def trainer_cluster(self, name: str) -> str:
+        for key in (name, self.canonical_trainer(name)):
+            if key in self.trainer_styles:
+                return self.trainer_styles[key].get("cluster", "UNKNOWN")
+        return "UNKNOWN"
+
+    def trainer_type_record(self, name: str, archetype: str) -> dict | None:
+        for key in (name, self.canonical_trainer(name)):
+            if key in self.trainer_styles:
+                return self.trainer_styles[key].get("type_record", {}).get(archetype)
+        return None
+
+    def cluster_record(self, cluster: str, archetype: str) -> dict | None:
+        return self.cluster_records.get(cluster, {}).get(archetype)
 
     def trainer_method(self, name: str) -> str:
         for key in (name, self.canonical_trainer(name)):
@@ -193,20 +287,33 @@ def similarity(runner: dict, template: dict, idx: ArchetypeIndex) -> tuple[float
 def pattern_scores(runners: list[dict], history: list[dict], idx: ArchetypeIndex, top_k: int = 4) -> dict[str, dict]:
     out = {}
     template_styles = {id(t): blended_style(t, idx) for t in history}
+    template_camps = {id(t): campaign_vector(t, idx.dims, idx.trainer_profile(t["trainer"])) for t in history}
     for r in runners:
         r_trainer = idx.canonical_trainer(r["trainer"])
         r_style = blended_style(r, idx)
+        r_camp = campaign_vector(r, idx.dims, idx.trainer_profile(r["trainer"]))
+        r_cluster = idx.trainer_cluster(r["trainer"])
+        r_camp_cluster = campaign_cluster(r)
         contributions = []
         for t in history:
             sim, parts = similarity(r, t, idx)
             same_trainer = idx.canonical_trainer(t["trainer"]) == r_trainer
             tsim = style_similarity(r_style, template_styles[id(t)])
-            mult = 1.0 if same_trainer else CROSS_BASE + (1.0 - CROSS_BASE) * tsim
+            if same_trainer:
+                csim = style_similarity(r_camp, template_camps[id(t)])
+                mult = method_gate(csim)
+                gate_note = f"same trainer, campaign match {csim:.2f}"
+            else:
+                mult = method_gate(tsim)
+                t_cluster = idx.trainer_cluster(t["trainer"])
+                if t_cluster not in (r_cluster, r_camp_cluster) and tsim < CROSS_CLUSTER_WAIVER:
+                    mult *= CROSS_CLUSTER_PENALTY
+                gate_note = f"method similarity {tsim:.2f}"
             contrib = t.get("confidence", 0.8) * RESULT_WEIGHT.get(t["pos"], 0.2) * (sim ** 2.2) * mult
             contributions.append({
                 "year": t["year"], "horse": t["horse"], "pos": t["pos"], "trainer": t["trainer"],
                 "archetype": idx.archetype_of(t["leadup_group"]), "similarity": round(sim, 3),
-                "trainer_style_similarity": round(tsim, 3), "trainer_multiplier": round(mult, 3),
+                "trainer_style_similarity": round(tsim, 3), "trainer_multiplier": round(mult, 3), "gate_note": gate_note,
                 "same_trainer": same_trainer, "contribution": contrib,
                 "top_feature_matches": sorted(parts.items(), key=lambda kv: -kv[1])[:3],
             })
@@ -221,8 +328,10 @@ def pattern_scores(runners: list[dict], history: list[dict], idx: ArchetypeIndex
         prof = idx.trainer_profile(r["trainer"])
         camp = campaign_vector(r, idx.dims, prof)
         departure = 1.0 - style_similarity(prof, camp)
+        type_rec = trainer_type_term(r, idx.archetype_of(r["leadup_group"]) or "OTHER", idx)
         out[r["horse"]] = {
             "pattern_total": total,
+            "type_record": type_rec,
             "campaign_style": r_style,
             "trainer_profile": prof,
             "campaign_departure": departure,

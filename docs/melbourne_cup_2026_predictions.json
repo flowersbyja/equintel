@@ -22,16 +22,16 @@
       "no": 1,
       "horse": "Sons And Lovers",
       "odds": 19.0,
-      "win_prob": 0.05961970532892737,
-      "place_prob": 0.18082,
-      "top4_prob": 0.24318,
+      "win_prob": 0.07493063430503341,
+      "place_prob": 0.21692,
+      "top4_prob": 0.28825,
       "components": {
         "horse": "Sons And Lovers",
         "market_prob": 0.042671956907955,
         "form_rating": 1.086,
         "form_z": 0.896493959025921,
-        "pattern_total": 2.22601577995038,
-        "pattern_z": 0.5671853231558409,
+        "pattern_total": 1.405411492507033,
+        "pattern_z": 0.8927535834143617,
         "prior": -0.21,
         "prior_notes": [
           "trainer Cup record 2w/4p +0.25",
@@ -45,23 +45,29 @@
           "hot tempo scenario +0.04",
           "style history +0.08"
         ],
-        "logit": -1.9073641875058707
+        "trainer_type_adj": 0.14145529125288764,
+        "trainer_type_notes": [
+          "Joseph O'Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 & 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan)",
+          "as a closer: 11 runners, 1 wins, 2 placings (Rekindling won 2017, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025, Yucatan, Latrobe, Al Riffa unplaced)",
+          "carrying 57kg+: 2 runners, 0 wins, 0 placings"
+        ],
+        "logit": -1.6682384181754268
       }
     },
     {
       "no": 2,
       "horse": "Trustyourinstinct",
       "odds": 8.0,
-      "win_prob": 0.06752862282985003,
-      "place_prob": 0.20099,
-      "top4_prob": 0.26771,
+      "win_prob": 0.07893987775849771,
+      "place_prob": 0.22633,
+      "top4_prob": 0.29882,
       "components": {
         "horse": "Trustyourinstinct",
         "market_prob": 0.10134589765639314,
         "form_rating": 0.136,
         "form_z": 0.051234581563717775,
-        "pattern_total": 2.284465779709781,
-        "pattern_z": 0.6906826316167765,
+        "pattern_total": 1.3027704524464983,
+        "pattern_z": 0.7747785848211568,
         "prior": -0.22,
         "prior_notes": [
           "trainer Cup record 2w/4p +0.25",
@@ -77,23 +83,29 @@
           "hot tempo scenario +0.12",
           "style history -0.01"
         ],
-        "logit": -1.7827987833348011
+        "trainer_type_adj": 0.14145529125288764,
+        "trainer_type_notes": [
+          "Joseph O'Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 & 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan)",
+          "as a closer: 11 runners, 1 wins, 2 placings (Rekindling won 2017, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025, Yucatan, Latrobe, Al Riffa unplaced)",
+          "carrying 57kg+: 2 runners, 0 wins, 0 placings"
+        ],
+        "logit": -1.6161147061205994
       }
     },
     {
       "no": 3,
       "horse": "Knight's Choice",
       "odds": 34.0,
-      "win_prob": 0.023028103575792158,
-      "place_prob": 0.08056,
-      "top4_prob": 0.11089,
+      "win_prob": 0.03018961702005009,
+      "place_prob": 0.10119,
+      "top4_prob": 0.13735,
       "components": {
         "horse": "Knight's Choice",
         "market_prob": 0.023846093566210147,
         "form_rating": -0.996,
         "form_z": -0.9559586976859811,
-        "pattern_total": 2.1033416038967894,
-        "pattern_z": 0.29708969037489075,
+        "pattern_total": 0.7951326479947135,
+        "pattern_z": 0.010508503315187628,
         "prior": 0.03,
         "prior_notes": [
           "trainer Cup record 2w/0p +0.16",
@@ -108,23 +120,27 @@
           "hot tempo scenario +0.12",
           "style history -0.01"
         ],
-        "logit": -2.858634968633468
+        "trainer_type_adj": 0.3673061549166105,
+        "trainer_type_notes": [
+          "John Symons & Sheila Laxon with this type: 2 runners, 1 wins, 0 placings (Ethereal won 2001 (Laxon); Knight's Choice 2026 comes off the Caulfield Cup again)"
+        ],
+        "logit": -2.5773031698347686
       }
     },
     {
       "no": 4,
       "horse": "Middle Earth",
       "odds": 14.0,
-      "win_prob": 0.06497785316861272,
-      "place_prob": 0.19407,
-      "top4_prob": 0.2597,
+      "win_prob": 0.07978683230812743,
+      "place_prob": 0.22797,
+      "top4_prob": 0.30129,
       "components": {
         "horse": "Middle Earth",
         "market_prob": 0.05791194151793893,
         "form_rating": -0.794,
         "form_z": -0.7762298616361233,
-        "pattern_total": 2.7561279665229854,
-        "pattern_z": 1.5850034039372551,
+        "pattern_total": 1.3277438507445256,
+        "pattern_z": 0.8043047983460764,
         "prior": -0.10000000000000003,
         "prior_notes": [
           "trainer Cup record 1w/5p +0.23",
@@ -139,23 +155,27 @@
           "hot tempo scenario +0.12",
           "style history -0.01"
         ],
-        "logit": -1.8213038419022767
+        "trainer_type_adj": 0.45007067793267325,
+        "trainer_type_notes": [
+          "Ciaron Maher with this type: 3 runners, 1 wins, 1 placings (Gold Trip won 2022, Sir Dragonet 4th 2020, Gold Trip 17th 2023 (58kg))"
+        ],
+        "logit": -1.6054427456469567
       }
     },
     {
       "no": 5,
       "horse": "Vauban",
       "odds": 51.0,
-      "win_prob": 0.002956252310905458,
-      "place_prob": 0.01324,
-      "top4_prob": 0.0179,
+      "win_prob": 0.003949269354903969,
+      "place_prob": 0.01648,
+      "top4_prob": 0.02318,
       "components": {
         "horse": "Vauban",
         "market_prob": 0.015897395710806766,
         "form_rating": 0.284,
         "form_z": 0.18291709510519782,
-        "pattern_total": 1.1093440668197754,
-        "pattern_z": -2.7512094709831287,
+        "pattern_total": 0.17890292720531908,
+        "pattern_z": -2.0,
         "prior": -0.9199999999999999,
         "prior_notes": [
           "trainer Cup record 1w/1p +0.11",
@@ -170,23 +190,27 @@
           "hot tempo scenario -0.08",
           "style history -0.15"
         ],
-        "logit": -4.911427978297185
+        "trainer_type_adj": 0.07479449754633766,
+        "trainer_type_notes": [
+          "Gai Waterhouse & Adrian Bott has never taken this type into the Cup (untested: Vauban 2026 is the first Waterhouse/Bott runner off a Geelong Cup lead-up); trainers of the one run import school with this type: 20 runners, 2 wins, 3 placings"
+        ],
+        "logit": -4.611270639455909
       }
     },
     {
       "no": 6,
       "horse": "Enfjaar",
       "odds": 22.0,
-      "win_prob": 0.05158085619405907,
-      "place_prob": 0.1619,
-      "top4_prob": 0.21743,
+      "win_prob": 0.04996499847930948,
+      "place_prob": 0.15544,
+      "top4_prob": 0.20932,
       "components": {
         "horse": "Enfjaar",
         "market_prob": 0.03685305369323387,
         "form_rating": 2.007,
         "form_z": 1.715950681807699,
-        "pattern_total": 2.2943367850634795,
-        "pattern_z": 0.7112264762259098,
+        "pattern_total": 1.246409913771269,
+        "pattern_z": 0.7060410743058039,
         "prior": -0.19,
         "prior_notes": [
           "trainer Cup record 0w/0p -0.05",
@@ -200,23 +224,27 @@
           "hot tempo scenario -0.08",
           "style history -0.15"
         ],
-        "logit": -2.0521997335992146
+        "trainer_type_adj": -0.019723143763324957,
+        "trainer_type_notes": [
+          "Roger Varian has never taken this type into the Cup (no record); trainers of the one run import school with this type: 18 runners, 0 wins, 5 placings"
+        ],
+        "logit": -2.073478497938572
       }
     },
     {
       "no": 7,
       "horse": "Royal Supremacy",
       "odds": 51.0,
-      "win_prob": 0.007935180597729845,
-      "place_prob": 0.03047,
-      "top4_prob": 0.04209,
+      "win_prob": 0.0052426106892344195,
+      "place_prob": 0.02058,
+      "top4_prob": 0.02894,
       "components": {
         "horse": "Royal Supremacy",
         "market_prob": 0.015897395710806766,
         "form_rating": -1.973,
         "form_z": -1.8252412364023733,
-        "pattern_total": 1.9447245222974663,
-        "pattern_z": -0.07650125923790647,
+        "pattern_total": 0.7153073498321745,
+        "pattern_z": -0.15218946328101848,
         "prior": -0.16,
         "prior_notes": [
           "trainer Cup record 1w/5p +0.23",
@@ -230,23 +258,27 @@
           "hot tempo scenario -0.20",
           "style history +0.00"
         ],
-        "logit": -3.924044219898953
+        "trainer_type_adj": -0.3812309493079699,
+        "trainer_type_notes": [
+          "Ciaron Maher with this type: 6 runners, 0 wins, 0 placings (Jameka 15th 2016 (fav), Smokin' Romans 2022, Royal Supremacy 15th 2025)"
+        ],
+        "logit": -4.327981630419857
       }
     },
     {
       "no": 8,
       "horse": "Wine Dark Sea",
       "odds": 46.0,
-      "win_prob": 0.010680677858202786,
-      "place_prob": 0.04044,
-      "top4_prob": 0.05554,
+      "win_prob": 0.012446787000172682,
+      "place_prob": 0.04586,
+      "top4_prob": 0.06291,
       "components": {
         "horse": "Wine Dark Sea",
         "market_prob": 0.017625373505459674,
         "form_rating": 0.144,
         "form_z": 0.05835255526866263,
-        "pattern_total": 1.9776798279556267,
-        "pattern_z": 0.003565966357529079,
+        "pattern_total": 1.1751087714805948,
+        "pattern_z": 0.6145608501731634,
         "prior": -0.38999999999999996,
         "prior_notes": [
           "trainer Cup record 0w/0p -0.05",
@@ -261,23 +293,27 @@
           "hot tempo scenario -0.08",
           "style history -0.15"
         ],
-        "logit": -3.626914031869524
+        "trainer_type_adj": -0.019723143763324957,
+        "trainer_type_notes": [
+          "Harry Charlton has never taken this type into the Cup (no record); trainers of the one run import school with this type: 18 runners, 0 wins, 5 placings"
+        ],
+        "logit": -3.4633387104881592
       }
     },
     {
       "no": 9,
       "horse": "Asterix",
       "odds": 56.0,
-      "win_prob": 0.01268928587927011,
-      "place_prob": 0.04786,
-      "top4_prob": 0.06503,
+      "win_prob": 0.013436157968761438,
+      "place_prob": 0.04923,
+      "top4_prob": 0.06771,
       "components": {
         "horse": "Asterix",
         "market_prob": 0.014477985379484732,
         "form_rating": -1.348,
         "form_z": -1.2691495407035553,
-        "pattern_total": 2.034230639071404,
-        "pattern_z": 0.13790058612490413,
+        "pattern_total": 0.9763381021463691,
+        "pattern_z": 0.32739753072833583,
         "prior": -0.04999999999999999,
         "prior_notes": [
           "trainer Cup record 1w/6p +0.25",
@@ -291,23 +327,27 @@
           "hot tempo scenario +0.12",
           "style history -0.01"
         ],
-        "logit": -3.454592327402977
+        "trainer_type_adj": 0.010891445012898852,
+        "trainer_type_notes": [
+          "Chris Waller with this type: 14 runners, 0 wins, 3 placings (Soulcombe 2nd 2023, Finche 4th 2018, River Of Stars 4th 2025; Youngstar, Finche 2019, Buckaroo, Valiant King, Kalapour, Stockman, Montefilia unplaced)"
+        ],
+        "logit": -3.3868517990090488
       }
     },
     {
       "no": 10,
       "horse": "Goodie Two Shoes",
       "odds": 26.0,
-      "win_prob": 0.013949284872462433,
-      "place_prob": 0.05261,
-      "top4_prob": 0.07224,
+      "win_prob": 0.022582778675573702,
+      "place_prob": 0.07952,
+      "top4_prob": 0.10773,
       "components": {
         "horse": "Goodie Two Shoes",
         "market_prob": 0.03118335312504404,
         "form_rating": -0.569,
         "form_z": -0.5760368511845487,
-        "pattern_total": 1.9357158615190415,
-        "pattern_z": -0.09862464422996703,
+        "pattern_total": 1.1966572965615727,
+        "pattern_z": 0.6427710580460646,
         "prior": -0.45,
         "prior_notes": [
           "trainer Cup record 2w/4p +0.25",
@@ -323,23 +363,28 @@
           "hot tempo scenario +0.04",
           "style history +0.08"
         ],
-        "logit": -3.359922089926035
+        "trainer_type_adj": 0.26988976172490214,
+        "trainer_type_notes": [
+          "Joseph O'Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 & 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan)",
+          "as a closer: 11 runners, 1 wins, 2 placings (Rekindling won 2017, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025, Yucatan, Latrobe, Al Riffa unplaced)"
+        ],
+        "logit": -2.8676136175183236
       }
     },
     {
       "no": 11,
       "horse": "Juja Kibo",
       "odds": 12.0,
-      "win_prob": 0.09018897389102297,
-      "place_prob": 0.25216,
-      "top4_prob": 0.33286,
+      "win_prob": 0.09313681191858335,
+      "place_prob": 0.25653,
+      "top4_prob": 0.33744,
       "components": {
         "horse": "Juja Kibo",
         "market_prob": 0.06756393177092875,
         "form_rating": 1.42,
         "form_z": 1.1936693612073692,
-        "pattern_total": 1.9352713025020942,
-        "pattern_z": -0.09971905226439366,
+        "pattern_total": 0.5620862502533821,
+        "pattern_z": -0.5210695532379026,
         "prior": -0.07,
         "prior_notes": [
           "trainer Cup record 1w/5p +0.23",
@@ -352,23 +397,27 @@
           "hot tempo scenario +0.12",
           "style history -0.01"
         ],
-        "logit": -1.4934431543360633
+        "trainer_type_adj": 0.16911658486137832,
+        "trainer_type_notes": [
+          "Ciaron Maher with this type: 9 runners, 0 wins, 3 placings (High Emocean 3rd 2022, Ashrun 4th 2023, Middle Earth 3rd 2025; Future History 15th 2023, Grand Promenade, Land Legend unplaced)"
+        ],
+        "logit": -1.4507317197667378
       }
     },
     {
       "no": 12,
       "horse": "Hopewell Rock",
       "odds": 9.5,
-      "win_prob": 0.13907224004060514,
-      "place_prob": 0.35463,
-      "top4_prob": 0.4549,
+      "win_prob": 0.13519502132605757,
+      "place_prob": 0.34501,
+      "top4_prob": 0.44225,
       "components": {
         "horse": "Hopewell Rock",
         "market_prob": 0.08534391381591,
         "form_rating": 1.549,
         "form_z": 1.3084466871996052,
-        "pattern_total": 2.3765903280504013,
-        "pattern_z": 0.8790558599106318,
+        "pattern_total": 1.3442833738204347,
+        "pattern_z": 0.8235599384148874,
         "prior": -0.10000000000000002,
         "prior_notes": [
           "trainer Cup record 0w/0p -0.05",
@@ -382,23 +431,27 @@
           "hot tempo scenario +0.04",
           "style history +0.08"
         ],
-        "logit": -1.0603568226073694
+        "trainer_type_adj": -0.0010772903417001906,
+        "trainer_type_notes": [
+          "George Boughey has never taken this type into the Cup (no record); trainers of the direct flyin school with this type: 75 runners, 3 wins, 14 placings"
+        ],
+        "logit": -1.0780828893977927
       }
     },
     {
       "no": 13,
       "horse": "Onesmoothoperator",
       "odds": 76.0,
-      "win_prob": 0.0019036642819864984,
-      "place_prob": 0.00861,
-      "top4_prob": 0.01194,
+      "win_prob": 0.0012944678333874895,
+      "place_prob": 0.00609,
+      "top4_prob": 0.00828,
       "components": {
         "horse": "Onesmoothoperator",
         "market_prob": 0.01066798922698875,
         "form_rating": -2.151,
         "form_z": -1.9836161513373962,
-        "pattern_total": 1.311232773479376,
-        "pattern_z": -1.9545461443787961,
+        "pattern_total": 0.22791754392439406,
+        "pattern_z": -1.868471906385893,
         "prior": -0.65,
         "prior_notes": [
           "trainer Cup record 0w/0p -0.05",
@@ -411,23 +464,27 @@
           "hot tempo scenario -0.08",
           "style history -0.15"
         ],
-        "logit": -5.351569734920167
+        "trainer_type_adj": -0.4009540930712949,
+        "trainer_type_notes": [
+          "Tim Fitzsimmons has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 8 runners, 0 wins, 0 placings"
+        ],
+        "logit": -5.726701556593591
       }
     },
     {
       "no": 14,
       "horse": "Soul Of Spain",
       "odds": 32.0,
-      "win_prob": 0.053291525622290406,
-      "place_prob": 0.16517,
-      "top4_prob": 0.22247,
+      "win_prob": 0.049358239065666595,
+      "place_prob": 0.15301,
+      "top4_prob": 0.20665,
       "components": {
         "horse": "Soul Of Spain",
         "market_prob": 0.025336474414098285,
         "form_rating": -0.186,
         "form_z": -0.23526386006031316,
-        "pattern_total": 2.6479971138785534,
-        "pattern_z": 1.394302047722687,
+        "pattern_total": 1.6445440050425093,
+        "pattern_z": 1.1375855126517442,
         "prior": 0.25,
         "prior_notes": [
           "trainer Cup record 1w/6p +0.25"
@@ -439,23 +496,27 @@
           "hot tempo scenario +0.04",
           "style history +0.08"
         ],
-        "logit": -2.019573008678976
+        "trainer_type_adj": 0.010891445012898852,
+        "trainer_type_notes": [
+          "Chris Waller with this type: 14 runners, 0 wins, 3 placings (Soulcombe 2nd 2023, Finche 4th 2018, River Of Stars 4th 2025; Youngstar, Finche 2019, Buckaroo, Valiant King, Kalapour, Stockman, Montefilia unplaced)"
+        ],
+        "logit": -2.08569652418736
       }
     },
     {
       "no": 15,
       "horse": "Zahrann",
       "odds": 27.0,
-      "win_prob": 0.04848238571075216,
-      "place_prob": 0.15391,
-      "top4_prob": 0.20705,
+      "win_prob": 0.029168231181871077,
+      "place_prob": 0.09817,
+      "top4_prob": 0.13398,
       "components": {
         "horse": "Zahrann",
         "market_prob": 0.030028414120412777,
         "form_rating": -0.12,
         "form_z": -0.176540576994518,
-        "pattern_total": 2.6045474951946335,
-        "pattern_z": 1.315470926287039,
+        "pattern_total": 1.4372898672974825,
+        "pattern_z": 0.9276697521869488,
         "prior": 0.27999999999999997,
         "prior_notes": [
           "trainer Cup record 1w/5p +0.23",
@@ -468,23 +529,27 @@
           "hot tempo scenario +0.04",
           "style history +0.08"
         ],
-        "logit": -2.1141497825010602
+        "trainer_type_adj": -0.3812309493079699,
+        "trainer_type_notes": [
+          "Ciaron Maher with this type: 6 runners, 0 wins, 0 placings (Jameka 15th 2016 (fav), Smokin' Romans 2022, Royal Supremacy 15th 2025)"
+        ],
+        "logit": -2.6117210840390572
       }
     },
     {
       "no": 16,
       "horse": "So You Are",
       "odds": 13.0,
-      "win_prob": 0.045455609541928385,
-      "place_prob": 0.14356,
-      "top4_prob": 0.19423,
+      "win_prob": 0.04302126785665326,
+      "place_prob": 0.13563,
+      "top4_prob": 0.1835,
       "components": {
         "horse": "So You Are",
         "market_prob": 0.06236670625008808,
         "form_rating": 1.081,
         "form_z": 0.8920452254603304,
-        "pattern_total": 2.0318208943083134,
-        "pattern_z": 0.1322529098372283,
+        "pattern_total": 0.8545575797747174,
+        "pattern_z": 0.12159291284045673,
         "prior": -0.3,
         "prior_notes": [
           "trainer Cup record 0w/0p -0.05",
@@ -498,23 +563,27 @@
           "hot tempo scenario -0.08",
           "style history -0.15"
         ],
-        "logit": -2.178614097984383
+        "trainer_type_adj": -0.04129453599762971,
+        "trainer_type_notes": [
+          "Bjorn Baker has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings"
+        ],
+        "logit": -2.223106633081044
       }
     },
     {
       "no": 17,
       "horse": "Future History",
       "odds": 56.0,
-      "win_prob": 0.005341463245128285,
-      "place_prob": 0.02134,
-      "top4_prob": 0.02979,
+      "win_prob": 0.007057965286849968,
+      "place_prob": 0.02694,
+      "top4_prob": 0.03754,
       "components": {
         "horse": "Future History",
         "market_prob": 0.014477985379484732,
         "form_rating": -0.017,
         "form_z": -0.08489666554335284,
-        "pattern_total": 1.563008837562411,
-        "pattern_z": -1.1176389879282176,
+        "pattern_total": 0.7815746460227456,
+        "pattern_z": -0.015969597829040644,
         "prior": -0.8999999999999999,
         "prior_notes": [
           "trainer Cup record 0w/0p -0.05",
@@ -529,23 +598,27 @@
           "hot tempo scenario +0.04",
           "style history +0.08"
         ],
-        "logit": -4.319850701878402
+        "trainer_type_adj": -0.04129453599762971,
+        "trainer_type_notes": [
+          "Gregory Hickman has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings"
+        ],
+        "logit": -4.030644420846278
       }
     },
     {
       "no": 18,
       "horse": "James J Braddock",
       "odds": 17.0,
-      "win_prob": 0.03705326426430959,
-      "place_prob": 0.12136,
-      "top4_prob": 0.16538,
+      "win_prob": 0.055871883154444114,
+      "place_prob": 0.17159,
+      "top4_prob": 0.22878,
       "components": {
         "horse": "James J Braddock",
         "market_prob": 0.047692187132420294,
         "form_rating": -0.796,
         "form_z": -0.7780093550623595,
-        "pattern_total": 2.3793825207667765,
-        "pattern_z": 0.88465057083604,
+        "pattern_total": 1.8477116636770898,
+        "pattern_z": 1.3193857386676169,
         "prior": -0.24999999999999997,
         "prior_notes": [
           "trainer Cup record 2w/4p +0.25",
@@ -561,23 +634,29 @@
           "hot tempo scenario +0.04",
           "style history +0.08"
         ],
-        "logit": -2.3829938810956266
+        "trainer_type_adj": 0.2908333718359785,
+        "trainer_type_notes": [
+          "Joseph O'Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 & 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan)",
+          "as a closer: 11 runners, 1 wins, 2 placings (Rekindling won 2017, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025, Yucatan, Latrobe, Al Riffa unplaced)",
+          "with lightly raced 3-4yos: 5 runners, 1 wins, 1 placings"
+        ],
+        "logit": -1.961739958910175
       }
     },
     {
       "no": 19,
       "horse": "Kizlyar",
       "odds": 41.0,
-      "win_prob": 0.00902348659836045,
-      "place_prob": 0.03465,
-      "top4_prob": 0.04809,
+      "win_prob": 0.01145811965579597,
+      "place_prob": 0.04269,
+      "top4_prob": 0.05865,
       "components": {
         "horse": "Kizlyar",
         "market_prob": 0.019774809298808416,
         "form_rating": 0.046,
         "form_z": -0.028842622616912002,
-        "pattern_total": 1.5152854951380461,
-        "pattern_z": -1.2653888507589994,
+        "pattern_total": 0.6212503918645772,
+        "pattern_z": -0.3682552910890541,
         "prior": -0.35,
         "prior_notes": [
           "trainer Cup record 2w/4p +0.25",
@@ -592,23 +671,27 @@
           "hot tempo scenario -0.08",
           "style history -0.15"
         ],
-        "logit": -3.7955195330315648
+        "trainer_type_adj": -0.019723143763324957,
+        "trainer_type_notes": [
+          "Joseph O'Brien has never taken this type into the Cup (untested: Kizlyar 2026 is O'Brien's first Cup runner with an Australian lead-up); trainers of the one run import school with this type: 10 runners, 1 wins, 1 placings"
+        ],
+        "logit": -3.5461026088939063
       }
     },
     {
       "no": 20,
       "horse": "Point Of Law",
       "odds": 6.5,
-      "win_prob": 0.1303605310421968,
-      "place_prob": 0.33922,
-      "top4_prob": 0.43659,
+      "win_prob": 0.07706287840401459,
+      "place_prob": 0.22341,
+      "top4_prob": 0.29478,
       "components": {
         "horse": "Point Of Law",
         "market_prob": 0.12473341250017617,
         "form_rating": 1.363,
         "form_z": 1.142953798559637,
-        "pattern_total": 1.962324076756191,
-        "pattern_z": -0.03357457179206892,
+        "pattern_total": 0.16064575528317093,
+        "pattern_z": -2.0,
         "prior": 0.32999999999999996,
         "prior_notes": [
           "trainer Cup record 1w/5p +0.23",
@@ -621,23 +704,27 @@
           "hot tempo scenario -0.08",
           "style history -0.15"
         ],
-        "logit": -1.125046405636484
+        "trainer_type_adj": 0.07479449754633766,
+        "trainer_type_notes": [
+          "Ciaron Maher has never taken this type into the Cup (untested: Point Of Law 2026 is the first horse Maher has trained from Werribee quarantine with one run); trainers of the one run import school with this type: 20 runners, 2 wins, 3 placings"
+        ],
+        "logit": -1.6401795365525254
       }
     },
     {
       "no": 21,
       "horse": "Strictly Business",
       "odds": 61.0,
-      "win_prob": 0.007551074081561583,
-      "place_prob": 0.03023,
-      "top4_prob": 0.04164,
+      "win_prob": 0.008334611713103878,
+      "place_prob": 0.03288,
+      "top4_prob": 0.04472,
       "components": {
         "horse": "Strictly Business",
         "market_prob": 0.013291265266412215,
         "form_rating": -0.994,
         "form_z": -0.9541792042597448,
-        "pattern_total": 1.824491577410149,
-        "pattern_z": -0.3805837348735597,
+        "pattern_total": 0.8544057272175626,
+        "pattern_z": 0.12131878460340269,
         "prior": -0.45,
         "prior_notes": [
           "trainer Cup record 0w/0p -0.05",
@@ -652,23 +739,27 @@
           "hot tempo scenario +0.04",
           "style history +0.08"
         ],
-        "logit": -3.9736605176555435
+        "trainer_type_adj": -0.04129453599762971,
+        "trainer_type_notes": [
+          "Thomas Carberry has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings"
+        ],
+        "logit": -3.8643842978100844
       }
     },
     {
       "no": 22,
       "horse": "Mr Monaco",
       "odds": 24.0,
-      "win_prob": 0.04319382215097554,
-      "place_prob": 0.1365,
-      "top4_prob": 0.1849,
+      "win_prob": 0.049088163007915006,
+      "place_prob": 0.15021,
+      "top4_prob": 0.20296,
       "components": {
         "horse": "Mr Monaco",
         "market_prob": 0.03378196588546437,
         "form_rating": 1.748,
         "form_z": 1.4855062831101087,
-        "pattern_total": 1.9892329168334077,
-        "pattern_z": 0.03131949914164042,
+        "pattern_total": 0.754193426061176,
+        "pattern_z": -0.07083727490373849,
         "prior": -0.12,
         "prior_notes": [
           "trainer Cup record 1w/5p +0.23",
@@ -683,23 +774,27 @@
           "hot tempo scenario -0.08",
           "style history -0.15"
         ],
-        "logit": -2.2296528539973104
+        "trainer_type_adj": 0.16911658486137832,
+        "trainer_type_notes": [
+          "Ciaron Maher with this type: 9 runners, 0 wins, 3 placings (High Emocean 3rd 2022, Ashrun 4th 2023, Middle Earth 3rd 2025; Future History 15th 2023, Grand Promenade, Land Legend unplaced)"
+        ],
+        "logit": -2.0911833013495458
       }
     },
     {
       "no": 23,
       "horse": "Zakouma",
       "odds": 31.0,
-      "win_prob": 0.018461336747476582,
-      "place_prob": 0.06486,
-      "top4_prob": 0.08932,
+      "win_prob": 0.017794933568268233,
+      "place_prob": 0.06226,
+      "top4_prob": 0.08541,
       "components": {
         "horse": "Zakouma",
         "market_prob": 0.026153780040359516,
         "form_rating": 0.149,
         "form_z": 0.06280128883425318,
-        "pattern_total": 1.7462625431724041,
-        "pattern_z": -0.5893926797420166,
+        "pattern_total": 0.5554648040240956,
+        "pattern_z": -0.5391300544706435,
         "prior": -0.3,
         "prior_notes": [
           "trainer Cup record 0w/0p -0.05",
@@ -713,23 +808,27 @@
           "hot tempo scenario +0.12",
           "style history -0.01"
         ],
-        "logit": -3.079671693614209
+        "trainer_type_adj": -0.04129453599762971,
+        "trainer_type_notes": [
+          "Grahame Begg has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings"
+        ],
+        "logit": -3.1058874420304265
       }
     },
     {
       "no": 24,
       "horse": "Shockletz",
       "odds": 10.0,
-      "win_prob": 0.05567480016559356,
-      "place_prob": 0.17084,
-      "top4_prob": 0.22913,
+      "win_prob": 0.05068784246772446,
+      "place_prob": 0.15606,
+      "top4_prob": 0.20956,
       "components": {
         "horse": "Shockletz",
         "market_prob": 0.08107671812511451,
         "form_rating": 0.813,
         "form_z": 0.6535931063446772,
-        "pattern_total": 1.8702619343138953,
-        "pattern_z": -0.26252649533932,
+        "pattern_total": 0.38239194331388454,
+        "pattern_z": -1.103889878507908,
         "prior": -0.32,
         "prior_notes": [
           "trainer Cup record 1w/5p +0.23",
@@ -745,7 +844,11 @@
           "hot tempo scenario +0.12",
           "style history -0.01"
         ],
-        "logit": -1.975822709421947
+        "trainer_type_adj": 0.16911658486137832,
+        "trainer_type_notes": [
+          "Ciaron Maher with this type: 9 runners, 0 wins, 3 placings (High Emocean 3rd 2022, Ashrun 4th 2023, Middle Earth 3rd 2025; Future History 15th 2023, Grand Promenade, Land Legend unplaced)"
+        ],
+        "logit": -2.059115139511145
       }
     }
   ],
@@ -753,56 +856,83 @@
     {
       "order": [
         "Hopewell Rock",
-        "Point Of Law",
         "Juja Kibo",
+        "Middle Earth",
         "Trustyourinstinct"
       ],
-      "prob": 0.0002032179406899678
-    },
-    {
-      "order": [
-        "Point Of Law",
-        "Hopewell Rock",
-        "Juja Kibo",
-        "Trustyourinstinct"
-      ],
-      "prob": 0.00020154918047816055
+      "prob": 0.00013230411484036617
     },
     {
       "order": [
         "Hopewell Rock",
-        "Point Of Law",
+        "Juja Kibo",
         "Trustyourinstinct",
-        "Juja Kibo"
+        "Middle Earth"
       ],
-      "prob": 0.00019733739701035182
+      "prob": 0.00013216688544624282
     },
     {
       "order": [
         "Hopewell Rock",
-        "Point Of Law",
+        "Middle Earth",
+        "Juja Kibo",
+        "Trustyourinstinct"
+      ],
+      "prob": 0.00013039536011117246
+    },
+    {
+      "order": [
+        "Hopewell Rock",
+        "Trustyourinstinct",
         "Juja Kibo",
         "Middle Earth"
       ],
-      "prob": 0.00019629614247021604
+      "prob": 0.00013013998366365973
     },
     {
       "order": [
-        "Point Of Law",
         "Hopewell Rock",
+        "Juja Kibo",
+        "Middle Earth",
+        "Point Of Law"
+      ],
+      "prob": 0.00012946943441463212
+    },
+    {
+      "order": [
+        "Hopewell Rock",
+        "Juja Kibo",
+        "Point Of Law",
+        "Middle Earth"
+      ],
+      "prob": 0.00012903801407787832
+    },
+    {
+      "order": [
+        "Hopewell Rock",
+        "Middle Earth",
         "Trustyourinstinct",
         "Juja Kibo"
       ],
-      "prob": 0.0001957169259273637
+      "prob": 0.00012818209618033812
     },
     {
       "order": [
-        "Point Of Law",
         "Hopewell Rock",
         "Juja Kibo",
-        "Middle Earth"
+        "Trustyourinstinct",
+        "Point Of Law"
       ],
-      "prob": 0.00019468422183381275
+      "prob": 0.00012809885825218234
+    },
+    {
+      "order": [
+        "Hopewell Rock",
+        "Trustyourinstinct",
+        "Middle Earth",
+        "Juja Kibo"
+      ],
+      "prob": 0.00012806388567574033
     },
     {
       "order": [
@@ -811,34 +941,7 @@
         "Point Of Law",
         "Trustyourinstinct"
       ],
-      "prob": 0.0001944259966431396
-    },
-    {
-      "order": [
-        "Point Of Law",
-        "Juja Kibo",
-        "Hopewell Rock",
-        "Trustyourinstinct"
-      ],
-      "prob": 0.0001910733117072
-    },
-    {
-      "order": [
-        "Hopewell Rock",
-        "Point Of Law",
-        "Middle Earth",
-        "Juja Kibo"
-      ],
-      "prob": 0.00018998641219226644
-    },
-    {
-      "order": [
-        "Point Of Law",
-        "Hopewell Rock",
-        "Middle Earth",
-        "Juja Kibo"
-      ],
-      "prob": 0.00018842630502665872
+      "prob": 0.0001278045673156787
     }
   ],
   "first_four_boxed": [
@@ -846,10 +949,10 @@
       "set": [
         "Hopewell Rock",
         "Juja Kibo",
-        "Point Of Law",
+        "Middle Earth",
         "Trustyourinstinct"
       ],
-      "prob": 0.0042546153446442825
+      "prob": 0.0028977054972183546
     },
     {
       "set": [
@@ -858,7 +961,34 @@
         "Middle Earth",
         "Point Of Law"
       ],
-      "prob": 0.004092548150187788
+      "prob": 0.002826981939657081
+    },
+    {
+      "set": [
+        "Hopewell Rock",
+        "Juja Kibo",
+        "Point Of Law",
+        "Trustyourinstinct"
+      ],
+      "prob": 0.0027961053342563822
+    },
+    {
+      "set": [
+        "Hopewell Rock",
+        "Juja Kibo",
+        "Middle Earth",
+        "Sons And Lovers"
+      ],
+      "prob": 0.0027469615815570608
+    },
+    {
+      "set": [
+        "Hopewell Rock",
+        "Juja Kibo",
+        "Sons And Lovers",
+        "Trustyourinstinct"
+      ],
+      "prob": 0.002716960424236991
     },
     {
       "set": [
@@ -867,34 +997,7 @@
         "Point Of Law",
         "Sons And Lovers"
       ],
-      "prob": 0.003754469583521853
-    },
-    {
-      "set": [
-        "Hopewell Rock",
-        "Juja Kibo",
-        "Point Of Law",
-        "Shockletz"
-      ],
-      "prob": 0.00350746309942665
-    },
-    {
-      "set": [
-        "Hopewell Rock",
-        "Juja Kibo",
-        "Point Of Law",
-        "Soul Of Spain"
-      ],
-      "prob": 0.003358956196782858
-    },
-    {
-      "set": [
-        "Enfjaar",
-        "Hopewell Rock",
-        "Juja Kibo",
-        "Point Of Law"
-      ],
-      "prob": 0.0032526734145495455
+      "prob": 0.002650655440200186
     },
     {
       "set": [
@@ -903,7 +1006,25 @@
         "Point Of Law",
         "Trustyourinstinct"
       ],
-      "prob": 0.0030386068949727176
+      "prob": 0.00238028712557136
+    },
+    {
+      "set": [
+        "Hopewell Rock",
+        "Middle Earth",
+        "Sons And Lovers",
+        "Trustyourinstinct"
+      ],
+      "prob": 0.0023129338592225044
+    },
+    {
+      "set": [
+        "Hopewell Rock",
+        "Middle Earth",
+        "Point Of Law",
+        "Sons And Lovers"
+      ],
+      "prob": 0.002256507985680294
     },
     {
       "set": [
@@ -912,25 +1033,7 @@
         "Sons And Lovers",
         "Trustyourinstinct"
       ],
-      "prob": 0.002787665822749126
-    },
-    {
-      "set": [
-        "Hopewell Rock",
-        "Middle Earth",
-        "Point Of Law",
-        "Sons And Lovers"
-      ],
-      "prob": 0.002681523047234325
-    },
-    {
-      "set": [
-        "Hopewell Rock",
-        "Point Of Law",
-        "Shockletz",
-        "Trustyourinstinct"
-      ],
-      "prob": 0.00260431349272103
+      "prob": 0.0022318736767461948
     }
   ]
 }

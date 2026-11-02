@@ -10,75 +10,75 @@
 
 ## Selections
 
-1. **Hopewell Rock** (No.12, barrier 15, 54.5kg, George Boughey, Zac Lloyd) - win 13.9%, top-4 45.5%, market $9.50
-2. **Point Of Law** (No.20, barrier 9, 53.0kg, Ciaron Maher, Ethan Brown) - win 13.0%, top-4 43.7%, market $6.50
-3. **Juja Kibo** (No.11, barrier 14, 55.0kg, Ciaron Maher, Sam Clipperton) - win 9.0%, top-4 33.3%, market $12.00
-4. **Trustyourinstinct** (No.2, barrier 18, 57.0kg, Joseph O'Brien, James McDonald) - win 6.8%, top-4 26.8%, market $8.00
+1. **Hopewell Rock** (No.12, barrier 15, 54.5kg, George Boughey, Zac Lloyd) - win 13.5%, top-4 44.2%, market $9.50
+2. **Juja Kibo** (No.11, barrier 14, 55.0kg, Ciaron Maher, Sam Clipperton) - win 9.3%, top-4 33.7%, market $12.00
+3. **Middle Earth** (No.4, barrier 1, 56.5kg, Ciaron Maher, Mark Zahra) - win 8.0%, top-4 30.1%, market $14.00
+4. **Trustyourinstinct** (No.2, barrier 18, 57.0kg, Joseph O'Brien, James McDonald) - win 7.9%, top-4 29.9%, market $8.00
 
-**Most likely exact first four (model order):** Hopewell Rock - Point Of Law - Juja Kibo - Trustyourinstinct (0.0%) / Point Of Law - Hopewell Rock - Juja Kibo - Trustyourinstinct (0.0%) / Hopewell Rock - Point Of Law - Trustyourinstinct - Juja Kibo (0.0%)
+**Most likely exact first four (model order):** Hopewell Rock - Juja Kibo - Middle Earth - Trustyourinstinct (0.0%) / Hopewell Rock - Juja Kibo - Trustyourinstinct - Middle Earth (0.0%) / Hopewell Rock - Middle Earth - Juja Kibo - Trustyourinstinct (0.0%)
 
-**Most likely boxed first four:** {Hopewell Rock, Juja Kibo, Point Of Law, Trustyourinstinct} (0.4%) / {Hopewell Rock, Juja Kibo, Middle Earth, Point Of Law} (0.4%) / {Hopewell Rock, Juja Kibo, Point Of Law, Sons And Lovers} (0.4%)
+**Most likely boxed first four:** {Hopewell Rock, Juja Kibo, Middle Earth, Trustyourinstinct} (0.3%) / {Hopewell Rock, Juja Kibo, Middle Earth, Point Of Law} (0.3%) / {Hopewell Rock, Juja Kibo, Point Of Law, Trustyourinstinct} (0.3%)
 
 ## What changes with the going and the day's bias
 
 | Horse | forecast / neutral | Good 4 | Soft 6 | Soft 7+ | on-pace bias | closers bias |
 |---|---|---|---|---|---|---|
-| Hopewell Rock | 13.9% | 12.8% | 14.5% | 14.9% | 13.5% | 13.8% |
-| Point Of Law | 13.0% | 13.5% | 12.7% | 12.5% | 16.8% | 10.1% |
-| Juja Kibo | 9.0% | 7.9% | 9.7% | 10.1% | 6.9% | 11.0% |
-| Trustyourinstinct | 6.8% | 8.3% | 5.9% | 5.4% | 5.1% | 8.2% |
-| Middle Earth | 6.5% | 6.3% | 6.6% | 6.6% | 5.0% | 7.9% |
-| Sons And Lovers | 6.0% | 5.5% | 6.2% | 6.4% | 5.8% | 5.9% |
-| Shockletz | 5.6% | 5.7% | 5.4% | 5.3% | 4.2% | 6.8% |
-| Soul Of Spain | 5.3% | 5.4% | 5.3% | 5.2% | 5.2% | 5.3% |
-| Enfjaar | 5.2% | 4.8% | 5.4% | 5.5% | 6.6% | 4.0% |
-| Zahrann | 4.8% | 6.3% | 4.1% | 3.7% | 4.7% | 4.8% |
+| Hopewell Rock | 13.5% | 12.5% | 14.1% | 14.4% | 13.5% | 13.1% |
+| Juja Kibo | 9.3% | 8.2% | 10.0% | 10.4% | 7.3% | 11.2% |
+| Middle Earth | 8.0% | 7.8% | 8.1% | 8.1% | 6.2% | 9.6% |
+| Trustyourinstinct | 7.9% | 9.8% | 6.9% | 6.3% | 6.2% | 9.5% |
+| Point Of Law | 7.7% | 8.0% | 7.5% | 7.3% | 10.2% | 5.9% |
+| Sons And Lovers | 7.5% | 6.9% | 7.8% | 8.0% | 7.5% | 7.3% |
+| James J Braddock | 5.6% | 5.8% | 5.4% | 5.3% | 5.6% | 5.4% |
+| Shockletz | 5.1% | 5.3% | 4.9% | 4.8% | 4.0% | 6.1% |
+| Enfjaar | 5.0% | 4.6% | 5.2% | 5.3% | 6.6% | 3.8% |
+| Soul Of Spain | 4.9% | 5.0% | 4.9% | 4.8% | 4.9% | 4.8% |
 
 *Re-run on the day: `--track soft6` (or good4 / soft7) once the rating is posted, and `--bias on-pace` or `--bias closers` after watching how the early races at Flemington are being won.*
 
 ## Full field
 
-| Rank | No | Horse | Bar | Wt | Odds | Market | Model win | Place | Top-4 | Win edge | Form (tempo adj) | Pattern z | Prior | Going | Pace |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | 12 | Hopewell Rock | 15 | 54.5 | $9.5 | 8.5% | **13.9%** | 35.5% | 45.5% | +32% | +1.55 | +0.88 | -0.10 | +0.11 | +0.12 |
-| 2 | 20 | Point Of Law | 9 | 53.0 | $6.5 | 12.5% | **13.0%** | 33.9% | 43.7% | -15% | +1.36 | -0.03 | +0.33 | +0.00 | -0.23 |
-| 3 | 11 | Juja Kibo | 14 | 55.0 | $12.0 | 6.8% | **9.0%** | 25.2% | 33.3% | +8% | +1.42 | -0.10 | -0.07 | +0.16 | +0.11 |
-| 4 | 2 | Trustyourinstinct | 18 | 57.0 | $8.0 | 10.1% | **6.8%** | 20.1% | 26.8% | -46% | +0.14 | +0.69 | -0.22 | -0.18 | +0.11 |
-| 5 | 4 | Middle Earth | 1 | 56.5 | $14.0 | 5.8% | **6.5%** | 19.4% | 26.0% | -9% | -0.79 | +1.59 | -0.10 | +0.06 | +0.11 |
-| 6 | 1 | Sons And Lovers | 3 | 57.5 | $19.0 | 4.3% | **6.0%** | 18.1% | 24.3% | +13% | +1.09 | +0.57 | -0.21 | +0.11 | +0.12 |
-| 7 | 24 | Shockletz | 17 | 51.0 | $10.0 | 8.1% | **5.6%** | 17.1% | 22.9% | -44% | +0.81 | -0.26 | -0.32 | +0.00 | +0.11 |
-| 8 | 14 | Soul Of Spain | 5 | 54.5 | $32.0 | 2.5% | **5.3%** | 16.5% | 22.2% | +71% | -0.19 | +1.39 | +0.25 | +0.02 | +0.12 |
-| 9 | 6 | Enfjaar | 8 | 56.0 | $22.0 | 3.7% | **5.2%** | 16.2% | 21.7% | +13% | +2.01 | +0.71 | -0.19 | +0.11 | -0.23 |
-| 10 | 15 | Zahrann | 11 | 54.5 | $27.0 | 3.0% | **4.8%** | 15.4% | 20.7% | +31% | -0.12 | +1.32 | +0.28 | -0.22 | +0.12 |
-| 11 | 16 | So You Are | 7 | 54.0 | $13.0 | 6.2% | **4.5%** | 14.4% | 19.4% | -41% | +1.08 | +0.13 | -0.30 | +0.12 | -0.23 |
-| 12 | 22 | Mr Monaco | 16 | 52.5 | $24.0 | 3.4% | **4.3%** | 13.7% | 18.5% | +4% | +1.75 | +0.03 | -0.12 | +0.20 | -0.23 |
-| 13 | 18 | James J Braddock | 24 | 53.5 | $17.0 | 4.8% | **3.7%** | 12.1% | 16.5% | -37% | -0.80 | +0.88 | -0.25 | +0.00 | +0.12 |
-| 14 | 3 | Knight's Choice | 2 | 56.5 | $34.0 | 2.4% | **2.3%** | 8.1% | 11.1% | -22% | -1.00 | +0.30 | +0.03 | +0.00 | +0.11 |
-| 15 | 23 | Zakouma | 10 | 52.0 | $31.0 | 2.6% | **1.8%** | 6.5% | 8.9% | -43% | +0.15 | -0.59 | -0.30 | +0.00 | +0.11 |
-| 16 | 10 | Goodie Two Shoes | 19 | 55.0 | $26.0 | 3.1% | **1.4%** | 5.3% | 7.2% | -64% | -0.57 | -0.10 | -0.45 | -0.22 | +0.12 |
-| 17 | 9 | Asterix | 6 | 55.0 | $56.0 | 1.4% | **1.3%** | 4.8% | 6.5% | -29% | -1.35 | +0.14 | -0.05 | +0.00 | +0.11 |
-| 18 | 8 | Wine Dark Sea | 23 | 56.0 | $46.0 | 1.8% | **1.1%** | 4.0% | 5.6% | -51% | +0.14 | +0.00 | -0.39 | +0.00 | -0.23 |
-| 19 | 19 | Kizlyar | 20 | 53.5 | $41.0 | 2.0% | **0.9%** | 3.5% | 4.8% | -63% | +0.05 | -1.27 | -0.35 | +0.11 | -0.23 |
-| 20 | 7 | Royal Supremacy | 21 | 56.0 | $51.0 | 1.6% | **0.8%** | 3.0% | 4.2% | -60% | -1.97 | -0.08 | -0.16 | +0.11 | -0.20 |
-| 21 | 21 | Strictly Business | 4 | 53.0 | $61.0 | 1.3% | **0.8%** | 3.0% | 4.2% | -54% | -0.99 | -0.38 | -0.45 | +0.00 | +0.12 |
-| 22 | 17 | Future History | 12 | 53.5 | $56.0 | 1.4% | **0.5%** | 2.1% | 3.0% | -70% | -0.02 | -1.12 | -0.90 | +0.00 | +0.12 |
-| 23 | 5 | Vauban | 22 | 56.5 | $51.0 | 1.6% | **0.3%** | 1.3% | 1.8% | -85% | +0.28 | -2.75 | -0.92 | +0.11 | -0.23 |
-| 24 | 13 | Onesmoothoperator | 13 | 54.5 | $76.0 | 1.1% | **0.2%** | 0.9% | 1.2% | -86% | -2.15 | -1.95 | -0.65 | +0.11 | -0.23 |
+| Rank | No | Horse | Bar | Wt | Odds | Market | Model win | Place | Top-4 | Win edge | Form (tempo adj) | Pattern z | Trainer done it? | Prior | Going | Pace |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 12 | Hopewell Rock | 15 | 54.5 | $9.5 | 8.5% | **13.5%** | 34.5% | 44.2% | +28% | +1.55 | +0.82 | -0.00 | -0.10 | +0.11 | +0.12 |
+| 2 | 11 | Juja Kibo | 14 | 55.0 | $12.0 | 6.8% | **9.3%** | 25.7% | 33.7% | +12% | +1.42 | -0.52 | +0.17 | -0.07 | +0.16 | +0.11 |
+| 3 | 4 | Middle Earth | 1 | 56.5 | $14.0 | 5.8% | **8.0%** | 22.8% | 30.1% | +12% | -0.79 | +0.80 | +0.45 | -0.10 | +0.06 | +0.11 |
+| 4 | 2 | Trustyourinstinct | 18 | 57.0 | $8.0 | 10.1% | **7.9%** | 22.6% | 29.9% | -37% | +0.14 | +0.77 | +0.14 | -0.22 | -0.18 | +0.11 |
+| 5 | 20 | Point Of Law | 9 | 53.0 | $6.5 | 12.5% | **7.7%** | 22.3% | 29.5% | -50% | +1.36 | -2.00 | +0.07 | +0.33 | +0.00 | -0.23 |
+| 6 | 1 | Sons And Lovers | 3 | 57.5 | $19.0 | 4.3% | **7.5%** | 21.7% | 28.8% | +42% | +1.09 | +0.89 | +0.14 | -0.21 | +0.11 | +0.12 |
+| 7 | 18 | James J Braddock | 24 | 53.5 | $17.0 | 4.8% | **5.6%** | 17.2% | 22.9% | -5% | -0.80 | +1.32 | +0.29 | -0.25 | +0.00 | +0.12 |
+| 8 | 24 | Shockletz | 17 | 51.0 | $10.0 | 8.1% | **5.1%** | 15.6% | 21.0% | -49% | +0.81 | -1.10 | +0.17 | -0.32 | +0.00 | +0.11 |
+| 9 | 6 | Enfjaar | 8 | 56.0 | $22.0 | 3.7% | **5.0%** | 15.5% | 20.9% | +10% | +2.01 | +0.71 | -0.02 | -0.19 | +0.11 | -0.23 |
+| 10 | 14 | Soul Of Spain | 5 | 54.5 | $32.0 | 2.5% | **4.9%** | 15.3% | 20.7% | +58% | -0.19 | +1.14 | +0.01 | +0.25 | +0.02 | +0.12 |
+| 11 | 22 | Mr Monaco | 16 | 52.5 | $24.0 | 3.4% | **4.9%** | 15.0% | 20.3% | +18% | +1.75 | -0.07 | +0.17 | -0.12 | +0.20 | -0.23 |
+| 12 | 16 | So You Are | 7 | 54.0 | $13.0 | 6.2% | **4.3%** | 13.6% | 18.4% | -44% | +1.08 | +0.12 | -0.04 | -0.30 | +0.12 | -0.23 |
+| 13 | 3 | Knight's Choice | 2 | 56.5 | $34.0 | 2.4% | **3.0%** | 10.1% | 13.7% | +3% | -1.00 | +0.01 | +0.37 | +0.03 | +0.00 | +0.11 |
+| 14 | 15 | Zahrann | 11 | 54.5 | $27.0 | 3.0% | **2.9%** | 9.8% | 13.4% | -21% | -0.12 | +0.93 | -0.38 | +0.28 | -0.22 | +0.12 |
+| 15 | 10 | Goodie Two Shoes | 19 | 55.0 | $26.0 | 3.1% | **2.3%** | 8.0% | 10.8% | -41% | -0.57 | +0.64 | +0.27 | -0.45 | -0.22 | +0.12 |
+| 16 | 23 | Zakouma | 10 | 52.0 | $31.0 | 2.6% | **1.8%** | 6.2% | 8.5% | -45% | +0.15 | -0.54 | -0.04 | -0.30 | +0.00 | +0.11 |
+| 17 | 9 | Asterix | 6 | 55.0 | $56.0 | 1.4% | **1.3%** | 4.9% | 6.8% | -25% | -1.35 | +0.33 | +0.01 | -0.05 | +0.00 | +0.11 |
+| 18 | 8 | Wine Dark Sea | 23 | 56.0 | $46.0 | 1.8% | **1.2%** | 4.6% | 6.3% | -43% | +0.14 | +0.61 | -0.02 | -0.39 | +0.00 | -0.23 |
+| 19 | 19 | Kizlyar | 20 | 53.5 | $41.0 | 2.0% | **1.1%** | 4.3% | 5.9% | -53% | +0.05 | -0.37 | -0.02 | -0.35 | +0.11 | -0.23 |
+| 20 | 21 | Strictly Business | 4 | 53.0 | $61.0 | 1.3% | **0.8%** | 3.3% | 4.5% | -49% | -0.99 | +0.12 | -0.04 | -0.45 | +0.00 | +0.12 |
+| 21 | 17 | Future History | 12 | 53.5 | $56.0 | 1.4% | **0.7%** | 2.7% | 3.8% | -60% | -0.02 | -0.02 | -0.04 | -0.90 | +0.00 | +0.12 |
+| 22 | 7 | Royal Supremacy | 21 | 56.0 | $51.0 | 1.6% | **0.5%** | 2.1% | 2.9% | -73% | -1.97 | -0.15 | -0.38 | -0.16 | +0.11 | -0.20 |
+| 23 | 5 | Vauban | 22 | 56.5 | $51.0 | 1.6% | **0.4%** | 1.6% | 2.3% | -80% | +0.28 | -2.00 | +0.07 | -0.92 | +0.11 | -0.23 |
+| 24 | 13 | Onesmoothoperator | 13 | 54.5 | $76.0 | 1.1% | **0.1%** | 0.6% | 0.8% | -90% | -2.15 | -1.87 | -0.40 | -0.65 | +0.11 | -0.23 |
 
 *Win edge = model probability x fixed odds - 1 (equintel value definition). Positive means the market is longer than the model.*
 
 ## Value against the market
 
-- **Soul Of Spain** $32.0: model 5.3% vs market 2.5% -> edge +71%, top-4 22.2%
-- **Hopewell Rock** $9.5: model 13.9% vs market 8.5% -> edge +32%, top-4 45.5%
-- **Zahrann** $27.0: model 4.8% vs market 3.0% -> edge +31%, top-4 20.7%
-- **Enfjaar** $22.0: model 5.2% vs market 3.7% -> edge +13%, top-4 21.7%
-- **Sons And Lovers** $19.0: model 6.0% vs market 4.3% -> edge +13%, top-4 24.3%
-- **Juja Kibo** $12.0: model 9.0% vs market 6.8% -> edge +8%, top-4 33.3%
+- **Soul Of Spain** $32.0: model 4.9% vs market 2.5% -> edge +58%, top-4 20.7%
+- **Sons And Lovers** $19.0: model 7.5% vs market 4.3% -> edge +42%, top-4 28.8%
+- **Hopewell Rock** $9.5: model 13.5% vs market 8.5% -> edge +28%, top-4 44.2%
+- **Mr Monaco** $24.0: model 4.9% vs market 3.4% -> edge +18%, top-4 20.3%
+- **Juja Kibo** $12.0: model 9.3% vs market 6.8% -> edge +12%, top-4 33.7%
+- **Middle Earth** $14.0: model 8.0% vs market 5.8% -> edge +12%, top-4 30.1%
 
 ## Runner by runner: tempo, excuses and preparation pattern
 
-### 12. Hopewell Rock - model 13.9% (market 8.5%), top-4 45.5%
+### 12. Hopewell Rock - model 13.5% (market 8.5%), top-4 44.2%
 
 George Boughey / Zac Lloyd, barrier 15, 54.5kg, 5yo G, GB, style midfield, prep archetype **EURO_DIRECT_FLYIN** (EURO_DIRECT, 73 days since last run, 0 Australian prep runs).
 
@@ -93,37 +93,16 @@ Form rating +1.55 (z +1.31). Structural prior -0.10: trainer Cup record 0w/0p -0
 
 Trainer method: Young Newmarket trainer with a strongly analytical, target-driven operation (Wathnan Racing). Hopewell Rock: Goodwood handicap win, Ebor 2nd (head) in August, then no run for 73 days and straight to the Cup from quarantine - the Cross Counter / Heartbreak City fly-in shape. No prior Cup runner. This campaign: Boughey fly-in: Goodwood handicap win, Ebor 2nd, then 73 days fresh straight to the Cup from Werribee - the Cross Counter / Heartbreak City shape with no Australian run. (departure from the trainer's norm 0.09).
 
-Closest historical preps (pattern z +0.88; 0.0% of the pattern score comes from the trainer's own past Cup preps, 70.3% from winners rather than placegetters):
+**Has this trainer done this before?** (-0.00) George Boughey has never taken this type into the Cup (no record); trainers of the direct flyin school with this type: 75 runners, 3 wins, 14 placings
 
-- Twilight Payment 2020 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.83 (different trainer; method similarity 0.89, credit x0.93) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
-- Cross Counter 2018 (won, Charlie Appleby, EURO_DIRECT_FLYIN) similarity 0.83 (different trainer; method similarity 0.85, credit x0.90) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
-- Rekindling 2017 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.79 (different trainer; method similarity 0.85, credit x0.91) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
-- Heartbreak City 2016 (2nd, Tony Martin, EURO_DIRECT_FLYIN) similarity 0.90 (different trainer; method similarity 0.87, credit x0.91) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+Closest historical preps (pattern z +0.82; 0.0% of the pattern score comes from the trainer's own past Cup preps, 67.1% from winners rather than placegetters):
 
-### 20. Point Of Law - model 13.0% (market 12.5%), top-4 43.7%
+- Twilight Payment 2020 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.83 (different trainer; method similarity 0.89, credit x0.56) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+- Cross Counter 2018 (won, Charlie Appleby, EURO_DIRECT_FLYIN) similarity 0.83 (different trainer; method similarity 0.85, credit x0.45) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+- Rekindling 2017 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.79 (different trainer; method similarity 0.85, credit x0.46) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+- Marmelo 2018 (2nd, Hughie Morrison, EURO_DIRECT_FLYIN) similarity 0.92 (different trainer; method similarity 0.91, credit x0.63) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
 
-Ciaron Maher / Ethan Brown, barrier 9, 53.0kg, 4yo G, GB, style on-pace, prep archetype **GEELONG_CUP_IMPORT** (GEELONG_CUP, 13 days since last run, 1 Australian prep runs).
-
-Favourite. Bought from King Charles in August; only his sixth start. Sustained on-pace Geelong Cup win (rivals off the bit from the 600m) earned a 2kg penalty to 53kg. Trying to be the first Geelong Cup -> Melbourne Cup double since Dunaden (2011). Lightly raced 4yo on a light weight is also the Rekindling / Cross Counter age-weight profile.
-
-Lead-ups (most recent first), tempo-adjusted:
-
-- Geelong Cup G3: 1/14 beaten 0.5L, tempo moderate -> base +1.52, tempo +0.15 (on-pace and ran it out at an honest tempo) => +1.67 (weight 1.0)
-- Bahrain Trophy G3: 1/8 beaten 1.0L, tempo unknown -> base +1.46, tempo +0.00 (tempo unknown) => +1.46 (weight 0.55)
-- Queen's Vase G2: 4/10 beaten 2.0L, tempo unknown -> base +0.17, tempo +0.00 (tempo unknown) => +0.17 (weight 0.303)
-
-Form rating +1.36 (z +1.14). Structural prior +0.33: trainer Cup record 1w/5p +0.23; age 4 +0.10. Going +0.00 (going fit +0.00 x wetness 0.50 -> +0.00 (connections / pedigree only)). Pace/shape -0.23 (hot tempo scenario -0.08; style history -0.15).
-
-Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Handled like a European fly-in despite the Maher stable: UK base (Queen's Vase 4th, Bahrain Trophy win), first shipment to Werribee quarantine, ONE Australian run (Geelong Cup win) 13 days out - Americain / Dunaden / Media Puzzle shape, not Maher's usual 3-5 run build. (departure from the trainer's norm 0.37).
-
-Closest historical preps (pattern z -0.03; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
-
-- Media Puzzle 2002 (won, Dermot Weld, GEELONG_CUP_IMPORT) similarity 0.88 (different trainer; method similarity 0.70, credit x0.80) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Dunaden 2011 (won, Mikel Delzangles, GEELONG_CUP_IMPORT) similarity 0.84 (different trainer; method similarity 0.68, credit x0.79) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Americain 2010 (won, Alain de Royer-Dupre, GEELONG_CUP_IMPORT) similarity 0.80 (different trainer; method similarity 0.65, credit x0.77) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Vow And Declare 2019 (won, Danny O'Brien, CAULFIELD_CUP_FORM) similarity 0.57 (different trainer; method similarity 0.71, credit x0.81) - strongest matches: age 1.00, style 1.00, sex 1.00
-
-### 11. Juja Kibo - model 9.0% (market 6.8%), top-4 33.3%
+### 11. Juja Kibo - model 9.3% (market 6.8%), top-4 33.7%
 
 Ciaron Maher / Sam Clipperton, barrier 14, 55.0kg, 6yo G, IRE, style backmarker, prep archetype **HARDENED_LOCAL_STAYER** (MV_CUP, 10 days since last run, 4 Australian prep runs).
 
@@ -138,37 +117,16 @@ Form rating +1.42 (z +1.19). Structural prior -0.07: trainer Cup record 1w/5p +0
 
 Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Maher Golden Ticket campaign: Metropolitan win then MV Gold Cup win ten days out (both slowly run), closer. (departure from the trainer's norm 0.24).
 
-Closest historical preps (pattern z -0.10; 16.9% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+**Has this trainer done this before?** (+0.17) Ciaron Maher with this type: 9 runners, 0 wins, 3 placings (High Emocean 3rd 2022, Ashrun 4th 2023, Middle Earth 3rd 2025; Future History 15th 2023, Grand Promenade, Land Legend unplaced)
 
-- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.82 (different trainer; method similarity 0.84, credit x0.90) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Half Yours 2025 (won, Tony & Calvin McEvoy, CAULFIELD_CUP_FORM) similarity 0.70 (different trainer; method similarity 0.77, credit x0.85) - strongest matches: aus_prep_runs 1.00, leadup_finish 1.00, sex 1.00
-- Almandin 2016 (won, Robert Hickmott, BART_CUMMINGS_TICKET) similarity 0.69 (different trainer; method similarity 0.80, credit x0.87) - strongest matches: origin 1.00, age 1.00, leadup_finish 1.00
-- Gold Trip 2022 (won, Ciaron Maher & David Eustace, COX_PLATE_SHARPENER) similarity 0.62 **(same trainer's formula)** - strongest matches: days_since 1.00, aus_prep_runs 1.00, origin 1.00
+Closest historical preps (pattern z -0.52; 33.0% of the pattern score comes from the trainer's own past Cup preps, 39.4% from winners rather than placegetters):
 
-### 2. Trustyourinstinct - model 6.8% (market 10.1%), top-4 26.8%
+- Who Shot Thebarman 2014 (3rd, Chris Waller, HARDENED_LOCAL_STAYER) similarity 0.88 (different trainer; method similarity 0.92, credit x0.69) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.82 (different trainer; method similarity 0.84, credit x0.21) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Ashrun 2023 (4th, Ciaron Maher & David Eustace, HARDENED_LOCAL_STAYER) similarity 0.87 **(same trainer's formula; same trainer, campaign match 0.97, credit x0.90)** - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
+- Half Yours 2025 (won, Tony & Calvin McEvoy, CAULFIELD_CUP_FORM) similarity 0.70 (different trainer; method similarity 0.77, credit x0.21) - strongest matches: aus_prep_runs 1.00, leadup_finish 1.00, sex 1.00
 
-Joseph O'Brien / James McDonald, barrier 18, 57.0kg, 6yo G, IRE, style backmarker, prep archetype **EURO_DIRECT_FLYIN** (EURO_DIRECT, 51 days since last run, 0 Australian prep runs).
-
-Same Irish St Leger -> Cup route Joseph O'Brien used with Twilight Payment (2020), but this horse is a hold-up closer not a leader, carries 57kg from barrier 18, and the trainer has said he wants dry, fast ground. J McDonald rides.
-
-Lead-ups (most recent first), tempo-adjusted:
-
-- Irish St Leger G1: 4/7 beaten 4.5L, tempo slow -> base -0.75, tempo +0.55 (backmarker in a slowly run race - tempo did not suit, upgraded) => -0.20 (weight 1.0)
-- Curragh Cup G2: 1/6 beaten 0.0L, tempo slow -> base +1.87, tempo -0.45 (closed off a slow tempo - race shape handed it the finish, discounted) => +1.42 (weight 0.55)
-- Listed/Group race: 6/8 beaten 5.0L, tempo unknown -> base -1.09, tempo +0.00 (tempo unknown) => -1.09 (weight 0.303)
-
-Form rating +0.14 (z +0.05). Structural prior -0.22: trainer Cup record 2w/4p +0.25; Cup-winning jockey +0.05; weight 57.0kg -0.12; barrier 18 -0.10; last lead-up slowly run -0.30. Going -0.18 (going fit -0.80 x wetness 0.50 -> -0.18 (wet record 4 starts (score -0.60) blended with prior -1.0)). Pace/shape +0.11 (hot tempo scenario +0.12; style history -0.01).
-
-Trainer method: Builds the whole base in Ireland: a mid-summer break, one or two September preparation runs (Curragh Cup / Irish St Leger / Kilternan), then straight on the plane and into the Cup from Werribee with no Australian run. Both winners (Rekindling 2017, Twilight Payment 2020) won the Curragh Cup earlier in the year. Horses are kept to a simple routine at Werribee and ridden positively - Twilight Payment led throughout, Master Of Reality raced on the pace. Happy to run lightly raced classic-generation horses (Rekindling, Master Of Reality, James J Braddock) and to bring back older horses year after year (Twilight Payment, Goodie Two Shoes). Big teams of four or five runners. This campaign: Classic O'Brien fly-in via the Curragh Cup (won, like Rekindling and Twilight Payment) and Irish St Leger 4th, 51 days fresh, no Australian run. Hold-up closer, unlike Twilight Payment. (departure from the trainer's norm 0.21).
-
-Closest historical preps (pattern z +0.69; 49.2% of the pattern score comes from the trainer's own past Cup preps, 69.8% from winners rather than placegetters):
-
-- Twilight Payment 2020 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.83 **(same trainer's formula)** - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
-- Rekindling 2017 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.75 **(same trainer's formula)** - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
-- Cross Counter 2018 (won, Charlie Appleby, EURO_DIRECT_FLYIN) similarity 0.76 (different trainer; method similarity 0.87, credit x0.92) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
-- Red Cadeaux 2013 (2nd, Ed Dunlop, EURO_DIRECT_FLYIN) similarity 0.97 (different trainer; method similarity 0.91, credit x0.94) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
-
-### 4. Middle Earth - model 6.5% (market 5.8%), top-4 26.0%
+### 4. Middle Earth - model 8.0% (market 5.8%), top-4 30.1%
 
 Ciaron Maher / Mark Zahra, barrier 1, 56.5kg, 6yo G, GB, style backmarker, prep archetype **COX_PLATE_SHARPENER** (COX_PLATE, 10 days since last run, 5 Australian prep runs).
 
@@ -184,14 +142,66 @@ Form rating -0.79 (z -0.78). Structural prior -0.10: trainer Cup record 1w/5p +0
 
 Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Maher Gold Trip route: five weight-for-age / Caulfield Cup runs (Underwood, Caulfield Cup, Cox Plate) as sharpeners, raced hard, ridden last. (departure from the trainer's norm 0.29).
 
-Closest historical preps (pattern z +1.59; 21.3% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+**Has this trainer done this before?** (+0.45) Ciaron Maher with this type: 3 runners, 1 wins, 1 placings (Gold Trip won 2022, Sir Dragonet 4th 2020, Gold Trip 17th 2023 (58kg))
 
-- Verry Elleegant 2021 (won, Chris Waller, COX_PLATE_SHARPENER) similarity 0.86 (different trainer; method similarity 0.92, credit x0.95) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Fiorente 2013 (won, Gai Waterhouse, COX_PLATE_SHARPENER) similarity 0.86 (different trainer; method similarity 0.81, credit x0.88) - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
-- Gold Trip 2022 (won, Ciaron Maher & David Eustace, COX_PLATE_SHARPENER) similarity 0.80 **(same trainer's formula)** - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
-- Green Moon 2012 (won, Robert Hickmott, COX_PLATE_SHARPENER) similarity 0.86 (different trainer; method similarity 0.84, credit x0.90) - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
+Closest historical preps (pattern z +0.80; 33.2% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
 
-### 1. Sons And Lovers - model 6.0% (market 4.3%), top-4 24.3%
+- Verry Elleegant 2021 (won, Chris Waller, COX_PLATE_SHARPENER) similarity 0.86 (different trainer; method similarity 0.92, credit x0.68) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Gold Trip 2022 (won, Ciaron Maher & David Eustace, COX_PLATE_SHARPENER) similarity 0.80 **(same trainer's formula; same trainer, campaign match 0.94, credit x0.75)** - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
+- Makybe Diva 2005 (won, Lee Freedman, COX_PLATE_SHARPENER) similarity 0.72 (different trainer; method similarity 0.84, credit x0.42) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 0.82
+- Green Moon 2012 (won, Robert Hickmott, COX_PLATE_SHARPENER) similarity 0.86 (different trainer; method similarity 0.84, credit x0.21) - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
+
+### 2. Trustyourinstinct - model 7.9% (market 10.1%), top-4 29.9%
+
+Joseph O'Brien / James McDonald, barrier 18, 57.0kg, 6yo G, IRE, style backmarker, prep archetype **EURO_DIRECT_FLYIN** (EURO_DIRECT, 51 days since last run, 0 Australian prep runs).
+
+Same Irish St Leger -> Cup route Joseph O'Brien used with Twilight Payment (2020), but this horse is a hold-up closer not a leader, carries 57kg from barrier 18, and the trainer has said he wants dry, fast ground. J McDonald rides.
+
+Lead-ups (most recent first), tempo-adjusted:
+
+- Irish St Leger G1: 4/7 beaten 4.5L, tempo slow -> base -0.75, tempo +0.55 (backmarker in a slowly run race - tempo did not suit, upgraded) => -0.20 (weight 1.0)
+- Curragh Cup G2: 1/6 beaten 0.0L, tempo slow -> base +1.87, tempo -0.45 (closed off a slow tempo - race shape handed it the finish, discounted) => +1.42 (weight 0.55)
+- Listed/Group race: 6/8 beaten 5.0L, tempo unknown -> base -1.09, tempo +0.00 (tempo unknown) => -1.09 (weight 0.303)
+
+Form rating +0.14 (z +0.05). Structural prior -0.22: trainer Cup record 2w/4p +0.25; Cup-winning jockey +0.05; weight 57.0kg -0.12; barrier 18 -0.10; last lead-up slowly run -0.30. Going -0.18 (going fit -0.80 x wetness 0.50 -> -0.18 (wet record 4 starts (score -0.60) blended with prior -1.0)). Pace/shape +0.11 (hot tempo scenario +0.12; style history -0.01).
+
+Trainer method: Builds the whole base in Ireland: a mid-summer break, one or two September preparation runs (Curragh Cup / Irish St Leger / Kilternan), then straight on the plane and into the Cup from Werribee with no Australian run. Both winners (Rekindling 2017, Twilight Payment 2020) won the Curragh Cup earlier in the year. Horses are kept to a simple routine at Werribee and ridden positively - Twilight Payment led throughout, Master Of Reality raced on the pace. Happy to run lightly raced classic-generation horses (Rekindling, Master Of Reality, James J Braddock) and to bring back older horses year after year (Twilight Payment, Goodie Two Shoes). Big teams of four or five runners. This campaign: Classic O'Brien fly-in via the Curragh Cup (won, like Rekindling and Twilight Payment) and Irish St Leger 4th, 51 days fresh, no Australian run. Hold-up closer, unlike Twilight Payment. (departure from the trainer's norm 0.21).
+
+**Has this trainer done this before?** (+0.14) Joseph O'Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 & 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan) as a closer: 11 runners, 1 wins, 2 placings (Rekindling won 2017, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025, Yucatan, Latrobe, Al Riffa unplaced) carrying 57kg+: 2 runners, 0 wins, 0 placings
+
+Closest historical preps (pattern z +0.77; 43.1% of the pattern score comes from the trainer's own past Cup preps, 63.5% from winners rather than placegetters):
+
+- Twilight Payment 2020 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.83 **(same trainer's formula; same trainer, campaign match 0.89, credit x0.57)** - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+- Cross Counter 2018 (won, Charlie Appleby, EURO_DIRECT_FLYIN) similarity 0.76 (different trainer; method similarity 0.87, credit x0.52) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+- Red Cadeaux 2013 (2nd, Ed Dunlop, EURO_DIRECT_FLYIN) similarity 0.97 (different trainer; method similarity 0.91, credit x0.65) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+- Red Cadeaux 2014 (2nd, Ed Dunlop, EURO_DIRECT_FLYIN) similarity 0.92 (different trainer; method similarity 0.91, credit x0.65) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+
+### 20. Point Of Law - model 7.7% (market 12.5%), top-4 29.5%
+
+Ciaron Maher / Ethan Brown, barrier 9, 53.0kg, 4yo G, GB, style on-pace, prep archetype **GEELONG_CUP_IMPORT** (GEELONG_CUP, 13 days since last run, 1 Australian prep runs).
+
+Favourite. Bought from King Charles in August; only his sixth start. Sustained on-pace Geelong Cup win (rivals off the bit from the 600m) earned a 2kg penalty to 53kg. Trying to be the first Geelong Cup -> Melbourne Cup double since Dunaden (2011). Lightly raced 4yo on a light weight is also the Rekindling / Cross Counter age-weight profile.
+
+Lead-ups (most recent first), tempo-adjusted:
+
+- Geelong Cup G3: 1/14 beaten 0.5L, tempo moderate -> base +1.52, tempo +0.15 (on-pace and ran it out at an honest tempo) => +1.67 (weight 1.0)
+- Bahrain Trophy G3: 1/8 beaten 1.0L, tempo unknown -> base +1.46, tempo +0.00 (tempo unknown) => +1.46 (weight 0.55)
+- Queen's Vase G2: 4/10 beaten 2.0L, tempo unknown -> base +0.17, tempo +0.00 (tempo unknown) => +0.17 (weight 0.303)
+
+Form rating +1.36 (z +1.14). Structural prior +0.33: trainer Cup record 1w/5p +0.23; age 4 +0.10. Going +0.00 (going fit +0.00 x wetness 0.50 -> +0.00 (connections / pedigree only)). Pace/shape -0.23 (hot tempo scenario -0.08; style history -0.15).
+
+Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Handled like a European fly-in despite the Maher stable: UK base (Queen's Vase 4th, Bahrain Trophy win), first shipment to Werribee quarantine, ONE Australian run (Geelong Cup win) 13 days out - Americain / Dunaden / Media Puzzle shape, not Maher's usual 3-5 run build. (departure from the trainer's norm 0.37).
+
+**Has this trainer done this before?** (+0.07) Ciaron Maher has never taken this type into the Cup (untested: Point Of Law 2026 is the first horse Maher has trained from Werribee quarantine with one run); trainers of the one run import school with this type: 20 runners, 2 wins, 3 placings
+
+Closest historical preps (pattern z -2.00; 0.0% of the pattern score comes from the trainer's own past Cup preps, 85.5% from winners rather than placegetters):
+
+- Media Puzzle 2002 (won, Dermot Weld, GEELONG_CUP_IMPORT) similarity 0.88 (different trainer; method similarity 0.70, credit x0.08) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Dunaden 2011 (won, Mikel Delzangles, GEELONG_CUP_IMPORT) similarity 0.84 (different trainer; method similarity 0.68, credit x0.05) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Vow And Declare 2019 (won, Danny O'Brien, CAULFIELD_CUP_FORM) similarity 0.57 (different trainer; method similarity 0.71, credit x0.10) - strongest matches: age 1.00, style 1.00, sex 1.00
+- Finche 2018 (4th, Chris Waller, CAULFIELD_CUP_FORM) similarity 0.60 (different trainer; method similarity 0.83, credit x0.40) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
+
+### 1. Sons And Lovers - model 7.5% (market 4.3%), top-4 28.8%
 
 Joseph O'Brien / Dylan Browne McMonagle, barrier 3, 57.5kg, 6yo G, IRE, style midfield, prep archetype **EURO_DIRECT_FLYIN** (EURO_DIRECT, 52 days since last run, 0 Australian prep runs).
 
@@ -207,150 +217,16 @@ Form rating +1.09 (z +0.90). Structural prior -0.21: trainer Cup record 2w/4p +0
 
 Trainer method: Builds the whole base in Ireland: a mid-summer break, one or two September preparation runs (Curragh Cup / Irish St Leger / Kilternan), then straight on the plane and into the Cup from Werribee with no Australian run. Both winners (Rekindling 2017, Twilight Payment 2020) won the Curragh Cup earlier in the year. Horses are kept to a simple routine at Werribee and ridden positively - Twilight Payment led throughout, Master Of Reality raced on the pace. Happy to run lightly raced classic-generation horses (Rekindling, Master Of Reality, James J Braddock) and to bring back older horses year after year (Twilight Payment, Goodie Two Shoes). Big teams of four or five runners. This campaign: Classic O'Brien fly-in: European summer campaign (Riyadh, Dubai, Ascot, Longchamp), Kilternan 2nd in September, straight to Werribee, no Australian run. (departure from the trainer's norm 0.17).
 
-Closest historical preps (pattern z +0.57; 54.5% of the pattern score comes from the trainer's own past Cup preps, 73.2% from winners rather than placegetters):
+**Has this trainer done this before?** (+0.14) Joseph O'Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 & 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan) as a closer: 11 runners, 1 wins, 2 placings (Rekindling won 2017, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025, Yucatan, Latrobe, Al Riffa unplaced) carrying 57kg+: 2 runners, 0 wins, 0 placings
 
-- Twilight Payment 2020 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.85 **(same trainer's formula)** - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Rekindling 2017 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.78 **(same trainer's formula)** - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Cross Counter 2018 (won, Charlie Appleby, EURO_DIRECT_FLYIN) similarity 0.72 (different trainer; method similarity 0.85, credit x0.90) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
-- Marmelo 2018 (2nd, Hughie Morrison, EURO_DIRECT_FLYIN) similarity 0.86 (different trainer; method similarity 0.91, credit x0.94) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+Closest historical preps (pattern z +0.89; 70.5% of the pattern score comes from the trainer's own past Cup preps, 68.6% from winners rather than placegetters):
 
-### 24. Shockletz - model 5.6% (market 8.1%), top-4 22.9%
+- Twilight Payment 2020 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.85 **(same trainer's formula; same trainer, campaign match 0.93, credit x0.70)** - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Rekindling 2017 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.78 **(same trainer's formula; same trainer, campaign match 0.88, credit x0.53)** - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Goodie Two Shoes 2025 (2nd, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.86 **(same trainer's formula; same trainer, campaign match 0.96, credit x0.85)** - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+- Marmelo 2018 (2nd, Hughie Morrison, EURO_DIRECT_FLYIN) similarity 0.86 (different trainer; method similarity 0.91, credit x0.65) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
 
-Ciaron Maher / Harry Coffey, barrier 17, 51.0kg, 5yo M, NZ, style backmarker, prep archetype **HARDENED_LOCAL_STAYER** (OTHER_AUS, 10 days since last run, 4 Australian prep runs).
-
-Daughter of Shocking (2009 winner, also 51kg). Archer Stakes winner, good closing sectionals when sixth in the Herbert Power, then an eye-catching second over 2040m. Bottom weight, never beyond 2500m, mare; Coffey riding with a sore shoulder.
-
-Lead-ups (most recent first), tempo-adjusted:
-
-- Tesio Stakes G3: 2/12 beaten 0.5L, tempo slow -> base +1.31, tempo -0.45 (closed off a slow tempo - race shape handed it the finish, discounted), excuses: short sharpener (+0.0) => +0.86 (weight 0.35)
-- Herbert Power Stakes G2: 6/13 beaten 1.5L, tempo slow -> base +0.01, tempo +0.55 (backmarker in a slowly run race - tempo did not suit, upgraded) => +0.56 (weight 0.55)
-- Lexus Archer Stakes: 1/12 beaten 1.0L, tempo moderate -> base +1.22, tempo +0.00 (honest tempo) => +1.22 (weight 0.303)
-
-Form rating +0.81 (z +0.65). Structural prior -0.32: trainer Cup record 1w/5p +0.23; barrier 17 -0.10; age 5 +0.05; mare -0.20; last lead-up slowly run -0.30. Going +0.00 (going fit +0.00 x wetness 0.50 -> +0.00 (connections / pedigree only)). Pace/shape +0.11 (hot tempo scenario +0.12; style history -0.01).
-
-Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Maher Golden Ticket campaign: Archer Stakes win in September, Herbert Power, Tesio Stakes (2040m) sharpener ten days out; ridden last. (departure from the trainer's norm 0.10).
-
-Closest historical preps (pattern z -0.26; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
-
-- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.80 (different trainer; method similarity 0.78, credit x0.86) - strongest matches: days_since 1.00, aus_prep_runs 1.00, origin 1.00
-- Knight's Choice 2024 (won, John Symons & Sheila Laxon, HARDENED_LOCAL_STAYER) similarity 0.79 (different trainer; method similarity 0.70, credit x0.80) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
-- Makybe Diva 2003 (won, David Hall, CAULFIELD_CUP_FORM) similarity 0.71 (different trainer; method similarity 0.65, credit x0.77) - strongest matches: origin 1.00, age 1.00, weight 1.00
-- Ethereal 2001 (won, Sheila Laxon, CAULFIELD_CUP_FORM) similarity 0.69 (different trainer; method similarity 0.62, credit x0.76) - strongest matches: aus_prep_runs 1.00, origin 1.00, sex 1.00
-
-### 14. Soul Of Spain - model 5.3% (market 2.5%), top-4 22.2%
-
-Chris Waller / Tommy Berry, barrier 5, 54.5kg, 6yo G, GB, style midfield, prep archetype **CAULFIELD_CUP_FORM** (CAULFIELD_CUP, 17 days since last run, 4 Australian prep runs).
-
-Second in the Sydney Cup at his only 3200m start. Barrier 5 (equal most successful gate). Form this spring a notch below autumn.
-
-Lead-ups (most recent first), tempo-adjusted:
-
-- Caulfield Cup G1: 8/18 beaten 4.0L, tempo moderate -> base -0.38, tempo +0.00 (honest tempo) => -0.38 (weight 1.0)
-- The Metropolitan: 7/14 beaten 6.5L, tempo slow -> base -0.82, tempo -0.10 (midfield in a slow race) => -0.92 (weight 0.55)
-- Sydney Cup G1: 2/14 beaten 1.0L, tempo unknown -> base +1.79, tempo +0.00 (tempo unknown) => +1.79 (weight 0.303)
-
-Form rating -0.19 (z -0.24). Structural prior +0.25: trainer Cup record 1w/6p +0.25. Going +0.02 (going fit +0.10 x wetness 0.50 -> +0.02 (wet record 10 starts (score +0.20) blended with prior +0.0)). Pace/shape +0.12 (hot tempo scenario +0.04; style history +0.08).
-
-Trainer method: Races horses into peak fitness with a long Sydney-then-Melbourne spring: 4-6 runs, high-class weight-for-age races as sharpeners (Verry Elleegant: Turnbull win, Caulfield Cup 4th, Cox Plate 7th -> Cup). Groups his Cup team into 'form stayers' and 'weight-for-age horses'. Settled imports ridden midfield to back; many runners, high place strike rate. This campaign: Waller race-hardened local: Metropolitan, Caulfield Cup; Sydney Cup 2nd in autumn. (departure from the trainer's norm 0.24).
-
-Closest historical preps (pattern z +1.39; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
-
-- Half Yours 2025 (won, Tony & Calvin McEvoy, CAULFIELD_CUP_FORM) similarity 0.83 (different trainer; method similarity 0.91, credit x0.94) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Makybe Diva 2004 (won, Lee Freedman, CAULFIELD_CUP_FORM) similarity 0.83 (different trainer; method similarity 0.92, credit x0.95) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Fiorente 2013 (won, Gai Waterhouse, COX_PLATE_SHARPENER) similarity 0.79 (different trainer; method similarity 0.87, credit x0.91) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
-- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.77 (different trainer; method similarity 0.88, credit x0.92) - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
-
-### 6. Enfjaar - model 5.2% (market 3.7%), top-4 21.7%
-
-Roger Varian / Ray Dawson, barrier 8, 56.0kg, 7yo G, GB, style on-pace, prep archetype **CAULFIELD_CUP_FORM** (CAULFIELD_CUP, 17 days since last run, 1 Australian prep runs).
-
-Raced on speed first-up after three months and only 'felt the pinch' in the last 100m of the Caulfield Cup (rider thought he would win on the turn). Led all the way in the Glorious Stakes. Caulfield Cup top-3 is the single most productive Cup lead-up. Tough, handles all ground, untried at 3200m. Passed the vet on his second inspection.
-
-Lead-ups (most recent first), tempo-adjusted:
-
-- Caulfield Cup G1: 3/18 beaten 1.0L, tempo moderate -> base +1.66, tempo +0.15 (on-pace and ran it out at an honest tempo), excuses: first up (+0.35) => +2.16 (weight 1.0)
-- Glorious Stakes G3: 1/7 beaten 0.0L, tempo moderate -> base +1.58, tempo +0.15 (on-pace and ran it out at an honest tempo) => +1.73 (weight 0.55)
-
-Form rating +2.01 (z +1.72). Structural prior -0.19: trainer Cup record 0w/0p -0.05; weight 56.0kg -0.04; age 7 -0.10. Going +0.11 (going fit +0.50 x wetness 0.50 -> +0.11 (connections / pedigree only)). Pace/shape -0.23 (hot tempo scenario -0.08; style history -0.15).
-
-Trainer method: Newmarket trainer, first Cup runner. Classic European method: base built at home, one Australian run from quarantine (Caulfield Cup 3rd first-up after three months) into the Cup. Enfjaar is a front-running stayer (led all the way in the Glorious Stakes, raced on speed at Caulfield). This campaign: European base (Glorious Stakes win leading), quarantine at Werribee, one Australian run first-up in the Caulfield Cup (3rd on speed), 17 days to the Cup - the Protectionist / Delta Blues fly-in-with-one-run shape. (departure from the trainer's norm 0.16).
-
-Closest historical preps (pattern z +0.71; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
-
-- Delta Blues 2006 (won, Katsuhiko Sumii, CAULFIELD_CUP_FORM) similarity 0.94 (different trainer; method similarity 0.97, credit x0.98) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.80 (different trainer; method similarity 0.78, credit x0.86) - strongest matches: leadup_group 1.00, days_since 1.00, age 1.00
-- Makybe Diva 2004 (won, Lee Freedman, CAULFIELD_CUP_FORM) similarity 0.74 (different trainer; method similarity 0.74, credit x0.83) - strongest matches: leadup_group 1.00, days_since 1.00, weight 0.97
-- Protectionist 2014 (won, Andreas Wohler, HARDENED_LOCAL_STAYER) similarity 0.65 (different trainer; method similarity 0.83, credit x0.89) - strongest matches: aus_prep_runs 1.00, origin 1.00, weight 0.97
-
-### 15. Zahrann - model 4.8% (market 3.0%), top-4 20.7%
-
-Ciaron Maher / Ben Melham, barrier 11, 54.5kg, 5yo G, IRE, style midfield, prep archetype **CAULFIELD_CUP_FORM** (CAULFIELD_CUP, 17 days since last run, 4 Australian prep runs).
-
-Second favourite in the Caulfield Cup, ran sixth. Heavy-track Turnbull forgiven. Light weight, good gate, untried at 3200m.
-
-Lead-ups (most recent first), tempo-adjusted:
-
-- Caulfield Cup G1: 6/18 beaten 4.0L, tempo moderate -> base -0.01, tempo +0.00 (honest tempo) => -0.01 (weight 1.0)
-- Turnbull Stakes G1: 11/14 beaten 7.0L, tempo unknown -> base -2.03, tempo +0.00 (tempo unknown), excuses: heavy track (+0.5) => -1.53 (weight 0.193)
-- Naturalism Stakes G3: 1/12 beaten 1.5L, tempo unknown -> base +1.40, tempo +0.00 (tempo unknown) => +1.40 (weight 0.106)
-
-Form rating -0.12 (z -0.18). Structural prior +0.28: trainer Cup record 1w/5p +0.23; age 5 +0.05. Going -0.22 (going fit -1.00 x wetness 0.50 -> -0.22 (connections / pedigree only)). Pace/shape +0.12 (hot tempo scenario +0.04; style history +0.08).
-
-Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Maher race-hardened import: Naturalism win, Turnbull (heavy, failed), Caulfield Cup 6th as second favourite. (departure from the trainer's norm 0.22).
-
-Closest historical preps (pattern z +1.32; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
-
-- Half Yours 2025 (won, Tony & Calvin McEvoy, CAULFIELD_CUP_FORM) similarity 0.86 (different trainer; method similarity 0.80, credit x0.87) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Makybe Diva 2004 (won, Lee Freedman, CAULFIELD_CUP_FORM) similarity 0.84 (different trainer; method similarity 0.80, credit x0.87) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Makybe Diva 2003 (won, David Hall, CAULFIELD_CUP_FORM) similarity 0.83 (different trainer; method similarity 0.74, credit x0.83) - strongest matches: leadup_group 1.00, days_since 1.00, age 1.00
-- Fiorente 2013 (won, Gai Waterhouse, COX_PLATE_SHARPENER) similarity 0.78 (different trainer; method similarity 0.86, credit x0.91) - strongest matches: aus_prep_runs 1.00, origin 1.00, style 1.00
-
-### 16. So You Are - model 4.5% (market 6.2%), top-4 19.4%
-
-Bjorn Baker / Rachel King, barrier 7, 54.0kg, 5yo G, AUS, style on-pace, prep archetype **HARDENED_LOCAL_STAYER** (BENDIGO_CUP, 6 days since last run, 5 Australian prep runs).
-
-Four straight wins, the latest the Bendigo Cup six days out - the same Bendigo Cup backup Knight's Choice used in 2024, and a Prince Of Penzance-style hardened local. Rising sharply in class; on-pace type who will be in the first half.
-
-Lead-ups (most recent first), tempo-adjusted:
-
-- Bendigo Cup: 1/12 beaten 0.8L, tempo slow -> base +1.24, tempo -0.35 (on the speed in a slow race - soft lead, discounted) => +0.89 (weight 1.0)
-- Tattersall's Cup / St Leger series: 1/10 beaten 1.0L, tempo unknown -> base +1.22, tempo +0.00 (tempo unknown) => +1.22 (weight 0.55)
-- Colin Stephen Quality G3: 1/10 beaten 1.0L, tempo unknown -> base +1.46, tempo +0.00 (tempo unknown) => +1.46 (weight 0.303)
-
-Form rating +1.08 (z +0.89). Structural prior -0.30: trainer Cup record 0w/0p -0.05; age 5 +0.05; last lead-up slowly run -0.30. Going +0.12 (going fit +0.54 x wetness 0.50 -> +0.12 (wet record 16 starts (score +0.59) blended with prior +0.5)). Pace/shape -0.23 (hot tempo scenario -0.08; style history -0.15).
-
-Trainer method: Sydney trainer, first Cup runner. So You Are has been raced into form through the second-tier Sydney staying races (Colin Stephen, St Leger series, Tatts Cup) then backed up six days out via the Bendigo Cup - a Knight's Choice 2024 / Prince Of Penzance style hardened-local campaign, ridden on the speed. This campaign: Baker hardened-local campaign: four straight wins through Sydney staying races then the Bendigo Cup six days out (Knight's Choice 2024 backup), ridden on speed. (departure from the trainer's norm 0.12).
-
-Closest historical preps (pattern z +0.13; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
-
-- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.78 (different trainer; method similarity 0.89, credit x0.93) - strongest matches: origin 1.00, sex 1.00, weight 0.90
-- Knight's Choice 2024 (won, John Symons & Sheila Laxon, HARDENED_LOCAL_STAYER) similarity 0.77 (different trainer; method similarity 0.77, credit x0.85) - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
-- Half Yours 2025 (won, Tony & Calvin McEvoy, CAULFIELD_CUP_FORM) similarity 0.70 (different trainer; method similarity 0.81, credit x0.88) - strongest matches: origin 1.00, age 1.00, leadup_finish 1.00
-- Shocking 2009 (won, Mark Kavanagh, LEXUS_3DAY_BACKUP) similarity 0.70 (different trainer; method similarity 0.82, credit x0.88) - strongest matches: aus_prep_runs 1.00, origin 1.00, barrier 1.00
-
-### 22. Mr Monaco - model 4.3% (market 3.4%), top-4 18.5%
-
-Ciaron Maher / Jabez Johnstone, barrier 16, 52.5kg, 5yo G, GB, style on-pace, prep archetype **HARDENED_LOCAL_STAYER** (MV_CUP, 10 days since last run, 4 Australian prep runs).
-
-Bart Cummings winner on a rain-affected Flemington (the Almandin 2016 ticket), then third carrying 57.5kg in the MV Cup after racing wide, over-racing and his apprentice dropping the whip. Drops to 52.5kg. Apprentice Jabez Johnstone's first Cup ride.
-
-Lead-ups (most recent first), tempo-adjusted:
-
-- Moonee Valley Gold Cup G2: 3/16 beaten 0.8L, tempo slow -> base +1.39, tempo -0.35 (on the speed in a slow race - soft lead, discounted), excuses: wide, overraced, dropped whip, big weight (+0.8) => +1.84 (weight 1.0)
-- The Bart Cummings G3: 1/12 beaten 1.25L, tempo moderate -> base +1.43, tempo +0.15 (on-pace and ran it out at an honest tempo) => +1.58 (weight 0.55)
-
-Form rating +1.75 (z +1.49). Structural prior -0.12: trainer Cup record 1w/5p +0.23; barrier 16 -0.10; age 5 +0.05; last lead-up slowly run -0.30. Going +0.20 (going fit +0.91 x wetness 0.50 -> +0.20 (wet record 6 starts (score +0.81) blended with prior +1.0)). Pace/shape -0.23 (hot tempo scenario -0.08; style history -0.15).
-
-Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Maher Golden Ticket campaign: Bart Cummings win on rain-affected Flemington (Almandin 2016 ticket) then MV Gold Cup 3rd under 57.5kg ten days out; forward type. (departure from the trainer's norm 0.21).
-
-Closest historical preps (pattern z +0.03; 15.9% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
-
-- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.85 (different trainer; method similarity 0.85, credit x0.91) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Knight's Choice 2024 (won, John Symons & Sheila Laxon, HARDENED_LOCAL_STAYER) similarity 0.72 (different trainer; method similarity 0.72, credit x0.82) - strongest matches: aus_prep_runs 1.00, age 1.00, sex 1.00
-- Vow And Declare 2019 (won, Danny O'Brien, CAULFIELD_CUP_FORM) similarity 0.70 (different trainer; method similarity 0.69, credit x0.80) - strongest matches: style 1.00, sex 1.00, weight 0.97
-- Almandin 2016 (won, Robert Hickmott, BART_CUMMINGS_TICKET) similarity 0.67 (different trainer; method similarity 0.82, credit x0.88) - strongest matches: origin 1.00, sex 1.00, barrier 0.99
-
-### 18. James J Braddock - model 3.7% (market 4.8%), top-4 16.5%
+### 18. James J Braddock - model 5.6% (market 4.8%), top-4 22.9%
 
 Joseph O'Brien / Craig Williams, barrier 24, 53.5kg, 4yo G, IRE, style midfield, prep archetype **EURO_DIRECT_FLYIN** (EURO_DIRECT, 52 days since last run, 0 Australian prep runs).
 
@@ -366,14 +242,139 @@ Form rating -0.80 (z -0.78). Structural prior -0.25: trainer Cup record 2w/4p +0
 
 Trainer method: Builds the whole base in Ireland: a mid-summer break, one or two September preparation runs (Curragh Cup / Irish St Leger / Kilternan), then straight on the plane and into the Cup from Werribee with no Australian run. Both winners (Rekindling 2017, Twilight Payment 2020) won the Curragh Cup earlier in the year. Horses are kept to a simple routine at Werribee and ridden positively - Twilight Payment led throughout, Master Of Reality raced on the pace. Happy to run lightly raced classic-generation horses (Rekindling, Master Of Reality, James J Braddock) and to bring back older horses year after year (Twilight Payment, Goodie Two Shoes). Big teams of four or five runners. This campaign: O'Brien Rekindling-style fly-in: classic-generation 4yo, Epsom Derby 3rd, gelded, mid-summer break, one prep run (Kilternan), straight on the plane, 52 days fresh. (departure from the trainer's norm 0.11).
 
-Closest historical preps (pattern z +0.88; 49.8% of the pattern score comes from the trainer's own past Cup preps, 73.1% from winners rather than placegetters):
+**Has this trainer done this before?** (+0.29) Joseph O'Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 & 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan) as a closer: 11 runners, 1 wins, 2 placings (Rekindling won 2017, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025, Yucatan, Latrobe, Al Riffa unplaced) with lightly raced 3-4yos: 5 runners, 1 wins, 1 placings
 
-- Rekindling 2017 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.89 **(same trainer's formula)** - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Cross Counter 2018 (won, Charlie Appleby, EURO_DIRECT_FLYIN) similarity 0.80 (different trainer; method similarity 0.93, credit x0.95) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
-- Twilight Payment 2020 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.72 **(same trainer's formula)** - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Tiger Moth 2020 (2nd, Aidan O'Brien, EURO_DIRECT_FLYIN) similarity 0.90 (different trainer; method similarity 0.98, credit x0.98) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+Closest historical preps (pattern z +1.32; 48.2% of the pattern score comes from the trainer's own past Cup preps, 61.5% from winners rather than placegetters):
 
-### 3. Knight's Choice - model 2.3% (market 2.4%), top-4 11.1%
+- Rekindling 2017 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.89 **(same trainer's formula; same trainer, campaign match 1.00, credit x1.00)** - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Cross Counter 2018 (won, Charlie Appleby, EURO_DIRECT_FLYIN) similarity 0.80 (different trainer; method similarity 0.93, credit x0.70) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+- Tiger Moth 2020 (2nd, Aidan O'Brien, EURO_DIRECT_FLYIN) similarity 0.90 (different trainer; method similarity 0.98, credit x0.91) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Il Paradiso 2019 (3rd, Aidan O'Brien, EURO_DIRECT_FLYIN) similarity 0.91 (different trainer; method similarity 0.96, credit x0.82) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+
+### 24. Shockletz - model 5.1% (market 8.1%), top-4 21.0%
+
+Ciaron Maher / Harry Coffey, barrier 17, 51.0kg, 5yo M, NZ, style backmarker, prep archetype **HARDENED_LOCAL_STAYER** (OTHER_AUS, 10 days since last run, 4 Australian prep runs).
+
+Daughter of Shocking (2009 winner, also 51kg). Archer Stakes winner, good closing sectionals when sixth in the Herbert Power, then an eye-catching second over 2040m. Bottom weight, never beyond 2500m, mare; Coffey riding with a sore shoulder.
+
+Lead-ups (most recent first), tempo-adjusted:
+
+- Tesio Stakes G3: 2/12 beaten 0.5L, tempo slow -> base +1.31, tempo -0.45 (closed off a slow tempo - race shape handed it the finish, discounted), excuses: short sharpener (+0.0) => +0.86 (weight 0.35)
+- Herbert Power Stakes G2: 6/13 beaten 1.5L, tempo slow -> base +0.01, tempo +0.55 (backmarker in a slowly run race - tempo did not suit, upgraded) => +0.56 (weight 0.55)
+- Lexus Archer Stakes: 1/12 beaten 1.0L, tempo moderate -> base +1.22, tempo +0.00 (honest tempo) => +1.22 (weight 0.303)
+
+Form rating +0.81 (z +0.65). Structural prior -0.32: trainer Cup record 1w/5p +0.23; barrier 17 -0.10; age 5 +0.05; mare -0.20; last lead-up slowly run -0.30. Going +0.00 (going fit +0.00 x wetness 0.50 -> +0.00 (connections / pedigree only)). Pace/shape +0.11 (hot tempo scenario +0.12; style history -0.01).
+
+Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Maher Golden Ticket campaign: Archer Stakes win in September, Herbert Power, Tesio Stakes (2040m) sharpener ten days out; ridden last. (departure from the trainer's norm 0.10).
+
+**Has this trainer done this before?** (+0.17) Ciaron Maher with this type: 9 runners, 0 wins, 3 placings (High Emocean 3rd 2022, Ashrun 4th 2023, Middle Earth 3rd 2025; Future History 15th 2023, Grand Promenade, Land Legend unplaced)
+
+Closest historical preps (pattern z -1.10; 35.1% of the pattern score comes from the trainer's own past Cup preps, 58.2% from winners rather than placegetters):
+
+- Who Shot Thebarman 2014 (3rd, Chris Waller, HARDENED_LOCAL_STAYER) similarity 0.86 (different trainer; method similarity 0.86, credit x0.48) - strongest matches: days_since 1.00, aus_prep_runs 1.00, origin 1.00
+- Gold Trip 2022 (won, Ciaron Maher & David Eustace, COX_PLATE_SHARPENER) similarity 0.55 **(same trainer's formula; same trainer, campaign match 0.80, credit x0.30)** - strongest matches: days_since 1.00, aus_prep_runs 1.00, age 1.00
+- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.80 (different trainer; method similarity 0.78, credit x0.13) - strongest matches: days_since 1.00, aus_prep_runs 1.00, origin 1.00
+- Verry Elleegant 2021 (won, Chris Waller, COX_PLATE_SHARPENER) similarity 0.52 (different trainer; method similarity 0.81, credit x0.32) - strongest matches: days_since 1.00, origin 1.00, sex 1.00
+
+### 6. Enfjaar - model 5.0% (market 3.7%), top-4 20.9%
+
+Roger Varian / Ray Dawson, barrier 8, 56.0kg, 7yo G, GB, style on-pace, prep archetype **CAULFIELD_CUP_FORM** (CAULFIELD_CUP, 17 days since last run, 1 Australian prep runs).
+
+Raced on speed first-up after three months and only 'felt the pinch' in the last 100m of the Caulfield Cup (rider thought he would win on the turn). Led all the way in the Glorious Stakes. Caulfield Cup top-3 is the single most productive Cup lead-up. Tough, handles all ground, untried at 3200m. Passed the vet on his second inspection.
+
+Lead-ups (most recent first), tempo-adjusted:
+
+- Caulfield Cup G1: 3/18 beaten 1.0L, tempo moderate -> base +1.66, tempo +0.15 (on-pace and ran it out at an honest tempo), excuses: first up (+0.35) => +2.16 (weight 1.0)
+- Glorious Stakes G3: 1/7 beaten 0.0L, tempo moderate -> base +1.58, tempo +0.15 (on-pace and ran it out at an honest tempo) => +1.73 (weight 0.55)
+
+Form rating +2.01 (z +1.72). Structural prior -0.19: trainer Cup record 0w/0p -0.05; weight 56.0kg -0.04; age 7 -0.10. Going +0.11 (going fit +0.50 x wetness 0.50 -> +0.11 (connections / pedigree only)). Pace/shape -0.23 (hot tempo scenario -0.08; style history -0.15).
+
+Trainer method: Newmarket trainer, first Cup runner. Classic European method: base built at home, one Australian run from quarantine (Caulfield Cup 3rd first-up after three months) into the Cup. Enfjaar is a front-running stayer (led all the way in the Glorious Stakes, raced on speed at Caulfield). This campaign: European base (Glorious Stakes win leading), quarantine at Werribee, one Australian run first-up in the Caulfield Cup (3rd on speed), 17 days to the Cup - the Protectionist / Delta Blues fly-in-with-one-run shape. (departure from the trainer's norm 0.16).
+
+**Has this trainer done this before?** (-0.02) Roger Varian has never taken this type into the Cup (no record); trainers of the one run import school with this type: 18 runners, 0 wins, 5 placings
+
+Closest historical preps (pattern z +0.71; 0.0% of the pattern score comes from the trainer's own past Cup preps, 67.3% from winners rather than placegetters):
+
+- Delta Blues 2006 (won, Katsuhiko Sumii, CAULFIELD_CUP_FORM) similarity 0.94 (different trainer; method similarity 0.97, credit x0.90) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Warp Speed 2024 (2nd, Noriyuki Hori, CAULFIELD_CUP_FORM) similarity 0.82 (different trainer; method similarity 0.89, credit x0.59) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Protectionist 2014 (won, Andreas Wohler, HARDENED_LOCAL_STAYER) similarity 0.65 (different trainer; method similarity 0.83, credit x0.38) - strongest matches: aus_prep_runs 1.00, origin 1.00, weight 0.97
+- Jakkalberry 2012 (3rd, Marco Botti, CAULFIELD_CUP_FORM) similarity 0.90 (different trainer; method similarity 0.93, credit x0.73) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+
+### 14. Soul Of Spain - model 4.9% (market 2.5%), top-4 20.7%
+
+Chris Waller / Tommy Berry, barrier 5, 54.5kg, 6yo G, GB, style midfield, prep archetype **CAULFIELD_CUP_FORM** (CAULFIELD_CUP, 17 days since last run, 4 Australian prep runs).
+
+Second in the Sydney Cup at his only 3200m start. Barrier 5 (equal most successful gate). Form this spring a notch below autumn.
+
+Lead-ups (most recent first), tempo-adjusted:
+
+- Caulfield Cup G1: 8/18 beaten 4.0L, tempo moderate -> base -0.38, tempo +0.00 (honest tempo) => -0.38 (weight 1.0)
+- The Metropolitan: 7/14 beaten 6.5L, tempo slow -> base -0.82, tempo -0.10 (midfield in a slow race) => -0.92 (weight 0.55)
+- Sydney Cup G1: 2/14 beaten 1.0L, tempo unknown -> base +1.79, tempo +0.00 (tempo unknown) => +1.79 (weight 0.303)
+
+Form rating -0.19 (z -0.24). Structural prior +0.25: trainer Cup record 1w/6p +0.25. Going +0.02 (going fit +0.10 x wetness 0.50 -> +0.02 (wet record 10 starts (score +0.20) blended with prior +0.0)). Pace/shape +0.12 (hot tempo scenario +0.04; style history +0.08).
+
+Trainer method: Races horses into peak fitness with a long Sydney-then-Melbourne spring: 4-6 runs, high-class weight-for-age races as sharpeners (Verry Elleegant: Turnbull win, Caulfield Cup 4th, Cox Plate 7th -> Cup). Groups his Cup team into 'form stayers' and 'weight-for-age horses'. Settled imports ridden midfield to back; many runners, high place strike rate. This campaign: Waller race-hardened local: Metropolitan, Caulfield Cup; Sydney Cup 2nd in autumn. (departure from the trainer's norm 0.24).
+
+**Has this trainer done this before?** (+0.01) Chris Waller with this type: 14 runners, 0 wins, 3 placings (Soulcombe 2nd 2023, Finche 4th 2018, River Of Stars 4th 2025; Youngstar, Finche 2019, Buckaroo, Valiant King, Kalapour, Stockman, Montefilia unplaced)
+
+Closest historical preps (pattern z +1.14; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+
+- Half Yours 2025 (won, Tony & Calvin McEvoy, CAULFIELD_CUP_FORM) similarity 0.83 (different trainer; method similarity 0.91, credit x0.66) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Makybe Diva 2004 (won, Lee Freedman, CAULFIELD_CUP_FORM) similarity 0.83 (different trainer; method similarity 0.92, credit x0.68) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.77 (different trainer; method similarity 0.88, credit x0.53) - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
+- Fiorente 2013 (won, Gai Waterhouse, COX_PLATE_SHARPENER) similarity 0.79 (different trainer; method similarity 0.87, credit x0.50) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
+
+### 22. Mr Monaco - model 4.9% (market 3.4%), top-4 20.3%
+
+Ciaron Maher / Jabez Johnstone, barrier 16, 52.5kg, 5yo G, GB, style on-pace, prep archetype **HARDENED_LOCAL_STAYER** (MV_CUP, 10 days since last run, 4 Australian prep runs).
+
+Bart Cummings winner on a rain-affected Flemington (the Almandin 2016 ticket), then third carrying 57.5kg in the MV Cup after racing wide, over-racing and his apprentice dropping the whip. Drops to 52.5kg. Apprentice Jabez Johnstone's first Cup ride.
+
+Lead-ups (most recent first), tempo-adjusted:
+
+- Moonee Valley Gold Cup G2: 3/16 beaten 0.8L, tempo slow -> base +1.39, tempo -0.35 (on the speed in a slow race - soft lead, discounted), excuses: wide, overraced, dropped whip, big weight (+0.8) => +1.84 (weight 1.0)
+- The Bart Cummings G3: 1/12 beaten 1.25L, tempo moderate -> base +1.43, tempo +0.15 (on-pace and ran it out at an honest tempo) => +1.58 (weight 0.55)
+
+Form rating +1.75 (z +1.49). Structural prior -0.12: trainer Cup record 1w/5p +0.23; barrier 16 -0.10; age 5 +0.05; last lead-up slowly run -0.30. Going +0.20 (going fit +0.91 x wetness 0.50 -> +0.20 (wet record 6 starts (score +0.81) blended with prior +1.0)). Pace/shape -0.23 (hot tempo scenario -0.08; style history -0.15).
+
+Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Maher Golden Ticket campaign: Bart Cummings win on rain-affected Flemington (Almandin 2016 ticket) then MV Gold Cup 3rd under 57.5kg ten days out; forward type. (departure from the trainer's norm 0.21).
+
+**Has this trainer done this before?** (+0.17) Ciaron Maher with this type: 9 runners, 0 wins, 3 placings (High Emocean 3rd 2022, Ashrun 4th 2023, Middle Earth 3rd 2025; Future History 15th 2023, Grand Promenade, Land Legend unplaced)
+
+Closest historical preps (pattern z -0.07; 15.8% of the pattern score comes from the trainer's own past Cup preps, 56.2% from winners rather than placegetters):
+
+- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.85 (different trainer; method similarity 0.85, credit x0.46) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- High Emocean 2022 (3rd, Ciaron Maher & David Eustace, HARDENED_LOCAL_STAYER) similarity 0.84 **(same trainer's formula; same trainer, campaign match 0.93, credit x0.73)** - strongest matches: leadup_group 1.00, days_since 1.00, weight 0.97
+- Brew 2000 (won, Michael Moroney, LEXUS_3DAY_BACKUP) similarity 0.55 (different trainer; method similarity 0.86, credit x0.48) - strongest matches: aus_prep_runs 1.00, sex 1.00, barrier 0.85
+- Who Shot Thebarman 2014 (3rd, Chris Waller, HARDENED_LOCAL_STAYER) similarity 0.81 (different trainer; method similarity 0.89, credit x0.57) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+
+### 16. So You Are - model 4.3% (market 6.2%), top-4 18.4%
+
+Bjorn Baker / Rachel King, barrier 7, 54.0kg, 5yo G, AUS, style on-pace, prep archetype **HARDENED_LOCAL_STAYER** (BENDIGO_CUP, 6 days since last run, 5 Australian prep runs).
+
+Four straight wins, the latest the Bendigo Cup six days out - the same Bendigo Cup backup Knight's Choice used in 2024, and a Prince Of Penzance-style hardened local. Rising sharply in class; on-pace type who will be in the first half.
+
+Lead-ups (most recent first), tempo-adjusted:
+
+- Bendigo Cup: 1/12 beaten 0.8L, tempo slow -> base +1.24, tempo -0.35 (on the speed in a slow race - soft lead, discounted) => +0.89 (weight 1.0)
+- Tattersall's Cup / St Leger series: 1/10 beaten 1.0L, tempo unknown -> base +1.22, tempo +0.00 (tempo unknown) => +1.22 (weight 0.55)
+- Colin Stephen Quality G3: 1/10 beaten 1.0L, tempo unknown -> base +1.46, tempo +0.00 (tempo unknown) => +1.46 (weight 0.303)
+
+Form rating +1.08 (z +0.89). Structural prior -0.30: trainer Cup record 0w/0p -0.05; age 5 +0.05; last lead-up slowly run -0.30. Going +0.12 (going fit +0.54 x wetness 0.50 -> +0.12 (wet record 16 starts (score +0.59) blended with prior +0.5)). Pace/shape -0.23 (hot tempo scenario -0.08; style history -0.15).
+
+Trainer method: Sydney trainer, first Cup runner. So You Are has been raced into form through the second-tier Sydney staying races (Colin Stephen, St Leger series, Tatts Cup) then backed up six days out via the Bendigo Cup - a Knight's Choice 2024 / Prince Of Penzance style hardened-local campaign, ridden on the speed. This campaign: Baker hardened-local campaign: four straight wins through Sydney staying races then the Bendigo Cup six days out (Knight's Choice 2024 backup), ridden on speed. (departure from the trainer's norm 0.12).
+
+**Has this trainer done this before?** (-0.04) Bjorn Baker has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings
+
+Closest historical preps (pattern z +0.12; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+
+- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.78 (different trainer; method similarity 0.89, credit x0.58) - strongest matches: origin 1.00, sex 1.00, weight 0.90
+- Brew 2000 (won, Michael Moroney, LEXUS_3DAY_BACKUP) similarity 0.66 (different trainer; method similarity 0.88, credit x0.56) - strongest matches: origin 1.00, leadup_finish 1.00, sex 1.00
+- Shocking 2009 (won, Mark Kavanagh, LEXUS_3DAY_BACKUP) similarity 0.70 (different trainer; method similarity 0.82, credit x0.35) - strongest matches: aus_prep_runs 1.00, origin 1.00, barrier 1.00
+- Knight's Choice 2024 (won, John Symons & Sheila Laxon, HARDENED_LOCAL_STAYER) similarity 0.77 (different trainer; method similarity 0.77, credit x0.23) - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
+
+### 3. Knight's Choice - model 3.0% (market 2.4%), top-4 13.7%
 
 John Symons & Sheila Laxon / Robbie Dolan, barrier 2, 56.5kg, 7yo G, AUS, style backmarker, prep archetype **CAULFIELD_CUP_FORM** (CAULFIELD_CUP, 17 days since last run, 4 Australian prep runs).
 
@@ -389,14 +390,65 @@ Form rating -1.00 (z -0.96). Structural prior +0.03: trainer Cup record 2w/0p +0
 
 Trainer method: Old-school race-hardening (Laxon won with Ethereal 2001 via the Caulfield Cup). Knight's Choice 2024: four lead-up runs rising in distance (Turnbull 16th, Caulfield Cup 14th, Bendigo Cup 5th) because 'if we didn't run, we wouldn't get a run'; ridden from the back. Same shape again in 2026 (Naturalism, Herbert Power 3rd, Caulfield Cup) but now based at Ballarat / Sunshine Coast after leaving Macedon Lodge. This campaign: Same Symons/Laxon shape as 2024: Queensland winter, four Victorian runs rising in distance (Naturalism, Herbert Power 3rd, Caulfield Cup), ridden from the back; 5kg more than 2024. (departure from the trainer's norm 0.21).
 
-Closest historical preps (pattern z +0.30; 17.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+**Has this trainer done this before?** (+0.37) John Symons & Sheila Laxon with this type: 2 runners, 1 wins, 0 placings (Ethereal won 2001 (Laxon); Knight's Choice 2026 comes off the Caulfield Cup again)
 
-- Makybe Diva 2004 (won, Lee Freedman, CAULFIELD_CUP_FORM) similarity 0.80 (different trainer; method similarity 0.84, credit x0.89) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Half Yours 2025 (won, Tony & Calvin McEvoy, CAULFIELD_CUP_FORM) similarity 0.76 (different trainer; method similarity 0.84, credit x0.90) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.73 (different trainer; method similarity 0.80, credit x0.87) - strongest matches: leadup_group 1.00, days_since 1.00, age 1.00
-- Verry Elleegant 2021 (won, Chris Waller, COX_PLATE_SHARPENER) similarity 0.69 (different trainer; method similarity 0.83, credit x0.89) - strongest matches: origin 1.00, weight 0.97, aus_prep_runs 0.82
+Closest historical preps (pattern z +0.01; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
 
-### 23. Zakouma - model 1.8% (market 2.6%), top-4 8.9%
+- Fiorente 2013 (won, Gai Waterhouse, COX_PLATE_SHARPENER) similarity 0.64 (different trainer; method similarity 0.91, credit x0.66) - strongest matches: aus_prep_runs 1.00, barrier 0.91, age 0.80
+- Makybe Diva 2005 (won, Lee Freedman, COX_PLATE_SHARPENER) similarity 0.65 (different trainer; method similarity 0.89, credit x0.59) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
+- Green Moon 2012 (won, Robert Hickmott, COX_PLATE_SHARPENER) similarity 0.61 (different trainer; method similarity 0.86, credit x0.47) - strongest matches: aus_prep_runs 1.00, barrier 0.91, sex 0.70
+- Makybe Diva 2004 (won, Lee Freedman, CAULFIELD_CUP_FORM) similarity 0.80 (different trainer; method similarity 0.84, credit x0.20) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+
+### 15. Zahrann - model 2.9% (market 3.0%), top-4 13.4%
+
+Ciaron Maher / Ben Melham, barrier 11, 54.5kg, 5yo G, IRE, style midfield, prep archetype **CAULFIELD_CUP_FORM** (CAULFIELD_CUP, 17 days since last run, 4 Australian prep runs).
+
+Second favourite in the Caulfield Cup, ran sixth. Heavy-track Turnbull forgiven. Light weight, good gate, untried at 3200m.
+
+Lead-ups (most recent first), tempo-adjusted:
+
+- Caulfield Cup G1: 6/18 beaten 4.0L, tempo moderate -> base -0.01, tempo +0.00 (honest tempo) => -0.01 (weight 1.0)
+- Turnbull Stakes G1: 11/14 beaten 7.0L, tempo unknown -> base -2.03, tempo +0.00 (tempo unknown), excuses: heavy track (+0.5) => -1.53 (weight 0.193)
+- Naturalism Stakes G3: 1/12 beaten 1.5L, tempo unknown -> base +1.40, tempo +0.00 (tempo unknown) => +1.40 (weight 0.106)
+
+Form rating -0.12 (z -0.18). Structural prior +0.28: trainer Cup record 1w/5p +0.23; age 5 +0.05. Going -0.22 (going fit -1.00 x wetness 0.50 -> -0.22 (connections / pedigree only)). Pace/shape +0.12 (hot tempo scenario +0.04; style history +0.08).
+
+Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Maher race-hardened import: Naturalism win, Turnbull (heavy, failed), Caulfield Cup 6th as second favourite. (departure from the trainer's norm 0.22).
+
+**Has this trainer done this before?** (-0.38) Ciaron Maher with this type: 6 runners, 0 wins, 0 placings (Jameka 15th 2016 (fav), Smokin' Romans 2022, Royal Supremacy 15th 2025)
+
+Closest historical preps (pattern z +0.93; 28.3% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+
+- Gold Trip 2022 (won, Ciaron Maher & David Eustace, COX_PLATE_SHARPENER) similarity 0.71 **(same trainer's formula; same trainer, campaign match 0.97, credit x0.90)** - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
+- Green Moon 2012 (won, Robert Hickmott, COX_PLATE_SHARPENER) similarity 0.82 (different trainer; method similarity 0.89, credit x0.59) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
+- Verry Elleegant 2021 (won, Chris Waller, COX_PLATE_SHARPENER) similarity 0.69 (different trainer; method similarity 0.91, credit x0.63) - strongest matches: style 1.00, leadup_finish 0.98, aus_prep_runs 0.82
+- Fiorente 2013 (won, Gai Waterhouse, COX_PLATE_SHARPENER) similarity 0.78 (different trainer; method similarity 0.86, credit x0.47) - strongest matches: aus_prep_runs 1.00, origin 1.00, style 1.00
+
+### 10. Goodie Two Shoes - model 2.3% (market 3.1%), top-4 10.8%
+
+Joseph O'Brien / Wayne Lordan, barrier 19, 55.0kg, 7yo M, IRE, style midfield, prep archetype **EURO_DIRECT_FLYIN** (EURO_DIRECT, 52 days since last run, 0 Australian prep runs).
+
+Second in the 2025 Cup with 51.5kg; carries 3.5kg more and drew 19. Trainer says career-best and wants a fast track. Only three mares have placed since 2005.
+
+Lead-ups (most recent first), tempo-adjusted:
+
+- Kilternan Stakes G3: 10/10 beaten 8.0L, tempo slow -> base -2.11, tempo +0.20 (midfield in a slow race) => -1.91 (weight 1.0)
+- Lillie Langtry Stakes G2: 1/9 beaten 0.02L, tempo unknown -> base +1.87, tempo +0.00 (tempo unknown) => +1.87 (weight 0.55)
+
+Form rating -0.57 (z -0.58). Structural prior -0.45: trainer Cup record 2w/4p +0.25; barrier 19 -0.10; age 7 -0.10; mare -0.20; last lead-up slowly run -0.30. Going -0.22 (going fit -1.00 x wetness 0.50 -> -0.22 (connections / pedigree only)). Pace/shape +0.12 (hot tempo scenario +0.04; style history +0.08).
+
+Trainer method: Builds the whole base in Ireland: a mid-summer break, one or two September preparation runs (Curragh Cup / Irish St Leger / Kilternan), then straight on the plane and into the Cup from Werribee with no Australian run. Both winners (Rekindling 2017, Twilight Payment 2020) won the Curragh Cup earlier in the year. Horses are kept to a simple routine at Werribee and ridden positively - Twilight Payment led throughout, Master Of Reality raced on the pace. Happy to run lightly raced classic-generation horses (Rekindling, Master Of Reality, James J Braddock) and to bring back older horses year after year (Twilight Payment, Goodie Two Shoes). Big teams of four or five runners. This campaign: O'Brien repeat fly-in: Lillie Langtry win, Kilternan last, 52 days fresh, no Australian run; only four runs since last year's Cup second. (departure from the trainer's norm 0.17).
+
+**Has this trainer done this before?** (+0.27) Joseph O'Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 & 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan) as a closer: 11 runners, 1 wins, 2 placings (Rekindling won 2017, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025, Yucatan, Latrobe, Al Riffa unplaced)
+
+Closest historical preps (pattern z +0.64; 85.9% of the pattern score comes from the trainer's own past Cup preps, 69.0% from winners rather than placegetters):
+
+- Twilight Payment 2020 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.80 **(same trainer's formula; same trainer, campaign match 0.93, credit x0.70)** - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Rekindling 2017 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.73 **(same trainer's formula; same trainer, campaign match 0.88, credit x0.53)** - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Goodie Two Shoes 2025 (2nd, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.81 **(same trainer's formula; same trainer, campaign match 0.96, credit x0.85)** - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+- Cross Counter 2018 (won, Charlie Appleby, EURO_DIRECT_FLYIN) similarity 0.66 (different trainer; method similarity 0.85, credit x0.45) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
+
+### 23. Zakouma - model 1.8% (market 2.6%), top-4 8.5%
 
 Grahame Begg / William Pike, barrier 10, 52.0kg, 5yo G, IRE, style backmarker, prep archetype **HARDENED_LOCAL_STAYER** (OTHER_AUS, 10 days since last run, 4 Australian prep runs).
 
@@ -412,36 +464,16 @@ Form rating +0.15 (z +0.06). Structural prior -0.30: trainer Cup record 0w/0p -0
 
 Trainer method: First Cup runner. Planned the whole year around the Andrew Ramsden Golden Ticket (won in May), then a short break and a conventional Naturalism / Herbert Power build, with an unusual Crystal Mile (1600m) sharpener ten days out instead of a 2500m race. This campaign: Begg Golden Ticket campaign: Andrew Ramsden win in May, break, Naturalism / Herbert Power build, Crystal Mile sharpener ten days out. (departure from the trainer's norm 0.09).
 
-Closest historical preps (pattern z -0.59; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+**Has this trainer done this before?** (-0.04) Grahame Begg has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings
 
-- Knight's Choice 2024 (won, John Symons & Sheila Laxon, HARDENED_LOCAL_STAYER) similarity 0.80 (different trainer; method similarity 0.78, credit x0.85) - strongest matches: aus_prep_runs 1.00, age 1.00, style 1.00
-- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.72 (different trainer; method similarity 0.85, credit x0.90) - strongest matches: days_since 1.00, aus_prep_runs 1.00, sex 1.00
-- Green Moon 2012 (won, Robert Hickmott, COX_PLATE_SHARPENER) similarity 0.67 (different trainer; method similarity 0.83, credit x0.89) - strongest matches: days_since 1.00, aus_prep_runs 1.00, origin 1.00
-- Almandin 2016 (won, Robert Hickmott, BART_CUMMINGS_TICKET) similarity 0.62 (different trainer; method similarity 0.78, credit x0.86) - strongest matches: origin 1.00, weight 1.00, sex 1.00
+Closest historical preps (pattern z -0.54; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
 
-### 10. Goodie Two Shoes - model 1.4% (market 3.1%), top-4 7.2%
+- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.72 (different trainer; method similarity 0.85, credit x0.45) - strongest matches: days_since 1.00, aus_prep_runs 1.00, sex 1.00
+- Knight's Choice 2024 (won, John Symons & Sheila Laxon, HARDENED_LOCAL_STAYER) similarity 0.80 (different trainer; method similarity 0.78, credit x0.24) - strongest matches: aus_prep_runs 1.00, age 1.00, style 1.00
+- Brew 2000 (won, Michael Moroney, LEXUS_3DAY_BACKUP) similarity 0.53 (different trainer; method similarity 0.85, credit x0.44) - strongest matches: aus_prep_runs 1.00, sex 1.00, barrier 0.96
+- Green Moon 2012 (won, Robert Hickmott, COX_PLATE_SHARPENER) similarity 0.67 (different trainer; method similarity 0.83, credit x0.20) - strongest matches: days_since 1.00, aus_prep_runs 1.00, origin 1.00
 
-Joseph O'Brien / Wayne Lordan, barrier 19, 55.0kg, 7yo M, IRE, style midfield, prep archetype **EURO_DIRECT_FLYIN** (EURO_DIRECT, 52 days since last run, 0 Australian prep runs).
-
-Second in the 2025 Cup with 51.5kg; carries 3.5kg more and drew 19. Trainer says career-best and wants a fast track. Only three mares have placed since 2005.
-
-Lead-ups (most recent first), tempo-adjusted:
-
-- Kilternan Stakes G3: 10/10 beaten 8.0L, tempo slow -> base -2.11, tempo +0.20 (midfield in a slow race) => -1.91 (weight 1.0)
-- Lillie Langtry Stakes G2: 1/9 beaten 0.02L, tempo unknown -> base +1.87, tempo +0.00 (tempo unknown) => +1.87 (weight 0.55)
-
-Form rating -0.57 (z -0.58). Structural prior -0.45: trainer Cup record 2w/4p +0.25; barrier 19 -0.10; age 7 -0.10; mare -0.20; last lead-up slowly run -0.30. Going -0.22 (going fit -1.00 x wetness 0.50 -> -0.22 (connections / pedigree only)). Pace/shape +0.12 (hot tempo scenario +0.04; style history +0.08).
-
-Trainer method: Builds the whole base in Ireland: a mid-summer break, one or two September preparation runs (Curragh Cup / Irish St Leger / Kilternan), then straight on the plane and into the Cup from Werribee with no Australian run. Both winners (Rekindling 2017, Twilight Payment 2020) won the Curragh Cup earlier in the year. Horses are kept to a simple routine at Werribee and ridden positively - Twilight Payment led throughout, Master Of Reality raced on the pace. Happy to run lightly raced classic-generation horses (Rekindling, Master Of Reality, James J Braddock) and to bring back older horses year after year (Twilight Payment, Goodie Two Shoes). Big teams of four or five runners. This campaign: O'Brien repeat fly-in: Lillie Langtry win, Kilternan last, 52 days fresh, no Australian run; only four runs since last year's Cup second. (departure from the trainer's norm 0.17).
-
-Closest historical preps (pattern z -0.10; 54.4% of the pattern score comes from the trainer's own past Cup preps, 71.9% from winners rather than placegetters):
-
-- Twilight Payment 2020 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.80 **(same trainer's formula)** - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Rekindling 2017 (won, Joseph O'Brien, EURO_DIRECT_FLYIN) similarity 0.73 **(same trainer's formula)** - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Cross Counter 2018 (won, Charlie Appleby, EURO_DIRECT_FLYIN) similarity 0.66 (different trainer; method similarity 0.85, credit x0.90) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
-- Red Cadeaux 2013 (2nd, Ed Dunlop, EURO_DIRECT_FLYIN) similarity 0.86 (different trainer; method similarity 0.89, credit x0.93) - strongest matches: leadup_group 1.00, aus_prep_runs 1.00, origin 1.00
-
-### 9. Asterix - model 1.3% (market 1.4%), top-4 6.5%
+### 9. Asterix - model 1.3% (market 1.4%), top-4 6.8%
 
 Chris Waller / Jye McNeil, barrier 6, 55.0kg, 8yo G, NZ, style backmarker, prep archetype **CAULFIELD_CUP_FORM** (CAULFIELD_CUP, 17 days since last run, 4 Australian prep runs).
 
@@ -457,14 +489,16 @@ Form rating -1.35 (z -1.27). Structural prior -0.05: trainer Cup record 1w/6p +0
 
 Trainer method: Races horses into peak fitness with a long Sydney-then-Melbourne spring: 4-6 runs, high-class weight-for-age races as sharpeners (Verry Elleegant: Turnbull win, Caulfield Cup 4th, Cox Plate 7th -> Cup). Groups his Cup team into 'form stayers' and 'weight-for-age horses'. Settled imports ridden midfield to back; many runners, high place strike rate. This campaign: Waller race-hardened local: Naturalism, Turnbull, Caulfield Cup, ridden from the back. (departure from the trainer's norm 0.17).
 
-Closest historical preps (pattern z +0.14; 17.7% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+**Has this trainer done this before?** (+0.01) Chris Waller with this type: 14 runners, 0 wins, 3 placings (Soulcombe 2nd 2023, Finche 4th 2018, River Of Stars 4th 2025; Youngstar, Finche 2019, Buckaroo, Valiant King, Kalapour, Stockman, Montefilia unplaced)
 
-- Half Yours 2025 (won, Tony & Calvin McEvoy, CAULFIELD_CUP_FORM) similarity 0.78 (different trainer; method similarity 0.81, credit x0.88) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Makybe Diva 2004 (won, Lee Freedman, CAULFIELD_CUP_FORM) similarity 0.79 (different trainer; method similarity 0.82, credit x0.88) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.70 (different trainer; method similarity 0.78, credit x0.86) - strongest matches: leadup_group 1.00, days_since 1.00, sex 1.00
-- Verry Elleegant 2021 (won, Chris Waller, COX_PLATE_SHARPENER) similarity 0.64 **(same trainer's formula)** - strongest matches: origin 1.00, aus_prep_runs 0.82, leadup_finish 0.80
+Closest historical preps (pattern z +0.33; 24.3% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
 
-### 8. Wine Dark Sea - model 1.1% (market 1.8%), top-4 5.6%
+- Verry Elleegant 2021 (won, Chris Waller, COX_PLATE_SHARPENER) similarity 0.64 **(same trainer's formula; same trainer, campaign match 0.91, credit x0.66)** - strongest matches: origin 1.00, aus_prep_runs 0.82, leadup_finish 0.80
+- Makybe Diva 2004 (won, Lee Freedman, CAULFIELD_CUP_FORM) similarity 0.79 (different trainer; method similarity 0.82, credit x0.36) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Half Yours 2025 (won, Tony & Calvin McEvoy, CAULFIELD_CUP_FORM) similarity 0.78 (different trainer; method similarity 0.81, credit x0.34) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Makybe Diva 2005 (won, Lee Freedman, COX_PLATE_SHARPENER) similarity 0.60 (different trainer; method similarity 0.90, credit x0.60) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 0.80
+
+### 8. Wine Dark Sea - model 1.2% (market 1.8%), top-4 6.3%
 
 Harry Charlton / Damian Lane, barrier 23, 56.0kg, 5yo G, GB, style on-pace, prep archetype **CAULFIELD_CUP_FORM** (CAULFIELD_CUP, 17 days since last run, 1 Australian prep runs).
 
@@ -479,14 +513,16 @@ Form rating +0.14 (z +0.06). Structural prior -0.39: trainer Cup record 0w/0p -0
 
 Trainer method: Beckhampton (took over from Roger Charlton). First Cup runner. Wine Dark Sea built his base in England (3 wins from 4 in 2026), one Australian run first-up in the Caulfield Cup where he was ridden forward. This campaign: English base (3 wins from 4), Werribee quarantine, one Australian run first-up in the Caulfield Cup ridden forward, 17 days to the Cup. (departure from the trainer's norm 0.16).
 
-Closest historical preps (pattern z +0.00; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+**Has this trainer done this before?** (-0.02) Harry Charlton has never taken this type into the Cup (no record); trainers of the one run import school with this type: 18 runners, 0 wins, 5 placings
 
-- Delta Blues 2006 (won, Katsuhiko Sumii, CAULFIELD_CUP_FORM) similarity 0.88 (different trainer; method similarity 0.98, credit x0.99) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.71 (different trainer; method similarity 0.78, credit x0.86) - strongest matches: leadup_group 1.00, days_since 1.00, style 1.00
-- Vow And Declare 2019 (won, Danny O'Brien, CAULFIELD_CUP_FORM) similarity 0.66 (different trainer; method similarity 0.71, credit x0.81) - strongest matches: leadup_group 1.00, days_since 1.00, style 1.00
-- Protectionist 2014 (won, Andreas Wohler, HARDENED_LOCAL_STAYER) similarity 0.63 (different trainer; method similarity 0.83, credit x0.89) - strongest matches: aus_prep_runs 1.00, origin 1.00, weight 0.97
+Closest historical preps (pattern z +0.61; 0.0% of the pattern score comes from the trainer's own past Cup preps, 73.4% from winners rather than placegetters):
 
-### 19. Kizlyar - model 0.9% (market 2.0%), top-4 4.8%
+- Delta Blues 2006 (won, Katsuhiko Sumii, CAULFIELD_CUP_FORM) similarity 0.88 (different trainer; method similarity 0.98, credit x0.94) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Warp Speed 2024 (2nd, Noriyuki Hori, CAULFIELD_CUP_FORM) similarity 0.86 (different trainer; method similarity 0.90, credit x0.63) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Protectionist 2014 (won, Andreas Wohler, HARDENED_LOCAL_STAYER) similarity 0.63 (different trainer; method similarity 0.83, credit x0.38) - strongest matches: aus_prep_runs 1.00, origin 1.00, weight 0.97
+- Jakkalberry 2012 (3rd, Marco Botti, CAULFIELD_CUP_FORM) similarity 0.87 (different trainer; method similarity 0.93, credit x0.73) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+
+### 19. Kizlyar - model 1.1% (market 2.0%), top-4 5.9%
 
 Joseph O'Brien / Beau Mertens, barrier 20, 53.5kg, 5yo G, IRE, style on-pace, prep archetype **HARDENED_LOCAL_STAYER** (MV_CUP, 10 days since last run, 1 Australian prep runs).
 
@@ -502,36 +538,16 @@ Form rating +0.05 (z -0.03). Structural prior -0.35: trainer Cup record 2w/4p +0
 
 Trainer method: Builds the whole base in Ireland: a mid-summer break, one or two September preparation runs (Curragh Cup / Irish St Leger / Kilternan), then straight on the plane and into the Cup from Werribee with no Australian run. Both winners (Rekindling 2017, Twilight Payment 2020) won the Curragh Cup earlier in the year. Horses are kept to a simple routine at Werribee and ridden positively - Twilight Payment led throughout, Master Of Reality raced on the pace. Happy to run lightly raced classic-generation horses (Rekindling, Master Of Reality, James J Braddock) and to bring back older horses year after year (Twilight Payment, Goodie Two Shoes). Big teams of four or five runners. This campaign: O'Brien with an Australian run (unusual for him): MV Gold Cup attempt at a Golden Ticket, raced on speed and weakened, ten days to the Cup. (departure from the trainer's norm 0.32).
 
-Closest historical preps (pattern z -1.27; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+**Has this trainer done this before?** (-0.02) Joseph O'Brien has never taken this type into the Cup (untested: Kizlyar 2026 is O'Brien's first Cup runner with an Australian lead-up); trainers of the one run import school with this type: 10 runners, 1 wins, 1 placings
 
-- Dunaden 2011 (won, Mikel Delzangles, GEELONG_CUP_IMPORT) similarity 0.66 (different trainer; method similarity 0.83, credit x0.89) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
-- Media Puzzle 2002 (won, Dermot Weld, GEELONG_CUP_IMPORT) similarity 0.65 (different trainer; method similarity 0.85, credit x0.90) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
-- Delta Blues 2006 (won, Katsuhiko Sumii, CAULFIELD_CUP_FORM) similarity 0.64 (different trainer; method similarity 0.85, credit x0.90) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
-- Americain 2010 (won, Alain de Royer-Dupre, GEELONG_CUP_IMPORT) similarity 0.61 (different trainer; method similarity 0.80, credit x0.87) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
+Closest historical preps (pattern z -0.37; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
 
-### 7. Royal Supremacy - model 0.8% (market 1.6%), top-4 4.2%
+- Media Puzzle 2002 (won, Dermot Weld, GEELONG_CUP_IMPORT) similarity 0.65 (different trainer; method similarity 0.85, credit x0.44) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
+- Delta Blues 2006 (won, Katsuhiko Sumii, CAULFIELD_CUP_FORM) similarity 0.64 (different trainer; method similarity 0.85, credit x0.44) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
+- Dunaden 2011 (won, Mikel Delzangles, GEELONG_CUP_IMPORT) similarity 0.66 (different trainer; method similarity 0.83, credit x0.38) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
+- Americain 2010 (won, Alain de Royer-Dupre, GEELONG_CUP_IMPORT) similarity 0.61 (different trainer; method similarity 0.80, credit x0.29) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
 
-Ciaron Maher / Ben Allen, barrier 21, 56.0kg, 6yo G, IRE, style leader, prep archetype **CAULFIELD_CUP_FORM** (CAULFIELD_CUP, 17 days since last run, 3 Australian prep runs).
-
-Led throughout to win the JRA Cup, then sent forward and eased out of the Caulfield Cup. 15th in the 2025 Cup. Barrier 21; outsider of the Maher seven.
-
-Lead-ups (most recent first), tempo-adjusted:
-
-- Caulfield Cup G1: 15/18 beaten 17.0L, tempo moderate -> base -3.04, tempo +0.00 (honest tempo), excuses: eased (+0.4) => -2.64 (weight 1.0)
-- JRA Cup G3: 1/10 beaten 0.8L, tempo unknown -> base +1.49, tempo +0.00 (tempo unknown) => +1.49 (weight 0.193)
-
-Form rating -1.97 (z -1.83). Structural prior -0.16: trainer Cup record 1w/5p +0.23; weight 56.0kg -0.04; barrier 21 -0.35 (no winner from 20+ since 2015). Going +0.11 (going fit +0.50 x wetness 0.50 -> +0.11 (connections / pedigree only)). Pace/shape -0.20 (hot tempo scenario -0.20; style history +0.00).
-
-Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Maher race-hardened local: JRA Cup win leading, Caulfield Cup (eased), likely leader. (departure from the trainer's norm 0.32).
-
-Closest historical preps (pattern z -0.08; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
-
-- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.84 (different trainer; method similarity 0.80, credit x0.87) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Makybe Diva 2004 (won, Lee Freedman, CAULFIELD_CUP_FORM) similarity 0.72 (different trainer; method similarity 0.77, credit x0.85) - strongest matches: leadup_group 1.00, days_since 1.00, age 1.00
-- Half Yours 2025 (won, Tony & Calvin McEvoy, CAULFIELD_CUP_FORM) similarity 0.69 (different trainer; method similarity 0.75, credit x0.84) - strongest matches: leadup_group 1.00, days_since 1.00, sex 1.00
-- Vow And Declare 2019 (won, Danny O'Brien, CAULFIELD_CUP_FORM) similarity 0.69 (different trainer; method similarity 0.71, credit x0.81) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-
-### 21. Strictly Business - model 0.8% (market 1.3%), top-4 4.2%
+### 21. Strictly Business - model 0.8% (market 1.3%), top-4 4.5%
 
 Thomas Carberry / Dean Yendall, barrier 4, 53.0kg, 4yo M, NZ, style midfield, prep archetype **HARDENED_LOCAL_STAYER** (MV_CUP, 10 days since last run, 3 Australian prep runs).
 
@@ -546,14 +562,16 @@ Form rating -0.99 (z -0.95). Structural prior -0.45: trainer Cup record 0w/0p -0
 
 Trainer method: First Cup runner with a four-year-old mare off an SA Derby second. This campaign: Carberry: SA Derby 2nd in autumn, MV Gold Cup last. (departure from the trainer's norm 0.20).
 
-Closest historical preps (pattern z -0.38; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+**Has this trainer done this before?** (-0.04) Thomas Carberry has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings
 
-- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.81 (different trainer; method similarity 0.85, credit x0.90) - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
-- Knight's Choice 2024 (won, John Symons & Sheila Laxon, HARDENED_LOCAL_STAYER) similarity 0.72 (different trainer; method similarity 0.79, credit x0.86) - strongest matches: origin 1.00, barrier 0.99, aus_prep_runs 0.82
-- Ethereal 2001 (won, Sheila Laxon, CAULFIELD_CUP_FORM) similarity 0.66 (different trainer; method similarity 0.88, credit x0.92) - strongest matches: origin 1.00, age 1.00, style 1.00
-- Vow And Declare 2019 (won, Danny O'Brien, CAULFIELD_CUP_FORM) similarity 0.60 (different trainer; method similarity 0.83, credit x0.89) - strongest matches: aus_prep_runs 1.00, origin 1.00, age 1.00
+Closest historical preps (pattern z +0.12; 0.0% of the pattern score comes from the trainer's own past Cup preps, 89.5% from winners rather than placegetters):
 
-### 17. Future History - model 0.5% (market 1.4%), top-4 3.0%
+- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.81 (different trainer; method similarity 0.85, credit x0.46) - strongest matches: leadup_group 1.00, days_since 1.00, origin 1.00
+- Ethereal 2001 (won, Sheila Laxon, CAULFIELD_CUP_FORM) similarity 0.66 (different trainer; method similarity 0.88, credit x0.54) - strongest matches: origin 1.00, age 1.00, style 1.00
+- Shocking 2009 (won, Mark Kavanagh, LEXUS_3DAY_BACKUP) similarity 0.57 (different trainer; method similarity 0.92, credit x0.67) - strongest matches: origin 1.00, age 1.00, style 1.00
+- Knight's Choice 2024 (won, John Symons & Sheila Laxon, HARDENED_LOCAL_STAYER) similarity 0.72 (different trainer; method similarity 0.79, credit x0.27) - strongest matches: origin 1.00, barrier 0.99, aus_prep_runs 0.82
+
+### 17. Future History - model 0.7% (market 1.4%), top-4 3.8%
 
 Gregory Hickman / Jamie Melham, barrier 12, 53.5kg, 9yo G, GB, style midfield, prep archetype **HARDENED_LOCAL_STAYER** (MV_CUP, 10 days since last run, 4 Australian prep runs).
 
@@ -569,14 +587,40 @@ Form rating -0.02 (z -0.08). Structural prior -0.90: trainer Cup record 0w/0p -0
 
 Trainer method: Sydney trainer, first Cup runner; took over the nine-year-old Future History this year and raced him through JRA Plate, Herbert Power and MV Cup. This campaign: Hickman race-hardened: JRA Plate 2nd, Herbert Power 4th, MV Cup 9th. (departure from the trainer's norm 0.21).
 
-Closest historical preps (pattern z -1.12; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+**Has this trainer done this before?** (-0.04) Gregory Hickman has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings
 
-- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.76 (different trainer; method similarity 0.88, credit x0.92) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Knight's Choice 2024 (won, John Symons & Sheila Laxon, HARDENED_LOCAL_STAYER) similarity 0.65 (different trainer; method similarity 0.83, credit x0.89) - strongest matches: aus_prep_runs 1.00, sex 1.00, leadup_finish 0.76
-- Green Moon 2012 (won, Robert Hickmott, COX_PLATE_SHARPENER) similarity 0.64 (different trainer; method similarity 0.86, credit x0.91) - strongest matches: days_since 1.00, aus_prep_runs 1.00, origin 1.00
-- Fiorente 2013 (won, Gai Waterhouse, COX_PLATE_SHARPENER) similarity 0.57 (different trainer; method similarity 0.86, credit x0.91) - strongest matches: days_since 1.00, aus_prep_runs 1.00, origin 1.00
+Closest historical preps (pattern z -0.02; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
 
-### 5. Vauban - model 0.3% (market 1.6%), top-4 1.8%
+- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.76 (different trainer; method similarity 0.88, credit x0.53) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Knight's Choice 2024 (won, John Symons & Sheila Laxon, HARDENED_LOCAL_STAYER) similarity 0.65 (different trainer; method similarity 0.83, credit x0.39) - strongest matches: aus_prep_runs 1.00, sex 1.00, leadup_finish 0.76
+- Green Moon 2012 (won, Robert Hickmott, COX_PLATE_SHARPENER) similarity 0.64 (different trainer; method similarity 0.86, credit x0.48) - strongest matches: days_since 1.00, aus_prep_runs 1.00, origin 1.00
+- Fiorente 2013 (won, Gai Waterhouse, COX_PLATE_SHARPENER) similarity 0.57 (different trainer; method similarity 0.86, credit x0.49) - strongest matches: days_since 1.00, aus_prep_runs 1.00, origin 1.00
+
+### 7. Royal Supremacy - model 0.5% (market 1.6%), top-4 2.9%
+
+Ciaron Maher / Ben Allen, barrier 21, 56.0kg, 6yo G, IRE, style leader, prep archetype **CAULFIELD_CUP_FORM** (CAULFIELD_CUP, 17 days since last run, 3 Australian prep runs).
+
+Led throughout to win the JRA Cup, then sent forward and eased out of the Caulfield Cup. 15th in the 2025 Cup. Barrier 21; outsider of the Maher seven.
+
+Lead-ups (most recent first), tempo-adjusted:
+
+- Caulfield Cup G1: 15/18 beaten 17.0L, tempo moderate -> base -3.04, tempo +0.00 (honest tempo), excuses: eased (+0.4) => -2.64 (weight 1.0)
+- JRA Cup G3: 1/10 beaten 0.8L, tempo unknown -> base +1.49, tempo +0.00 (tempo unknown) => +1.49 (weight 0.193)
+
+Form rating -1.97 (z -1.83). Structural prior -0.16: trainer Cup record 1w/5p +0.23; weight 56.0kg -0.04; barrier 21 -0.35 (no winner from 20+ since 2015). Going +0.11 (going fit +0.50 x wetness 0.50 -> +0.11 (connections / pedigree only)). Pace/shape -0.20 (hot tempo scenario -0.20; style history +0.00).
+
+Trainer method: Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in. This campaign: Maher race-hardened local: JRA Cup win leading, Caulfield Cup (eased), likely leader. (departure from the trainer's norm 0.32).
+
+**Has this trainer done this before?** (-0.38) Ciaron Maher with this type: 6 runners, 0 wins, 0 placings (Jameka 15th 2016 (fav), Smokin' Romans 2022, Royal Supremacy 15th 2025)
+
+Closest historical preps (pattern z -0.15; 22.8% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+
+- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.84 (different trainer; method similarity 0.80, credit x0.30) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Gold Trip 2022 (won, Ciaron Maher & David Eustace, COX_PLATE_SHARPENER) similarity 0.60 **(same trainer's formula; same trainer, campaign match 0.88, credit x0.53)** - strongest matches: origin 1.00, aus_prep_runs 0.82, age 0.80
+- Verry Elleegant 2021 (won, Chris Waller, COX_PLATE_SHARPENER) similarity 0.61 (different trainer; method similarity 0.84, credit x0.43) - strongest matches: age 1.00, barrier 0.91, weight 0.90
+- Green Moon 2012 (won, Robert Hickmott, COX_PLATE_SHARPENER) similarity 0.61 (different trainer; method similarity 0.85, credit x0.46) - strongest matches: origin 1.00, aus_prep_runs 0.82, age 0.80
+
+### 5. Vauban - model 0.4% (market 1.6%), top-4 2.3%
 
 Gai Waterhouse & Adrian Bott / Jordan Childs, barrier 22, 56.5kg, 9yo G, FR, style on-pace, prep archetype **GEELONG_CUP_IMPORT** (GEELONG_CUP, 13 days since last run, 1 Australian prep runs).
 
@@ -592,14 +636,16 @@ Form rating +0.28 (z +0.18). Structural prior -0.92: trainer Cup record 1w/1p +0
 
 Trainer method: Forward-racing, fit horses; 'balance and momentum'. Fiorente 2013 via Dato Tan Chin Nam win and Cox Plate 3rd. Adapts imports quickly (Fiorente 2nd in 2012 after three weeks in the stable). Vauban has been campaigned lightly this spring: one run (Geelong Cup under 60.5kg) since May. This campaign: Unusually light Waterhouse/Bott campaign: one run since May (Geelong Cup under 60.5kg), 13 days fresh, forward type. (departure from the trainer's norm 0.26).
 
-Closest historical preps (pattern z -2.75; 13.4% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+**Has this trainer done this before?** (+0.07) Gai Waterhouse & Adrian Bott has never taken this type into the Cup (untested: Vauban 2026 is the first Waterhouse/Bott runner off a Geelong Cup lead-up); trainers of the one run import school with this type: 20 runners, 2 wins, 3 placings
 
-- Dunaden 2011 (won, Mikel Delzangles, GEELONG_CUP_IMPORT) similarity 0.64 (different trainer; method similarity 0.73, credit x0.82) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Americain 2010 (won, Alain de Royer-Dupre, GEELONG_CUP_IMPORT) similarity 0.60 (different trainer; method similarity 0.70, credit x0.81) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Media Puzzle 2002 (won, Dermot Weld, GEELONG_CUP_IMPORT) similarity 0.59 (different trainer; method similarity 0.71, credit x0.81) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
-- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.53 (different trainer; method similarity 0.73, credit x0.82) - strongest matches: origin 1.00, weight 1.00, style 1.00
+Closest historical preps (pattern z -2.00; 0.0% of the pattern score comes from the trainer's own past Cup preps, 74.7% from winners rather than placegetters):
 
-### 13. Onesmoothoperator - model 0.2% (market 1.1%), top-4 1.2%
+- Dunaden 2011 (won, Mikel Delzangles, GEELONG_CUP_IMPORT) similarity 0.64 (different trainer; method similarity 0.73, credit x0.13) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Spanish Mission 2021 (3rd, Andrew Balding, GEELONG_CUP_IMPORT) similarity 0.71 (different trainer; method similarity 0.79, credit x0.29) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.53 (different trainer; method similarity 0.73, credit x0.13) - strongest matches: origin 1.00, weight 1.00, style 1.00
+- Media Puzzle 2002 (won, Dermot Weld, GEELONG_CUP_IMPORT) similarity 0.59 (different trainer; method similarity 0.71, credit x0.10) - strongest matches: leadup_group 1.00, days_since 1.00, aus_prep_runs 1.00
+
+### 13. Onesmoothoperator - model 0.1% (market 1.1%), top-4 0.8%
 
 Tim Fitzsimmons / Declan Bates, barrier 13, 54.5kg, 9yo G, USA, style on-pace, prep archetype **GEELONG_CUP_IMPORT** (GEELONG_CUP, 13 days since last run, 2 Australian prep runs).
 
@@ -614,37 +660,46 @@ Form rating -2.15 (z -1.98). Structural prior -0.65: trainer Cup record 0w/0p -0
 
 Trainer method: Took over Onesmoothoperator from Brian Ellison after the 2025 Cup; Herbert Power and Geelong Cup lead-ups. This campaign: Now a settled local: Herbert Power (last) and Geelong Cup (11th), on-pace type. (departure from the trainer's norm 0.13).
 
-Closest historical preps (pattern z -1.95; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+**Has this trainer done this before?** (-0.40) Tim Fitzsimmons has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 8 runners, 0 wins, 0 placings
 
-- Dunaden 2011 (won, Mikel Delzangles, GEELONG_CUP_IMPORT) similarity 0.68 (different trainer; method similarity 0.76, credit x0.84) - strongest matches: leadup_group 1.00, days_since 1.00, weight 1.00
-- Americain 2010 (won, Alain de Royer-Dupre, GEELONG_CUP_IMPORT) similarity 0.64 (different trainer; method similarity 0.74, credit x0.83) - strongest matches: leadup_group 1.00, days_since 1.00, weight 1.00
-- Media Puzzle 2002 (won, Dermot Weld, GEELONG_CUP_IMPORT) similarity 0.65 (different trainer; method similarity 0.74, credit x0.83) - strongest matches: leadup_group 1.00, days_since 1.00, sex 1.00
-- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.53 (different trainer; method similarity 0.84, credit x0.90) - strongest matches: origin 1.00, style 1.00, sex 1.00
+Closest historical preps (pattern z -1.87; 0.0% of the pattern score comes from the trainer's own past Cup preps, 100.0% from winners rather than placegetters):
+
+- Prince Of Penzance 2015 (won, Darren Weir, HARDENED_LOCAL_STAYER) similarity 0.48 (different trainer; method similarity 0.84, credit x0.43) - strongest matches: sex 1.00, days_since 0.87, weight 0.79
+- Without A Fight 2023 (won, Anthony & Sam Freedman, CAULFIELD_CUP_FORM) similarity 0.53 (different trainer; method similarity 0.84, credit x0.22) - strongest matches: origin 1.00, style 1.00, sex 1.00
+- Dunaden 2011 (won, Mikel Delzangles, GEELONG_CUP_IMPORT) similarity 0.68 (different trainer; method similarity 0.76, credit x0.10) - strongest matches: leadup_group 1.00, days_since 1.00, weight 1.00
+- Media Puzzle 2002 (won, Dermot Weld, GEELONG_CUP_IMPORT) similarity 0.65 (different trainer; method similarity 0.74, credit x0.08) - strongest matches: leadup_group 1.00, days_since 1.00, sex 1.00
 
 ## Trainer formulas in this field
 
 **Ciaron Maher** (7 runners) - Race-hardens settled imports through the Victorian spring: 3-5 runs, often including weight-for-age sharpeners (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and deliberately farms the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) to get a large team in. GPS, heart-rate, sectional and recovery analytics on every horse; jumps-racing background with stayers. Gold Trip 2022 came via Caulfield Cup -> Cox Plate 2nd. Exception this year: Point Of Law was trained out of Werribee quarantine with a single Australian run, i.e. handled like a European fly-in.
 
-- Point Of Law (GEELONG_CUP_IMPORT): no close match to this trainer's past Cup preps; closest other-trainer style: Media Puzzle 2002 (Dermot Weld, horse sim 0.88, method sim 0.70)
-- Juja Kibo (HARDENED_LOCAL_STAYER): own formula match: Gold Trip 2022 (sim 0.62); closest other-trainer style: Prince Of Penzance 2015 (Darren Weir, horse sim 0.82, method sim 0.84)
+- Juja Kibo (HARDENED_LOCAL_STAYER): own formula match: Ashrun 2023 (sim 0.87); closest other-trainer style: Who Shot Thebarman 2014 (Chris Waller, horse sim 0.88, method sim 0.92)
 - Middle Earth (COX_PLATE_SHARPENER): own formula match: Gold Trip 2022 (sim 0.80); closest other-trainer style: Verry Elleegant 2021 (Chris Waller, horse sim 0.86, method sim 0.92)
-- Shockletz (HARDENED_LOCAL_STAYER): no close match to this trainer's past Cup preps; closest other-trainer style: Prince Of Penzance 2015 (Darren Weir, horse sim 0.80, method sim 0.78)
-- Zahrann (CAULFIELD_CUP_FORM): no close match to this trainer's past Cup preps; closest other-trainer style: Half Yours 2025 (Tony & Calvin McEvoy, horse sim 0.86, method sim 0.80)
-- Mr Monaco (HARDENED_LOCAL_STAYER): no close match to this trainer's past Cup preps; closest other-trainer style: Prince Of Penzance 2015 (Darren Weir, horse sim 0.85, method sim 0.85)
-- Royal Supremacy (CAULFIELD_CUP_FORM): no close match to this trainer's past Cup preps; closest other-trainer style: Without A Fight 2023 (Anthony & Sam Freedman, horse sim 0.84, method sim 0.80)
+- Point Of Law (GEELONG_CUP_IMPORT): no close match to this trainer's past Cup preps; closest other-trainer style: Media Puzzle 2002 (Dermot Weld, horse sim 0.88, method sim 0.70)
+- Shockletz (HARDENED_LOCAL_STAYER): own formula match: Gold Trip 2022 (sim 0.55); closest other-trainer style: Who Shot Thebarman 2014 (Chris Waller, horse sim 0.86, method sim 0.86)
+- Mr Monaco (HARDENED_LOCAL_STAYER): own formula match: High Emocean 2022 (sim 0.84); closest other-trainer style: Prince Of Penzance 2015 (Darren Weir, horse sim 0.85, method sim 0.85)
+- Zahrann (CAULFIELD_CUP_FORM): own formula match: Gold Trip 2022 (sim 0.71); closest other-trainer style: Green Moon 2012 (Robert Hickmott, horse sim 0.82, method sim 0.89)
+- Royal Supremacy (CAULFIELD_CUP_FORM): own formula match: Gold Trip 2022 (sim 0.60); closest other-trainer style: Without A Fight 2023 (Anthony & Sam Freedman, horse sim 0.84, method sim 0.80)
 
 **Joseph O'Brien** (5 runners) - Builds the whole base in Ireland: a mid-summer break, one or two September preparation runs (Curragh Cup / Irish St Leger / Kilternan), then straight on the plane and into the Cup from Werribee with no Australian run. Both winners (Rekindling 2017, Twilight Payment 2020) won the Curragh Cup earlier in the year. Horses are kept to a simple routine at Werribee and ridden positively - Twilight Payment led throughout, Master Of Reality raced on the pace. Happy to run lightly raced classic-generation horses (Rekindling, Master Of Reality, James J Braddock) and to bring back older horses year after year (Twilight Payment, Goodie Two Shoes). Big teams of four or five runners.
 
 - Trustyourinstinct (EURO_DIRECT_FLYIN): own formula match: Twilight Payment 2020 (sim 0.83); closest other-trainer style: Cross Counter 2018 (Charlie Appleby, horse sim 0.76, method sim 0.87)
-- Sons And Lovers (EURO_DIRECT_FLYIN): own formula match: Twilight Payment 2020 (sim 0.85); closest other-trainer style: Cross Counter 2018 (Charlie Appleby, horse sim 0.72, method sim 0.85)
+- Sons And Lovers (EURO_DIRECT_FLYIN): own formula match: Twilight Payment 2020 (sim 0.85); closest other-trainer style: Marmelo 2018 (Hughie Morrison, horse sim 0.86, method sim 0.91)
 - James J Braddock (EURO_DIRECT_FLYIN): own formula match: Rekindling 2017 (sim 0.89); closest other-trainer style: Cross Counter 2018 (Charlie Appleby, horse sim 0.80, method sim 0.93)
 - Goodie Two Shoes (EURO_DIRECT_FLYIN): own formula match: Twilight Payment 2020 (sim 0.80); closest other-trainer style: Cross Counter 2018 (Charlie Appleby, horse sim 0.66, method sim 0.85)
-- Kizlyar (HARDENED_LOCAL_STAYER): no close match to this trainer's past Cup preps; closest other-trainer style: Dunaden 2011 (Mikel Delzangles, horse sim 0.66, method sim 0.83)
+- Kizlyar (HARDENED_LOCAL_STAYER): no close match to this trainer's past Cup preps; closest other-trainer style: Media Puzzle 2002 (Dermot Weld, horse sim 0.65, method sim 0.85)
 
 **Chris Waller** (2 runners) - Races horses into peak fitness with a long Sydney-then-Melbourne spring: 4-6 runs, high-class weight-for-age races as sharpeners (Verry Elleegant: Turnbull win, Caulfield Cup 4th, Cox Plate 7th -> Cup). Groups his Cup team into 'form stayers' and 'weight-for-age horses'. Settled imports ridden midfield to back; many runners, high place strike rate.
 
 - Soul Of Spain (CAULFIELD_CUP_FORM): no close match to this trainer's past Cup preps; closest other-trainer style: Half Yours 2025 (Tony & Calvin McEvoy, horse sim 0.83, method sim 0.91)
-- Asterix (CAULFIELD_CUP_FORM): own formula match: Verry Elleegant 2021 (sim 0.64); closest other-trainer style: Half Yours 2025 (Tony & Calvin McEvoy, horse sim 0.78, method sim 0.81)
+- Asterix (CAULFIELD_CUP_FORM): own formula match: Verry Elleegant 2021 (sim 0.64); closest other-trainer style: Makybe Diva 2004 (Lee Freedman, horse sim 0.79, method sim 0.82)
+
+## How the trainer layer works now
+
+- A past Cup horse only counts as a template for a 2026 runner if the two trainers' methods (blended with how each horse was actually campaigned) are alike: zero credit below 0.62 similarity, ramping to full credit at 1.0, and halved again when the trainers belong to different method schools.
+- The same trainer's own past Cup horse only counts if this campaign was run the same way (Maher's Point Of Law gets no Gold Trip credit because the campaign shape is different).
+- Separately, each runner carries a 'has this trainer done this before' term from the trainer's own record with this preparation type; a trainer with no such record inherits the method school's base rate with a first-attempt penalty.
+- Trainer type records and school base rates are approximate counts compiled from published Cup results (2010-2025) and are listed in melbourne_cup/cup_data/trainer_styles.json for checking.
 
 ## Caveats
 
