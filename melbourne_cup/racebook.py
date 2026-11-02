@@ -35,7 +35,10 @@ def _checks(x, y, w, h, c1, c2, n=4):
 
 
 def silks_svg(s: dict) -> str:
-    """Jacket + cap drawn in SVG. Keys: body, sleeves, cap, pattern, pattern_color, sleeve_pattern, sleeve_color, cap_pattern, cap_color."""
+    """Silks image. Uses the real silks picture (s['image'], a data URI cropped from the official sweep grid) when
+    present; otherwise falls back to a drawn jacket from body / sleeves / cap / pattern."""
+    if s.get("image"):
+        return f'<img class="silks" src="{s["image"]}" width="44" height="52" alt="{html.escape(s.get("desc", ""))}" style="object-fit:contain">'
     body, sleeves, cap = s.get("body", "#9e9e9e"), s.get("sleeves", "#9e9e9e"), s.get("cap", "#9e9e9e")
     pat, pc = s.get("pattern", "plain"), s.get("pattern_color", "#ffffff")
     sp, sc = s.get("sleeve_pattern", "plain"), s.get("sleeve_color", "#ffffff")
@@ -212,7 +215,7 @@ h2 {{ font-family: var(--display); font-weight: 700; font-size: 22px; letter-spa
 .runner {{ background: var(--panel); border: 1px solid var(--rule); border-left: 6px solid var(--rule); margin: 0 0 10px; padding: 8px 10px 6px; break-inside: avoid; }}
 .runner.r5 {{ background: var(--r5); border-left-color: var(--gold); }} .runner.r4 {{ background: var(--r4); border-left-color: #6fae7c; }} .runner.r3 {{ background: var(--r3); border-left-color: #a9c3a9; }} .runner.r2 {{ background: var(--r2); }} .runner.r1 {{ background: var(--r1); }}
 .rhead {{ display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap; }}
-.silks {{ flex: 0 0 auto; }}
+.silks {{ flex: 0 0 auto; width: 52px; height: 62px; object-fit: contain; }}
 .rtitle {{ flex: 1 1 320px; min-width: 0; }}
 .rname {{ font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: .01em; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
 .rno {{ display: inline-grid; place-items: center; min-width: 26px; height: 26px; padding: 0 5px; border-radius: 4px; background: var(--green); color: #fff; font-size: 16px; }}

@@ -252,7 +252,7 @@ h2{{font-family:var(--display);font-weight:800;font-size:24px;margin:18px 0 6px;
 .hdr{{background:var(--band);padding:6px 10px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;font-family:var(--display);font-size:15px}}
 .tab{{color:var(--red);font-weight:800;font-size:26px;line-height:1}} .nm{{color:var(--red);font-weight:800;font-size:24px;letter-spacing:.01em}} .flags{{font-family:var(--body);font-size:12px;color:var(--muted)}}
 .starts,.prize,.wt{{font-weight:700}} .jky,.trn{{font-weight:700}} .stars{{color:var(--gold);font-family:var(--body);font-size:14px;margin-left:auto}}
-.body{{display:flex;gap:10px;padding:6px 10px;align-items:flex-start}} .body .silks{{flex:0 0 auto;width:46px;height:46px}} .mid{{flex:1 1 0;min-width:0}}
+.body{{display:flex;gap:10px;padding:6px 10px;align-items:flex-start}} .body .silks{{flex:0 0 auto;width:58px;height:68px;object-fit:contain}} .mid{{flex:1 1 0;min-width:0}}
 .ped{{color:var(--red);font-size:11.5px;font-weight:600;margin-bottom:4px}}
 .grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:2px 8px;background:var(--band2);padding:4px 6px;font-size:11.5px;font-variant-numeric:tabular-nums}} .grid span b{{font-family:var(--display);text-transform:uppercase;font-size:11px;margin-right:3px}} .grid .wide{{grid-column:span 2}}
 .scroll{{overflow-x:auto}} table.form{{border-collapse:collapse;width:100%;font-size:11.5px;font-variant-numeric:tabular-nums}}
