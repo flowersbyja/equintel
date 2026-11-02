@@ -1,0 +1,73 @@
+{
+  "_notes": [
+    "Named preparation 'formulas'. A runner is matched to an archetype by its final lead-up group, origin and days since last run;",
+    "the pattern engine then compares the runner with every historical first-four horse that followed the same (or a related) formula.",
+    "trainer_aliases collapse partnership name changes so a trainer's own past Cup preps are recognised (own-formula bonus)."
+  ],
+  "archetypes": {
+    "CAULFIELD_CUP_FORM": {
+      "label": "Caulfield Cup form line (17 days)",
+      "leadup_groups": ["CAULFIELD_CUP"],
+      "description": "Run in the Caulfield Cup 17 days out. Produced Half Yours 2025, Without A Fight 2023, Vow And Declare 2019, Viewed 2008, Delta Blues 2006, Makybe Diva 2003/04 and Ethereal 2001; placings for Incentivise, Johannes Vermeer, Trip To Paris, Warp Speed, Emissary."
+    },
+    "COX_PLATE_SHARPENER": {
+      "label": "Cox Plate weight-for-age sharpener (10 days)",
+      "leadup_groups": ["COX_PLATE"],
+      "description": "A 2040m weight-for-age test ten days out, usually after the Caulfield Cup. Gold Trip 2022 (Maher), Verry Elleegant 2021 (Waller), Fiorente 2013 (Waterhouse), Green Moon 2012, Makybe Diva 2005; placings So You Think, Hartnell, Criterion, Sir Dragonet."
+    },
+    "EURO_DIRECT_FLYIN": {
+      "label": "European fly-in, no Australian run (50-75 days)",
+      "leadup_groups": ["EURO_DIRECT"],
+      "description": "Final European run in September (Irish St Leger, St Leger, Kilternan, Great Voltigeur, Ebor, Kergorlay) then straight to the Cup from quarantine. Twilight Payment 2020 and Rekindling 2017 (Joseph O'Brien), Cross Counter 2018 (Appleby); placings Tiger Moth, Il Paradiso, Master Of Reality, Marmelo, Heartbreak City, Max Dynamite, Red Cadeaux, Deauville Legend, Okita Soushi, Goodie Two Shoes."
+    },
+    "GEELONG_CUP_IMPORT": {
+      "label": "Geelong Cup first Australian run (13 days)",
+      "leadup_groups": ["GEELONG_CUP"],
+      "description": "Import runs (and ideally wins) the Geelong Cup at its first Australian start. Americain 2010, Dunaden 2011, Media Puzzle 2002; placings Qewy 2016, Spanish Mission 2021, Prince Of Arran 2020."
+    },
+    "LEXUS_3DAY_BACKUP": {
+      "label": "Lexus / Hotham / Mackinnon Saturday backup (3 days)",
+      "leadup_groups": ["LEXUS_HOTHAM", "MACKINNON"],
+      "description": "Win the Saturday ballot-exempt race and back up on Tuesday. Shocking 2009, Brew 2000; placings Prince Of Arran 2018/19, Signoff, Kelinni, Maluckyday, Floating Artist."
+    },
+    "BART_CUMMINGS_TICKET": {
+      "label": "Bart Cummings Golden Ticket (30 days)",
+      "leadup_groups": ["BART_CUMMINGS"],
+      "description": "Win The Bart Cummings at Flemington in early October and go straight to the Cup. Almandin 2016 (Lloyd Williams / Macedon Lodge)."
+    },
+    "HARDENED_LOCAL_STAYER": {
+      "label": "Hardened local stayer via MV Cup / Herbert Power / Bendigo Cup",
+      "leadup_groups": ["MV_CUP", "HERBERT_POWER", "BENDIGO_CUP", "OTHER_AUS"],
+      "description": "Four or five runs through the second-tier staying races. Prince Of Penzance 2015 (MV Cup 2nd), Protectionist 2014 (Herbert Power 4th), Knight's Choice 2024 (Bendigo Cup 5th); placings Who Shot Thebarman, High Emocean, Sheraz, Ashrun."
+    },
+    "TURNBULL_FRESH": {
+      "label": "Fresh off the Turnbull (30 days)",
+      "leadup_groups": ["TURNBULL"],
+      "description": "Efficient 2007: unplaced in the Turnbull then into the Cup fresh."
+    }
+  },
+  "related_archetypes": [
+    ["CAULFIELD_CUP_FORM", "COX_PLATE_SHARPENER", 0.6],
+    ["EURO_DIRECT_FLYIN", "GEELONG_CUP_IMPORT", 0.5],
+    ["HARDENED_LOCAL_STAYER", "LEXUS_3DAY_BACKUP", 0.5],
+    ["HARDENED_LOCAL_STAYER", "BART_CUMMINGS_TICKET", 0.6],
+    ["HARDENED_LOCAL_STAYER", "CAULFIELD_CUP_FORM", 0.4],
+    ["GEELONG_CUP_IMPORT", "HARDENED_LOCAL_STAYER", 0.35],
+    ["TURNBULL_FRESH", "BART_CUMMINGS_TICKET", 0.5]
+  ],
+  "trainer_aliases": {
+    "Ciaron Maher & David Eustace": "Ciaron Maher",
+    "Ciaron Maher": "Ciaron Maher",
+    "Anthony & Sam Freedman": "Freedman",
+    "Anthony Freedman": "Freedman",
+    "Lee Freedman": "Freedman",
+    "John Symons & Sheila Laxon": "Sheila Laxon",
+    "Sheila Laxon": "Sheila Laxon",
+    "Gai Waterhouse & Adrian Bott": "Gai Waterhouse",
+    "Gai Waterhouse": "Gai Waterhouse",
+    "David Hayes & Tom Dabernig": "David Hayes",
+    "Tony & Calvin McEvoy": "McEvoy",
+    "Michael Moroney": "Moroney",
+    "Mike Moroney": "Moroney"
+  }
+}

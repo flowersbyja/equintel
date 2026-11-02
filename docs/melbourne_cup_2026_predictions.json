@@ -1,0 +1,740 @@
+{
+  "race": {
+    "name": "Lexus Melbourne Cup 2026",
+    "date": "2026-11-03",
+    "course": "Flemington",
+    "distance_m": 3200,
+    "field_size": 24,
+    "expected_track": "Soft 5-6 (5-10mm forecast Monday, clearing Tuesday; rail +3m)",
+    "prob_rain_affected": 0.7,
+    "pace_outlook": "No clear leader. Enfjaar, So You Are, Royal Supremacy, Wine Dark Sea, Kizlyar are the go-forward types; several are drawn wide so an honest early tempo is expected.",
+    "odds_snapshot": "Consensus of TAB / Ladbrokes / CrownBet fixed prices published 31 Oct - 2 Nov 2026"
+  },
+  "runners": [
+    {
+      "no": 1,
+      "horse": "Sons And Lovers",
+      "odds": 19.0,
+      "win_prob": 0.05737072078047099,
+      "place_prob": 0.1759,
+      "top4_prob": 0.23856,
+      "components": {
+        "horse": "Sons And Lovers",
+        "market_prob": 0.042671956907955,
+        "form_rating": 1.086,
+        "form_z": 0.896493959025921,
+        "pattern_total": 1.9974785920242617,
+        "pattern_z": 1.146997273362661,
+        "prior": -0.355,
+        "prior_notes": [
+          "weight 57.5kg -0.16",
+          "expected going +0.10",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -2.1076126213233475
+      }
+    },
+    {
+      "no": 2,
+      "horse": "Trustyourinstinct",
+      "odds": 8.0,
+      "win_prob": 0.056834985583833236,
+      "place_prob": 0.17538,
+      "top4_prob": 0.2359,
+      "components": {
+        "horse": "Trustyourinstinct",
+        "market_prob": 0.10134589765639314,
+        "form_rating": 0.136,
+        "form_z": 0.051234581563717775,
+        "pattern_total": 1.9543187948864764,
+        "pattern_z": 1.0484897145645677,
+        "prior": -0.73,
+        "prior_notes": [
+          "weight 57.0kg -0.12",
+          "barrier 18 -0.10",
+          "expected going -0.21",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -2.116994624086483
+      }
+    },
+    {
+      "no": 3,
+      "horse": "Knight's Choice",
+      "odds": 34.0,
+      "win_prob": 0.019340128514018527,
+      "place_prob": 0.06943,
+      "top4_prob": 0.09637,
+      "components": {
+        "horse": "Knight's Choice",
+        "market_prob": 0.023846093566210147,
+        "form_rating": -0.996,
+        "form_z": -0.9559586976859811,
+        "pattern_total": 1.6358816320076408,
+        "pattern_z": 0.24641396948617916,
+        "prior": -0.18,
+        "prior_notes": [
+          "weight 56.5kg -0.08",
+          "age 7 -0.10"
+        ],
+        "logit": -3.194964568587153
+      }
+    },
+    {
+      "no": 4,
+      "horse": "Middle Earth",
+      "odds": 14.0,
+      "win_prob": 0.052071119701725996,
+      "place_prob": 0.16198,
+      "top4_prob": 0.21825,
+      "components": {
+        "horse": "Middle Earth",
+        "market_prob": 0.05791194151793893,
+        "form_rating": -0.794,
+        "form_z": -0.7762298616361233,
+        "pattern_total": 2.1441431424400825,
+        "pattern_z": 1.4665215983780453,
+        "prior": -0.275,
+        "prior_notes": [
+          "weight 56.5kg -0.08",
+          "expected going +0.10",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -2.204536232853959
+      }
+    },
+    {
+      "no": 5,
+      "horse": "Vauban",
+      "odds": 51.0,
+      "win_prob": 0.004335633251994323,
+      "place_prob": 0.01851,
+      "top4_prob": 0.02582,
+      "components": {
+        "horse": "Vauban",
+        "market_prob": 0.015897395710806766,
+        "form_rating": 0.284,
+        "form_z": 0.18291709510519782,
+        "pattern_total": 0.9137576127981022,
+        "pattern_z": -2.3798472414781537,
+        "prior": -0.925,
+        "prior_notes": [
+          "weight 56.5kg -0.08",
+          "barrier 22 -0.35 (no winner from 20+ since 2015)",
+          "age 9 -0.60",
+          "expected going +0.10"
+        ],
+        "logit": -4.690279025120223
+      }
+    },
+    {
+      "no": 6,
+      "horse": "Enfjaar",
+      "odds": 22.0,
+      "win_prob": 0.07131330533775325,
+      "place_prob": 0.21424,
+      "top4_prob": 0.28359,
+      "components": {
+        "horse": "Enfjaar",
+        "market_prob": 0.03685305369323387,
+        "form_rating": 2.007,
+        "form_z": 1.715950681807699,
+        "pattern_total": 1.674838018825461,
+        "pattern_z": 0.35254536401392395,
+        "prior": -0.03500000000000002,
+        "prior_notes": [
+          "weight 56.0kg -0.04",
+          "age 7 -0.10",
+          "expected going +0.10"
+        ],
+        "logit": -1.8900637829373417
+      }
+    },
+    {
+      "no": 7,
+      "horse": "Royal Supremacy",
+      "odds": 51.0,
+      "win_prob": 0.008355669695222853,
+      "place_prob": 0.03225,
+      "top4_prob": 0.04474,
+      "components": {
+        "horse": "Royal Supremacy",
+        "market_prob": 0.015897395710806766,
+        "form_rating": -1.973,
+        "form_z": -1.8252412364023733,
+        "pattern_total": 1.5598825926312179,
+        "pattern_z": 0.03188654137391382,
+        "prior": -0.38999999999999996,
+        "prior_notes": [
+          "weight 56.0kg -0.04",
+          "barrier 21 -0.35 (no winner from 20+ since 2015)"
+        ],
+        "logit": -4.034206389716874
+      }
+    },
+    {
+      "no": 8,
+      "horse": "Wine Dark Sea",
+      "odds": 46.0,
+      "win_prob": 0.015028521988938722,
+      "place_prob": 0.05556,
+      "top4_prob": 0.07579,
+      "components": {
+        "horse": "Wine Dark Sea",
+        "market_prob": 0.017625373505459674,
+        "form_rating": 0.144,
+        "form_z": 0.05835255526866263,
+        "pattern_total": 1.4429081778993529,
+        "pattern_z": -0.31963601530290453,
+        "prior": -0.33999999999999997,
+        "prior_notes": [
+          "weight 56.0kg -0.04",
+          "barrier 23 -0.35 (no winner from 20+ since 2015)",
+          "age 5 +0.05"
+        ],
+        "logit": -3.4471968420421852
+      }
+    },
+    {
+      "no": 9,
+      "horse": "Asterix",
+      "odds": 56.0,
+      "win_prob": 0.010025859039953176,
+      "place_prob": 0.0391,
+      "top4_prob": 0.05347,
+      "components": {
+        "horse": "Asterix",
+        "market_prob": 0.014477985379484732,
+        "form_rating": -1.348,
+        "form_z": -1.2691495407035553,
+        "pattern_total": 1.6132896452761303,
+        "pattern_z": 0.18370114214738228,
+        "prior": -0.35,
+        "prior_notes": [
+          "age 8 -0.35"
+        ],
+        "logit": -3.8519790442833055
+      }
+    },
+    {
+      "no": 10,
+      "horse": "Goodie Two Shoes",
+      "odds": 26.0,
+      "win_prob": 0.013759841521453037,
+      "place_prob": 0.05211,
+      "top4_prob": 0.07195,
+      "components": {
+        "horse": "Goodie Two Shoes",
+        "market_prob": 0.03118335312504404,
+        "form_rating": -0.569,
+        "form_z": -0.5760368511845487,
+        "pattern_total": 1.728361733232345,
+        "pattern_z": 0.49440609021169435,
+        "prior": -0.9099999999999999,
+        "prior_notes": [
+          "barrier 19 -0.10",
+          "age 7 -0.10",
+          "mare -0.20",
+          "expected going -0.21",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -3.535392388473059
+      }
+    },
+    {
+      "no": 11,
+      "horse": "Juja Kibo",
+      "odds": 12.0,
+      "win_prob": 0.0656821770473579,
+      "place_prob": 0.19572,
+      "top4_prob": 0.26293,
+      "components": {
+        "horse": "Juja Kibo",
+        "market_prob": 0.06756393177092875,
+        "form_rating": 1.42,
+        "form_z": 1.1936693612073692,
+        "pattern_total": 1.5381568055872807,
+        "pattern_z": -0.03136385687233116,
+        "prior": -0.3,
+        "prior_notes": [
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -1.9723190927055805
+      }
+    },
+    {
+      "no": 12,
+      "horse": "Hopewell Rock",
+      "odds": 9.5,
+      "win_prob": 0.14616637104341365,
+      "place_prob": 0.37105,
+      "top4_prob": 0.47458,
+      "components": {
+        "horse": "Hopewell Rock",
+        "market_prob": 0.08534391381591,
+        "form_rating": 1.549,
+        "form_z": 1.3084466871996052,
+        "pattern_total": 1.69363722992252,
+        "pattern_z": 0.40288132172830676,
+        "prior": 0.15999999999999998,
+        "prior_notes": [
+          "barrier 15 -0.10",
+          "age 5 +0.05",
+          "expected going +0.21"
+        ],
+        "logit": -1.1724012029415896
+      }
+    },
+    {
+      "no": 13,
+      "horse": "Onesmoothoperator",
+      "odds": 76.0,
+      "win_prob": 0.002916074616530252,
+      "place_prob": 0.01305,
+      "top4_prob": 0.01772,
+      "components": {
+        "horse": "Onesmoothoperator",
+        "market_prob": 0.01066798922698875,
+        "form_rating": -2.151,
+        "form_z": -1.9836161513373962,
+        "pattern_total": 1.0003662824645585,
+        "pattern_z": -1.9714756460545833,
+        "prior": -0.495,
+        "prior_notes": [
+          "age 9 -0.60",
+          "expected going +0.10"
+        ],
+        "logit": -5.086908301097433
+      }
+    },
+    {
+      "no": 14,
+      "horse": "Soul Of Spain",
+      "odds": 32.0,
+      "win_prob": 0.03752614712177555,
+      "place_prob": 0.12304,
+      "top4_prob": 0.16841,
+      "components": {
+        "horse": "Soul Of Spain",
+        "market_prob": 0.025336474414098285,
+        "form_rating": -0.186,
+        "form_z": -0.23526386006031316,
+        "pattern_total": 1.9264318300796313,
+        "pattern_z": 0.9836769493130754,
+        "prior": 0.0,
+        "prior_notes": [],
+        "logit": -2.5321087569890577
+      }
+    },
+    {
+      "no": 15,
+      "horse": "Zahrann",
+      "odds": 27.0,
+      "win_prob": 0.04443959662854655,
+      "place_prob": 0.14452,
+      "top4_prob": 0.19534,
+      "components": {
+        "horse": "Zahrann",
+        "market_prob": 0.030028414120412777,
+        "form_rating": -0.12,
+        "form_z": -0.176540576994518,
+        "pattern_total": 2.0423512223439824,
+        "pattern_z": 1.2471825455196028,
+        "prior": -0.05499999999999999,
+        "prior_notes": [
+          "age 5 +0.05",
+          "expected going -0.10"
+        ],
+        "logit": -2.363015815610814
+      }
+    },
+    {
+      "no": 16,
+      "horse": "So You Are",
+      "odds": 13.0,
+      "win_prob": 0.05643235891986374,
+      "place_prob": 0.17375,
+      "top4_prob": 0.23451,
+      "components": {
+        "horse": "So You Are",
+        "market_prob": 0.06236670625008808,
+        "form_rating": 1.081,
+        "form_z": 0.8920452254603304,
+        "pattern_total": 1.4809608462551496,
+        "pattern_z": -0.20224920920105952,
+        "prior": -0.25,
+        "prior_notes": [
+          "age 5 +0.05",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -2.124103969883463
+      }
+    },
+    {
+      "no": 17,
+      "horse": "Future History",
+      "odds": 56.0,
+      "win_prob": 0.005093479015162708,
+      "place_prob": 0.02042,
+      "top4_prob": 0.02865,
+      "components": {
+        "horse": "Future History",
+        "market_prob": 0.014477985379484732,
+        "form_rating": -0.017,
+        "form_z": -0.08489666554335284,
+        "pattern_total": 1.1293490543876208,
+        "pattern_z": -1.4245736069385888,
+        "prior": -0.8999999999999999,
+        "prior_notes": [
+          "age 9 -0.60",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -4.529185606461036
+      }
+    },
+    {
+      "no": 18,
+      "horse": "James J Braddock",
+      "odds": 17.0,
+      "win_prob": 0.032207624832094627,
+      "place_prob": 0.10842,
+      "top4_prob": 0.14821,
+      "components": {
+        "horse": "James J Braddock",
+        "market_prob": 0.047692187132420294,
+        "form_rating": -0.796,
+        "form_z": -0.7780093550623595,
+        "pattern_total": 2.0522562066201373,
+        "pattern_z": 1.2690002939889442,
+        "prior": -0.5499999999999999,
+        "prior_notes": [
+          "barrier 24 -0.35 (no winner from 20+ since 2015)",
+          "age 4 +0.10",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -2.684943483029278
+      }
+    },
+    {
+      "no": 19,
+      "horse": "Kizlyar",
+      "odds": 41.0,
+      "win_prob": 0.008968259726697302,
+      "place_prob": 0.03448,
+      "top4_prob": 0.0485,
+      "components": {
+        "horse": "Kizlyar",
+        "market_prob": 0.019774809298808416,
+        "form_rating": 0.046,
+        "form_z": -0.028842622616912002,
+        "pattern_total": 1.1420075581669786,
+        "pattern_z": -1.374308210835533,
+        "prior": -0.6,
+        "prior_notes": [
+          "barrier 20 -0.35 (no winner from 20+ since 2015)",
+          "age 5 +0.05",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -3.963455056729056
+      }
+    },
+    {
+      "no": 20,
+      "horse": "Point Of Law",
+      "odds": 6.5,
+      "win_prob": 0.16328002411900283,
+      "place_prob": 0.4036,
+      "top4_prob": 0.51082,
+      "components": {
+        "horse": "Point Of Law",
+        "market_prob": 0.12473341250017617,
+        "form_rating": 1.363,
+        "form_z": 1.142953798559637,
+        "pattern_total": 1.6150863746394781,
+        "pattern_z": 0.18872070804966942,
+        "prior": 0.1,
+        "prior_notes": [
+          "age 4 +0.10"
+        ],
+        "logit": -1.0616800373584934
+      }
+    },
+    {
+      "no": 21,
+      "horse": "Strictly Business",
+      "odds": 61.0,
+      "win_prob": 0.007624887090013247,
+      "place_prob": 0.03084,
+      "top4_prob": 0.04235,
+      "components": {
+        "horse": "Strictly Business",
+        "market_prob": 0.013291265266412215,
+        "form_rating": -0.994,
+        "form_z": -0.9541792042597448,
+        "pattern_total": 1.3370342349615885,
+        "pattern_z": -0.6632975766198287,
+        "prior": -0.4,
+        "prior_notes": [
+          "age 4 +0.10",
+          "mare -0.20",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -4.125729189058947
+      }
+    },
+    {
+      "no": 22,
+      "horse": "Mr Monaco",
+      "odds": 24.0,
+      "win_prob": 0.05205928688339847,
+      "place_prob": 0.16189,
+      "top4_prob": 0.21848,
+      "components": {
+        "horse": "Mr Monaco",
+        "market_prob": 0.03378196588546437,
+        "form_rating": 1.748,
+        "form_z": 1.4855062831101087,
+        "pattern_total": 1.5841556363386111,
+        "pattern_z": 0.10151914138169317,
+        "prior": -0.14,
+        "prior_notes": [
+          "barrier 16 -0.10",
+          "age 5 +0.05",
+          "expected going +0.21",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -2.204763502078511
+      }
+    },
+    {
+      "no": 23,
+      "horse": "Zakouma",
+      "odds": 31.0,
+      "win_prob": 0.019410172061270627,
+      "place_prob": 0.06838,
+      "top4_prob": 0.09376,
+      "components": {
+        "horse": "Zakouma",
+        "market_prob": 0.026153780040359516,
+        "form_rating": 0.149,
+        "form_z": 0.06280128883425318,
+        "pattern_total": 1.309279332770418,
+        "pattern_z": -0.7578955616235654,
+        "prior": -0.25,
+        "prior_notes": [
+          "age 5 +0.05",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -3.191349441865745
+      }
+    },
+    {
+      "no": 24,
+      "horse": "Shockletz",
+      "odds": 10.0,
+      "win_prob": 0.04975775547950848,
+      "place_prob": 0.15638,
+      "top4_prob": 0.2113,
+      "components": {
+        "horse": "Shockletz",
+        "market_prob": 0.08107671812511451,
+        "form_rating": 0.813,
+        "form_z": 0.6535931063446772,
+        "pattern_total": 1.5354537383771407,
+        "pattern_z": -0.039295728593105775,
+        "prior": -0.55,
+        "prior_notes": [
+          "barrier 17 -0.10",
+          "age 5 +0.05",
+          "mare -0.20",
+          "last lead-up slowly run -0.30"
+        ],
+        "logit": -2.2499803630851547
+      }
+    }
+  ],
+  "first_four_exact": [
+    {
+      "order": [
+        "Point Of Law",
+        "Hopewell Rock",
+        "Enfjaar",
+        "Juja Kibo"
+      ],
+      "prob": 0.00022813138489345355
+    },
+    {
+      "order": [
+        "Point Of Law",
+        "Hopewell Rock",
+        "Juja Kibo",
+        "Enfjaar"
+      ],
+      "prob": 0.0002263825578715341
+    },
+    {
+      "order": [
+        "Hopewell Rock",
+        "Point Of Law",
+        "Enfjaar",
+        "Juja Kibo"
+      ],
+      "prob": 0.0002244372535643934
+    },
+    {
+      "order": [
+        "Hopewell Rock",
+        "Point Of Law",
+        "Juja Kibo",
+        "Enfjaar"
+      ],
+      "prob": 0.00022271674529701003
+    },
+    {
+      "order": [
+        "Point Of Law",
+        "Enfjaar",
+        "Hopewell Rock",
+        "Juja Kibo"
+      ],
+      "prob": 0.0002095507262765646
+    },
+    {
+      "order": [
+        "Point Of Law",
+        "Juja Kibo",
+        "Hopewell Rock",
+        "Enfjaar"
+      ],
+      "prob": 0.00020662139337370737
+    },
+    {
+      "order": [
+        "Hopewell Rock",
+        "Enfjaar",
+        "Point Of Law",
+        "Juja Kibo"
+      ],
+      "prob": 0.00020252489696249092
+    },
+    {
+      "order": [
+        "Point Of Law",
+        "Hopewell Rock",
+        "Enfjaar",
+        "Sons And Lovers"
+      ],
+      "prob": 0.00020197774877673706
+    },
+    {
+      "order": [
+        "Point Of Law",
+        "Hopewell Rock",
+        "Enfjaar",
+        "Trustyourinstinct"
+      ],
+      "prob": 0.00020027946862072695
+    },
+    {
+      "order": [
+        "Hopewell Rock",
+        "Juja Kibo",
+        "Point Of Law",
+        "Enfjaar"
+      ],
+      "prob": 0.0001997161672899565
+    }
+  ],
+  "first_four_boxed": [
+    {
+      "set": [
+        "Enfjaar",
+        "Hopewell Rock",
+        "Juja Kibo",
+        "Point Of Law"
+      ],
+      "prob": 0.004508258451780884
+    },
+    {
+      "set": [
+        "Enfjaar",
+        "Hopewell Rock",
+        "Point Of Law",
+        "Sons And Lovers"
+      ],
+      "prob": 0.003936930541486426
+    },
+    {
+      "set": [
+        "Enfjaar",
+        "Hopewell Rock",
+        "Point Of Law",
+        "Trustyourinstinct"
+      ],
+      "prob": 0.0039003777771291393
+    },
+    {
+      "set": [
+        "Enfjaar",
+        "Hopewell Rock",
+        "Point Of Law",
+        "So You Are"
+      ],
+      "prob": 0.0038729273709742166
+    },
+    {
+      "set": [
+        "Hopewell Rock",
+        "Juja Kibo",
+        "Point Of Law",
+        "Sons And Lovers"
+      ],
+      "prob": 0.003622020873820286
+    },
+    {
+      "set": [
+        "Hopewell Rock",
+        "Juja Kibo",
+        "Point Of Law",
+        "Trustyourinstinct"
+      ],
+      "prob": 0.0035883932996248645
+    },
+    {
+      "set": [
+        "Enfjaar",
+        "Hopewell Rock",
+        "Middle Earth",
+        "Point Of Law"
+      ],
+      "prob": 0.0035766659597147063
+    },
+    {
+      "set": [
+        "Enfjaar",
+        "Hopewell Rock",
+        "Mr Monaco",
+        "Point Of Law"
+      ],
+      "prob": 0.003575864735469138
+    },
+    {
+      "set": [
+        "Hopewell Rock",
+        "Juja Kibo",
+        "Point Of Law",
+        "So You Are"
+      ],
+      "prob": 0.0035631396298739107
+    },
+    {
+      "set": [
+        "Hopewell Rock",
+        "Juja Kibo",
+        "Middle Earth",
+        "Point Of Law"
+      ],
+      "prob": 0.0032905854604726803
+    }
+  ]
+}

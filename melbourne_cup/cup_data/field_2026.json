@@ -1,0 +1,229 @@
+{
+  "race": {
+    "name": "Lexus Melbourne Cup 2026",
+    "date": "2026-11-03",
+    "course": "Flemington",
+    "distance_m": 3200,
+    "field_size": 24,
+    "expected_track": "Soft 5-6 (5-10mm forecast Monday, clearing Tuesday; rail +3m)",
+    "prob_rain_affected": 0.7,
+    "pace_outlook": "No clear leader. Enfjaar, So You Are, Royal Supremacy, Wine Dark Sea, Kizlyar are the go-forward types; several are drawn wide so an honest early tempo is expected.",
+    "odds_snapshot": "Consensus of TAB / Ladbrokes / CrownBet fixed prices published 31 Oct - 2 Nov 2026"
+  },
+  "_field_notes": [
+    "Final field after Defiantly (vet), Saint George and Stinger Glass were withdrawn; Kizlyar and Future History gained starts.",
+    "leadups are most-recent first. tempo codes: SLOW, MODERATE, FAST, UNKNOWN. Racelab reported only 11 of 24 runners had a moderate-or-faster lead-up:",
+    "that matches rating the Caulfield Cup and Geelong Cup as MODERATE, the Ebor as FAST, and the Cox Plate / Moonee Valley Cup / Bendigo Cup / Tesio / Kilternan / Irish St Leger / Crystal Mile as SLOW.",
+    "excuses are free-text tags the form engine recognises: FIRST_UP, WIDE, HEAVY_TRACK, INTERFERENCE, DROPPED_WHIP, OVERRACED, SHORT_SHARPENER, BIG_WEIGHT, WIDE_BARRIER, EASED, FELL.",
+    "wet_rating: +1 proven on rain-affected ground, 0 unknown/neutral, -1 connections want firm ground."
+  ],
+  "runners": [
+    {"no": 1, "horse": "Sons And Lovers", "country": "IRE", "trainer": "Joseph O'Brien", "jockey": "Dylan Browne McMonagle", "barrier": 3, "weight": 57.5, "age": 6, "sex": "G", "origin": "FLYIN_DIRECT", "odds": 19.0,
+     "style": "MIDFIELD", "prior_3200": true, "wet_rating": 0.5, "aus_prep_runs": 0, "days_since": 52,
+     "leadups": [
+       {"race": "Kilternan Stakes G3", "venue": "Leopardstown", "date": "2026-09-12", "dist": 2414, "finish": 2, "field": 10, "margin": 1.0, "tempo": "SLOW", "class": "G3", "excuses": []},
+       {"race": "Prix Maurice de Nieuil G2", "venue": "Longchamp", "date": "2026-07-12", "dist": 2800, "finish": 1, "field": 8, "margin": 0.0, "tempo": "UNKNOWN", "class": "G2", "excuses": []},
+       {"race": "Hardwicke Stakes G2", "venue": "Ascot", "date": "2026-06-20", "dist": 2400, "finish": 5, "field": 9, "margin": 3.0, "tempo": "UNKNOWN", "class": "G2", "excuses": []},
+       {"race": "Dubai Gold Cup G2", "venue": "Meydan", "date": "2026-03-28", "dist": 3200, "finish": 4, "field": 12, "margin": 3.0, "tempo": "UNKNOWN", "class": "G2", "excuses": []}
+     ],
+     "notes": "Topweight. Dual G2 winner (Red Sea Turf Hcp 3000m, Maurice de Nieuil 2800m). Beat stablemates James J Braddock and Goodie Two Shoes in the Kilternan. Handles all ground, rarely runs poorly, but 57.5kg is the heaviest winning weight since Makybe Diva's 58kg."},
+
+    {"no": 2, "horse": "Trustyourinstinct", "country": "IRE", "trainer": "Joseph O'Brien", "jockey": "James McDonald", "barrier": 18, "weight": 57.0, "age": 6, "sex": "G", "origin": "FLYIN_DIRECT", "odds": 8.0,
+     "style": "BACKMARKER", "prior_3200": false, "wet_rating": -1, "aus_prep_runs": 0, "days_since": 51,
+     "leadups": [
+       {"race": "Irish St Leger G1", "venue": "Curragh", "date": "2026-09-13", "dist": 2800, "finish": 4, "field": 7, "margin": 4.5, "tempo": "SLOW", "class": "G1", "excuses": []},
+       {"race": "Curragh Cup G2", "venue": "Curragh", "date": "2026-07-19", "dist": 2800, "finish": 1, "field": 6, "margin": 0.0, "tempo": "SLOW", "class": "G2", "excuses": []},
+       {"race": "Listed/Group race", "venue": "Curragh", "date": "2026-06-28", "dist": 2400, "finish": 6, "field": 8, "margin": 5.0, "tempo": "UNKNOWN", "class": "G3", "excuses": []}
+     ],
+     "notes": "Same Irish St Leger -> Cup route Joseph O'Brien used with Twilight Payment (2020), but this horse is a hold-up closer not a leader, carries 57kg from barrier 18, and the trainer has said he wants dry, fast ground. J McDonald rides."},
+
+    {"no": 3, "horse": "Knight's Choice", "country": "AUS", "trainer": "John Symons & Sheila Laxon", "jockey": "Robbie Dolan", "barrier": 2, "weight": 56.5, "age": 7, "sex": "G", "origin": "LOCAL", "odds": 34.0,
+     "style": "BACKMARKER", "prior_3200": true, "wet_rating": 0, "aus_prep_runs": 4, "days_since": 17,
+     "leadups": [
+       {"race": "Caulfield Cup G1", "venue": "Caulfield", "date": "2026-10-17", "dist": 2400, "finish": 14, "field": 18, "margin": 10.0, "tempo": "MODERATE", "class": "G1", "excuses": ["INTERFERENCE"]},
+       {"race": "Herbert Power Stakes G2", "venue": "Caulfield", "date": "2026-10-10", "dist": 2400, "finish": 3, "field": 13, "margin": 0.2, "tempo": "SLOW", "class": "G2", "excuses": []},
+       {"race": "Naturalism Stakes G3", "venue": "Caulfield", "date": "2026-09-19", "dist": 2000, "finish": 9, "field": 12, "margin": 4.0, "tempo": "UNKNOWN", "class": "G3", "excuses": []}
+     ],
+     "notes": "2024 Cup winner at $91 off a 16th-14th-5th lead-up line; this year's Herbert Power third was rated better than anything in that winning prep. Carries 5kg more than 2024 and the incident-packed Caulfield Cup can be forgiven. Missed 2025 spring (strangles outbreak)."},
+
+    {"no": 4, "horse": "Middle Earth", "country": "GB", "trainer": "Ciaron Maher", "jockey": "Mark Zahra", "barrier": 1, "weight": 56.5, "age": 6, "sex": "G", "origin": "SETTLED_IMPORT", "odds": 14.0,
+     "style": "BACKMARKER", "prior_3200": true, "wet_rating": 0.5, "aus_prep_runs": 5, "days_since": 10,
+     "leadups": [
+       {"race": "Cox Plate G1", "venue": "Flemington", "date": "2026-10-24", "dist": 2040, "finish": 8, "field": 12, "margin": 5.0, "tempo": "SLOW", "class": "G1", "excuses": ["SHORT_SHARPENER"]},
+       {"race": "Caulfield Cup G1", "venue": "Caulfield", "date": "2026-10-17", "dist": 2400, "finish": 9, "field": 18, "margin": 4.5, "tempo": "MODERATE", "class": "G1", "excuses": []},
+       {"race": "Underwood Stakes G1", "venue": "Caulfield", "date": "2026-09-26", "dist": 1800, "finish": 9, "field": 12, "margin": 6.0, "tempo": "UNKNOWN", "class": "G1", "excuses": ["SHORT_SHARPENER"]}
+     ],
+     "notes": "Third in the 2025 Cup. Five unplaced runs this prep in much tougher weight-for-age company (Underwood, Caulfield Cup, Cox Plate) - the classic Maher Gold Trip route (Caulfield Cup -> Cox Plate -> Cup, 2022). Third-fastest last 200m in the Caulfield Cup, settled last in the Cox Plate. Barrier 1, Zahra."},
+
+    {"no": 5, "horse": "Vauban", "country": "FR", "trainer": "Gai Waterhouse & Adrian Bott", "jockey": "Jordan Childs", "barrier": 22, "weight": 56.5, "age": 9, "sex": "G", "origin": "SETTLED_IMPORT", "odds": 51.0,
+     "style": "ON_PACE", "prior_3200": true, "wet_rating": 0.5, "aus_prep_runs": 1, "days_since": 13,
+     "leadups": [
+       {"race": "Geelong Cup G3", "venue": "Geelong", "date": "2026-10-21", "dist": 2400, "finish": 9, "field": 14, "margin": 6.0, "tempo": "MODERATE", "class": "G3", "excuses": ["BIG_WEIGHT", "WIDE_BARRIER", "FIRST_UP"]},
+       {"race": "Doomben Cup G1", "venue": "Doomben", "date": "2026-05-16", "dist": 2000, "finish": 3, "field": 12, "margin": 1.5, "tempo": "UNKNOWN", "class": "G1", "excuses": []},
+       {"race": "Tancred Stakes G1", "venue": "Rosehill", "date": "2026-03-28", "dist": 2400, "finish": 3, "field": 10, "margin": 2.0, "tempo": "UNKNOWN", "class": "G1", "excuses": []}
+     ],
+     "notes": "Sixth in the 2025 Cup (his best of three attempts). One run since May, 60.5kg from a wide gate at Geelong. Nine-year-old; no horse that old has won since 1941."},
+
+    {"no": 6, "horse": "Enfjaar", "country": "GB", "trainer": "Roger Varian", "jockey": "Ray Dawson", "barrier": 8, "weight": 56.0, "age": 7, "sex": "G", "origin": "FLYIN_RUN", "odds": 22.0,
+     "style": "ON_PACE", "prior_3200": false, "wet_rating": 0.5, "aus_prep_runs": 1, "days_since": 17,
+     "leadups": [
+       {"race": "Caulfield Cup G1", "venue": "Caulfield", "date": "2026-10-17", "dist": 2400, "finish": 3, "field": 18, "margin": 1.0, "tempo": "MODERATE", "class": "G1", "excuses": ["FIRST_UP"]},
+       {"race": "Glorious Stakes G3", "venue": "Goodwood", "date": "2026-08-01", "dist": 2412, "finish": 1, "field": 7, "margin": 0.0, "tempo": "MODERATE", "class": "G3", "excuses": []}
+     ],
+     "notes": "Raced on speed first-up after three months and only 'felt the pinch' in the last 100m of the Caulfield Cup (rider thought he would win on the turn). Led all the way in the Glorious Stakes. Caulfield Cup top-3 is the single most productive Cup lead-up. Tough, handles all ground, untried at 3200m. Passed the vet on his second inspection."},
+
+    {"no": 7, "horse": "Royal Supremacy", "country": "IRE", "trainer": "Ciaron Maher", "jockey": "Ben Allen", "barrier": 21, "weight": 56.0, "age": 6, "sex": "G", "origin": "SETTLED_IMPORT", "odds": 51.0,
+     "style": "LEADER", "prior_3200": true, "wet_rating": 0, "aus_prep_runs": 3, "days_since": 17,
+     "leadups": [
+       {"race": "Caulfield Cup G1", "venue": "Caulfield", "date": "2026-10-17", "dist": 2400, "finish": 15, "field": 18, "margin": 17.0, "tempo": "MODERATE", "class": "G1", "excuses": ["EASED"]},
+       {"race": "JRA Cup G3", "venue": "Caulfield", "date": "2026-09-27", "dist": 2000, "finish": 1, "field": 10, "margin": 0.8, "tempo": "UNKNOWN", "class": "G3", "excuses": []}
+     ],
+     "notes": "Led throughout to win the JRA Cup, then sent forward and eased out of the Caulfield Cup. 15th in the 2025 Cup. Barrier 21; outsider of the Maher seven."},
+
+    {"no": 8, "horse": "Wine Dark Sea", "country": "GB", "trainer": "Harry Charlton", "jockey": "Damian Lane", "barrier": 23, "weight": 56.0, "age": 5, "sex": "G", "origin": "FLYIN_RUN", "odds": 46.0,
+     "style": "ON_PACE", "prior_3200": false, "wet_rating": 0, "aus_prep_runs": 1, "days_since": 17,
+     "leadups": [
+       {"race": "Caulfield Cup G1", "venue": "Caulfield", "date": "2026-10-17", "dist": 2400, "finish": 11, "field": 18, "margin": 6.0, "tempo": "MODERATE", "class": "G1", "excuses": ["FIRST_UP", "WIDE"]},
+       {"race": "Geoffrey Freer Stakes G3", "venue": "Newbury", "date": "2026-08-15", "dist": 2671, "finish": 1, "field": 8, "margin": 1.0, "tempo": "UNKNOWN", "class": "G3", "excuses": []}
+     ],
+     "notes": "Won 3 of 4 in England this year including the Geoffrey Freer over Dubai Honour. Forced wide early on debut here, hit the front on the turn and weakened. Barrier 23; needs several lengths of improvement but has the excuse."},
+
+    {"no": 9, "horse": "Asterix", "country": "NZ", "trainer": "Chris Waller", "jockey": "Jye McNeil", "barrier": 6, "weight": 55.0, "age": 8, "sex": "G", "origin": "LOCAL", "odds": 56.0,
+     "style": "BACKMARKER", "prior_3200": false, "wet_rating": 0, "aus_prep_runs": 4, "days_since": 17,
+     "leadups": [
+       {"race": "Caulfield Cup G1", "venue": "Caulfield", "date": "2026-10-17", "dist": 2400, "finish": 12, "field": 18, "margin": 7.0, "tempo": "MODERATE", "class": "G1", "excuses": []},
+       {"race": "Turnbull Stakes G1", "venue": "Flemington", "date": "2026-10-03", "dist": 2000, "finish": 10, "field": 14, "margin": 6.0, "tempo": "UNKNOWN", "class": "G1", "excuses": ["HEAVY_TRACK"]},
+       {"race": "Naturalism Stakes G3", "venue": "Caulfield", "date": "2026-09-19", "dist": 2000, "finish": 3, "field": 12, "margin": 1.5, "tempo": "UNKNOWN", "class": "G3", "excuses": []}
+     ],
+     "notes": "Tattersall's Cup (2400m) winner in June; below par in the Turnbull and Caulfield Cup. Eight-year-old."},
+
+    {"no": 10, "horse": "Goodie Two Shoes", "country": "IRE", "trainer": "Joseph O'Brien", "jockey": "Wayne Lordan", "barrier": 19, "weight": 55.0, "age": 7, "sex": "M", "origin": "FLYIN_DIRECT", "odds": 26.0,
+     "style": "MIDFIELD", "prior_3200": true, "wet_rating": -1, "aus_prep_runs": 0, "days_since": 52,
+     "leadups": [
+       {"race": "Kilternan Stakes G3", "venue": "Leopardstown", "date": "2026-09-12", "dist": 2414, "finish": 10, "field": 10, "margin": 8.0, "tempo": "SLOW", "class": "G3", "excuses": []},
+       {"race": "Lillie Langtry Stakes G2", "venue": "Goodwood", "date": "2026-08-01", "dist": 2800, "finish": 1, "field": 9, "margin": 0.02, "tempo": "UNKNOWN", "class": "G2", "excuses": []}
+     ],
+     "notes": "Second in the 2025 Cup with 51.5kg; carries 3.5kg more and drew 19. Trainer says career-best and wants a fast track. Only three mares have placed since 2005."},
+
+    {"no": 11, "horse": "Juja Kibo", "country": "IRE", "trainer": "Ciaron Maher", "jockey": "Sam Clipperton", "barrier": 14, "weight": 55.0, "age": 6, "sex": "G", "origin": "SETTLED_IMPORT", "odds": 12.0,
+     "style": "BACKMARKER", "prior_3200": false, "wet_rating": 0, "aus_prep_runs": 4, "days_since": 10,
+     "leadups": [
+       {"race": "Moonee Valley Gold Cup G2", "venue": "Flemington", "date": "2026-10-24", "dist": 2500, "finish": 1, "field": 16, "margin": 0.0, "tempo": "SLOW", "class": "G2", "excuses": []},
+       {"race": "The Metropolitan", "venue": "Randwick", "date": "2026-10-03", "dist": 2400, "finish": 1, "field": 14, "margin": 0.0, "tempo": "SLOW", "class": "G2", "excuses": []}
+     ],
+     "notes": "Golden Ticket via the MV Gold Cup, beating stablemates Kings Valley and Mr Monaco. Maher: 'came off a slow speed and showed such a good turn of foot'. Flies off moderate tempos; the question is whether he gets that at 3200m. Kingston Rule (1990) is the only MV Cup winner to go on and win."},
+
+    {"no": 12, "horse": "Hopewell Rock", "country": "GB", "trainer": "George Boughey", "jockey": "Zac Lloyd", "barrier": 15, "weight": 54.5, "age": 5, "sex": "G", "origin": "FLYIN_DIRECT", "odds": 9.5,
+     "style": "MIDFIELD", "prior_3200": false, "wet_rating": 1, "aus_prep_runs": 0, "days_since": 73,
+     "leadups": [
+       {"race": "Ebor Handicap", "venue": "York", "date": "2026-08-22", "dist": 2800, "finish": 2, "field": 22, "margin": 0.1, "tempo": "FAST", "class": "HCP", "excuses": ["DROPPED_WHIP"]},
+       {"race": "Summer Handicap", "venue": "Goodwood", "date": "2026-07-30", "dist": 2800, "finish": 1, "field": 14, "margin": 1.0, "tempo": "MODERATE", "class": "HCP", "excuses": []}
+     ],
+     "notes": "Head second of 22 in a strongly run Ebor (jockey dropped the whip inside the final furlong); rated 109. Direct fly-in with no Australian run, 73 days between runs - the Cross Counter / Heartbreak City template. Handles rain-affected ground. Untried at 3200m."},
+
+    {"no": 13, "horse": "Onesmoothoperator", "country": "USA", "trainer": "Tim Fitzsimmons", "jockey": "Declan Bates", "barrier": 13, "weight": 54.5, "age": 9, "sex": "G", "origin": "SETTLED_IMPORT", "odds": 76.0,
+     "style": "ON_PACE", "prior_3200": true, "wet_rating": 0.5, "aus_prep_runs": 2, "days_since": 13,
+     "leadups": [
+       {"race": "Geelong Cup G3", "venue": "Geelong", "date": "2026-10-21", "dist": 2400, "finish": 11, "field": 14, "margin": 9.4, "tempo": "MODERATE", "class": "G3", "excuses": []},
+       {"race": "Herbert Power Stakes G2", "venue": "Caulfield", "date": "2026-10-10", "dist": 2400, "finish": 13, "field": 13, "margin": 9.0, "tempo": "SLOW", "class": "G2", "excuses": []}
+     ],
+     "notes": "2024 Geelong Cup and 2025 MV Gold Cup winner; 12th and 16th in his two Cups. Now trained locally. Last in the Herbert Power and 11th at Geelong."},
+
+    {"no": 14, "horse": "Soul Of Spain", "country": "GB", "trainer": "Chris Waller", "jockey": "Tommy Berry", "barrier": 5, "weight": 54.5, "age": 6, "sex": "G", "origin": "SETTLED_IMPORT", "odds": 32.0,
+     "style": "MIDFIELD", "prior_3200": true, "wet_rating": 0, "aus_prep_runs": 4, "days_since": 17,
+     "leadups": [
+       {"race": "Caulfield Cup G1", "venue": "Caulfield", "date": "2026-10-17", "dist": 2400, "finish": 8, "field": 18, "margin": 4.0, "tempo": "MODERATE", "class": "G1", "excuses": []},
+       {"race": "The Metropolitan", "venue": "Randwick", "date": "2026-10-03", "dist": 2400, "finish": 7, "field": 14, "margin": 6.5, "tempo": "SLOW", "class": "G2", "excuses": []},
+       {"race": "Sydney Cup G1", "venue": "Randwick", "date": "2026-04-11", "dist": 3200, "finish": 2, "field": 14, "margin": 1.0, "tempo": "UNKNOWN", "class": "G1", "excuses": []}
+     ],
+     "notes": "Second in the Sydney Cup at his only 3200m start. Barrier 5 (equal most successful gate). Form this spring a notch below autumn."},
+
+    {"no": 15, "horse": "Zahrann", "country": "IRE", "trainer": "Ciaron Maher", "jockey": "Ben Melham", "barrier": 11, "weight": 54.5, "age": 5, "sex": "G", "origin": "SETTLED_IMPORT", "odds": 27.0,
+     "style": "MIDFIELD", "prior_3200": false, "wet_rating": -0.5, "aus_prep_runs": 4, "days_since": 17,
+     "leadups": [
+       {"race": "Caulfield Cup G1", "venue": "Caulfield", "date": "2026-10-17", "dist": 2400, "finish": 6, "field": 18, "margin": 4.0, "tempo": "MODERATE", "class": "G1", "excuses": []},
+       {"race": "Turnbull Stakes G1", "venue": "Flemington", "date": "2026-10-03", "dist": 2000, "finish": 11, "field": 14, "margin": 7.0, "tempo": "UNKNOWN", "class": "G1", "excuses": ["HEAVY_TRACK"]},
+       {"race": "Naturalism Stakes G3", "venue": "Caulfield", "date": "2026-09-19", "dist": 2000, "finish": 1, "field": 12, "margin": 1.5, "tempo": "UNKNOWN", "class": "G3", "excuses": []}
+     ],
+     "notes": "Second favourite in the Caulfield Cup, ran sixth. Heavy-track Turnbull forgiven. Light weight, good gate, untried at 3200m."},
+
+    {"no": 16, "horse": "So You Are", "country": "AUS", "trainer": "Bjorn Baker", "jockey": "Rachel King", "barrier": 7, "weight": 54.0, "age": 5, "sex": "G", "origin": "LOCAL", "odds": 13.0,
+     "style": "ON_PACE", "prior_3200": false, "wet_rating": 0, "aus_prep_runs": 5, "days_since": 6,
+     "leadups": [
+       {"race": "Bendigo Cup", "venue": "Bendigo", "date": "2026-10-28", "dist": 2400, "finish": 1, "field": 12, "margin": 0.8, "tempo": "SLOW", "class": "LR", "excuses": []},
+       {"race": "Tattersall's Cup / St Leger series", "venue": "Randwick", "date": "2026-10-17", "dist": 2600, "finish": 1, "field": 10, "margin": 1.0, "tempo": "UNKNOWN", "class": "LR", "excuses": []},
+       {"race": "Colin Stephen Quality G3", "venue": "Rosehill", "date": "2026-09-26", "dist": 2400, "finish": 1, "field": 10, "margin": 1.0, "tempo": "UNKNOWN", "class": "G3", "excuses": []}
+     ],
+     "notes": "Four straight wins, the latest the Bendigo Cup six days out - the same Bendigo Cup backup Knight's Choice used in 2024, and a Prince Of Penzance-style hardened local. Rising sharply in class; on-pace type who will be in the first half."},
+
+    {"no": 17, "horse": "Future History", "country": "GB", "trainer": "Gregory Hickman", "jockey": "Jamie Melham", "barrier": 12, "weight": 53.5, "age": 9, "sex": "G", "origin": "SETTLED_IMPORT", "odds": 56.0,
+     "style": "MIDFIELD", "prior_3200": true, "wet_rating": 0, "aus_prep_runs": 4, "days_since": 10,
+     "leadups": [
+       {"race": "Moonee Valley Gold Cup G2", "venue": "Flemington", "date": "2026-10-24", "dist": 2500, "finish": 9, "field": 16, "margin": 3.6, "tempo": "SLOW", "class": "G2", "excuses": []},
+       {"race": "Herbert Power Stakes G2", "venue": "Caulfield", "date": "2026-10-10", "dist": 2400, "finish": 4, "field": 13, "margin": 1.0, "tempo": "SLOW", "class": "G2", "excuses": []},
+       {"race": "JRA Plate G3", "venue": "Caulfield", "date": "2026-09-27", "dist": 2000, "finish": 2, "field": 10, "margin": 0.8, "tempo": "UNKNOWN", "class": "G3", "excuses": []}
+     ],
+     "notes": "15th in the 2023 Cup for Maher. Got in after late scratchings. Jamie Melham (2025 winning rider) aboard."},
+
+    {"no": 18, "horse": "James J Braddock", "country": "IRE", "trainer": "Joseph O'Brien", "jockey": "Craig Williams", "barrier": 24, "weight": 53.5, "age": 4, "sex": "G", "origin": "FLYIN_DIRECT", "odds": 17.0,
+     "style": "MIDFIELD", "prior_3200": false, "wet_rating": 0, "aus_prep_runs": 0, "days_since": 52,
+     "leadups": [
+       {"race": "Kilternan Stakes G3", "venue": "Leopardstown", "date": "2026-09-12", "dist": 2414, "finish": 6, "field": 10, "margin": 4.0, "tempo": "SLOW", "class": "G3", "excuses": []},
+       {"race": "Irish Derby G1", "venue": "Curragh", "date": "2026-06-28", "dist": 2400, "finish": 6, "field": 8, "margin": 24.0, "tempo": "UNKNOWN", "class": "G1", "excuses": []},
+       {"race": "Epsom Derby G1", "venue": "Epsom", "date": "2026-06-06", "dist": 2420, "finish": 3, "field": 14, "margin": 2.0, "tempo": "UNKNOWN", "class": "G1", "excuses": []}
+     ],
+     "notes": "Epsom Derby third, gelded since; lightly raced (7 starts) classic-generation import on 53.5kg - the Rekindling / Cross Counter profile, and from the Rekindling stable. Untried beyond 2420m, drawn 24 (widest)."},
+
+    {"no": 19, "horse": "Kizlyar", "country": "IRE", "trainer": "Joseph O'Brien", "jockey": "Beau Mertens", "barrier": 20, "weight": 53.5, "age": 5, "sex": "G", "origin": "FLYIN_RUN", "odds": 41.0,
+     "style": "ON_PACE", "prior_3200": true, "wet_rating": 0, "aus_prep_runs": 1, "days_since": 10,
+     "leadups": [
+       {"race": "Moonee Valley Gold Cup G2", "venue": "Flemington", "date": "2026-10-24", "dist": 2500, "finish": 11, "field": 16, "margin": 4.0, "tempo": "SLOW", "class": "G2", "excuses": ["FIRST_UP"]},
+       {"race": "Irish St Leger Trial G3", "venue": "Curragh", "date": "2026-08-15", "dist": 2816, "finish": 2, "field": 8, "margin": 1.0, "tempo": "UNKNOWN", "class": "G3", "excuses": []},
+       {"race": "Queen Alexandra Stakes", "venue": "Ascot", "date": "2026-06-20", "dist": 4013, "finish": 1, "field": 10, "margin": 0.5, "tempo": "UNKNOWN", "class": "LR", "excuses": []}
+     ],
+     "notes": "Proven marathon stayer (beat Defiantly over 4013m at Royal Ascot) but raced on speed and weakened in a slowly run MV Cup. Promoted after Defiantly's scratching."},
+
+    {"no": 20, "horse": "Point Of Law", "country": "GB", "trainer": "Ciaron Maher", "jockey": "Ethan Brown", "barrier": 9, "weight": 53.0, "age": 4, "sex": "G", "origin": "SETTLED_IMPORT", "odds": 6.5,
+     "style": "ON_PACE", "prior_3200": false, "wet_rating": 0, "aus_prep_runs": 1, "days_since": 13,
+     "leadups": [
+       {"race": "Geelong Cup G3", "venue": "Geelong", "date": "2026-10-21", "dist": 2400, "finish": 1, "field": 14, "margin": 0.5, "tempo": "MODERATE", "class": "G3", "excuses": []},
+       {"race": "Bahrain Trophy G3", "venue": "Newmarket", "date": "2025-07-10", "dist": 2615, "finish": 1, "field": 8, "margin": 1.0, "tempo": "UNKNOWN", "class": "G3", "excuses": []},
+       {"race": "Queen's Vase G2", "venue": "Ascot", "date": "2025-06-18", "dist": 2816, "finish": 4, "field": 10, "margin": 2.0, "tempo": "UNKNOWN", "class": "G2", "excuses": []}
+     ],
+     "notes": "Favourite. Bought from King Charles in August; only his sixth start. Sustained on-pace Geelong Cup win (rivals off the bit from the 600m) earned a 2kg penalty to 53kg. Trying to be the first Geelong Cup -> Melbourne Cup double since Dunaden (2011). Lightly raced 4yo on a light weight is also the Rekindling / Cross Counter age-weight profile."},
+
+    {"no": 21, "horse": "Strictly Business", "country": "NZ", "trainer": "Thomas Carberry", "jockey": "Dean Yendall", "barrier": 4, "weight": 53.0, "age": 4, "sex": "M", "origin": "LOCAL", "odds": 61.0,
+     "style": "MIDFIELD", "prior_3200": false, "wet_rating": 0, "aus_prep_runs": 3, "days_since": 10,
+     "leadups": [
+       {"race": "Moonee Valley Gold Cup G2", "venue": "Flemington", "date": "2026-10-24", "dist": 2500, "finish": 16, "field": 16, "margin": 10.0, "tempo": "SLOW", "class": "G2", "excuses": []},
+       {"race": "SA Derby G1", "venue": "Morphettville", "date": "2026-05-02", "dist": 2500, "finish": 2, "field": 12, "margin": 0.1, "tempo": "UNKNOWN", "class": "G1", "excuses": []}
+     ],
+     "notes": "SA Derby runner-up (short head) in May; last in the MV Gold Cup."},
+
+    {"no": 22, "horse": "Mr Monaco", "country": "GB", "trainer": "Ciaron Maher", "jockey": "Jabez Johnstone", "barrier": 16, "weight": 52.5, "age": 5, "sex": "G", "origin": "SETTLED_IMPORT", "odds": 24.0,
+     "style": "ON_PACE", "prior_3200": false, "wet_rating": 1, "aus_prep_runs": 4, "days_since": 10,
+     "leadups": [
+       {"race": "Moonee Valley Gold Cup G2", "venue": "Flemington", "date": "2026-10-24", "dist": 2500, "finish": 3, "field": 16, "margin": 0.8, "tempo": "SLOW", "class": "G2", "excuses": ["WIDE", "OVERRACED", "DROPPED_WHIP", "BIG_WEIGHT"]},
+       {"race": "The Bart Cummings G3", "venue": "Flemington", "date": "2026-10-03", "dist": 2500, "finish": 1, "field": 12, "margin": 1.25, "tempo": "MODERATE", "class": "G3", "excuses": []}
+     ],
+     "notes": "Bart Cummings winner on a rain-affected Flemington (the Almandin 2016 ticket), then third carrying 57.5kg in the MV Cup after racing wide, over-racing and his apprentice dropping the whip. Drops to 52.5kg. Apprentice Jabez Johnstone's first Cup ride."},
+
+    {"no": 23, "horse": "Zakouma", "country": "IRE", "trainer": "Grahame Begg", "jockey": "William Pike", "barrier": 10, "weight": 52.0, "age": 5, "sex": "G", "origin": "SETTLED_IMPORT", "odds": 31.0,
+     "style": "BACKMARKER", "prior_3200": false, "wet_rating": 0, "aus_prep_runs": 4, "days_since": 10,
+     "leadups": [
+       {"race": "Crystal Mile G2", "venue": "Flemington", "date": "2026-10-24", "dist": 1600, "finish": 11, "field": 11, "margin": 8.0, "tempo": "SLOW", "class": "G2", "excuses": ["SHORT_SHARPENER"]},
+       {"race": "Herbert Power Stakes G2", "venue": "Caulfield", "date": "2026-10-10", "dist": 2400, "finish": 5, "field": 13, "margin": 0.8, "tempo": "SLOW", "class": "G2", "excuses": []},
+       {"race": "Andrew Ramsden", "venue": "Flemington", "date": "2026-05-16", "dist": 2800, "finish": 1, "field": 10, "margin": 1.0, "tempo": "UNKNOWN", "class": "LR", "excuses": []}
+     ],
+     "notes": "Andrew Ramsden (2800m) winner in May - the Golden Ticket route that has produced placings but no winner. Mile run was a deliberate warm-up. Begg's first Cup runner; William Pike."},
+
+    {"no": 24, "horse": "Shockletz", "country": "NZ", "trainer": "Ciaron Maher", "jockey": "Harry Coffey", "barrier": 17, "weight": 51.0, "age": 5, "sex": "M", "origin": "LOCAL", "odds": 10.0,
+     "style": "BACKMARKER", "prior_3200": false, "wet_rating": 0, "aus_prep_runs": 4, "days_since": 10,
+     "leadups": [
+       {"race": "Tesio Stakes G3", "venue": "Flemington", "date": "2026-10-24", "dist": 2040, "finish": 2, "field": 12, "margin": 0.5, "tempo": "SLOW", "class": "G3", "excuses": ["SHORT_SHARPENER"]},
+       {"race": "Herbert Power Stakes G2", "venue": "Caulfield", "date": "2026-10-10", "dist": 2400, "finish": 6, "field": 13, "margin": 1.5, "tempo": "SLOW", "class": "G2", "excuses": []},
+       {"race": "Lexus Archer Stakes", "venue": "Flemington", "date": "2026-09-12", "dist": 2500, "finish": 1, "field": 12, "margin": 1.0, "tempo": "MODERATE", "class": "LR", "excuses": []}
+     ],
+     "notes": "Daughter of Shocking (2009 winner, also 51kg). Archer Stakes winner, good closing sectionals when sixth in the Herbert Power, then an eye-catching second over 2040m. Bottom weight, never beyond 2500m, mare; Coffey riding with a sore shoulder."}
+  ]
+}

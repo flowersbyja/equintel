@@ -135,6 +135,24 @@ equintel/
 └── README.md
 ```
 
+## Melbourne Cup first-four predictor
+
+A one-race-a-year module (`melbourne_cup/`) that reuses the equintel ideas (market as a strong prior, value = model probability x odds - 1) and the racing-predictor race-shape ideas, and adds two things the generic models do not have:
+
+1. **Tempo-adjusted lead-up form** (`melbourne_cup/features.py`) - a finishing position is read against how the lead-up was run: a backmarker beaten in a slowly run race is upgraded, a closer that won off a slow tempo is discounted, on-pacers that faded in a genuinely run race are excused, and recognised excuses (first-up, wide, heavy track, interference, dropped whip, big weight) add merit back. Short sharpeners are down-weighted.
+2. **Preparation-formula similarity** (`melbourne_cup/patterns.py`) - every runner is compared with the preps of all first-four finishers since 2000 (`melbourne_cup/cup_data/historical_cups.json`): lead-up race, days between runs, number of Australian runs, origin, age, weight, barrier, running style. A match to the **same trainer's** past Cup prep scores full credit (Joseph O'Brien's Irish St Leger -> Cup route, Maher's Caulfield Cup -> Cox Plate -> Cup route); the same style used by a **different trainer** scores 65% credit, so a horse can be flagged as "Rekindling-like" even when it is not trained by Rekindling's trainer.
+
+The pieces are combined log-linearly with a shrunk market prior and small structural priors (weight, barrier, age, sex, expected going, slowly run last lead-up), then a Plackett-Luce model turns win probabilities into place / top-4 probabilities and the most likely exact and boxed first fours.
+
+```bash
+python scripts/predict_melbourne_cup.py                                   # print the report
+python scripts/predict_melbourne_cup.py --out docs/MELBOURNE_CUP_2026.md --json docs/melbourne_cup_2026_predictions.json
+python scripts/predict_melbourne_cup.py --market-weight 0.6 --pattern-weight 0.4 --sims 100000
+python -m pytest tests/test_melbourne_cup.py
+```
+
+The 2026 field, odds snapshot, lead-ups and tempo notes live in `melbourne_cup/cup_data/field_2026.json`; edit the odds and `expected_track` on race morning and re-run. The 2026 report is in `docs/MELBOURNE_CUP_2026.md`.
+
 ## Notes
 
 - The market (SP) is a strong predictor — the model finds edge by combining it with form features the market doesn't fully price in
