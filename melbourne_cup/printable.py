@@ -26,7 +26,7 @@ def _tier(rank: int) -> str:
 
 
 def _going_word(fit: float) -> str:
-    return "Loves wet" if fit >= 0.5 else "Handles wet" if fit > 0.1 else "Wants firm" if fit <= -0.5 else "Prefers dry" if fit < -0.1 else "Unknown"
+    return "Loves wet" if fit >= 0.7 else "Handles wet" if fit > 0.1 else "Wants firm" if fit <= -0.7 else "Prefers dry" if fit < -0.1 else "Unknown"
 
 
 def build_printable(pred: Prediction, scenarios: dict | None = None) -> str:
@@ -41,7 +41,7 @@ def build_printable(pred: Prediction, scenarios: dict | None = None) -> str:
     top = order[0]
     edges = sorted(range(len(rs)), key=lambda i: -(pred.win_prob[i] * rs[i]["odds"] - 1))
     value = next(i for i in edges if i != top and rs[i]["odds"] >= 10)
-    each_way = next(i for i in order if i not in (top, value))
+    each_way = next(i for i in sorted(range(len(rs)), key=lambda i: -pred.top4_prob[i]) if i not in (top, value) and rs[i]["odds"] >= 8)
     roughie = next(i for i in sorted(range(len(rs)), key=lambda i: -pred.top4_prob[i]) if rs[i]["odds"] >= 20 and i not in (top, value, each_way))
     first_four = [rs[i]["no"] for i in order[:4]]
     wide_box = [rs[i]["no"] for i in order[:6]]
