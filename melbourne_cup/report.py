@@ -10,14 +10,15 @@ def _pct(x: float) -> str:
     return f"{100 * x:.1f}%"
 
 
-def build_report(pred: Prediction) -> str:
+def build_report(pred: Prediction, scenarios: dict | None = None) -> str:
     rs = pred.runners
     order = np.argsort(-pred.win_prob)
     race = pred.race
     lines = []
     lines.append(f"# {race['name']} - model first four\n")
     lines.append(f"*{race['course']}, {race['distance_m']}m, {race['date']}. Expected track: {race['expected_track']}.*\n")
-    lines.append(f"*Pace: {race['pace_outlook']}*\n")
+    lines.append(f"*Pace: {race['pace_outlook']} Model pace read: {pred.pace[0]} ({pred.pace[1]}). Day-bias setting: {pred.weights.bias}.*\n")
+    lines.append("*Going model: " + ", ".join(f"{k} {int(100 * v)}%" for k, v in pred.track_distribution.items()) + ".*\n")
     lines.append(f"*Prices: {race['odds_snapshot']}. Model weights: market {pred.weights.market}, "
                  f"tempo-adjusted form {pred.weights.form}, prep-pattern similarity {pred.weights.pattern}; "
                  f"{pred.sims:,} Plackett-Luce simulations for the placings.*\n")
@@ -36,16 +37,26 @@ def build_report(pred: Prediction) -> str:
                  " / ".join(f"{{{', '.join(sorted(c))}}} ({_pct(p)})" for c, p in pred.first_four_boxed[:3]))
     lines.append("")
 
+    if scenarios:
+        lines.append("## What changes with the going and the day's bias\n")
+        names = list(scenarios["scenarios"].keys())
+        lines.append("| Horse | " + " | ".join(names) + " |")
+        lines.append("|---|" + "---|" * len(names))
+        for h in scenarios["horses"]:
+            lines.append(f"| {h} | " + " | ".join(_pct(scenarios["scenarios"][n][h]) for n in names) + " |")
+        lines.append("")
+        lines.append("*Re-run on the day: `--track soft6` (or good4 / soft7) once the rating is posted, and `--bias on-pace` or `--bias closers` after watching how the early races at Flemington are being won.*\n")
+
     lines.append("## Full field\n")
-    lines.append("| Rank | No | Horse | Bar | Wt | Odds | Market | Model win | Place | Top-4 | Win edge | Form (tempo adj) | Pattern z | Prior |")
-    lines.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+    lines.append("| Rank | No | Horse | Bar | Wt | Odds | Market | Model win | Place | Top-4 | Win edge | Form (tempo adj) | Pattern z | Prior | Going | Pace |")
+    lines.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
     for rank, i in enumerate(order, 1):
         r = rs[i]
         c = pred.components[i]
         edge = pred.win_prob[i] * r["odds"] - 1
         lines.append(f"| {rank} | {r['no']} | {r['horse']} | {r['barrier']} | {r['weight']} | ${r['odds']:.1f} | {_pct(c['market_prob'])} | "
                      f"**{_pct(pred.win_prob[i])}** | {_pct(pred.place_prob[i])} | {_pct(pred.top4_prob[i])} | {100 * edge:+.0f}% | "
-                     f"{c['form_rating']:+.2f} | {c['pattern_z']:+.2f} | {c['prior']:+.2f} |")
+                     f"{c['form_rating']:+.2f} | {c['pattern_z']:+.2f} | {c['prior']:+.2f} | {c['going_adj']:+.2f} | {c['pace_adj']:+.2f} |")
     lines.append("")
     lines.append("*Win edge = model probability x fixed odds - 1 (equintel value definition). Positive means the market is longer than the model.*\n")
 
@@ -75,12 +86,14 @@ def build_report(pred: Prediction) -> str:
             exc = f", excuses: {', '.join(run['excuses']).lower().replace('_', ' ')} (+{run['excuse_credit']})" if run["excuses"] else ""
             lines.append(f"- {run['race']}: {run['finish']}/{run['field']} beaten {run['margin']}L, tempo {run['tempo'].lower()} -> base {run['base']:+.2f}, "
                          f"tempo {run['tempo_adj']:+.2f} ({run['tempo_note']}){exc} => {run['adjusted']:+.2f} (weight {run['weight']})")
-        lines.append(f"\nForm rating {c['form_rating']:+.2f} (z {c['form_z']:+.2f}). Structural prior {c['prior']:+.2f}: {'; '.join(c['prior_notes']) or 'none'}.\n")
+        lines.append(f"\nForm rating {c['form_rating']:+.2f} (z {c['form_z']:+.2f}). Structural prior {c['prior']:+.2f}: {'; '.join(c['prior_notes']) or 'none'}. "
+                     f"Going {c['going_adj']:+.2f} ({c['going_note']}). Pace/shape {c['pace_adj']:+.2f} ({'; '.join(c['pace_notes']) or 'none'}).\n")
+        lines.append(f"Trainer method: {pred.idx.trainer_method(r['trainer'])} This campaign: {r.get('campaign', '')} (departure from the trainer's norm {p['campaign_departure']:.2f}).\n")
         lines.append(f"Closest historical preps (pattern z {c['pattern_z']:+.2f}; {_pct(p['own_formula_share'])} of the pattern score comes from the trainer's own past Cup preps, "
                      f"{_pct(p['winner_template_share'])} from winners rather than placegetters):\n")
         for m in p["best_matches"]:
             feats = ", ".join(f"{k} {v:.2f}" for k, v in m["top_feature_matches"])
-            own = " **(same trainer's formula)**" if m["same_trainer"] else ""
+            own = " **(same trainer's formula)**" if m["same_trainer"] else f" (different trainer; method similarity {m['trainer_style_similarity']:.2f}, credit x{m['trainer_multiplier']:.2f})"
             lines.append(f"- {m['horse']} {m['year']} ({'won' if m['pos'] == 1 else str(m['pos']) + 'th' if m['pos'] > 3 else ['', '', '2nd', '3rd'][m['pos']]}, {m['trainer']}, {m['archetype']}) "
                          f"similarity {m['similarity']:.2f}{own} - strongest matches: {feats}")
         lines.append("")
@@ -92,14 +105,14 @@ def build_report(pred: Prediction) -> str:
     for trainer, idxs in sorted(by_trainer.items(), key=lambda kv: -len(kv[1])):
         if len(idxs) < 2:
             continue
-        lines.append(f"**{trainer}** ({len(idxs)} runners)\n")
+        lines.append(f"**{trainer}** ({len(idxs)} runners) - {pred.idx.trainer_method(trainer)}\n")
         for i in sorted(idxs, key=lambda j: -pred.win_prob[j]):
             r = rs[i]
             p = pred.pattern[r["horse"]]
             own = [m for m in p["best_matches"] if m["same_trainer"]]
             own_txt = f"own formula match: {own[0]['horse']} {own[0]['year']} (sim {own[0]['similarity']:.2f})" if own else "no close match to this trainer's past Cup preps"
             cross = [m for m in p["best_matches"] if not m["same_trainer"]]
-            cross_txt = f"; closest other-trainer style: {cross[0]['horse']} {cross[0]['year']} ({cross[0]['trainer']}, sim {cross[0]['similarity']:.2f})" if cross else ""
+            cross_txt = f"; closest other-trainer style: {cross[0]['horse']} {cross[0]['year']} ({cross[0]['trainer']}, horse sim {cross[0]['similarity']:.2f}, method sim {cross[0]['trainer_style_similarity']:.2f})" if cross else ""
             lines.append(f"- {r['horse']} ({p['archetype']}): {own_txt}{cross_txt}")
         lines.append("")
 

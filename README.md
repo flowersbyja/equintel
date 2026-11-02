@@ -142,11 +142,16 @@ A one-race-a-year module (`melbourne_cup/`) that reuses the equintel ideas (mark
 1. **Tempo-adjusted lead-up form** (`melbourne_cup/features.py`) - a finishing position is read against how the lead-up was run: a backmarker beaten in a slowly run race is upgraded, a closer that won off a slow tempo is discounted, on-pacers that faded in a genuinely run race are excused, and recognised excuses (first-up, wide, heavy track, interference, dropped whip, big weight) add merit back. Short sharpeners are down-weighted.
 2. **Preparation-formula similarity** (`melbourne_cup/patterns.py`) - every runner is compared with the preps of all first-four finishers since 2000 (`melbourne_cup/cup_data/historical_cups.json`): lead-up race, days between runs, number of Australian runs, origin, age, weight, barrier, running style. A match to the **same trainer's** past Cup prep scores full credit (Joseph O'Brien's Irish St Leger -> Cup route, Maher's Caulfield Cup -> Cox Plate -> Cup route); the same style used by a **different trainer** scores 65% credit, so a horse can be flagged as "Rekindling-like" even when it is not trained by Rekindling's trainer.
 
-The pieces are combined log-linearly with a shrunk market prior and small structural priors (weight, barrier, age, sex, expected going, slowly run last lead-up), then a Plackett-Luce model turns win probabilities into place / top-4 probabilities and the most likely exact and boxed first fours.
+3. **Trainer methodology profiles** (`melbourne_cup/cup_data/trainer_styles.json`) - each trainer is described on eight dimensions (fresh vs race-hardened, Australian runs, European base, weight-for-age sharpeners, forward tactics, lightly raced young horses, Golden Ticket targeting, data-driven). The profile is blended with how the individual horse was actually campaigned, so Maher's Point Of Law (trained from Werribee quarantine with one run) reads as fly-in shaped even though Maher's norm is 3-5 runs. A match to another trainer's past Cup horse is credited at 0.35 + 0.65 x method similarity.
+4. **Going model** (`melbourne_cup/going.py`) - a distribution over the expected rating, and per-horse wet records blended with connections' comments.
+5. **Race shape** (`melbourne_cup/pace.py`) - speed map from predicted settling positions, pace-pressure read (racing-predictor thresholds), a running-style history prior, and a Cup Day bias switch (`--bias on-pace|closers`) for when the early races show which part of the field is winning.
+
+The pieces are combined log-linearly with a shrunk market prior and small structural priors (weight, barrier, age, sex, trainer and jockey Cup record, slowly run last lead-up), then a Plackett-Luce model turns win probabilities into place / top-4 probabilities and the most likely exact and boxed first fours. `--form-guide` writes a multi-variable form guide with a card per runner.
 
 ```bash
 python scripts/predict_melbourne_cup.py                                   # print the report
 python scripts/predict_melbourne_cup.py --out docs/MELBOURNE_CUP_2026.md --json docs/melbourne_cup_2026_predictions.json
+python scripts/predict_melbourne_cup.py --track soft6 --bias on-pace --form-guide docs/MELBOURNE_CUP_2026_FORM_GUIDE.md
 python scripts/predict_melbourne_cup.py --market-weight 0.6 --pattern-weight 0.4 --sims 100000
 python -m pytest tests/test_melbourne_cup.py
 ```

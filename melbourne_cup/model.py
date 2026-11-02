@@ -18,6 +18,8 @@ from dataclasses import dataclass, field
 import numpy as np
 
 from .features import form_rating
+from .going import PRESETS, going_adjustment
+from .pace import pace_adjustment, pace_pressure, speed_map, style_history_prior
 from .patterns import ArchetypeIndex, load_json, pattern_scores
 
 LEADUP_GROUP_RULES = [
@@ -54,7 +56,10 @@ class Weights:
     form: float = 0.30
     pattern: float = 0.30
     slow_leadup_penalty: float = 0.30
-    wet_scale: float = 0.30
+    going_scale: float = 0.45
+    bias: str = "neutral"          # neutral | on-pace | closers  (Cup Day track bias switch)
+    bias_strength: float = 0.35
+    track: str = "forecast"        # forecast | good4 | soft5 | soft6 | soft7 | heavy
 
 
 @dataclass
@@ -71,6 +76,10 @@ class Prediction:
     first_four_boxed: list[tuple[frozenset, float]] = field(default_factory=list)
     weights: Weights = field(default_factory=Weights)
     sims: int = 0
+    speed_map: dict = field(default_factory=dict)
+    pace: tuple = ("moderate", "")
+    track_distribution: dict = field(default_factory=dict)
+    idx: object = None
 
 
 def _z(values: np.ndarray) -> np.ndarray:
@@ -78,9 +87,19 @@ def _z(values: np.ndarray) -> np.ndarray:
     return (values - values.mean()) / sd if sd > 1e-9 else np.zeros_like(values)
 
 
-def structural_priors(r: dict, race: dict, w: Weights, last_tempo: str) -> tuple[float, list[str]]:
+def structural_priors(r: dict, race: dict, w: Weights, last_tempo: str, trainer_record: dict | None = None) -> tuple[float, list[str]]:
     notes = []
     p = 0.0
+    if trainer_record is not None:
+        tr = min(0.25, 0.08 * trainer_record.get("wins", 0) + 0.03 * trainer_record.get("placings", 0))
+        if trainer_record.get("runners", 0) == 0:
+            tr = -0.05
+        if tr:
+            p += tr
+            notes.append(f"trainer Cup record {trainer_record.get('wins', 0)}w/{trainer_record.get('placings', 0)}p {tr:+.2f}")
+    if r.get("jockey_cup_wins", 0) > 0:
+        p += 0.05
+        notes.append("Cup-winning jockey +0.05")
     if r["weight"] > 55.5:
         adj = -0.08 * (r["weight"] - 55.5)
         p += adj
@@ -98,10 +117,6 @@ def structural_priors(r: dict, race: dict, w: Weights, last_tempo: str) -> tuple
     if r["sex"] == "M":
         p -= 0.20
         notes.append("mare -0.20")
-    wet = r.get("wet_rating", 0.0) * race.get("prob_rain_affected", 0.5) * w.wet_scale
-    if abs(wet) > 1e-6:
-        p += wet
-        notes.append(f"expected going {wet:+.2f}")
     if last_tempo == "SLOW":
         p -= w.slow_leadup_penalty
         notes.append(f"last lead-up slowly run -{w.slow_leadup_penalty:.2f}")
@@ -132,16 +147,23 @@ def predict(weights: Weights | None = None, sims: int = 20000, seed: int = 7,
     form_z = _z(form_vals)
     pattern_z = _z(np.log(pattern_vals + 1e-9))
 
+    track_dist = PRESETS.get(w.track) or field_doc["race"].get("track_distribution", {"GOOD": 1.0})
+    pressure, pressure_note = pace_pressure(runners)
+    style_prior = style_history_prior(history, runners)
+
     components = []
     logits = np.zeros(len(runners))
     for i, r in enumerate(runners):
-        prior, notes = structural_priors(r, field_doc["race"], w, form[r["horse"]]["last_leadup_tempo"])
-        logit = w.market * math.log(market[i]) + w.form * form_z[i] + w.pattern * pattern_z[i] + prior
+        prior, notes = structural_priors(r, field_doc["race"], w, form[r["horse"]]["last_leadup_tempo"], idx.trainer_record(r["trainer"]))
+        g_adj, g_note = going_adjustment(r, track_dist, scale=w.going_scale)
+        p_adj, p_notes = pace_adjustment(r, pressure, w.bias, w.bias_strength, style_prior)
+        logit = w.market * math.log(market[i]) + w.form * form_z[i] + w.pattern * pattern_z[i] + prior + g_adj + p_adj
         logits[i] = logit
         components.append({
             "horse": r["horse"], "market_prob": float(market[i]), "form_rating": float(form_vals[i]),
             "form_z": float(form_z[i]), "pattern_total": float(pattern_vals[i]), "pattern_z": float(pattern_z[i]),
-            "prior": prior, "prior_notes": notes, "logit": float(logit),
+            "prior": prior, "prior_notes": notes, "going_adj": g_adj, "going_note": g_note,
+            "pace_adj": p_adj, "pace_notes": p_notes, "logit": float(logit),
         })
     win = np.exp(logits - logits.max())
     win = win / win.sum()
@@ -151,7 +173,8 @@ def predict(weights: Weights | None = None, sims: int = 20000, seed: int = 7,
     exact, boxed = analytic_first_four(win, names)
     return Prediction(race=field_doc["race"], runners=runners, win_prob=win, place_prob=place, top4_prob=top4,
                       components=components, pattern=pattern, form=form, first_four_exact=exact,
-                      first_four_boxed=boxed, weights=w, sims=sims)
+                      first_four_boxed=boxed, weights=w, sims=sims, speed_map=speed_map(runners),
+                      pace=(pressure, pressure_note), track_distribution=track_dist, idx=idx)
 
 
 def analytic_first_four(win: np.ndarray, names: list[str], temper: float = 0.9, top_n: int = 9, keep: int = 10):
@@ -199,3 +222,27 @@ def simulate_first_four(win: np.ndarray, names: list[str], sims: int = 20000, se
     exact_list = [(k, v / sims) for k, v in exact.most_common(10)]
     boxed_list = [(k, v / sims) for k, v in boxed.most_common(10)]
     return place, top4, exact_list, boxed_list
+
+
+SCENARIOS = {
+    "forecast / neutral": {},
+    "Good 4": {"track": "good4"},
+    "Soft 6": {"track": "soft6"},
+    "Soft 7+": {"track": "soft7"},
+    "on-pace bias": {"bias": "on-pace"},
+    "closers bias": {"bias": "closers"},
+}
+
+
+def scenario_table(base: Weights | None = None, sims: int = 4000, top_n: int = 10) -> dict:
+    """Win probabilities for the strongest runners under each going / bias scenario."""
+    base = base or Weights()
+    import dataclasses
+    results = {}
+    for name, override in SCENARIOS.items():
+        w = dataclasses.replace(base, **override)
+        pred = predict(weights=w, sims=sims)
+        results[name] = {r["horse"]: float(pred.win_prob[i]) for i, r in enumerate(pred.runners)}
+    ref = results["forecast / neutral"]
+    horses = sorted(ref, key=lambda h: -ref[h])[:top_n]
+    return {"horses": horses, "scenarios": results}
