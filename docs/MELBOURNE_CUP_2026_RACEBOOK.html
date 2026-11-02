@@ -1,0 +1,662 @@
+<title>Cup Racebook</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: newspaper racebook - masthead, rundown column, then one block per runner in saddlecloth order with drawn silks; A4 portrait print. */
+:root {
+  --bg: #fbfaf6; --fg: #1a1f1b; --muted: #5b655c; --rule: #d9ddd5; --panel: #ffffff;
+  --green: #0f4d3a; --gold: #c99a2e; --pos: #157347; --neg: #a23b2a;
+  --r5: #d9ecdd; --r4: #e8f2e6; --r3: #f3f5ee; --r2: #f9f8f3; --r1: #ffffff;
+  --display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #121715; --fg: #e8ece8; --muted: #a2ada4; --rule: #2b332d; --panel: #1a211d; --green: #0b3b2d; --pos: #4fcf8a; --neg: #ff8b73;
+  --r5: #1d3a2a; --r4: #1b2d22; --r3: #1a221d; --r2: #171d19; --r1: #151a17; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #121715; --fg: #e8ece8; --muted: #a2ada4; --rule: #2b332d; --panel: #1a211d; --green: #0b3b2d; --pos: #4fcf8a; --neg: #ff8b73;
+  --r5: #1d3a2a; --r4: #1b2d22; --r3: #1a221d; --r2: #171d19; --r1: #151a17; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 13px; line-height: 1.35; margin: 0; }
+.page { max-width: 1040px; margin: 0 auto; padding-block: 0 24px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.mast { background: var(--green); color: #fff; margin: 0 -16px; padding: 16px max(16px, env(safe-area-inset-left, 0px)) 14px max(16px, env(safe-area-inset-right, 0px)); border-bottom: 5px solid var(--gold); }
+.mast-inner { max-width: 1008px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 20px; }
+.mast h1 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 5vw, 42px); margin: 0; line-height: .95; text-wrap: balance; }
+.eyebrow { font-family: var(--display); letter-spacing: .14em; text-transform: uppercase; font-size: 12px; opacity: .85; }
+.mast .facts { font-size: 12.5px; max-width: 46ch; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: .02em; margin: 18px 0 6px; text-transform: uppercase; }
+.rundown p { margin: 0 0 8px; max-width: 95ch; }
+.key { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 11.5px; color: var(--muted); margin: 6px 0 10px; }
+.key i { display: inline-block; width: 14px; height: 12px; border: 1px solid var(--rule); vertical-align: -2px; margin-right: 4px; }
+.runner { background: var(--panel); border: 1px solid var(--rule); border-left: 6px solid var(--rule); margin: 0 0 10px; padding: 8px 10px 6px; break-inside: avoid; }
+.runner.r5 { background: var(--r5); border-left-color: var(--gold); } .runner.r4 { background: var(--r4); border-left-color: #6fae7c; } .runner.r3 { background: var(--r3); border-left-color: #a9c3a9; } .runner.r2 { background: var(--r2); } .runner.r1 { background: var(--r1); }
+.rhead { display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap; }
+.silks { flex: 0 0 auto; }
+.rtitle { flex: 1 1 320px; min-width: 0; }
+.rname { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: .01em; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.rno { display: inline-grid; place-items: center; min-width: 26px; height: 26px; padding: 0 5px; border-radius: 4px; background: var(--green); color: #fff; font-size: 16px; }
+.stars { color: var(--gold); font-size: 15px; letter-spacing: .05em; }
+.rsub { color: var(--muted); font-size: 12px; }
+.rsilks { font-size: 11px; color: var(--muted); font-style: italic; }
+.rnums { text-align: right; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; flex: 0 0 auto; }
+.rnums .big { font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--fg); line-height: 1; }
+.rnums b { color: var(--fg); } b.pos { color: var(--pos); } b.neg { color: var(--neg); }
+table.form { border-collapse: collapse; width: 100%; margin-top: 6px; font-size: 11.5px; font-variant-numeric: tabular-nums; }
+table.form th { font-family: var(--display); text-transform: uppercase; letter-spacing: .08em; font-size: 10.5px; color: var(--muted); text-align: left; padding: 2px 6px; border-bottom: 1px solid var(--rule); }
+table.form td { padding: 2px 6px; border-bottom: 1px dotted var(--rule); }
+table.form td.num { text-align: right; white-space: nowrap; }
+table.form i { color: var(--muted); font-style: normal; }
+.comment { margin: 6px 0 0; font-size: 12px; }
+footer { margin-top: 16px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--rule); padding-top: 8px; }
+@page { size: A4 portrait; margin: 10mm; }
+@media print {
+  :root { --bg: #ffffff; }
+  body { font-size: 10.5px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { max-width: none; padding: 0; }
+  header.mast { margin: 0; padding: 10px 12px; }
+  .runner { margin-bottom: 6px; padding: 6px 8px 4px; }
+  .rname { font-size: 17px; }
+  .field { break-before: page; }
+  table.form { font-size: 10px; }
+}
+</style>
+<div class="page">
+<header class="mast"><div class="mast-inner">
+  <div><div class="eyebrow">Flemington · Race 7 · 3:00pm AEDT · Tuesday 3 November 2026 · 3200m · Group 1 handicap</div><h1>Lexus Melbourne Cup racebook</h1></div>
+  <div class="facts">Track: Soft 5-6 (5-10mm forecast Monday, clearing Tuesday; rail +3m). Rail +3m. 24 runners. Prices are a 31 Oct - 2 Nov consensus.</div>
+</div></header>
+
+<section class="rundown">
+  <h2>The rundown</h2>
+  <p><b>The shape.</b> No clear leader. Enfjaar, So You Are, Royal Supremacy, Wine Dark Sea, Kizlyar are the go-forward types; several are drawn wide so an honest early tempo is expected. The model reads the tempo as <b>hot</b> (1 habitual leader(s) and 8 on-pace types drawn across the track). Expect Royal Supremacy (21), Enfjaar (8), Wine Dark Sea (23), Kizlyar (20) to be in the first half a dozen, with Shockletz, Asterix, Zakouma, Knight&#x27;s Choice, Middle Earth settling at the tail and needing the race run to suit.
+  The track is forecast Soft 5-6 (5-10mm forecast Monday, clearing Tuesday; rail +3m); the model carries a going distribution of Good 25%, Soft 5 35%, Soft 6 30%, Soft 7+ 10%.</p>
+  <p><b>The market.</b> Point Of Law heads the market after his Geelong Cup win; Trustyourinstinct, Hopewell Rock, Shockletz, Juja Kibo and So You Are are next. The model's biggest disagreements with the market are where a trainer is attempting a preparation they have never used before, or where the horse's closest historical match comes from a trainer who works a completely different way.</p>
+  <p><b>Selections.</b> <b>1. HOPEWELL ROCK (15)</b> Head second in a strongly run Ebor, 73 days fresh, Boughey&#x27;s fly-in method mirrors O&#x27;Brien&#x27;s. Rain helps. George Boughey has never taken this type into the Cup. <b>2. JUJA KIBO (14)</b> Two slowly run wins including the MV Cup Golden Ticket; loves wet ground. Needs tempo to swoop at 3200m. Ciaron Maher with this type: 9 runners, 0 wins, 3 placings. <b>3. MIDDLE EARTH (1)</b> Third last year; Gold Trip route through Caulfield Cup and Cox Plate, gate 1, Zahra. Needs the swoopers&#x27; race. Ciaron Maher with this type: 3 runners, 1 wins, 1 placings. <b>4. TRUSTYOURINSTINCT (18)</b> Curragh Cup winner on the exact O&#x27;Brien route, but a hold-up closer wanting firm ground, 57kg, gate 18. Joseph O&#x27;Brien with this type: 16 runners, 2 wins, 3 placings.</p>
+  <p><b>Suggested bets.</b> Best bet Hopewell Rock win at $9.5 (model 13.5%). Each-way Juja Kibo at $12.0 (top-4 33.7%).
+  Value Soul Of Spain at $32.0 (model 4.9% against a market 2.5%). Roughie Enfjaar at $22.0.
+  First four box 12 - 11 - 4 - 2; wider box 12 - 11 - 4 - 2 - 20 - 1; quinella 12 / 11.</p>
+  <p><b>If the day changes.</b> On-speed horses winning the early races lifts Point Of Law, Enfjaar and So You Are; swoopers dominating lifts Juja Kibo, Middle Earth, Trustyourinstinct and Shockletz. A Good 4 helps Trustyourinstinct and Zahrann; Soft 7 or worse helps Juja Kibo, Mr Monaco and Hopewell Rock and hurts Trustyourinstinct and Goodie Two Shoes.</p>
+</section>
+<section class="field">
+  <h2>The field</h2>
+  <div class="key"><span>Barrier in brackets after the name. Form figures oldest to newest, 0 = unplaced (10th or worse).</span>
+    <span><i style="background:var(--r5)"></i>★★★★★ 12%+ win chance</span><span><i style="background:var(--r4)"></i>★★★★ 8%+</span><span><i style="background:var(--r3)"></i>★★★ 5%+</span><span><i style="background:var(--r2)"></i>★★ 2.5%+</span><span><i style="background:var(--r1)"></i>★ outsider</span>
+    <span>Greyed silks = colours not confirmed. ~ = race label inferred from published form figures.</span></div>
+  
+<article class="runner r3">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="White and pink (H.O.S. Syndicate; design unverified)">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#e75480" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#e75480" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#ffffff" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#e75480" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">1</span> SONS AND LOVERS (3) <span class="stars" title="3 of 5">★★★☆☆</span></div>
+      <div class="rsub">Dylan Browne McMonagle · Joseph O&#x27;Brien · 57.5kg · 6g · IRE · midfield, settles ~10 · handles wet · gear: none reported</div>
+      <div class="rsilks">White and pink (H.O.S. Syndicate; design unverified)</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$19.0</div>
+      <div>model <b>7.5%</b> win · <b>28.8%</b> top-4 · rank 6</div>
+      <div>edge <b class="pos">+42%</b> · form 4-5-1-2</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>28 Mar</td><td>Meydan</td><td>Dubai Gold Cup G2</td><td class='num'>3200</td><td class='num'><b>4</b>/12</td><td>3.0L</td><td>Good</td></tr><tr><td>20 Jun</td><td>Ascot</td><td>Hardwicke Stakes G2</td><td class='num'>2400</td><td class='num'><b>5</b>/9</td><td>3.0L</td><td>Good</td></tr><tr><td>12 Jul</td><td>Longchamp</td><td>Prix Maurice de Nieuil G2</td><td class='num'>2800</td><td class='num'><b>1</b>/8</td><td>won</td><td>Good</td></tr><tr><td>12 Sep</td><td>Leopardstown</td><td>Kilternan Stakes G3</td><td class='num'>2414</td><td class='num'><b>2</b>/10</td><td>1.0L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Topweight fly-in from the Twilight Payment stable; handles any ground. 57.5kg is the catch. <b>Trainer:</b> Joseph O&#x27;Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 &amp; 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan). <b>Modelled on:</b> Twilight Payment 2020 (Joseph O&#x27;Brien), credit x0.70. <b>Last start:</b> midfield in a slow race.</p>
+</article>
+<article class="runner r3">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Emerald green, gold hoops, white cap (JP McManus)">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#0a8a3a" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#0a8a3a" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#0a8a3a" stroke="#333" stroke-width="1"/>
+<rect x="14" y="18" width="20" height="3.2" fill="#f2c200"/><rect x="14" y="25" width="20" height="3.2" fill="#f2c200"/><rect x="14" y="32" width="20" height="3.2" fill="#f2c200"/>
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#ffffff" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">2</span> TRUSTYOURINSTINCT (18) <span class="stars" title="3 of 5">★★★☆☆</span></div>
+      <div class="rsub">James McDonald · Joseph O&#x27;Brien · 57.0kg · 6g · IRE · swooper, settles ~19 · wants firm · gear: none reported</div>
+      <div class="rsilks">Emerald green, gold hoops, white cap (JP McManus)</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$8.0</div>
+      <div>model <b>7.9%</b> win · <b>29.9%</b> top-4 · rank 4</div>
+      <div>edge <b class="neg">-37%</b> · form 1-6-1-4</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>May</td><td>Curragh</td><td>Group race <i title="race label inferred from form figures">~</i></td><td class='num'>2400</td><td class='num'><b>1</b>/8</td><td>won</td><td>Good</td></tr><tr><td>28 Jun</td><td>Curragh</td><td>Group 3</td><td class='num'>2400</td><td class='num'><b>6</b>/8</td><td>5.0L</td><td>Good</td></tr><tr><td>19 Jul</td><td>Curragh</td><td>Curragh Cup G2</td><td class='num'>2800</td><td class='num'><b>1</b>/6</td><td>0.75L</td><td>Good</td></tr><tr><td>13 Sep</td><td>Curragh</td><td>Irish St Leger G1</td><td class='num'>2800</td><td class='num'><b>4</b>/7</td><td>4.5L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Curragh Cup winner on the exact O&#x27;Brien route, but a hold-up closer wanting firm ground, 57kg, gate 18. <b>Trainer:</b> Joseph O&#x27;Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 &amp; 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan). <b>Modelled on:</b> Twilight Payment 2020 (Joseph O&#x27;Brien), credit x0.57. <b>Last start:</b> backmarker in a slowly run race - tempo did not suit, upgraded.</p>
+</article>
+<article class="runner r2">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Pink, lime green sleeves and cap">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#b5e61d" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#b5e61d" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#ff5fa2" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#b5e61d" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">3</span> KNIGHT&#X27;S CHOICE (2) <span class="stars" title="2 of 5">★★☆☆☆</span></div>
+      <div class="rsub">Robbie Dolan · John Symons &amp; Sheila Laxon · 56.5kg · 7g · AUS · swooper, settles ~21 · wet unknown · gear: none reported</div>
+      <div class="rsilks">Pink, lime green sleeves and cap</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$34.0</div>
+      <div>model <b>3.0%</b> win · <b>13.7%</b> top-4 · rank 13</div>
+      <div>edge <b class="">+3%</b> · form 0-9-3-0</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>Aug</td><td>Queensland</td><td>Winter lead-up <i title="race label inferred from form figures">~</i></td><td class='num'>2200</td><td class='num'><b>11</b>/14</td><td>unpl</td><td>Soft</td></tr><tr><td>19 Sep</td><td>Caulfield</td><td>Naturalism Stakes G3</td><td class='num'>2000</td><td class='num'><b>9</b>/12</td><td>4.0L</td><td>Good</td></tr><tr><td>10 Oct</td><td>Caulfield</td><td>Herbert Power G2</td><td class='num'>2400</td><td class='num'><b>3</b>/13</td><td>0.2L</td><td>Good</td></tr><tr><td>17 Oct</td><td>Caulfield</td><td>Caulfield Cup G1</td><td class='num'>2400</td><td class='num'><b>14</b>/18</td><td>10.0L</td><td>Good 4</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> 2024 winner, same four-run build; Herbert Power third was good, 5kg more than 2024. <b>Trainer:</b> John Symons &amp; Sheila Laxon with this type: 2 runners, 1 wins, 0 placings (Ethereal won 2001 (Laxon); Knight&#x27;s Choice 2026 comes off the Caulfield Cup again). <b>Modelled on:</b> Fiorente 2013 (Gai Waterhouse), credit x0.66. <b>Last start:</b> honest tempo.</p>
+</article>
+<article class="runner r3">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="colours TBC" opacity="0.55">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">4</span> MIDDLE EARTH (1) <span class="stars" title="3 of 5">★★★☆☆</span></div>
+      <div class="rsub">Mark Zahra · Ciaron Maher · 56.5kg · 6g · GB · swooper, settles ~20 · handles wet · gear: none reported</div>
+      <div class="rsilks">colours TBC</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$14.0</div>
+      <div>model <b>8.0%</b> win · <b>30.1%</b> top-4 · rank 3</div>
+      <div>edge <b class="pos">+12%</b> · form 7-8-9-8</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>26 Sep</td><td>Caulfield</td><td>Underwood Stakes G1 <i title="race label inferred from form figures">~</i></td><td class='num'>1800</td><td class='num'><b>7</b>/12</td><td>5.0L</td><td>Good</td></tr><tr><td>3 Oct</td><td>Flemington</td><td>Turnbull Stakes G1</td><td class='num'>2000</td><td class='num'><b>8</b>/14</td><td>5.0L</td><td>Heavy</td></tr><tr><td>17 Oct</td><td>Caulfield</td><td>Caulfield Cup G1</td><td class='num'>2400</td><td class='num'><b>9</b>/18</td><td>4.5L</td><td>Good 4</td></tr><tr><td>24 Oct</td><td>Flemington</td><td>Cox Plate G1</td><td class='num'>2040</td><td class='num'><b>8</b>/12</td><td>5.0L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Third last year; Gold Trip route through Caulfield Cup and Cox Plate, gate 1, Zahra. Needs the swoopers&#x27; race. <b>Trainer:</b> Ciaron Maher with this type: 3 runners, 1 wins, 1 placings (Gold Trip won 2022, Sir Dragonet 4th 2020, Gold Trip 17th 2023 (58kg)). <b>Modelled on:</b> Verry Elleegant 2021 (Chris Waller), credit x0.68. <b>Last start:</b> backmarker in a slowly run race - tempo did not suit, upgraded.</p>
+</article>
+<article class="runner r1">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="colours TBC" opacity="0.55">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">5</span> VAUBAN (22) <span class="stars" title="1 of 5">★☆☆☆☆</span></div>
+      <div class="rsub">Jordan Childs · Gai Waterhouse &amp; Adrian Bott · 56.5kg · 9g · FR · on pace, settles ~7 · handles wet · gear: none reported</div>
+      <div class="rsilks">colours TBC</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$51.0</div>
+      <div>model <b>0.4%</b> win · <b>2.3%</b> top-4 · rank 23</div>
+      <div>edge <b class="neg">-80%</b> · form 1-3-3-9</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>7 Mar</td><td>Rosehill</td><td>Group 3 <i title="race label inferred from form figures">~</i></td><td class='num'>2000</td><td class='num'><b>1</b>/10</td><td>won</td><td>Good</td></tr><tr><td>28 Mar</td><td>Rosehill</td><td>Tancred Stakes G1</td><td class='num'>2400</td><td class='num'><b>3</b>/10</td><td>2.0L</td><td>Good</td></tr><tr><td>16 May</td><td>Doomben</td><td>Doomben Cup G1</td><td class='num'>2000</td><td class='num'><b>3</b>/12</td><td>1.5L</td><td>Good</td></tr><tr><td>21 Oct</td><td>Geelong</td><td>Geelong Cup G3</td><td class='num'>2400</td><td class='num'><b>9</b>/14</td><td>6.0L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Nine-year-old, one run since May under 60.5kg, gate 22. Past it for this. <b>Trainer:</b> Gai Waterhouse &amp; Adrian Bott has never taken this type into the Cup (untested: Vauban 2026 is the first Waterhouse/Bott runner off a Geelong Cup lead-up); trainers of the one run import school with this type: 20 runners, 2 wins, 3 placings. <b>Modelled on:</b> Dunaden 2011 (Mikel Delzangles), credit x0.13. <b>Last start:</b> honest tempo.</p>
+</article>
+<article class="runner r2">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Green and purple (Racing Post); design unverified">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#5b2d8e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#5b2d8e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#1f7a3a" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#5b2d8e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">6</span> ENFJAAR (8) <span class="stars" title="2 of 5">★★☆☆☆</span></div>
+      <div class="rsub">Ray Dawson · Roger Varian · 56.0kg · 7g · GB · on pace, settles ~2 · handles wet · gear: none reported</div>
+      <div class="rsilks">Green and purple (Racing Post); design unverified</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$22.0</div>
+      <div>model <b>5.0%</b> win · <b>20.9%</b> top-4 · rank 9</div>
+      <div>edge <b class="">+10%</b> · form 3-8-1-3</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>Jun</td><td>England</td><td>Group/Listed <i title="race label inferred from form figures">~</i></td><td class='num'>2400</td><td class='num'><b>3</b>/10</td><td>plc</td><td>Good</td></tr><tr><td>Jul</td><td>England</td><td>Stakes race <i title="race label inferred from form figures">~</i></td><td class='num'>2400</td><td class='num'><b>8</b>/12</td><td>unpl</td><td>Good</td></tr><tr><td>1 Aug</td><td>Goodwood</td><td>Glorious Stakes G3</td><td class='num'>2412</td><td class='num'><b>1</b>/7</td><td>won, led all the way</td><td>Good</td></tr><tr><td>17 Oct</td><td>Caulfield</td><td>Caulfield Cup G1</td><td class='num'>2400</td><td class='num'><b>3</b>/18</td><td>1.0L</td><td>Good 4</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> On-speed Caulfield Cup third first-up, handles all ground. The classic Delta Blues / Protectionist one-run import. <b>Trainer:</b> Roger Varian has never taken this type into the Cup (no record); trainers of the one run import school with this type: 18 runners, 0 wins, 5 placings. <b>Modelled on:</b> Delta Blues 2006 (Katsuhiko Sumii), credit x0.90. <b>Last start:</b> on-pace and ran it out at an honest tempo.</p>
+</article>
+<article class="runner r1">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="colours TBC" opacity="0.55">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">7</span> ROYAL SUPREMACY (21) <span class="stars" title="1 of 5">★☆☆☆☆</span></div>
+      <div class="rsub">Ben Allen · Ciaron Maher · 56.0kg · 6g · IRE · leader, settles ~1 · handles wet · gear: cap change reported 31 Oct (unconfirmed)</div>
+      <div class="rsilks">colours TBC</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$51.0</div>
+      <div>model <b>0.5%</b> win · <b>2.9%</b> top-4 · rank 22</div>
+      <div>edge <b class="neg">-73%</b> · form 1-9-1-0</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>4 Oct 2025</td><td>Randwick</td><td>The Metropolitan <i title="race label inferred from form figures">~</i></td><td class='num'>2400</td><td class='num'><b>1</b>/16</td><td>won</td><td>Soft</td></tr><tr><td>Sep</td><td>Caulfield</td><td>Spring lead-up <i title="race label inferred from form figures">~</i></td><td class='num'>1800</td><td class='num'><b>9</b>/12</td><td>unpl</td><td>Good</td></tr><tr><td>27 Sep</td><td>Caulfield</td><td>JRA Cup G3</td><td class='num'>2000</td><td class='num'><b>1</b>/10</td><td>0.8L, led</td><td>Good</td></tr><tr><td>17 Oct</td><td>Caulfield</td><td>Caulfield Cup G1</td><td class='num'>2400</td><td class='num'><b>15</b>/18</td><td>17.0L, eased</td><td>Good 4</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Likely leader, eased out of the Caulfield Cup, gate 21. Pace influence more than a chance. <b>Trainer:</b> Ciaron Maher with this type: 6 runners, 0 wins, 0 placings (Jameka 15th 2016 (fav), Smokin&#x27; Romans 2022, Royal Supremacy 15th 2025). <b>Modelled on:</b> Without A Fight 2023 (Anthony &amp; Sam Freedman), credit x0.30. <b>Last start:</b> honest tempo.</p>
+</article>
+<article class="runner r1">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Purple, blue, green and yellow custom design (Sonny Glebe); layout unverified">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#1f6f8b" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#1f6f8b" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#5b2d8e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#2e9e4f" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">8</span> WINE DARK SEA (23) <span class="stars" title="1 of 5">★☆☆☆☆</span></div>
+      <div class="rsub">Damian Lane · Harry Charlton · 56.0kg · 5g · GB · on pace, settles ~3 · wet unknown · gear: none reported</div>
+      <div class="rsilks">Purple, blue, green and yellow custom design (Sonny Glebe); layout unverified</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$46.0</div>
+      <div>model <b>1.2%</b> win · <b>6.3%</b> top-4 · rank 18</div>
+      <div>edge <b class="neg">-43%</b> · form 1-5-1-0</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>Jun</td><td>England</td><td>Handicap <i title="race label inferred from form figures">~</i></td><td class='num'>2400</td><td class='num'><b>1</b>/10</td><td>won</td><td>Good</td></tr><tr><td>Jul</td><td>England</td><td>Stakes race <i title="race label inferred from form figures">~</i></td><td class='num'>2600</td><td class='num'><b>5</b>/8</td><td>unpl</td><td>Good</td></tr><tr><td>15 Aug</td><td>Newbury</td><td>Geoffrey Freer Stakes G3</td><td class='num'>2671</td><td class='num'><b>1</b>/8</td><td>1.0L</td><td>Good</td></tr><tr><td>17 Oct</td><td>Caulfield</td><td>Caulfield Cup G1</td><td class='num'>2400</td><td class='num'><b>11</b>/18</td><td>6.0L, wide</td><td>Good 4</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Forgive the wide first-up Caulfield Cup run; English form strong, but gate 23 and untried at the trip. <b>Trainer:</b> Harry Charlton has never taken this type into the Cup (no record); trainers of the one run import school with this type: 18 runners, 0 wins, 5 placings. <b>Modelled on:</b> Delta Blues 2006 (Katsuhiko Sumii), credit x0.94. <b>Last start:</b> honest tempo.</p>
+</article>
+<article class="runner r1">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Green and red">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#c62828" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#c62828" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#1f7a3a" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#c62828" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">9</span> ASTERIX (6) <span class="stars" title="1 of 5">★☆☆☆☆</span></div>
+      <div class="rsub">Jye McNeil · Chris Waller · 55.0kg · 8g · NZ · swooper, settles ~23 · wet unknown · gear: none reported</div>
+      <div class="rsilks">Green and red</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$56.0</div>
+      <div>model <b>1.3%</b> win · <b>6.8%</b> top-4 · rank 17</div>
+      <div>edge <b class="">-25%</b> · form 5-3-0-0</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>Sep</td><td>Caulfield</td><td>First-up lead-up <i title="race label inferred from form figures">~</i></td><td class='num'>1800</td><td class='num'><b>5</b>/12</td><td>unpl</td><td>Good</td></tr><tr><td>19 Sep</td><td>Caulfield</td><td>Naturalism Stakes G3</td><td class='num'>2000</td><td class='num'><b>3</b>/12</td><td>1.5L</td><td>Good</td></tr><tr><td>3 Oct</td><td>Flemington</td><td>Turnbull Stakes G1</td><td class='num'>2000</td><td class='num'><b>10</b>/14</td><td>6.0L</td><td>Heavy</td></tr><tr><td>17 Oct</td><td>Caulfield</td><td>Caulfield Cup G1</td><td class='num'>2400</td><td class='num'><b>12</b>/18</td><td>7.0L</td><td>Good 4</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Eight-year-old off two poor spring runs. Hard to make a case. <b>Trainer:</b> Chris Waller with this type: 14 runners, 0 wins, 3 placings (Soulcombe 2nd 2023, Finche 4th 2018, River Of Stars 4th 2025; Youngstar, Finche 2019, Buckaroo, Valiant King, Kalapour, Stockman, Montefilia unplaced). <b>Modelled on:</b> Verry Elleegant 2021 (Chris Waller), credit x0.66. <b>Last start:</b> honest tempo.</p>
+</article>
+<article class="runner r1">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Emerald green, gold hoops, white cap (JP McManus)">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#0a8a3a" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#0a8a3a" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#0a8a3a" stroke="#333" stroke-width="1"/>
+<rect x="14" y="18" width="20" height="3.2" fill="#f2c200"/><rect x="14" y="25" width="20" height="3.2" fill="#f2c200"/><rect x="14" y="32" width="20" height="3.2" fill="#f2c200"/>
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#ffffff" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">10</span> GOODIE TWO SHOES (19) <span class="stars" title="1 of 5">★☆☆☆☆</span></div>
+      <div class="rsub">Wayne Lordan · Joseph O&#x27;Brien · 55.0kg · 7m · IRE · midfield, settles ~11 · wants firm · gear: cap change reported 31 Oct (unconfirmed)</div>
+      <div class="rsilks">Emerald green, gold hoops, white cap (JP McManus)</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$26.0</div>
+      <div>model <b>2.3%</b> win · <b>10.8%</b> top-4 · rank 15</div>
+      <div>edge <b class="neg">-41%</b> · form 8-2-1-0</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>19 Jun</td><td>Limerick</td><td>Listed</td><td class='num'>2400</td><td class='num'><b>8</b>/10</td><td>unpl</td><td>Good</td></tr><tr><td>8 Jul</td><td>Fairyhouse</td><td>Listed</td><td class='num'>2400</td><td class='num'><b>2</b>/9</td><td>0.5L</td><td>Good</td></tr><tr><td>1 Aug</td><td>Goodwood</td><td>Lillie Langtry Stakes G2</td><td class='num'>2800</td><td class='num'><b>1</b>/9</td><td>nose</td><td>Good</td></tr><tr><td>12 Sep</td><td>Leopardstown</td><td>Kilternan Stakes G3</td><td class='num'>2414</td><td class='num'><b>10</b>/10</td><td>8.0L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Last year&#x27;s runner-up, but 3.5kg more, gate 19, last in the Kilternan and wants a fast track. <b>Trainer:</b> Joseph O&#x27;Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 &amp; 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan). <b>Modelled on:</b> Twilight Payment 2020 (Joseph O&#x27;Brien), credit x0.70. <b>Last start:</b> midfield in a slow race.</p>
+</article>
+<article class="runner r4">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Blue (design unverified)">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#1e3f8f" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#1e3f8f" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#1e3f8f" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#1e3f8f" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">11</span> JUJA KIBO (14) <span class="stars" title="4 of 5">★★★★☆</span></div>
+      <div class="rsub">Sam Clipperton · Ciaron Maher · 55.0kg · 6g · IRE · swooper, settles ~18 · loves wet · gear: cap change reported 31 Oct (unconfirmed)</div>
+      <div class="rsilks">Blue (design unverified)</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$12.0</div>
+      <div>model <b>9.3%</b> win · <b>33.7%</b> top-4 · rank 2</div>
+      <div>edge <b class="pos">+12%</b> · form 3-2-1-1</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>Aug</td><td>Randwick</td><td>First-up <i title="race label inferred from form figures">~</i></td><td class='num'>1800</td><td class='num'><b>3</b>/10</td><td>plc</td><td>Soft</td></tr><tr><td>Sep</td><td>Randwick</td><td>Kingston Town Stakes G3 <i title="race label inferred from form figures">~</i></td><td class='num'>2000</td><td class='num'><b>2</b>/12</td><td>2nd</td><td>Good</td></tr><tr><td>3 Oct</td><td>Randwick</td><td>The Metropolitan</td><td class='num'>2400</td><td class='num'><b>1</b>/14</td><td>won</td><td>Good</td></tr><tr><td>24 Oct</td><td>Flemington</td><td>Moonee Valley Gold Cup G2</td><td class='num'>2500</td><td class='num'><b>1</b>/16</td><td>0.5L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Two slowly run wins including the MV Cup Golden Ticket; loves wet ground. Needs tempo to swoop at 3200m. <b>Trainer:</b> Ciaron Maher with this type: 9 runners, 0 wins, 3 placings (High Emocean 3rd 2022, Ashrun 4th 2023, Middle Earth 3rd 2025; Future History 15th 2023, Grand Promenade, Land Legend unplaced). <b>Modelled on:</b> Who Shot Thebarman 2014 (Chris Waller), credit x0.69. <b>Last start:</b> closed off a slow tempo - race shape handed it the finish, discounted.</p>
+</article>
+<article class="runner r5">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Old gold and peacock blue (Wathnan Racing)">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#1f6f8b" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#1f6f8b" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#c9a227" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#1f6f8b" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">12</span> HOPEWELL ROCK (15) <span class="stars" title="5 of 5">★★★★★</span></div>
+      <div class="rsub">Zac Lloyd · George Boughey · 54.5kg · 5g · GB · midfield, settles ~15 · handles wet · gear: none reported</div>
+      <div class="rsilks">Old gold and peacock blue (Wathnan Racing)</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$9.5</div>
+      <div>model <b>13.5%</b> win · <b>44.2%</b> top-4 · rank 1</div>
+      <div>edge <b class="pos">+28%</b> · form 3-6-1-2</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>May</td><td>England</td><td>Handicap <i title="race label inferred from form figures">~</i></td><td class='num'>2400</td><td class='num'><b>3</b>/12</td><td>plc</td><td>Good</td></tr><tr><td>Jun</td><td>England</td><td>Handicap <i title="race label inferred from form figures">~</i></td><td class='num'>2800</td><td class='num'><b>6</b>/14</td><td>unpl</td><td>Good</td></tr><tr><td>30 Jul</td><td>Goodwood</td><td>Summer Handicap</td><td class='num'>2800</td><td class='num'><b>1</b>/14</td><td>1.0L</td><td>Good</td></tr><tr><td>22 Aug</td><td>York</td><td>Ebor Handicap</td><td class='num'>2800</td><td class='num'><b>2</b>/22</td><td>head</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Head second in a strongly run Ebor, 73 days fresh, Boughey&#x27;s fly-in method mirrors O&#x27;Brien&#x27;s. Rain helps. <b>Trainer:</b> George Boughey has never taken this type into the Cup (no record); trainers of the direct flyin school with this type: 75 runners, 3 wins, 14 placings. <b>Modelled on:</b> Twilight Payment 2020 (Joseph O&#x27;Brien), credit x0.56. <b>Last start:</b> fast tempo.</p>
+</article>
+<article class="runner r1">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="colours TBC" opacity="0.55">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">13</span> ONESMOOTHOPERATOR (13) <span class="stars" title="1 of 5">★☆☆☆☆</span></div>
+      <div class="rsub">Declan Bates · Tim Fitzsimmons · 54.5kg · 9g · USA · on pace, settles ~6 · handles wet · gear: none reported</div>
+      <div class="rsilks">colours TBC</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$76.0</div>
+      <div>model <b>0.1%</b> win · <b>0.8%</b> top-4 · rank 24</div>
+      <div>edge <b class="neg">-90%</b> · form 0-9-0-0</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>4 Nov 2025</td><td>Flemington</td><td>Melbourne Cup G1</td><td class='num'>3200</td><td class='num'><b>16</b>/24</td><td>unpl</td><td>Soft 6</td></tr><tr><td>Sep</td><td>Caulfield</td><td>First-up <i title="race label inferred from form figures">~</i></td><td class='num'>2000</td><td class='num'><b>9</b>/12</td><td>unpl</td><td>Good</td></tr><tr><td>10 Oct</td><td>Caulfield</td><td>Herbert Power G2</td><td class='num'>2400</td><td class='num'><b>13</b>/13</td><td>9.0L</td><td>Good</td></tr><tr><td>21 Oct</td><td>Geelong</td><td>Geelong Cup G3</td><td class='num'>2400</td><td class='num'><b>11</b>/14</td><td>9.4L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Two Cups, 12th and 16th; last in the Herbert Power. No. <b>Trainer:</b> Tim Fitzsimmons has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 8 runners, 0 wins, 0 placings. <b>Modelled on:</b> Prince Of Penzance 2015 (Darren Weir), credit x0.43. <b>Last start:</b> honest tempo.</p>
+</article>
+<article class="runner r2">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="colours TBC" opacity="0.55">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">14</span> SOUL OF SPAIN (5) <span class="stars" title="2 of 5">★★☆☆☆</span></div>
+      <div class="rsub">Tommy Berry · Chris Waller · 54.5kg · 6g · GB · midfield, settles ~13 · wet unknown · gear: none reported</div>
+      <div class="rsilks">colours TBC</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$32.0</div>
+      <div>model <b>4.9%</b> win · <b>20.7%</b> top-4 · rank 10</div>
+      <div>edge <b class="pos">+58%</b> · form 8-3-7-8</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>Aug</td><td>Randwick</td><td>First-up <i title="race label inferred from form figures">~</i></td><td class='num'>1600</td><td class='num'><b>8</b>/12</td><td>unpl</td><td>Soft</td></tr><tr><td>Sep</td><td>Randwick</td><td>Kingston Town Stakes G3 <i title="race label inferred from form figures">~</i></td><td class='num'>2000</td><td class='num'><b>3</b>/12</td><td>plc</td><td>Good</td></tr><tr><td>3 Oct</td><td>Randwick</td><td>The Metropolitan</td><td class='num'>2400</td><td class='num'><b>7</b>/14</td><td>6.5L</td><td>Good</td></tr><tr><td>17 Oct</td><td>Caulfield</td><td>Caulfield Cup G1</td><td class='num'>2400</td><td class='num'><b>8</b>/18</td><td>4.0L</td><td>Good 4</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Sydney Cup second at the trip, gate 5, Waller race-hardening. Place hope at a price. <b>Trainer:</b> Chris Waller with this type: 14 runners, 0 wins, 3 placings (Soulcombe 2nd 2023, Finche 4th 2018, River Of Stars 4th 2025; Youngstar, Finche 2019, Buckaroo, Valiant King, Kalapour, Stockman, Montefilia unplaced). <b>Modelled on:</b> Half Yours 2025 (Tony &amp; Calvin McEvoy), credit x0.66. <b>Last start:</b> honest tempo.</p>
+</article>
+<article class="runner r2">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Green and yellow, red cap (design unverified)">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#f2c200" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#f2c200" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#1f7a3a" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#c62828" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">15</span> ZAHRANN (11) <span class="stars" title="2 of 5">★★☆☆☆</span></div>
+      <div class="rsub">Ben Melham · Ciaron Maher · 54.5kg · 5g · IRE · midfield, settles ~14 · wants firm · gear: none reported</div>
+      <div class="rsilks">Green and yellow, red cap (design unverified)</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$27.0</div>
+      <div>model <b>2.9%</b> win · <b>13.4%</b> top-4 · rank 14</div>
+      <div>edge <b class="">-21%</b> · form 3-1-0-6</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>6 Jun</td><td>Flemington</td><td>Stakes race</td><td class='num'>2000</td><td class='num'><b>3</b>/14</td><td>plc</td><td>Heavy</td></tr><tr><td>19 Sep</td><td>Caulfield</td><td>Naturalism Stakes G3</td><td class='num'>2000</td><td class='num'><b>1</b>/12</td><td>1.5L</td><td>Good</td></tr><tr><td>3 Oct</td><td>Flemington</td><td>Turnbull Stakes G1</td><td class='num'>2000</td><td class='num'><b>11</b>/14</td><td>7.0L</td><td>Heavy</td></tr><tr><td>17 Oct</td><td>Caulfield</td><td>Caulfield Cup G1</td><td class='num'>2400</td><td class='num'><b>6</b>/18</td><td>4.0L</td><td>Good 4</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Caulfield Cup sixth as second favourite; light weight, good gate, but wet ground is against him. <b>Trainer:</b> Ciaron Maher with this type: 6 runners, 0 wins, 0 placings (Jameka 15th 2016 (fav), Smokin&#x27; Romans 2022, Royal Supremacy 15th 2025). <b>Modelled on:</b> Gold Trip 2022 (Ciaron Maher &amp; David Eustace), credit x0.90. <b>Last start:</b> honest tempo.</p>
+</article>
+<article class="runner r2">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="colours TBC" opacity="0.55">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">16</span> SO YOU ARE (7) <span class="stars" title="2 of 5">★★☆☆☆</span></div>
+      <div class="rsub">Rachel King · Bjorn Baker · 54.0kg · 5g · AUS · on pace, settles ~5 · handles wet · gear: none reported</div>
+      <div class="rsilks">colours TBC</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$13.0</div>
+      <div>model <b>4.3%</b> win · <b>18.4%</b> top-4 · rank 12</div>
+      <div>edge <b class="neg">-44%</b> · form 1-1-1-1</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>Sep</td><td>Randwick</td><td>Benchmark <i title="race label inferred from form figures">~</i></td><td class='num'>2000</td><td class='num'><b>1</b>/12</td><td>won</td><td>Soft</td></tr><tr><td>26 Sep</td><td>Rosehill</td><td>Colin Stephen Quality G3</td><td class='num'>2400</td><td class='num'><b>1</b>/10</td><td>1.0L</td><td>Good</td></tr><tr><td>17 Oct</td><td>Randwick</td><td>Tattersall&#x27;s Cup / St Leger series</td><td class='num'>2600</td><td class='num'><b>1</b>/10</td><td>1.0L</td><td>Good</td></tr><tr><td>28 Oct</td><td>Bendigo</td><td>Bendigo Cup</td><td class='num'>2400</td><td class='num'><b>1</b>/12</td><td>0.8L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Four straight wins, Bendigo Cup six days out like Knight&#x27;s Choice 2024, wet-track stats 16: 4-5-2. Big class rise. <b>Trainer:</b> Bjorn Baker has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings. <b>Modelled on:</b> Prince Of Penzance 2015 (Darren Weir), credit x0.58. <b>Last start:</b> on the speed in a slow race - soft lead, discounted.</p>
+</article>
+<article class="runner r1">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="colours TBC" opacity="0.55">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">17</span> FUTURE HISTORY (12) <span class="stars" title="1 of 5">★☆☆☆☆</span></div>
+      <div class="rsub">Jamie Melham · Gregory Hickman · 53.5kg · 9g · GB · midfield, settles ~16 · wet unknown · gear: none reported</div>
+      <div class="rsilks">colours TBC</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$56.0</div>
+      <div>model <b>0.7%</b> win · <b>3.8%</b> top-4 · rank 21</div>
+      <div>edge <b class="neg">-60%</b> · form 3-2-4-9</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>Sep</td><td>Caulfield</td><td>First-up <i title="race label inferred from form figures">~</i></td><td class='num'>1800</td><td class='num'><b>3</b>/12</td><td>plc</td><td>Good</td></tr><tr><td>27 Sep</td><td>Caulfield</td><td>JRA Plate G3</td><td class='num'>2000</td><td class='num'><b>2</b>/10</td><td>0.8L</td><td>Good</td></tr><tr><td>10 Oct</td><td>Caulfield</td><td>Herbert Power G2</td><td class='num'>2400</td><td class='num'><b>4</b>/13</td><td>1.0L</td><td>Good</td></tr><tr><td>24 Oct</td><td>Flemington</td><td>Moonee Valley Gold Cup G2</td><td class='num'>2500</td><td class='num'><b>9</b>/16</td><td>3.6L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Late inclusion, nine-year-old, 15th in 2023. Pass. <b>Trainer:</b> Gregory Hickman has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings. <b>Modelled on:</b> Prince Of Penzance 2015 (Darren Weir), credit x0.53. <b>Last start:</b> midfield in a slow race.</p>
+</article>
+<article class="runner r3">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="colours TBC" opacity="0.55">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">18</span> JAMES J BRADDOCK (24) <span class="stars" title="3 of 5">★★★☆☆</span></div>
+      <div class="rsub">Craig Williams · Joseph O&#x27;Brien · 53.5kg · 4g · IRE · midfield, settles ~12 · wet unknown · gear: cap change reported 31 Oct (unconfirmed)</div>
+      <div class="rsilks">colours TBC</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$17.0</div>
+      <div>model <b>5.6%</b> win · <b>22.9%</b> top-4 · rank 7</div>
+      <div>edge <b class="">-5%</b> · form 1-3-6-6</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>10 May</td><td>Leopardstown</td><td>Derby Trial</td><td class='num'>2012</td><td class='num'><b>1</b>/8</td><td>won</td><td>Good</td></tr><tr><td>6 Jun</td><td>Epsom</td><td>Epsom Derby G1</td><td class='num'>2420</td><td class='num'><b>3</b>/14</td><td>2.0L</td><td>Good</td></tr><tr><td>28 Jun</td><td>Curragh</td><td>Irish Derby G1</td><td class='num'>2400</td><td class='num'><b>6</b>/8</td><td>24.0L</td><td>Good</td></tr><tr><td>12 Sep</td><td>Leopardstown</td><td>Kilternan Stakes G3</td><td class='num'>2414</td><td class='num'><b>6</b>/10</td><td>4.0L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Rekindling profile from the Rekindling stable: Derby third, gelded, 53.5kg. Gate 24 and untried past 2420m. <b>Trainer:</b> Joseph O&#x27;Brien with this type: 16 runners, 2 wins, 3 placings (Rekindling won 2017 (3yo), Twilight Payment won 2020 (led), Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025; Yucatan 11th 2018 (fav), Latrobe, Downdraft, Twilight Payment 11th 2019 &amp; 2021, Al Riffa 7th 2025 (fav), Changingoftheguard, Meydaan). <b>Modelled on:</b> Rekindling 2017 (Joseph O&#x27;Brien), credit x1.00. <b>Last start:</b> midfield in a slow race.</p>
+</article>
+<article class="runner r1">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="colours TBC" opacity="0.55">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">19</span> KIZLYAR (20) <span class="stars" title="1 of 5">★☆☆☆☆</span></div>
+      <div class="rsub">Beau Mertens · Joseph O&#x27;Brien · 53.5kg · 5g · IRE · on pace, settles ~4 · handles wet · gear: none reported</div>
+      <div class="rsilks">colours TBC</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$41.0</div>
+      <div>model <b>1.1%</b> win · <b>5.9%</b> top-4 · rank 19</div>
+      <div>edge <b class="neg">-53%</b> · form 1-1-2-0</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>May</td><td>Ireland</td><td>Stakes race <i title="race label inferred from form figures">~</i></td><td class='num'>2800</td><td class='num'><b>1</b>/10</td><td>won</td><td>Good</td></tr><tr><td>20 Jun</td><td>Ascot</td><td>Queen Alexandra Stakes</td><td class='num'>4013</td><td class='num'><b>1</b>/10</td><td>0.5L</td><td>Good</td></tr><tr><td>15 Aug</td><td>Curragh</td><td>Irish St Leger Trial G3</td><td class='num'>2816</td><td class='num'><b>2</b>/8</td><td>1.0L</td><td>Good</td></tr><tr><td>24 Oct</td><td>Flemington</td><td>Moonee Valley Gold Cup G2</td><td class='num'>2500</td><td class='num'><b>11</b>/16</td><td>4.0L, on speed</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Proven marathon stayer who weakened in a slow MV Cup. Each-way roughie only on a strongly run race. <b>Trainer:</b> Joseph O&#x27;Brien has never taken this type into the Cup (untested: Kizlyar 2026 is O&#x27;Brien&#x27;s first Cup runner with an Australian lead-up); trainers of the one run import school with this type: 10 runners, 1 wins, 1 placings. <b>Modelled on:</b> Media Puzzle 2002 (Dermot Weld), credit x0.44. <b>Last start:</b> on the speed in a slow race and still beaten - no excuse.</p>
+</article>
+<article class="runner r3">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Blue (new Australian owners; design unverified)">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#1e3f8f" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#1e3f8f" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#1e3f8f" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#1e3f8f" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">20</span> POINT OF LAW (9) <span class="stars" title="3 of 5">★★★☆☆</span></div>
+      <div class="rsub">Ethan Brown · Ciaron Maher · 53.0kg · 4g · GB · on pace, settles ~8 · wet unknown · gear: none reported</div>
+      <div class="rsilks">Blue (new Australian owners; design unverified)</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$6.5</div>
+      <div>model <b>7.7%</b> win · <b>29.5%</b> top-4 · rank 5</div>
+      <div>edge <b class="neg">-50%</b> · form 1-4-1-1</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>May</td><td>Newmarket</td><td>Maiden <i title="race label inferred from form figures">~</i></td><td class='num'>2000</td><td class='num'><b>1</b>/10</td><td>won</td><td>Good</td></tr><tr><td>Jun</td><td>Ascot</td><td>Queen&#x27;s Vase G2</td><td class='num'>2816</td><td class='num'><b>4</b>/10</td><td>1.5L, hampered early</td><td>Good</td></tr><tr><td>Jul</td><td>Newmarket</td><td>Bahrain Trophy G3</td><td class='num'>2615</td><td class='num'><b>1</b>/8</td><td>1.0L</td><td>Good</td></tr><tr><td>21 Oct</td><td>Geelong</td><td>Geelong Cup G3</td><td class='num'>2400</td><td class='num'><b>1</b>/14</td><td>0.5L, on pace</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Favourite. Trained from Werribee quarantine with one sustained on-pace Geelong Cup win, only six starts, 53kg. Americain / Dunaden shape. <b>Trainer:</b> Ciaron Maher has never taken this type into the Cup (untested: Point Of Law 2026 is the first horse Maher has trained from Werribee quarantine with one run); trainers of the one run import school with this type: 20 runners, 2 wins, 3 placings. <b>Modelled on:</b> Media Puzzle 2002 (Dermot Weld), credit x0.08. <b>Last start:</b> on-pace and ran it out at an honest tempo.</p>
+</article>
+<article class="runner r1">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="colours TBC" opacity="0.55">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">21</span> STRICTLY BUSINESS (4) <span class="stars" title="1 of 5">★☆☆☆☆</span></div>
+      <div class="rsub">Dean Yendall · Thomas Carberry · 53.0kg · 4m · NZ · midfield, settles ~17 · wet unknown · gear: none reported</div>
+      <div class="rsilks">colours TBC</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$61.0</div>
+      <div>model <b>0.8%</b> win · <b>4.5%</b> top-4 · rank 20</div>
+      <div>edge <b class="neg">-49%</b> · form 2-2-6-0</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>Apr</td><td>Morphettville</td><td>Lead-up <i title="race label inferred from form figures">~</i></td><td class='num'>2000</td><td class='num'><b>2</b>/10</td><td>plc</td><td>Good</td></tr><tr><td>2 May</td><td>Morphettville</td><td>SA Derby G1</td><td class='num'>2500</td><td class='num'><b>2</b>/12</td><td>short head</td><td>Good</td></tr><tr><td>Oct</td><td>Caulfield</td><td>Spring lead-up <i title="race label inferred from form figures">~</i></td><td class='num'>2000</td><td class='num'><b>6</b>/12</td><td>unpl</td><td>Good</td></tr><tr><td>24 Oct</td><td>Flemington</td><td>Moonee Valley Gold Cup G2</td><td class='num'>2500</td><td class='num'><b>16</b>/16</td><td>10.0L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Last in the MV Cup. No. <b>Trainer:</b> Thomas Carberry has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings. <b>Modelled on:</b> Prince Of Penzance 2015 (Darren Weir), credit x0.46. <b>Last start:</b> midfield in a slow race.</p>
+</article>
+<article class="runner r2">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Red, blue cap">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#c62828" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#c62828" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#c62828" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#1e3f8f" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">22</span> MR MONACO (16) <span class="stars" title="2 of 5">★★☆☆☆</span></div>
+      <div class="rsub">Jabez Johnstone · Ciaron Maher · 52.5kg · 5g · GB · on pace, settles ~9 · loves wet · gear: none reported</div>
+      <div class="rsilks">Red, blue cap</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$24.0</div>
+      <div>model <b>4.9%</b> win · <b>20.3%</b> top-4 · rank 11</div>
+      <div>edge <b class="pos">+18%</b> · form 1-5-1-3</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>21 Mar</td><td>Rosehill</td><td>NE Manion Cup G3</td><td class='num'>2400</td><td class='num'><b>1</b>/12</td><td>won</td><td>Soft</td></tr><tr><td>11 Apr</td><td>Randwick</td><td>Sydney Cup G1 <i title="race label inferred from form figures">~</i></td><td class='num'>3200</td><td class='num'><b>5</b>/14</td><td>unpl</td><td>Good</td></tr><tr><td>3 Oct</td><td>Flemington</td><td>The Bart Cummings G3</td><td class='num'>2500</td><td class='num'><b>1</b>/12</td><td>1.25L</td><td>Soft/Heavy</td></tr><tr><td>24 Oct</td><td>Flemington</td><td>Moonee Valley Gold Cup G2</td><td class='num'>2500</td><td class='num'><b>3</b>/16</td><td>0.8L, wide, 57.5kg</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Bart Cummings winner on a heavy Flemington, unlucky MV Cup third under 57.5kg, drops to 52.5kg. The wet-track value. <b>Trainer:</b> Ciaron Maher with this type: 9 runners, 0 wins, 3 placings (High Emocean 3rd 2022, Ashrun 4th 2023, Middle Earth 3rd 2025; Future History 15th 2023, Grand Promenade, Land Legend unplaced). <b>Modelled on:</b> Prince Of Penzance 2015 (Darren Weir), credit x0.46. <b>Last start:</b> on the speed in a slow race - soft lead, discounted.</p>
+</article>
+<article class="runner r1">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="colours TBC" opacity="0.55">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#9e9e9e" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">23</span> ZAKOUMA (10) <span class="stars" title="1 of 5">★☆☆☆☆</span></div>
+      <div class="rsub">William Pike · Grahame Begg · 52.0kg · 5g · IRE · swooper, settles ~22 · wet unknown · gear: none reported</div>
+      <div class="rsilks">colours TBC</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$31.0</div>
+      <div>model <b>1.8%</b> win · <b>8.5%</b> top-4 · rank 16</div>
+      <div>edge <b class="neg">-45%</b> · form 1-6-5-0</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>16 May</td><td>Flemington</td><td>Andrew Ramsden LR</td><td class='num'>2800</td><td class='num'><b>1</b>/10</td><td>1.0L</td><td>Good</td></tr><tr><td>19 Sep</td><td>Caulfield</td><td>Naturalism Stakes G3</td><td class='num'>2000</td><td class='num'><b>6</b>/12</td><td>unpl</td><td>Good</td></tr><tr><td>10 Oct</td><td>Caulfield</td><td>Herbert Power G2</td><td class='num'>2400</td><td class='num'><b>5</b>/13</td><td>0.8L</td><td>Good</td></tr><tr><td>24 Oct</td><td>Flemington</td><td>Crystal Mile G2</td><td class='num'>1600</td><td class='num'><b>11</b>/11</td><td>8.0L, warm-up</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Andrew Ramsden ticket, odd mile sharpener. Pike rides; needs luck from the back. <b>Trainer:</b> Grahame Begg has never taken this type into the Cup (no record); trainers of the aus boutique school with this type: 40 runners, 2 wins, 6 placings. <b>Modelled on:</b> Prince Of Penzance 2015 (Darren Weir), credit x0.45. <b>Last start:</b> backmarker in a slowly run race - tempo did not suit, upgraded.</p>
+</article>
+<article class="runner r3">
+  <div class="rhead">
+    <svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="Black and orange">
+<rect x="2" y="14" width="12" height="16" rx="2" fill="#f27d14" stroke="#333" stroke-width="1"/>
+<rect x="34" y="14" width="12" height="16" rx="2" fill="#f27d14" stroke="#333" stroke-width="1"/>
+<rect x="14" y="14" width="20" height="26" rx="2" fill="#111111" stroke="#333" stroke-width="1"/>
+
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="#f27d14" stroke="#333" stroke-width="1"/>
+<rect x="13" y="6" width="22" height="2.5" fill="#333"/>
+</svg>
+    <div class="rtitle">
+      <div class="rname"><span class="rno">24</span> SHOCKLETZ (17) <span class="stars" title="3 of 5">★★★☆☆</span></div>
+      <div class="rsub">Harry Coffey · Ciaron Maher · 51.0kg · 5m · NZ · swooper, settles ~24 · wet unknown · gear: none reported</div>
+      <div class="rsilks">Black and orange</div>
+    </div>
+    <div class="rnums">
+      <div class="big">$10.0</div>
+      <div>model <b>5.1%</b> win · <b>21.0%</b> top-4 · rank 8</div>
+      <div>edge <b class="neg">-49%</b> · form 4-1-6-2</div>
+    </div>
+  </div>
+  <table class="form"><thead><tr><th>Date</th><th>Track</th><th>Race</th><th>Dist</th><th>Fin</th><th>Margin</th><th>Going</th></tr></thead><tbody><tr><td>Aug</td><td>Flemington</td><td>Lead-up <i title="race label inferred from form figures">~</i></td><td class='num'>2000</td><td class='num'><b>4</b>/12</td><td>plc</td><td>Good</td></tr><tr><td>12 Sep</td><td>Flemington</td><td>Lexus Archer Stakes</td><td class='num'>2500</td><td class='num'><b>1</b>/12</td><td>1.0L</td><td>Good</td></tr><tr><td>10 Oct</td><td>Caulfield</td><td>Herbert Power G2</td><td class='num'>2400</td><td class='num'><b>6</b>/13</td><td>1.5L, closing</td><td>Good</td></tr><tr><td>24 Oct</td><td>Flemington</td><td>Tesio Stakes G3</td><td class='num'>2040</td><td class='num'><b>2</b>/12</td><td>0.5L</td><td>Good</td></tr></tbody></table>
+  <p class="comment"><b>Comment:</b> Bottom weight, daughter of Shocking, closing well in slow races. Never past 2500m and a mare. <b>Trainer:</b> Ciaron Maher with this type: 9 runners, 0 wins, 3 placings (High Emocean 3rd 2022, Ashrun 4th 2023, Middle Earth 3rd 2025; Future History 15th 2023, Grand Promenade, Land Legend unplaced). <b>Modelled on:</b> Who Shot Thebarman 2014 (Chris Waller), credit x0.48. <b>Last start:</b> closed off a slow tempo - race shape handed it the finish, discounted.</p>
+</article>
+</section>
+<footer>Generated 02 Nov 2026 04:42 from the equintel melbourne_cup model. Silks drawn from published colour descriptions where available; unconfirmed designs are drawn grey. Research model, not betting advice. Gamble responsibly.</footer>
+</div>

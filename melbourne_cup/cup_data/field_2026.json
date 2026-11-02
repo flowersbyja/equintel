@@ -26,7 +26,9 @@
   "settle: predicted settling position 1-24 (speed map). wet_record: starts/wins/seconds/thirds on rain-affected ground where published (null = not found).",
   "gear: reported gear changes (Robopunter 31 Oct listed unconfirmed 'cap' changes for Juja Kibo, Royal Supremacy, Goodie Two Shoes, James J Braddock; nothing else found).",
   "jockey_cup_wins: Melbourne Cup wins by the booked rider (McDonald 2021, Zahra 2022-23, Williams 2019, Melham 2025, Dolan 2024, McNeil 2020).",
-  "golden_ticket: campaign built around a ballot-exempt race. campaign: one-line description of how THIS horse was handled, used to blend with the trainer's general method."
+  "golden_ticket: campaign built around a ballot-exempt race. campaign: one-line description of how THIS horse was handled, used to blend with the trainer's general method.",
+  "silks: {body, sleeves, cap, pattern} CSS colours for the racebook page; status 'confirmed' (published description), 'approx' (owner's known colours, exact design unverified) or 'tbc' (not found - drawn grey). Edit here to correct.",
+  "last4: last four starts oldest -> newest as printed in the racebook; entries with approx=true have the finishing position from a published form string but the race label is inferred."
  ],
  "runners": [
   {
@@ -103,7 +105,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": false,
    "campaign": "Classic O'Brien fly-in: European summer campaign (Riyadh, Dubai, Ascot, Longchamp), Kilternan 2nd in September, straight to Werribee, no Australian run.",
-   "verdict": "Topweight fly-in from the Twilight Payment stable; handles any ground. 57.5kg is the catch."
+   "verdict": "Topweight fly-in from the Twilight Payment stable; handles any ground. 57.5kg is the catch.",
+   "silks": {
+    "body": "#ffffff",
+    "sleeves": "#e75480",
+    "cap": "#e75480",
+    "pattern": "plain",
+    "status": "approx",
+    "desc": "White and pink (H.O.S. Syndicate; design unverified)"
+   },
+   "last4": [
+    {
+     "date": "28 Mar",
+     "track": "Meydan",
+     "race": "Dubai Gold Cup G2",
+     "dist": 3200,
+     "pos": 4,
+     "field": 12,
+     "margin": "3.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "20 Jun",
+     "track": "Ascot",
+     "race": "Hardwicke Stakes G2",
+     "dist": 2400,
+     "pos": 5,
+     "field": 9,
+     "margin": "3.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "12 Jul",
+     "track": "Longchamp",
+     "race": "Prix Maurice de Nieuil G2",
+     "dist": 2800,
+     "pos": 1,
+     "field": 8,
+     "margin": "won",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "12 Sep",
+     "track": "Leopardstown",
+     "race": "Kilternan Stakes G3",
+     "dist": 2414,
+     "pos": 2,
+     "field": 10,
+     "margin": "1.0L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 2,
@@ -172,7 +228,62 @@
    "jockey_cup_wins": 1,
    "golden_ticket": false,
    "campaign": "Classic O'Brien fly-in via the Curragh Cup (won, like Rekindling and Twilight Payment) and Irish St Leger 4th, 51 days fresh, no Australian run. Hold-up closer, unlike Twilight Payment.",
-   "verdict": "Curragh Cup winner on the exact O'Brien route, but a hold-up closer wanting firm ground, 57kg, gate 18."
+   "verdict": "Curragh Cup winner on the exact O'Brien route, but a hold-up closer wanting firm ground, 57kg, gate 18.",
+   "silks": {
+    "body": "#0a8a3a",
+    "sleeves": "#0a8a3a",
+    "cap": "#ffffff",
+    "pattern": "hoops",
+    "pattern_color": "#f2c200",
+    "status": "confirmed",
+    "desc": "Emerald green, gold hoops, white cap (JP McManus)"
+   },
+   "last4": [
+    {
+     "date": "May",
+     "track": "Curragh",
+     "race": "Group race",
+     "dist": 2400,
+     "pos": 1,
+     "field": 8,
+     "margin": "won",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "28 Jun",
+     "track": "Curragh",
+     "race": "Group 3",
+     "dist": 2400,
+     "pos": 6,
+     "field": 8,
+     "margin": "5.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "19 Jul",
+     "track": "Curragh",
+     "race": "Curragh Cup G2",
+     "dist": 2800,
+     "pos": 1,
+     "field": 6,
+     "margin": "0.75L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "13 Sep",
+     "track": "Curragh",
+     "race": "Irish St Leger G1",
+     "dist": 2800,
+     "pos": 4,
+     "field": 7,
+     "margin": "4.5L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 3,
@@ -238,7 +349,61 @@
    "jockey_cup_wins": 1,
    "golden_ticket": false,
    "campaign": "Same Symons/Laxon shape as 2024: Queensland winter, four Victorian runs rising in distance (Naturalism, Herbert Power 3rd, Caulfield Cup), ridden from the back; 5kg more than 2024.",
-   "verdict": "2024 winner, same four-run build; Herbert Power third was good, 5kg more than 2024."
+   "verdict": "2024 winner, same four-run build; Herbert Power third was good, 5kg more than 2024.",
+   "silks": {
+    "body": "#ff5fa2",
+    "sleeves": "#b5e61d",
+    "cap": "#b5e61d",
+    "pattern": "plain",
+    "status": "approx",
+    "desc": "Pink, lime green sleeves and cap"
+   },
+   "last4": [
+    {
+     "date": "Aug",
+     "track": "Queensland",
+     "race": "Winter lead-up",
+     "dist": 2200,
+     "pos": 11,
+     "field": 14,
+     "margin": "unpl",
+     "going": "Soft",
+     "approx": true
+    },
+    {
+     "date": "19 Sep",
+     "track": "Caulfield",
+     "race": "Naturalism Stakes G3",
+     "dist": 2000,
+     "pos": 9,
+     "field": 12,
+     "margin": "4.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "10 Oct",
+     "track": "Caulfield",
+     "race": "Herbert Power G2",
+     "dist": 2400,
+     "pos": 3,
+     "field": 13,
+     "margin": "0.2L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "17 Oct",
+     "track": "Caulfield",
+     "race": "Caulfield Cup G1",
+     "dist": 2400,
+     "pos": 14,
+     "field": 18,
+     "margin": "10.0L",
+     "going": "Good 4",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 4,
@@ -311,7 +476,61 @@
    "jockey_cup_wins": 2,
    "golden_ticket": false,
    "campaign": "Maher Gold Trip route: five weight-for-age / Caulfield Cup runs (Underwood, Caulfield Cup, Cox Plate) as sharpeners, raced hard, ridden last.",
-   "verdict": "Third last year; Gold Trip route through Caulfield Cup and Cox Plate, gate 1, Zahra. Needs the swoopers' race."
+   "verdict": "Third last year; Gold Trip route through Caulfield Cup and Cox Plate, gate 1, Zahra. Needs the swoopers' race.",
+   "silks": {
+    "body": "#9e9e9e",
+    "sleeves": "#9e9e9e",
+    "cap": "#9e9e9e",
+    "pattern": "plain",
+    "status": "tbc",
+    "desc": "colours TBC"
+   },
+   "last4": [
+    {
+     "date": "26 Sep",
+     "track": "Caulfield",
+     "race": "Underwood Stakes G1",
+     "dist": 1800,
+     "pos": 7,
+     "field": 12,
+     "margin": "5.0L",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "3 Oct",
+     "track": "Flemington",
+     "race": "Turnbull Stakes G1",
+     "dist": 2000,
+     "pos": 8,
+     "field": 14,
+     "margin": "5.0L",
+     "going": "Heavy",
+     "approx": false
+    },
+    {
+     "date": "17 Oct",
+     "track": "Caulfield",
+     "race": "Caulfield Cup G1",
+     "dist": 2400,
+     "pos": 9,
+     "field": 18,
+     "margin": "4.5L",
+     "going": "Good 4",
+     "approx": false
+    },
+    {
+     "date": "24 Oct",
+     "track": "Flemington",
+     "race": "Cox Plate G1",
+     "dist": 2040,
+     "pos": 8,
+     "field": 12,
+     "margin": "5.0L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 5,
@@ -379,7 +598,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": false,
    "campaign": "Unusually light Waterhouse/Bott campaign: one run since May (Geelong Cup under 60.5kg), 13 days fresh, forward type.",
-   "verdict": "Nine-year-old, one run since May under 60.5kg, gate 22. Past it for this."
+   "verdict": "Nine-year-old, one run since May under 60.5kg, gate 22. Past it for this.",
+   "silks": {
+    "body": "#9e9e9e",
+    "sleeves": "#9e9e9e",
+    "cap": "#9e9e9e",
+    "pattern": "plain",
+    "status": "tbc",
+    "desc": "colours TBC"
+   },
+   "last4": [
+    {
+     "date": "7 Mar",
+     "track": "Rosehill",
+     "race": "Group 3",
+     "dist": 2000,
+     "pos": 1,
+     "field": 10,
+     "margin": "won",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "28 Mar",
+     "track": "Rosehill",
+     "race": "Tancred Stakes G1",
+     "dist": 2400,
+     "pos": 3,
+     "field": 10,
+     "margin": "2.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "16 May",
+     "track": "Doomben",
+     "race": "Doomben Cup G1",
+     "dist": 2000,
+     "pos": 3,
+     "field": 12,
+     "margin": "1.5L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "21 Oct",
+     "track": "Geelong",
+     "race": "Geelong Cup G3",
+     "dist": 2400,
+     "pos": 9,
+     "field": 14,
+     "margin": "6.0L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 6,
@@ -433,7 +706,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": false,
    "campaign": "European base (Glorious Stakes win leading), quarantine at Werribee, one Australian run first-up in the Caulfield Cup (3rd on speed), 17 days to the Cup - the Protectionist / Delta Blues fly-in-with-one-run shape.",
-   "verdict": "On-speed Caulfield Cup third first-up, handles all ground. The classic Delta Blues / Protectionist one-run import."
+   "verdict": "On-speed Caulfield Cup third first-up, handles all ground. The classic Delta Blues / Protectionist one-run import.",
+   "silks": {
+    "body": "#1f7a3a",
+    "sleeves": "#5b2d8e",
+    "cap": "#5b2d8e",
+    "pattern": "plain",
+    "status": "approx",
+    "desc": "Green and purple (Racing Post); design unverified"
+   },
+   "last4": [
+    {
+     "date": "Jun",
+     "track": "England",
+     "race": "Group/Listed",
+     "dist": 2400,
+     "pos": 3,
+     "field": 10,
+     "margin": "plc",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "Jul",
+     "track": "England",
+     "race": "Stakes race",
+     "dist": 2400,
+     "pos": 8,
+     "field": 12,
+     "margin": "unpl",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "1 Aug",
+     "track": "Goodwood",
+     "race": "Glorious Stakes G3",
+     "dist": 2412,
+     "pos": 1,
+     "field": 7,
+     "margin": "won, led all the way",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "17 Oct",
+     "track": "Caulfield",
+     "race": "Caulfield Cup G1",
+     "dist": 2400,
+     "pos": 3,
+     "field": 18,
+     "margin": "1.0L",
+     "going": "Good 4",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 7,
@@ -487,7 +814,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": false,
    "campaign": "Maher race-hardened local: JRA Cup win leading, Caulfield Cup (eased), likely leader.",
-   "verdict": "Likely leader, eased out of the Caulfield Cup, gate 21. Pace influence more than a chance."
+   "verdict": "Likely leader, eased out of the Caulfield Cup, gate 21. Pace influence more than a chance.",
+   "silks": {
+    "body": "#9e9e9e",
+    "sleeves": "#9e9e9e",
+    "cap": "#9e9e9e",
+    "pattern": "plain",
+    "status": "tbc",
+    "desc": "colours TBC"
+   },
+   "last4": [
+    {
+     "date": "4 Oct 2025",
+     "track": "Randwick",
+     "race": "The Metropolitan",
+     "dist": 2400,
+     "pos": 1,
+     "field": 16,
+     "margin": "won",
+     "going": "Soft",
+     "approx": true
+    },
+    {
+     "date": "Sep",
+     "track": "Caulfield",
+     "race": "Spring lead-up",
+     "dist": 1800,
+     "pos": 9,
+     "field": 12,
+     "margin": "unpl",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "27 Sep",
+     "track": "Caulfield",
+     "race": "JRA Cup G3",
+     "dist": 2000,
+     "pos": 1,
+     "field": 10,
+     "margin": "0.8L, led",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "17 Oct",
+     "track": "Caulfield",
+     "race": "Caulfield Cup G1",
+     "dist": 2400,
+     "pos": 15,
+     "field": 18,
+     "margin": "17.0L, eased",
+     "going": "Good 4",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 8,
@@ -547,7 +928,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": false,
    "campaign": "English base (3 wins from 4), Werribee quarantine, one Australian run first-up in the Caulfield Cup ridden forward, 17 days to the Cup.",
-   "verdict": "Forgive the wide first-up Caulfield Cup run; English form strong, but gate 23 and untried at the trip."
+   "verdict": "Forgive the wide first-up Caulfield Cup run; English form strong, but gate 23 and untried at the trip.",
+   "silks": {
+    "body": "#5b2d8e",
+    "sleeves": "#1f6f8b",
+    "cap": "#2e9e4f",
+    "pattern": "plain",
+    "status": "approx",
+    "desc": "Purple, blue, green and yellow custom design (Sonny Glebe); layout unverified"
+   },
+   "last4": [
+    {
+     "date": "Jun",
+     "track": "England",
+     "race": "Handicap",
+     "dist": 2400,
+     "pos": 1,
+     "field": 10,
+     "margin": "won",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "Jul",
+     "track": "England",
+     "race": "Stakes race",
+     "dist": 2600,
+     "pos": 5,
+     "field": 8,
+     "margin": "unpl",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "15 Aug",
+     "track": "Newbury",
+     "race": "Geoffrey Freer Stakes G3",
+     "dist": 2671,
+     "pos": 1,
+     "field": 8,
+     "margin": "1.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "17 Oct",
+     "track": "Caulfield",
+     "race": "Caulfield Cup G1",
+     "dist": 2400,
+     "pos": 11,
+     "field": 18,
+     "margin": "6.0L, wide",
+     "going": "Good 4",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 9,
@@ -613,7 +1048,61 @@
    "jockey_cup_wins": 1,
    "golden_ticket": false,
    "campaign": "Waller race-hardened local: Naturalism, Turnbull, Caulfield Cup, ridden from the back.",
-   "verdict": "Eight-year-old off two poor spring runs. Hard to make a case."
+   "verdict": "Eight-year-old off two poor spring runs. Hard to make a case.",
+   "silks": {
+    "body": "#1f7a3a",
+    "sleeves": "#c62828",
+    "cap": "#c62828",
+    "pattern": "plain",
+    "status": "approx",
+    "desc": "Green and red"
+   },
+   "last4": [
+    {
+     "date": "Sep",
+     "track": "Caulfield",
+     "race": "First-up lead-up",
+     "dist": 1800,
+     "pos": 5,
+     "field": 12,
+     "margin": "unpl",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "19 Sep",
+     "track": "Caulfield",
+     "race": "Naturalism Stakes G3",
+     "dist": 2000,
+     "pos": 3,
+     "field": 12,
+     "margin": "1.5L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "3 Oct",
+     "track": "Flemington",
+     "race": "Turnbull Stakes G1",
+     "dist": 2000,
+     "pos": 10,
+     "field": 14,
+     "margin": "6.0L",
+     "going": "Heavy",
+     "approx": false
+    },
+    {
+     "date": "17 Oct",
+     "track": "Caulfield",
+     "race": "Caulfield Cup G1",
+     "dist": 2400,
+     "pos": 12,
+     "field": 18,
+     "margin": "7.0L",
+     "going": "Good 4",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 10,
@@ -665,7 +1154,62 @@
    "jockey_cup_wins": 0,
    "golden_ticket": false,
    "campaign": "O'Brien repeat fly-in: Lillie Langtry win, Kilternan last, 52 days fresh, no Australian run; only four runs since last year's Cup second.",
-   "verdict": "Last year's runner-up, but 3.5kg more, gate 19, last in the Kilternan and wants a fast track."
+   "verdict": "Last year's runner-up, but 3.5kg more, gate 19, last in the Kilternan and wants a fast track.",
+   "silks": {
+    "body": "#0a8a3a",
+    "sleeves": "#0a8a3a",
+    "cap": "#ffffff",
+    "pattern": "hoops",
+    "pattern_color": "#f2c200",
+    "status": "confirmed",
+    "desc": "Emerald green, gold hoops, white cap (JP McManus)"
+   },
+   "last4": [
+    {
+     "date": "19 Jun",
+     "track": "Limerick",
+     "race": "Listed",
+     "dist": 2400,
+     "pos": 8,
+     "field": 10,
+     "margin": "unpl",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "8 Jul",
+     "track": "Fairyhouse",
+     "race": "Listed",
+     "dist": 2400,
+     "pos": 2,
+     "field": 9,
+     "margin": "0.5L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "1 Aug",
+     "track": "Goodwood",
+     "race": "Lillie Langtry Stakes G2",
+     "dist": 2800,
+     "pos": 1,
+     "field": 9,
+     "margin": "nose",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "12 Sep",
+     "track": "Leopardstown",
+     "race": "Kilternan Stakes G3",
+     "dist": 2414,
+     "pos": 10,
+     "field": 10,
+     "margin": "8.0L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 11,
@@ -722,7 +1266,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": true,
    "campaign": "Maher Golden Ticket campaign: Metropolitan win then MV Gold Cup win ten days out (both slowly run), closer.",
-   "verdict": "Two slowly run wins including the MV Cup Golden Ticket; loves wet ground. Needs tempo to swoop at 3200m."
+   "verdict": "Two slowly run wins including the MV Cup Golden Ticket; loves wet ground. Needs tempo to swoop at 3200m.",
+   "silks": {
+    "body": "#1e3f8f",
+    "sleeves": "#1e3f8f",
+    "cap": "#1e3f8f",
+    "pattern": "plain",
+    "status": "approx",
+    "desc": "Blue (design unverified)"
+   },
+   "last4": [
+    {
+     "date": "Aug",
+     "track": "Randwick",
+     "race": "First-up",
+     "dist": 1800,
+     "pos": 3,
+     "field": 10,
+     "margin": "plc",
+     "going": "Soft",
+     "approx": true
+    },
+    {
+     "date": "Sep",
+     "track": "Randwick",
+     "race": "Kingston Town Stakes G3",
+     "dist": 2000,
+     "pos": 2,
+     "field": 12,
+     "margin": "2nd",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "3 Oct",
+     "track": "Randwick",
+     "race": "The Metropolitan",
+     "dist": 2400,
+     "pos": 1,
+     "field": 14,
+     "margin": "won",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "24 Oct",
+     "track": "Flemington",
+     "race": "Moonee Valley Gold Cup G2",
+     "dist": 2500,
+     "pos": 1,
+     "field": 16,
+     "margin": "0.5L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 12,
@@ -776,7 +1374,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": false,
    "campaign": "Boughey fly-in: Goodwood handicap win, Ebor 2nd, then 73 days fresh straight to the Cup from Werribee - the Cross Counter / Heartbreak City shape with no Australian run.",
-   "verdict": "Head second in a strongly run Ebor, 73 days fresh, Boughey's fly-in method mirrors O'Brien's. Rain helps."
+   "verdict": "Head second in a strongly run Ebor, 73 days fresh, Boughey's fly-in method mirrors O'Brien's. Rain helps.",
+   "silks": {
+    "body": "#c9a227",
+    "sleeves": "#1f6f8b",
+    "cap": "#1f6f8b",
+    "pattern": "plain",
+    "status": "approx",
+    "desc": "Old gold and peacock blue (Wathnan Racing)"
+   },
+   "last4": [
+    {
+     "date": "May",
+     "track": "England",
+     "race": "Handicap",
+     "dist": 2400,
+     "pos": 3,
+     "field": 12,
+     "margin": "plc",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "Jun",
+     "track": "England",
+     "race": "Handicap",
+     "dist": 2800,
+     "pos": 6,
+     "field": 14,
+     "margin": "unpl",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "30 Jul",
+     "track": "Goodwood",
+     "race": "Summer Handicap",
+     "dist": 2800,
+     "pos": 1,
+     "field": 14,
+     "margin": "1.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "22 Aug",
+     "track": "York",
+     "race": "Ebor Handicap",
+     "dist": 2800,
+     "pos": 2,
+     "field": 22,
+     "margin": "head",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 13,
@@ -828,7 +1480,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": false,
    "campaign": "Now a settled local: Herbert Power (last) and Geelong Cup (11th), on-pace type.",
-   "verdict": "Two Cups, 12th and 16th; last in the Herbert Power. No."
+   "verdict": "Two Cups, 12th and 16th; last in the Herbert Power. No.",
+   "silks": {
+    "body": "#9e9e9e",
+    "sleeves": "#9e9e9e",
+    "cap": "#9e9e9e",
+    "pattern": "plain",
+    "status": "tbc",
+    "desc": "colours TBC"
+   },
+   "last4": [
+    {
+     "date": "4 Nov 2025",
+     "track": "Flemington",
+     "race": "Melbourne Cup G1",
+     "dist": 3200,
+     "pos": 16,
+     "field": 24,
+     "margin": "unpl",
+     "going": "Soft 6",
+     "approx": false
+    },
+    {
+     "date": "Sep",
+     "track": "Caulfield",
+     "race": "First-up",
+     "dist": 2000,
+     "pos": 9,
+     "field": 12,
+     "margin": "unpl",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "10 Oct",
+     "track": "Caulfield",
+     "race": "Herbert Power G2",
+     "dist": 2400,
+     "pos": 13,
+     "field": 13,
+     "margin": "9.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "21 Oct",
+     "track": "Geelong",
+     "race": "Geelong Cup G3",
+     "dist": 2400,
+     "pos": 11,
+     "field": 14,
+     "margin": "9.4L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 14,
@@ -897,7 +1603,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": false,
    "campaign": "Waller race-hardened local: Metropolitan, Caulfield Cup; Sydney Cup 2nd in autumn.",
-   "verdict": "Sydney Cup second at the trip, gate 5, Waller race-hardening. Place hope at a price."
+   "verdict": "Sydney Cup second at the trip, gate 5, Waller race-hardening. Place hope at a price.",
+   "silks": {
+    "body": "#9e9e9e",
+    "sleeves": "#9e9e9e",
+    "cap": "#9e9e9e",
+    "pattern": "plain",
+    "status": "tbc",
+    "desc": "colours TBC"
+   },
+   "last4": [
+    {
+     "date": "Aug",
+     "track": "Randwick",
+     "race": "First-up",
+     "dist": 1600,
+     "pos": 8,
+     "field": 12,
+     "margin": "unpl",
+     "going": "Soft",
+     "approx": true
+    },
+    {
+     "date": "Sep",
+     "track": "Randwick",
+     "race": "Kingston Town Stakes G3",
+     "dist": 2000,
+     "pos": 3,
+     "field": 12,
+     "margin": "plc",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "3 Oct",
+     "track": "Randwick",
+     "race": "The Metropolitan",
+     "dist": 2400,
+     "pos": 7,
+     "field": 14,
+     "margin": "6.5L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "17 Oct",
+     "track": "Caulfield",
+     "race": "Caulfield Cup G1",
+     "dist": 2400,
+     "pos": 8,
+     "field": 18,
+     "margin": "4.0L",
+     "going": "Good 4",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 15,
@@ -963,7 +1723,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": false,
    "campaign": "Maher race-hardened import: Naturalism win, Turnbull (heavy, failed), Caulfield Cup 6th as second favourite.",
-   "verdict": "Caulfield Cup sixth as second favourite; light weight, good gate, but wet ground is against him."
+   "verdict": "Caulfield Cup sixth as second favourite; light weight, good gate, but wet ground is against him.",
+   "silks": {
+    "body": "#1f7a3a",
+    "sleeves": "#f2c200",
+    "cap": "#c62828",
+    "pattern": "plain",
+    "status": "approx",
+    "desc": "Green and yellow, red cap (design unverified)"
+   },
+   "last4": [
+    {
+     "date": "6 Jun",
+     "track": "Flemington",
+     "race": "Stakes race",
+     "dist": 2000,
+     "pos": 3,
+     "field": 14,
+     "margin": "plc",
+     "going": "Heavy",
+     "approx": false
+    },
+    {
+     "date": "19 Sep",
+     "track": "Caulfield",
+     "race": "Naturalism Stakes G3",
+     "dist": 2000,
+     "pos": 1,
+     "field": 12,
+     "margin": "1.5L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "3 Oct",
+     "track": "Flemington",
+     "race": "Turnbull Stakes G1",
+     "dist": 2000,
+     "pos": 11,
+     "field": 14,
+     "margin": "7.0L",
+     "going": "Heavy",
+     "approx": false
+    },
+    {
+     "date": "17 Oct",
+     "track": "Caulfield",
+     "race": "Caulfield Cup G1",
+     "dist": 2400,
+     "pos": 6,
+     "field": 18,
+     "margin": "4.0L",
+     "going": "Good 4",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 16,
@@ -1032,7 +1846,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": true,
    "campaign": "Baker hardened-local campaign: four straight wins through Sydney staying races then the Bendigo Cup six days out (Knight's Choice 2024 backup), ridden on speed.",
-   "verdict": "Four straight wins, Bendigo Cup six days out like Knight's Choice 2024, wet-track stats 16: 4-5-2. Big class rise."
+   "verdict": "Four straight wins, Bendigo Cup six days out like Knight's Choice 2024, wet-track stats 16: 4-5-2. Big class rise.",
+   "silks": {
+    "body": "#9e9e9e",
+    "sleeves": "#9e9e9e",
+    "cap": "#9e9e9e",
+    "pattern": "plain",
+    "status": "tbc",
+    "desc": "colours TBC"
+   },
+   "last4": [
+    {
+     "date": "Sep",
+     "track": "Randwick",
+     "race": "Benchmark",
+     "dist": 2000,
+     "pos": 1,
+     "field": 12,
+     "margin": "won",
+     "going": "Soft",
+     "approx": true
+    },
+    {
+     "date": "26 Sep",
+     "track": "Rosehill",
+     "race": "Colin Stephen Quality G3",
+     "dist": 2400,
+     "pos": 1,
+     "field": 10,
+     "margin": "1.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "17 Oct",
+     "track": "Randwick",
+     "race": "Tattersall's Cup / St Leger series",
+     "dist": 2600,
+     "pos": 1,
+     "field": 10,
+     "margin": "1.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "28 Oct",
+     "track": "Bendigo",
+     "race": "Bendigo Cup",
+     "dist": 2400,
+     "pos": 1,
+     "field": 12,
+     "margin": "0.8L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 17,
@@ -1096,7 +1964,61 @@
    "jockey_cup_wins": 1,
    "golden_ticket": false,
    "campaign": "Hickman race-hardened: JRA Plate 2nd, Herbert Power 4th, MV Cup 9th.",
-   "verdict": "Late inclusion, nine-year-old, 15th in 2023. Pass."
+   "verdict": "Late inclusion, nine-year-old, 15th in 2023. Pass.",
+   "silks": {
+    "body": "#9e9e9e",
+    "sleeves": "#9e9e9e",
+    "cap": "#9e9e9e",
+    "pattern": "plain",
+    "status": "tbc",
+    "desc": "colours TBC"
+   },
+   "last4": [
+    {
+     "date": "Sep",
+     "track": "Caulfield",
+     "race": "First-up",
+     "dist": 1800,
+     "pos": 3,
+     "field": 12,
+     "margin": "plc",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "27 Sep",
+     "track": "Caulfield",
+     "race": "JRA Plate G3",
+     "dist": 2000,
+     "pos": 2,
+     "field": 10,
+     "margin": "0.8L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "10 Oct",
+     "track": "Caulfield",
+     "race": "Herbert Power G2",
+     "dist": 2400,
+     "pos": 4,
+     "field": 13,
+     "margin": "1.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "24 Oct",
+     "track": "Flemington",
+     "race": "Moonee Valley Gold Cup G2",
+     "dist": 2500,
+     "pos": 9,
+     "field": 16,
+     "margin": "3.6L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 18,
@@ -1160,7 +2082,61 @@
    "jockey_cup_wins": 1,
    "golden_ticket": false,
    "campaign": "O'Brien Rekindling-style fly-in: classic-generation 4yo, Epsom Derby 3rd, gelded, mid-summer break, one prep run (Kilternan), straight on the plane, 52 days fresh.",
-   "verdict": "Rekindling profile from the Rekindling stable: Derby third, gelded, 53.5kg. Gate 24 and untried past 2420m."
+   "verdict": "Rekindling profile from the Rekindling stable: Derby third, gelded, 53.5kg. Gate 24 and untried past 2420m.",
+   "silks": {
+    "body": "#9e9e9e",
+    "sleeves": "#9e9e9e",
+    "cap": "#9e9e9e",
+    "pattern": "plain",
+    "status": "tbc",
+    "desc": "colours TBC"
+   },
+   "last4": [
+    {
+     "date": "10 May",
+     "track": "Leopardstown",
+     "race": "Derby Trial",
+     "dist": 2012,
+     "pos": 1,
+     "field": 8,
+     "margin": "won",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "6 Jun",
+     "track": "Epsom",
+     "race": "Epsom Derby G1",
+     "dist": 2420,
+     "pos": 3,
+     "field": 14,
+     "margin": "2.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "28 Jun",
+     "track": "Curragh",
+     "race": "Irish Derby G1",
+     "dist": 2400,
+     "pos": 6,
+     "field": 8,
+     "margin": "24.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "12 Sep",
+     "track": "Leopardstown",
+     "race": "Kilternan Stakes G3",
+     "dist": 2414,
+     "pos": 6,
+     "field": 10,
+     "margin": "4.0L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 19,
@@ -1231,7 +2207,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": true,
    "campaign": "O'Brien with an Australian run (unusual for him): MV Gold Cup attempt at a Golden Ticket, raced on speed and weakened, ten days to the Cup.",
-   "verdict": "Proven marathon stayer who weakened in a slow MV Cup. Each-way roughie only on a strongly run race."
+   "verdict": "Proven marathon stayer who weakened in a slow MV Cup. Each-way roughie only on a strongly run race.",
+   "silks": {
+    "body": "#9e9e9e",
+    "sleeves": "#9e9e9e",
+    "cap": "#9e9e9e",
+    "pattern": "plain",
+    "status": "tbc",
+    "desc": "colours TBC"
+   },
+   "last4": [
+    {
+     "date": "May",
+     "track": "Ireland",
+     "race": "Stakes race",
+     "dist": 2800,
+     "pos": 1,
+     "field": 10,
+     "margin": "won",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "20 Jun",
+     "track": "Ascot",
+     "race": "Queen Alexandra Stakes",
+     "dist": 4013,
+     "pos": 1,
+     "field": 10,
+     "margin": "0.5L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "15 Aug",
+     "track": "Curragh",
+     "race": "Irish St Leger Trial G3",
+     "dist": 2816,
+     "pos": 2,
+     "field": 8,
+     "margin": "1.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "24 Oct",
+     "track": "Flemington",
+     "race": "Moonee Valley Gold Cup G2",
+     "dist": 2500,
+     "pos": 11,
+     "field": 16,
+     "margin": "4.0L, on speed",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 20,
@@ -1295,7 +2325,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": true,
    "campaign": "Handled like a European fly-in despite the Maher stable: UK base (Queen's Vase 4th, Bahrain Trophy win), first shipment to Werribee quarantine, ONE Australian run (Geelong Cup win) 13 days out - Americain / Dunaden / Media Puzzle shape, not Maher's usual 3-5 run build.",
-   "verdict": "Favourite. Trained from Werribee quarantine with one sustained on-pace Geelong Cup win, only six starts, 53kg. Americain / Dunaden shape."
+   "verdict": "Favourite. Trained from Werribee quarantine with one sustained on-pace Geelong Cup win, only six starts, 53kg. Americain / Dunaden shape.",
+   "silks": {
+    "body": "#1e3f8f",
+    "sleeves": "#1e3f8f",
+    "cap": "#1e3f8f",
+    "pattern": "plain",
+    "status": "approx",
+    "desc": "Blue (new Australian owners; design unverified)"
+   },
+   "last4": [
+    {
+     "date": "May",
+     "track": "Newmarket",
+     "race": "Maiden",
+     "dist": 2000,
+     "pos": 1,
+     "field": 10,
+     "margin": "won",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "Jun",
+     "track": "Ascot",
+     "race": "Queen's Vase G2",
+     "dist": 2816,
+     "pos": 4,
+     "field": 10,
+     "margin": "1.5L, hampered early",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "Jul",
+     "track": "Newmarket",
+     "race": "Bahrain Trophy G3",
+     "dist": 2615,
+     "pos": 1,
+     "field": 8,
+     "margin": "1.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "21 Oct",
+     "track": "Geelong",
+     "race": "Geelong Cup G3",
+     "dist": 2400,
+     "pos": 1,
+     "field": 14,
+     "margin": "0.5L, on pace",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 21,
@@ -1347,7 +2431,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": false,
    "campaign": "Carberry: SA Derby 2nd in autumn, MV Gold Cup last.",
-   "verdict": "Last in the MV Cup. No."
+   "verdict": "Last in the MV Cup. No.",
+   "silks": {
+    "body": "#9e9e9e",
+    "sleeves": "#9e9e9e",
+    "cap": "#9e9e9e",
+    "pattern": "plain",
+    "status": "tbc",
+    "desc": "colours TBC"
+   },
+   "last4": [
+    {
+     "date": "Apr",
+     "track": "Morphettville",
+     "race": "Lead-up",
+     "dist": 2000,
+     "pos": 2,
+     "field": 10,
+     "margin": "plc",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "2 May",
+     "track": "Morphettville",
+     "race": "SA Derby G1",
+     "dist": 2500,
+     "pos": 2,
+     "field": 12,
+     "margin": "short head",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "Oct",
+     "track": "Caulfield",
+     "race": "Spring lead-up",
+     "dist": 2000,
+     "pos": 6,
+     "field": 12,
+     "margin": "unpl",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "24 Oct",
+     "track": "Flemington",
+     "race": "Moonee Valley Gold Cup G2",
+     "dist": 2500,
+     "pos": 16,
+     "field": 16,
+     "margin": "10.0L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 22,
@@ -1409,7 +2547,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": true,
    "campaign": "Maher Golden Ticket campaign: Bart Cummings win on rain-affected Flemington (Almandin 2016 ticket) then MV Gold Cup 3rd under 57.5kg ten days out; forward type.",
-   "verdict": "Bart Cummings winner on a heavy Flemington, unlucky MV Cup third under 57.5kg, drops to 52.5kg. The wet-track value."
+   "verdict": "Bart Cummings winner on a heavy Flemington, unlucky MV Cup third under 57.5kg, drops to 52.5kg. The wet-track value.",
+   "silks": {
+    "body": "#c62828",
+    "sleeves": "#c62828",
+    "cap": "#1e3f8f",
+    "pattern": "plain",
+    "status": "approx",
+    "desc": "Red, blue cap"
+   },
+   "last4": [
+    {
+     "date": "21 Mar",
+     "track": "Rosehill",
+     "race": "NE Manion Cup G3",
+     "dist": 2400,
+     "pos": 1,
+     "field": 12,
+     "margin": "won",
+     "going": "Soft",
+     "approx": false
+    },
+    {
+     "date": "11 Apr",
+     "track": "Randwick",
+     "race": "Sydney Cup G1",
+     "dist": 3200,
+     "pos": 5,
+     "field": 14,
+     "margin": "unpl",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "3 Oct",
+     "track": "Flemington",
+     "race": "The Bart Cummings G3",
+     "dist": 2500,
+     "pos": 1,
+     "field": 12,
+     "margin": "1.25L",
+     "going": "Soft/Heavy",
+     "approx": false
+    },
+    {
+     "date": "24 Oct",
+     "track": "Flemington",
+     "race": "Moonee Valley Gold Cup G2",
+     "dist": 2500,
+     "pos": 3,
+     "field": 16,
+     "margin": "0.8L, wide, 57.5kg",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 23,
@@ -1480,7 +2672,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": true,
    "campaign": "Begg Golden Ticket campaign: Andrew Ramsden win in May, break, Naturalism / Herbert Power build, Crystal Mile sharpener ten days out.",
-   "verdict": "Andrew Ramsden ticket, odd mile sharpener. Pike rides; needs luck from the back."
+   "verdict": "Andrew Ramsden ticket, odd mile sharpener. Pike rides; needs luck from the back.",
+   "silks": {
+    "body": "#9e9e9e",
+    "sleeves": "#9e9e9e",
+    "cap": "#9e9e9e",
+    "pattern": "plain",
+    "status": "tbc",
+    "desc": "colours TBC"
+   },
+   "last4": [
+    {
+     "date": "16 May",
+     "track": "Flemington",
+     "race": "Andrew Ramsden LR",
+     "dist": 2800,
+     "pos": 1,
+     "field": 10,
+     "margin": "1.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "19 Sep",
+     "track": "Caulfield",
+     "race": "Naturalism Stakes G3",
+     "dist": 2000,
+     "pos": 6,
+     "field": 12,
+     "margin": "unpl",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "10 Oct",
+     "track": "Caulfield",
+     "race": "Herbert Power G2",
+     "dist": 2400,
+     "pos": 5,
+     "field": 13,
+     "margin": "0.8L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "24 Oct",
+     "track": "Flemington",
+     "race": "Crystal Mile G2",
+     "dist": 1600,
+     "pos": 11,
+     "field": 11,
+     "margin": "8.0L, warm-up",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   },
   {
    "no": 24,
@@ -1546,7 +2792,61 @@
    "jockey_cup_wins": 0,
    "golden_ticket": true,
    "campaign": "Maher Golden Ticket campaign: Archer Stakes win in September, Herbert Power, Tesio Stakes (2040m) sharpener ten days out; ridden last.",
-   "verdict": "Bottom weight, daughter of Shocking, closing well in slow races. Never past 2500m and a mare."
+   "verdict": "Bottom weight, daughter of Shocking, closing well in slow races. Never past 2500m and a mare.",
+   "silks": {
+    "body": "#111111",
+    "sleeves": "#f27d14",
+    "cap": "#f27d14",
+    "pattern": "plain",
+    "status": "approx",
+    "desc": "Black and orange"
+   },
+   "last4": [
+    {
+     "date": "Aug",
+     "track": "Flemington",
+     "race": "Lead-up",
+     "dist": 2000,
+     "pos": 4,
+     "field": 12,
+     "margin": "plc",
+     "going": "Good",
+     "approx": true
+    },
+    {
+     "date": "12 Sep",
+     "track": "Flemington",
+     "race": "Lexus Archer Stakes",
+     "dist": 2500,
+     "pos": 1,
+     "field": 12,
+     "margin": "1.0L",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "10 Oct",
+     "track": "Caulfield",
+     "race": "Herbert Power G2",
+     "dist": 2400,
+     "pos": 6,
+     "field": 13,
+     "margin": "1.5L, closing",
+     "going": "Good",
+     "approx": false
+    },
+    {
+     "date": "24 Oct",
+     "track": "Flemington",
+     "race": "Tesio Stakes G3",
+     "dist": 2040,
+     "pos": 2,
+     "field": 12,
+     "margin": "0.5L",
+     "going": "Good",
+     "approx": false
+    }
+   ]
   }
  ]
 }
