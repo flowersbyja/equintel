@@ -1,0 +1,533 @@
+<title>Cup Day Best Bets</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: a racebook page - dark green masthead, white printable body, tier-shaded field grid, A4 print. */
+:root {
+  --bg: #fbfaf6; --fg: #1a1f1b; --muted: #5b655c; --rule: #d9ddd5; --panel: #ffffff;
+  --green: #0f4d3a; --green-ink: #ffffff; --gold: #c99a2e; --gold-soft: #fff3cf;
+  --t1: #e3f1e6; --t2: #f1f6ec; --t3: #f8f8f4; --t4: #ffffff;
+  --ew: #e6f0f7; --val: #efe9f7; --rough: #fdebd9; --pos: #157347; --neg: #a23b2a;
+  --display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121715; --fg: #e8ece8; --muted: #a2ada4; --rule: #2b332d; --panel: #1a211d; --green: #0b3b2d; --gold-soft: #3a2f12;
+  --t1: #1d3a2a; --t2: #1b2d22; --t3: #1a221d; --t4: #171d19; --ew: #16303d; --val: #2a2238; --rough: #3b2616; --pos: #4fcf8a; --neg: #ff8b73; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #121715; --fg: #e8ece8; --muted: #a2ada4; --rule: #2b332d; --panel: #1a211d; --green: #0b3b2d; --gold-soft: #3a2f12;
+  --t1: #1d3a2a; --t2: #1b2d22; --t3: #1a221d; --t4: #171d19; --ew: #16303d; --val: #2a2238; --rough: #3b2616; --pos: #4fcf8a; --neg: #ff8b73; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 13px; line-height: 1.35; margin: 0; }
+.page { max-width: 1180px; margin: 0 auto; padding-block: 0 24px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.mast { background: var(--green); color: var(--green-ink); margin: 0 -16px; padding: 18px max(16px, env(safe-area-inset-left, 0px)) 16px max(16px, env(safe-area-inset-right, 0px)); border-bottom: 5px solid var(--gold); }
+.mast-inner { max-width: 1148px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; align-items: flex-end; }
+.mast h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 5vw, 46px); letter-spacing: .01em; margin: 0; line-height: .95; text-wrap: balance; }
+.mast .eyebrow { font-family: var(--display); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: 12px; opacity: .85; }
+.mast .facts { display: grid; grid-template-columns: auto auto; gap: 2px 14px; font-size: 12.5px; }
+.mast .facts b { font-weight: 700; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: .02em; margin: 0 0 6px; text-transform: uppercase; }
+.lede { color: var(--muted); margin: 0 0 10px; max-width: 70ch; }
+section.panel { margin-top: 18px; }
+.bets { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.bet { background: var(--panel); border: 1px solid var(--rule); border-top: 6px solid var(--gold); padding: 12px 14px; break-inside: avoid; }
+.bet.best { background: var(--gold-soft); border-top-color: var(--gold); }
+.bet.ew { border-top-color: #2d6f9c; background: var(--ew); }
+.bet.val { border-top-color: #6a4fa3; background: var(--val); }
+.bet.rough { border-top-color: #d0742a; background: var(--rough); }
+.bet-kind { font-family: var(--display); text-transform: uppercase; letter-spacing: .12em; font-size: 12px; font-weight: 700; color: var(--muted); }
+.bet-horse { font-family: var(--display); font-size: 26px; font-weight: 800; margin: 2px 0 2px; display: flex; align-items: center; gap: 8px; }
+.bet-meta { color: var(--muted); font-size: 12px; }
+.bet-nums { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0 6px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bet-nums b { color: var(--fg); font-size: 15px; }
+.bet-why { margin: 0; font-size: 13px; }
+.cloth { display: inline-grid; place-items: center; min-width: 26px; height: 26px; padding: 0 5px; border-radius: 4px; background: var(--green); color: #fff; font-family: var(--display); font-weight: 800; font-size: 16px; }
+.exotics { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 12px; font-size: 13.5px; }
+.exotics b { font-family: var(--display); font-size: 18px; letter-spacing: .04em; }
+.map { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+.lane { background: var(--panel); border: 1px solid var(--rule); padding: 8px 10px; }
+.lane h3 { margin: 0 0 6px; font-family: var(--display); font-size: 15px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.chip { display: inline-flex; align-items: center; gap: 5px; margin: 2px 4px 2px 0; padding: 2px 7px 2px 3px; border-radius: 14px; border: 1px solid var(--rule); font-family: var(--display); font-weight: 700; font-size: 14px; }
+.chip small { font-family: var(--body); font-weight: 400; font-size: 11.5px; color: var(--muted); }
+.chip.c1 { background: var(--rough); } .chip.c2 { background: var(--gold-soft); } .chip.c3 { background: var(--t2); } .chip.c4 { background: var(--ew); }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; background: var(--panel); }
+th { font-family: var(--display); text-transform: uppercase; letter-spacing: .08em; font-size: 11.5px; text-align: left; color: var(--muted); padding: 6px 7px; border-bottom: 2px solid var(--green); white-space: nowrap; }
+td { padding: 6px 7px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td small, .horse small { display: block; color: var(--muted); font-size: 11px; line-height: 1.25; }
+td.num { text-align: right; white-space: nowrap; }
+td.model b { font-size: 14px; }
+tr.t1 td { background: var(--t1); } tr.t2 td { background: var(--t2); } tr.t3 td { background: var(--t3); } tr.t4 td { background: var(--t4); color: var(--muted); }
+td.going.gp { color: var(--pos); font-weight: 600; } td.going.gn { color: var(--neg); font-weight: 600; }
+small.pos { color: var(--pos); font-weight: 600; } small.neg { color: var(--neg); }
+td.stars { color: var(--gold); letter-spacing: .05em; white-space: nowrap; font-size: 13px; }
+td.verdict { min-width: 220px; font-size: 12px; }
+.scen td, .scen th { text-align: right; } .scen td.horse, .scen th:first-child { text-align: left; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 11.5px; color: var(--muted); margin-top: 8px; }
+.legend i { display: inline-block; width: 14px; height: 12px; vertical-align: -2px; border: 1px solid var(--rule); margin-right: 4px; }
+footer { margin-top: 18px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--rule); padding-top: 8px; }
+@page { size: A4 landscape; margin: 9mm; }
+@media print {
+  :root { --bg: #ffffff; }
+  body { font-size: 10.5px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { max-width: none; padding: 0; }
+  header.mast { margin: 0; padding: 10px 12px; }
+  .mast h1 { font-size: 30px; }
+  .bets { grid-template-columns: repeat(4, 1fr); }
+  .bet-horse { font-size: 20px; }
+  section.panel { margin-top: 10px; }
+  .field { break-before: page; }
+  tr { break-inside: avoid; }
+  td, th { padding: 3px 5px; }
+  td.verdict { min-width: 0; }
+  .scroll { overflow: visible; }
+}
+</style>
+<div class="page">
+<header class="mast"><div class="mast-inner">
+  <div><div class="eyebrow">Flemington · Race 7 · 3:00pm AEDT · Tuesday 3 November 2026</div><h1>Lexus Melbourne Cup<br>best bets &amp; form</h1></div>
+  <div class="facts">
+    <span>Distance</span><b>3200m, Group 1 handicap, 24 runners</b>
+    <span>Track</span><b>Soft 5-6 (5-10mm forecast Monday, clearing Tuesday; rail +3m)</b>
+    <span>Going model</span><b>Good 25%, Soft 5 35%, Soft 6 30%, Soft 7+ 10%</b>
+    <span>Pace</span><b>hot tempo expected</b>
+  </div>
+</div></header>
+
+<section class="panel">
+  <h2>Best bets</h2>
+  <p class="lede">Model probabilities combine the market, tempo-adjusted lead-up form, how closely each preparation (and the trainer's method) matches past first-four finishers, going, race shape, weight, barrier and age. Edge = model chance x market odds, minus one.</p>
+  <div class="bets">
+    
+        <article class="bet best">
+          <div class="bet-kind">Best bet</div>
+          <div class="bet-horse"><span class="cloth">12</span> Hopewell Rock</div>
+          <div class="bet-meta">Bar 15 · 54.5kg · Zac Lloyd · George Boughey</div>
+          <div class="bet-nums"><span><b>13.9%</b> win</span><span><b>45.5%</b> top-4</span><span><b>$9.5</b> market</span><span><b>+32%</b> edge</span></div>
+          <p class="bet-why">Head second in a strongly run Ebor, 73 days fresh, Boughey&#x27;s fly-in method mirrors O&#x27;Brien&#x27;s. Rain helps.</p>
+        </article>
+    
+        <article class="bet ew">
+          <div class="bet-kind">Each-way</div>
+          <div class="bet-horse"><span class="cloth">20</span> Point Of Law</div>
+          <div class="bet-meta">Bar 9 · 53.0kg · Ethan Brown · Ciaron Maher</div>
+          <div class="bet-nums"><span><b>13.0%</b> win</span><span><b>43.7%</b> top-4</span><span><b>$6.5</b> market</span><span><b>-15%</b> edge</span></div>
+          <p class="bet-why">Favourite. Trained from Werribee quarantine with one sustained on-pace Geelong Cup win, only six starts, 53kg. Americain / Dunaden shape.</p>
+        </article>
+    
+        <article class="bet val">
+          <div class="bet-kind">Best value</div>
+          <div class="bet-horse"><span class="cloth">14</span> Soul Of Spain</div>
+          <div class="bet-meta">Bar 5 · 54.5kg · Tommy Berry · Chris Waller</div>
+          <div class="bet-nums"><span><b>5.3%</b> win</span><span><b>22.2%</b> top-4</span><span><b>$32.0</b> market</span><span><b>+71%</b> edge</span></div>
+          <p class="bet-why">Sydney Cup second at the trip, gate 5, Waller race-hardening. Place hope at a price.</p>
+        </article>
+    
+        <article class="bet rough">
+          <div class="bet-kind">Roughie</div>
+          <div class="bet-horse"><span class="cloth">6</span> Enfjaar</div>
+          <div class="bet-meta">Bar 8 · 56.0kg · Ray Dawson · Roger Varian</div>
+          <div class="bet-nums"><span><b>5.2%</b> win</span><span><b>21.7%</b> top-4</span><span><b>$22.0</b> market</span><span><b>+13%</b> edge</span></div>
+          <p class="bet-why">On-speed Caulfield Cup third first-up, handles all ground. The classic Delta Blues / Protectionist one-run import.</p>
+        </article>
+  </div>
+  <div class="exotics">
+    <span>First four box: <b>12 · 20 · 11 · 2</b></span>
+    <span>Wider first four / trifecta box: <b>12 · 20 · 11 · 2 · 4 · 1</b></span>
+    <span>Quinella: <b>12 / 20</b></span>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Speed map</h2>
+  <p class="lede">No clear leader. Enfjaar, So You Are, Royal Supremacy, Wine Dark Sea, Kizlyar are the go-forward types; several are drawn wide so an honest early tempo is expected.</p>
+  <div class="map">
+    <div class="lane"><h3>Leaders</h3><span class="chip c1">7<small>Royal Supremacy</small></span><span class="chip c1">6<small>Enfjaar</small></span><span class="chip c1">8<small>Wine Dark Sea</small></span></div>
+    <div class="lane"><h3>On pace</h3><span class="chip c2">19<small>Kizlyar</small></span><span class="chip c2">16<small>So You Are</small></span><span class="chip c2">13<small>Onesmoothoperator</small></span><span class="chip c2">5<small>Vauban</small></span><span class="chip c2">20<small>Point Of Law</small></span></div>
+    <div class="lane"><h3>Midfield</h3><span class="chip c3">22<small>Mr Monaco</small></span><span class="chip c3">1<small>Sons And Lovers</small></span><span class="chip c3">10<small>Goodie Two Shoes</small></span><span class="chip c3">18<small>James J Braddock</small></span><span class="chip c3">14<small>Soul Of Spain</small></span><span class="chip c3">15<small>Zahrann</small></span><span class="chip c3">12<small>Hopewell Rock</small></span><span class="chip c3">17<small>Future History</small></span></div>
+    <div class="lane"><h3>Back / swoopers</h3><span class="chip c4">21<small>Strictly Business</small></span><span class="chip c4">11<small>Juja Kibo</small></span><span class="chip c4">2<small>Trustyourinstinct</small></span><span class="chip c4">4<small>Middle Earth</small></span><span class="chip c4">3<small>Knight&#x27;s Choice</small></span><span class="chip c4">23<small>Zakouma</small></span><span class="chip c4">9<small>Asterix</small></span><span class="chip c4">24<small>Shockletz</small></span></div>
+  </div>
+</section>
+
+      <section class="panel">
+        <h2>If the day changes</h2>
+        <p class="lede">Win chance for the top eight under each going and track-bias reading. Watch the first three or four races: if on-speed horses keep winning, use the on-pace column; if the swoopers are getting over the top, the closers column.</p>
+        <div class="scroll"><table class="scen"><thead><tr><th>Horse</th><th>forecast / neutral</th><th>Good 4</th><th>Soft 6</th><th>Soft 7+</th><th>on-pace bias</th><th>closers bias</th></tr></thead><tbody><tr><td class='horse'><b>Hopewell Rock</b></td><td>13.9%</td><td>12.8%</td><td>14.5%</td><td>14.9%</td><td>13.5%</td><td>13.8%</td></tr><tr><td class='horse'><b>Point Of Law</b></td><td>13.0%</td><td>13.5%</td><td>12.7%</td><td>12.5%</td><td>16.8%</td><td>10.1%</td></tr><tr><td class='horse'><b>Juja Kibo</b></td><td>9.0%</td><td>7.9%</td><td>9.7%</td><td>10.1%</td><td>6.9%</td><td>11.0%</td></tr><tr><td class='horse'><b>Trustyourinstinct</b></td><td>6.8%</td><td>8.3%</td><td>5.9%</td><td>5.4%</td><td>5.1%</td><td>8.2%</td></tr><tr><td class='horse'><b>Middle Earth</b></td><td>6.5%</td><td>6.3%</td><td>6.6%</td><td>6.6%</td><td>5.0%</td><td>7.9%</td></tr><tr><td class='horse'><b>Sons And Lovers</b></td><td>6.0%</td><td>5.5%</td><td>6.2%</td><td>6.4%</td><td>5.8%</td><td>5.9%</td></tr><tr><td class='horse'><b>Shockletz</b></td><td>5.6%</td><td>5.7%</td><td>5.4%</td><td>5.3%</td><td>4.2%</td><td>6.8%</td></tr><tr><td class='horse'><b>Soul Of Spain</b></td><td>5.3%</td><td>5.4%</td><td>5.3%</td><td>5.2%</td><td>5.2%</td><td>5.3%</td></tr></tbody></table></div>
+      </section>
+<section class="panel field">
+  <h2>The field, ranked by the model</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>#</th><th>No</th><th>Horse / rider / trainer</th><th>Bar</th><th>Kg</th><th>Style</th><th>Last start</th><th>Going</th><th>Modelled on</th><th>Model</th><th>Odds / edge</th><th>Rating</th><th>Verdict</th></tr></thead>
+    <tbody>
+        <tr class="t1">
+          <td class="num">1</td>
+          <td class="cloth-cell"><span class="cloth">12</span></td>
+          <td class="horse"><b>Hopewell Rock</b><small>Zac Lloyd · George Boughey</small></td>
+          <td class="num">15</td>
+          <td class="num">54.5</td>
+          <td>Midfield<small>settles ~15</small></td>
+          <td>Ebor Handicap 2/22<small>fast tempo · 73d</small></td>
+          <td class="going gp">Loves wet</td>
+          <td class="small">Twilight Payment 2020<small>method 0.89</small></td>
+          <td class="num model"><b>13.9%</b><small>top-4 45.5%</small></td>
+          <td class="num">$9.5<small class="pos">+32%</small></td>
+          <td class="stars">★★★★★</td>
+          <td class="verdict">Head second in a strongly run Ebor, 73 days fresh, Boughey&#x27;s fly-in method mirrors O&#x27;Brien&#x27;s. Rain helps.</td>
+        </tr>
+        <tr class="t1">
+          <td class="num">2</td>
+          <td class="cloth-cell"><span class="cloth">20</span></td>
+          <td class="horse"><b>Point Of Law</b><small>Ethan Brown · Ciaron Maher</small></td>
+          <td class="num">9</td>
+          <td class="num">53.0</td>
+          <td>On pace<small>settles ~8</small></td>
+          <td>Geelong Cup 1/14<small>moderate tempo · 13d</small></td>
+          <td class="going gz">Unknown</td>
+          <td class="small">Media Puzzle 2002<small>method 0.70</small></td>
+          <td class="num model"><b>13.0%</b><small>top-4 43.7%</small></td>
+          <td class="num">$6.5<small class="">-15%</small></td>
+          <td class="stars">★★★★★</td>
+          <td class="verdict">Favourite. Trained from Werribee quarantine with one sustained on-pace Geelong Cup win, only six starts, 53kg. Americain / Dunaden shape.</td>
+        </tr>
+        <tr class="t1">
+          <td class="num">3</td>
+          <td class="cloth-cell"><span class="cloth">11</span></td>
+          <td class="horse"><b>Juja Kibo</b><small>Sam Clipperton · Ciaron Maher</small></td>
+          <td class="num">14</td>
+          <td class="num">55.0</td>
+          <td>Swooper<small>settles ~18</small></td>
+          <td>Moonee Valley Gold Cup 1/16<small>slow tempo · 10d</small></td>
+          <td class="going gp">Loves wet</td>
+          <td class="small">Prince Of Penzance 2015<small>method 0.84</small></td>
+          <td class="num model"><b>9.0%</b><small>top-4 33.3%</small></td>
+          <td class="num">$12.0<small class="">+8%</small></td>
+          <td class="stars">★★★★☆</td>
+          <td class="verdict">Two slowly run wins including the MV Cup Golden Ticket; loves wet ground. Needs tempo to swoop at 3200m.</td>
+        </tr>
+        <tr class="t1">
+          <td class="num">4</td>
+          <td class="cloth-cell"><span class="cloth">2</span></td>
+          <td class="horse"><b>Trustyourinstinct</b><small>James McDonald · Joseph O&#x27;Brien</small></td>
+          <td class="num">18</td>
+          <td class="num">57.0</td>
+          <td>Swooper<small>settles ~19</small></td>
+          <td>Irish St Leger 4/7<small>slow tempo · 51d</small></td>
+          <td class="going gn">Wants firm</td>
+          <td class="small">Twilight Payment 2020<small>method 0.93 · own</small></td>
+          <td class="num model"><b>6.8%</b><small>top-4 26.8%</small></td>
+          <td class="num">$8.0<small class="neg">-46%</small></td>
+          <td class="stars">★★★☆☆</td>
+          <td class="verdict">Curragh Cup winner on the exact O&#x27;Brien route, but a hold-up closer wanting firm ground, 57kg, gate 18.</td>
+        </tr>
+        <tr class="t2">
+          <td class="num">5</td>
+          <td class="cloth-cell"><span class="cloth">4</span></td>
+          <td class="horse"><b>Middle Earth</b><small>Mark Zahra · Ciaron Maher</small></td>
+          <td class="num">1</td>
+          <td class="num">56.5</td>
+          <td>Swooper<small>settles ~20</small></td>
+          <td>Cox Plate 8/12<small>slow tempo · 10d</small></td>
+          <td class="going gp">Handles wet</td>
+          <td class="small">Verry Elleegant 2021<small>method 0.92</small></td>
+          <td class="num model"><b>6.5%</b><small>top-4 26.0%</small></td>
+          <td class="num">$14.0<small class="">-9%</small></td>
+          <td class="stars">★★★☆☆</td>
+          <td class="verdict">Third last year; Gold Trip route through Caulfield Cup and Cox Plate, gate 1, Zahra. Needs the swoopers&#x27; race.</td>
+        </tr>
+        <tr class="t2">
+          <td class="num">6</td>
+          <td class="cloth-cell"><span class="cloth">1</span></td>
+          <td class="horse"><b>Sons And Lovers</b><small>Dylan Browne McMonagle · Joseph O&#x27;Brien</small></td>
+          <td class="num">3</td>
+          <td class="num">57.5</td>
+          <td>Midfield<small>settles ~10</small></td>
+          <td>Kilternan Stakes 2/10<small>slow tempo · 52d</small></td>
+          <td class="going gp">Loves wet</td>
+          <td class="small">Twilight Payment 2020<small>method 0.95 · own</small></td>
+          <td class="num model"><b>6.0%</b><small>top-4 24.3%</small></td>
+          <td class="num">$19.0<small class="pos">+13%</small></td>
+          <td class="stars">★★★☆☆</td>
+          <td class="verdict">Topweight fly-in from the Twilight Payment stable; handles any ground. 57.5kg is the catch.</td>
+        </tr>
+        <tr class="t2">
+          <td class="num">7</td>
+          <td class="cloth-cell"><span class="cloth">24</span></td>
+          <td class="horse"><b>Shockletz</b><small>Harry Coffey · Ciaron Maher</small></td>
+          <td class="num">17</td>
+          <td class="num">51.0</td>
+          <td>Swooper<small>settles ~24</small></td>
+          <td>Tesio Stakes 2/12<small>slow tempo · 10d</small></td>
+          <td class="going gz">Unknown</td>
+          <td class="small">Prince Of Penzance 2015<small>method 0.78</small></td>
+          <td class="num model"><b>5.6%</b><small>top-4 22.9%</small></td>
+          <td class="num">$10.0<small class="neg">-44%</small></td>
+          <td class="stars">★★★☆☆</td>
+          <td class="verdict">Bottom weight, daughter of Shocking, closing well in slow races. Never past 2500m and a mare.</td>
+        </tr>
+        <tr class="t2">
+          <td class="num">8</td>
+          <td class="cloth-cell"><span class="cloth">14</span></td>
+          <td class="horse"><b>Soul Of Spain</b><small>Tommy Berry · Chris Waller</small></td>
+          <td class="num">5</td>
+          <td class="num">54.5</td>
+          <td>Midfield<small>settles ~13</small></td>
+          <td>Caulfield Cup 8/18<small>moderate tempo · 17d</small></td>
+          <td class="going gz">Unknown</td>
+          <td class="small">Half Yours 2025<small>method 0.91</small></td>
+          <td class="num model"><b>5.3%</b><small>top-4 22.2%</small></td>
+          <td class="num">$32.0<small class="pos">+71%</small></td>
+          <td class="stars">★★★☆☆</td>
+          <td class="verdict">Sydney Cup second at the trip, gate 5, Waller race-hardening. Place hope at a price.</td>
+        </tr>
+        <tr class="t3">
+          <td class="num">9</td>
+          <td class="cloth-cell"><span class="cloth">6</span></td>
+          <td class="horse"><b>Enfjaar</b><small>Ray Dawson · Roger Varian</small></td>
+          <td class="num">8</td>
+          <td class="num">56.0</td>
+          <td>On pace<small>settles ~2</small></td>
+          <td>Caulfield Cup 3/18<small>moderate tempo · 17d</small></td>
+          <td class="going gp">Loves wet</td>
+          <td class="small">Delta Blues 2006<small>method 0.97</small></td>
+          <td class="num model"><b>5.2%</b><small>top-4 21.7%</small></td>
+          <td class="num">$22.0<small class="pos">+13%</small></td>
+          <td class="stars">★★★☆☆</td>
+          <td class="verdict">On-speed Caulfield Cup third first-up, handles all ground. The classic Delta Blues / Protectionist one-run import.</td>
+        </tr>
+        <tr class="t3">
+          <td class="num">10</td>
+          <td class="cloth-cell"><span class="cloth">15</span></td>
+          <td class="horse"><b>Zahrann</b><small>Ben Melham · Ciaron Maher</small></td>
+          <td class="num">11</td>
+          <td class="num">54.5</td>
+          <td>Midfield<small>settles ~14</small></td>
+          <td>Caulfield Cup 6/18<small>moderate tempo · 17d</small></td>
+          <td class="going gn">Wants firm</td>
+          <td class="small">Half Yours 2025<small>method 0.80</small></td>
+          <td class="num model"><b>4.8%</b><small>top-4 20.7%</small></td>
+          <td class="num">$27.0<small class="pos">+31%</small></td>
+          <td class="stars">★★☆☆☆</td>
+          <td class="verdict">Caulfield Cup sixth as second favourite; light weight, good gate, but wet ground is against him.</td>
+        </tr>
+        <tr class="t3">
+          <td class="num">11</td>
+          <td class="cloth-cell"><span class="cloth">16</span></td>
+          <td class="horse"><b>So You Are</b><small>Rachel King · Bjorn Baker</small></td>
+          <td class="num">7</td>
+          <td class="num">54.0</td>
+          <td>On pace<small>settles ~5</small></td>
+          <td>Bendigo Cup 1/12<small>slow tempo · 6d</small></td>
+          <td class="going gp">Loves wet</td>
+          <td class="small">Prince Of Penzance 2015<small>method 0.89</small></td>
+          <td class="num model"><b>4.5%</b><small>top-4 19.4%</small></td>
+          <td class="num">$13.0<small class="neg">-41%</small></td>
+          <td class="stars">★★☆☆☆</td>
+          <td class="verdict">Four straight wins, Bendigo Cup six days out like Knight&#x27;s Choice 2024, wet-track stats 16: 4-5-2. Big class rise.</td>
+        </tr>
+        <tr class="t3">
+          <td class="num">12</td>
+          <td class="cloth-cell"><span class="cloth">22</span></td>
+          <td class="horse"><b>Mr Monaco</b><small>Jabez Johnstone · Ciaron Maher</small></td>
+          <td class="num">16</td>
+          <td class="num">52.5</td>
+          <td>On pace<small>settles ~9</small></td>
+          <td>Moonee Valley Gold Cup 3/16<small>slow tempo · 10d</small></td>
+          <td class="going gp">Loves wet</td>
+          <td class="small">Prince Of Penzance 2015<small>method 0.85</small></td>
+          <td class="num model"><b>4.3%</b><small>top-4 18.5%</small></td>
+          <td class="num">$24.0<small class="">+4%</small></td>
+          <td class="stars">★★☆☆☆</td>
+          <td class="verdict">Bart Cummings winner on a heavy Flemington, unlucky MV Cup third under 57.5kg, drops to 52.5kg. The wet-track value.</td>
+        </tr>
+        <tr class="t3">
+          <td class="num">13</td>
+          <td class="cloth-cell"><span class="cloth">18</span></td>
+          <td class="horse"><b>James J Braddock</b><small>Craig Williams · Joseph O&#x27;Brien</small></td>
+          <td class="num">24</td>
+          <td class="num">53.5</td>
+          <td>Midfield<small>settles ~12</small></td>
+          <td>Kilternan Stakes 6/10<small>slow tempo · 52d</small></td>
+          <td class="going gz">Unknown</td>
+          <td class="small">Rekindling 2017<small>method 1.00 · own</small></td>
+          <td class="num model"><b>3.7%</b><small>top-4 16.5%</small></td>
+          <td class="num">$17.0<small class="neg">-37%</small></td>
+          <td class="stars">★★☆☆☆</td>
+          <td class="verdict">Rekindling profile from the Rekindling stable: Derby third, gelded, 53.5kg. Gate 24 and untried past 2420m.</td>
+        </tr>
+        <tr class="t3">
+          <td class="num">14</td>
+          <td class="cloth-cell"><span class="cloth">3</span></td>
+          <td class="horse"><b>Knight&#x27;s Choice</b><small>Robbie Dolan · John Symons &amp; Sheila Laxon</small></td>
+          <td class="num">2</td>
+          <td class="num">56.5</td>
+          <td>Swooper<small>settles ~21</small></td>
+          <td>Caulfield Cup 14/18<small>moderate tempo · 17d</small></td>
+          <td class="going gz">Unknown</td>
+          <td class="small">Makybe Diva 2004<small>method 0.84</small></td>
+          <td class="num model"><b>2.3%</b><small>top-4 11.1%</small></td>
+          <td class="num">$34.0<small class="">-22%</small></td>
+          <td class="stars">★☆☆☆☆</td>
+          <td class="verdict">2024 winner, same four-run build; Herbert Power third was good, 5kg more than 2024.</td>
+        </tr>
+        <tr class="t4">
+          <td class="num">15</td>
+          <td class="cloth-cell"><span class="cloth">23</span></td>
+          <td class="horse"><b>Zakouma</b><small>William Pike · Grahame Begg</small></td>
+          <td class="num">10</td>
+          <td class="num">52.0</td>
+          <td>Swooper<small>settles ~22</small></td>
+          <td>Crystal Mile 11/11<small>slow tempo · 10d</small></td>
+          <td class="going gz">Unknown</td>
+          <td class="small">Knight&#x27;s Choice 2024<small>method 0.78</small></td>
+          <td class="num model"><b>1.8%</b><small>top-4 8.9%</small></td>
+          <td class="num">$31.0<small class="neg">-43%</small></td>
+          <td class="stars">★☆☆☆☆</td>
+          <td class="verdict">Andrew Ramsden ticket, odd mile sharpener. Pike rides; needs luck from the back.</td>
+        </tr>
+        <tr class="t4">
+          <td class="num">16</td>
+          <td class="cloth-cell"><span class="cloth">10</span></td>
+          <td class="horse"><b>Goodie Two Shoes</b><small>Wayne Lordan · Joseph O&#x27;Brien</small></td>
+          <td class="num">19</td>
+          <td class="num">55.0</td>
+          <td>Midfield<small>settles ~11</small></td>
+          <td>Kilternan Stakes 10/10<small>slow tempo · 52d</small></td>
+          <td class="going gn">Wants firm</td>
+          <td class="small">Twilight Payment 2020<small>method 0.95 · own</small></td>
+          <td class="num model"><b>1.4%</b><small>top-4 7.2%</small></td>
+          <td class="num">$26.0<small class="neg">-64%</small></td>
+          <td class="stars">★☆☆☆☆</td>
+          <td class="verdict">Last year&#x27;s runner-up, but 3.5kg more, gate 19, last in the Kilternan and wants a fast track.</td>
+        </tr>
+        <tr class="t4">
+          <td class="num">17</td>
+          <td class="cloth-cell"><span class="cloth">9</span></td>
+          <td class="horse"><b>Asterix</b><small>Jye McNeil · Chris Waller</small></td>
+          <td class="num">6</td>
+          <td class="num">55.0</td>
+          <td>Swooper<small>settles ~23</small></td>
+          <td>Caulfield Cup 12/18<small>moderate tempo · 17d</small></td>
+          <td class="going gz">Unknown</td>
+          <td class="small">Half Yours 2025<small>method 0.81</small></td>
+          <td class="num model"><b>1.3%</b><small>top-4 6.5%</small></td>
+          <td class="num">$56.0<small class="">-29%</small></td>
+          <td class="stars">★☆☆☆☆</td>
+          <td class="verdict">Eight-year-old off two poor spring runs. Hard to make a case.</td>
+        </tr>
+        <tr class="t4">
+          <td class="num">18</td>
+          <td class="cloth-cell"><span class="cloth">8</span></td>
+          <td class="horse"><b>Wine Dark Sea</b><small>Damian Lane · Harry Charlton</small></td>
+          <td class="num">23</td>
+          <td class="num">56.0</td>
+          <td>On pace<small>settles ~3</small></td>
+          <td>Caulfield Cup 11/18<small>moderate tempo · 17d</small></td>
+          <td class="going gz">Unknown</td>
+          <td class="small">Delta Blues 2006<small>method 0.98</small></td>
+          <td class="num model"><b>1.1%</b><small>top-4 5.6%</small></td>
+          <td class="num">$46.0<small class="neg">-51%</small></td>
+          <td class="stars">★☆☆☆☆</td>
+          <td class="verdict">Forgive the wide first-up Caulfield Cup run; English form strong, but gate 23 and untried at the trip.</td>
+        </tr>
+        <tr class="t4">
+          <td class="num">19</td>
+          <td class="cloth-cell"><span class="cloth">19</span></td>
+          <td class="horse"><b>Kizlyar</b><small>Beau Mertens · Joseph O&#x27;Brien</small></td>
+          <td class="num">20</td>
+          <td class="num">53.5</td>
+          <td>On pace<small>settles ~4</small></td>
+          <td>Moonee Valley Gold Cup 11/16<small>slow tempo · 10d</small></td>
+          <td class="going gp">Loves wet</td>
+          <td class="small">Dunaden 2011<small>method 0.83</small></td>
+          <td class="num model"><b>0.9%</b><small>top-4 4.8%</small></td>
+          <td class="num">$41.0<small class="neg">-63%</small></td>
+          <td class="stars">★☆☆☆☆</td>
+          <td class="verdict">Proven marathon stayer who weakened in a slow MV Cup. Each-way roughie only on a strongly run race.</td>
+        </tr>
+        <tr class="t4">
+          <td class="num">20</td>
+          <td class="cloth-cell"><span class="cloth">7</span></td>
+          <td class="horse"><b>Royal Supremacy</b><small>Ben Allen · Ciaron Maher</small></td>
+          <td class="num">21</td>
+          <td class="num">56.0</td>
+          <td>Leader<small>settles ~1</small></td>
+          <td>Caulfield Cup 15/18<small>moderate tempo · 17d</small></td>
+          <td class="going gp">Loves wet</td>
+          <td class="small">Without A Fight 2023<small>method 0.80</small></td>
+          <td class="num model"><b>0.8%</b><small>top-4 4.2%</small></td>
+          <td class="num">$51.0<small class="neg">-60%</small></td>
+          <td class="stars">★☆☆☆☆</td>
+          <td class="verdict">Likely leader, eased out of the Caulfield Cup, gate 21. Pace influence more than a chance.</td>
+        </tr>
+        <tr class="t4">
+          <td class="num">21</td>
+          <td class="cloth-cell"><span class="cloth">21</span></td>
+          <td class="horse"><b>Strictly Business</b><small>Dean Yendall · Thomas Carberry</small></td>
+          <td class="num">4</td>
+          <td class="num">53.0</td>
+          <td>Midfield<small>settles ~17</small></td>
+          <td>Moonee Valley Gold Cup 16/16<small>slow tempo · 10d</small></td>
+          <td class="going gz">Unknown</td>
+          <td class="small">Prince Of Penzance 2015<small>method 0.85</small></td>
+          <td class="num model"><b>0.8%</b><small>top-4 4.2%</small></td>
+          <td class="num">$61.0<small class="neg">-54%</small></td>
+          <td class="stars">★☆☆☆☆</td>
+          <td class="verdict">Last in the MV Cup. No.</td>
+        </tr>
+        <tr class="t4">
+          <td class="num">22</td>
+          <td class="cloth-cell"><span class="cloth">17</span></td>
+          <td class="horse"><b>Future History</b><small>Jamie Melham · Gregory Hickman</small></td>
+          <td class="num">12</td>
+          <td class="num">53.5</td>
+          <td>Midfield<small>settles ~16</small></td>
+          <td>Moonee Valley Gold Cup 9/16<small>slow tempo · 10d</small></td>
+          <td class="going gz">Unknown</td>
+          <td class="small">Prince Of Penzance 2015<small>method 0.88</small></td>
+          <td class="num model"><b>0.5%</b><small>top-4 3.0%</small></td>
+          <td class="num">$56.0<small class="neg">-70%</small></td>
+          <td class="stars">★☆☆☆☆</td>
+          <td class="verdict">Late inclusion, nine-year-old, 15th in 2023. Pass.</td>
+        </tr>
+        <tr class="t4">
+          <td class="num">23</td>
+          <td class="cloth-cell"><span class="cloth">5</span></td>
+          <td class="horse"><b>Vauban</b><small>Jordan Childs · Gai Waterhouse &amp; Adrian Bott</small></td>
+          <td class="num">22</td>
+          <td class="num">56.5</td>
+          <td>On pace<small>settles ~7</small></td>
+          <td>Geelong Cup 9/14<small>moderate tempo · 13d</small></td>
+          <td class="going gp">Loves wet</td>
+          <td class="small">Dunaden 2011<small>method 0.73</small></td>
+          <td class="num model"><b>0.3%</b><small>top-4 1.8%</small></td>
+          <td class="num">$51.0<small class="neg">-85%</small></td>
+          <td class="stars">★☆☆☆☆</td>
+          <td class="verdict">Nine-year-old, one run since May under 60.5kg, gate 22. Past it for this.</td>
+        </tr>
+        <tr class="t4">
+          <td class="num">24</td>
+          <td class="cloth-cell"><span class="cloth">13</span></td>
+          <td class="horse"><b>Onesmoothoperator</b><small>Declan Bates · Tim Fitzsimmons</small></td>
+          <td class="num">13</td>
+          <td class="num">54.5</td>
+          <td>On pace<small>settles ~6</small></td>
+          <td>Geelong Cup 11/14<small>moderate tempo · 13d</small></td>
+          <td class="going gp">Loves wet</td>
+          <td class="small">Dunaden 2011<small>method 0.76</small></td>
+          <td class="num model"><b>0.2%</b><small>top-4 1.2%</small></td>
+          <td class="num">$76.0<small class="neg">-86%</small></td>
+          <td class="stars">★☆☆☆☆</td>
+          <td class="verdict">Two Cups, 12th and 16th; last in the Herbert Power. No.</td>
+        </tr></tbody>
+  </table>
+  </div>
+  <div class="legend">
+    <span><i style="background:var(--t1)"></i>Top four</span><span><i style="background:var(--t2)"></i>Next four</span><span><i style="background:var(--t3)"></i>Place hopes</span><span><i style="background:var(--t4)"></i>Outsiders</span>
+    <span>Rating: ★★★★★ 12%+ win chance, ★★★★ 8%+, ★★★ 5%+, ★★ 2.5%+</span>
+    <span>"Modelled on" = closest past first-four prep and how alike that trainer's method is (0-1).</span>
+  </div>
+</section>
+
+<footer>Generated 02 Nov 2026 04:17 from the equintel melbourne_cup model (market weight 0.75, 100,000 simulations). Prices are a 31 Oct - 2 Nov consensus; re-run on race morning with the final track rating and prices. Research model, not betting advice. Gamble responsibly.</footer>
+</div>

@@ -102,7 +102,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": false,
-   "campaign": "Classic O'Brien fly-in: European summer campaign (Riyadh, Dubai, Ascot, Longchamp), Kilternan 2nd in September, straight to Werribee, no Australian run."
+   "campaign": "Classic O'Brien fly-in: European summer campaign (Riyadh, Dubai, Ascot, Longchamp), Kilternan 2nd in September, straight to Werribee, no Australian run.",
+   "verdict": "Topweight fly-in from the Twilight Payment stable; handles any ground. 57.5kg is the catch."
   },
   {
    "no": 2,
@@ -170,7 +171,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 1,
    "golden_ticket": false,
-   "campaign": "Classic O'Brien fly-in via the Curragh Cup (won, like Rekindling and Twilight Payment) and Irish St Leger 4th, 51 days fresh, no Australian run. Hold-up closer, unlike Twilight Payment."
+   "campaign": "Classic O'Brien fly-in via the Curragh Cup (won, like Rekindling and Twilight Payment) and Irish St Leger 4th, 51 days fresh, no Australian run. Hold-up closer, unlike Twilight Payment.",
+   "verdict": "Curragh Cup winner on the exact O'Brien route, but a hold-up closer wanting firm ground, 57kg, gate 18."
   },
   {
    "no": 3,
@@ -235,7 +237,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 1,
    "golden_ticket": false,
-   "campaign": "Same Symons/Laxon shape as 2024: Queensland winter, four Victorian runs rising in distance (Naturalism, Herbert Power 3rd, Caulfield Cup), ridden from the back; 5kg more than 2024."
+   "campaign": "Same Symons/Laxon shape as 2024: Queensland winter, four Victorian runs rising in distance (Naturalism, Herbert Power 3rd, Caulfield Cup), ridden from the back; 5kg more than 2024.",
+   "verdict": "2024 winner, same four-run build; Herbert Power third was good, 5kg more than 2024."
   },
   {
    "no": 4,
@@ -307,7 +310,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 2,
    "golden_ticket": false,
-   "campaign": "Maher Gold Trip route: five weight-for-age / Caulfield Cup runs (Underwood, Caulfield Cup, Cox Plate) as sharpeners, raced hard, ridden last."
+   "campaign": "Maher Gold Trip route: five weight-for-age / Caulfield Cup runs (Underwood, Caulfield Cup, Cox Plate) as sharpeners, raced hard, ridden last.",
+   "verdict": "Third last year; Gold Trip route through Caulfield Cup and Cox Plate, gate 1, Zahra. Needs the swoopers' race."
   },
   {
    "no": 5,
@@ -374,7 +378,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": false,
-   "campaign": "Unusually light Waterhouse/Bott campaign: one run since May (Geelong Cup under 60.5kg), 13 days fresh, forward type."
+   "campaign": "Unusually light Waterhouse/Bott campaign: one run since May (Geelong Cup under 60.5kg), 13 days fresh, forward type.",
+   "verdict": "Nine-year-old, one run since May under 60.5kg, gate 22. Past it for this."
   },
   {
    "no": 6,
@@ -427,7 +432,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": false,
-   "campaign": "European base (Glorious Stakes win leading), quarantine at Werribee, one Australian run first-up in the Caulfield Cup (3rd on speed), 17 days to the Cup - the Protectionist / Delta Blues fly-in-with-one-run shape."
+   "campaign": "European base (Glorious Stakes win leading), quarantine at Werribee, one Australian run first-up in the Caulfield Cup (3rd on speed), 17 days to the Cup - the Protectionist / Delta Blues fly-in-with-one-run shape.",
+   "verdict": "On-speed Caulfield Cup third first-up, handles all ground. The classic Delta Blues / Protectionist one-run import."
   },
   {
    "no": 7,
@@ -480,7 +486,8 @@
    "gear": "cap change reported 31 Oct (unconfirmed)",
    "jockey_cup_wins": 0,
    "golden_ticket": false,
-   "campaign": "Maher race-hardened local: JRA Cup win leading, Caulfield Cup (eased), likely leader."
+   "campaign": "Maher race-hardened local: JRA Cup win leading, Caulfield Cup (eased), likely leader.",
+   "verdict": "Likely leader, eased out of the Caulfield Cup, gate 21. Pace influence more than a chance."
   },
   {
    "no": 8,
@@ -539,7 +546,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": false,
-   "campaign": "English base (3 wins from 4), Werribee quarantine, one Australian run first-up in the Caulfield Cup ridden forward, 17 days to the Cup."
+   "campaign": "English base (3 wins from 4), Werribee quarantine, one Australian run first-up in the Caulfield Cup ridden forward, 17 days to the Cup.",
+   "verdict": "Forgive the wide first-up Caulfield Cup run; English form strong, but gate 23 and untried at the trip."
   },
   {
    "no": 9,
@@ -604,7 +612,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 1,
    "golden_ticket": false,
-   "campaign": "Waller race-hardened local: Naturalism, Turnbull, Caulfield Cup, ridden from the back."
+   "campaign": "Waller race-hardened local: Naturalism, Turnbull, Caulfield Cup, ridden from the back.",
+   "verdict": "Eight-year-old off two poor spring runs. Hard to make a case."
   },
   {
    "no": 10,
@@ -655,7 +664,8 @@
    "gear": "cap change reported 31 Oct (unconfirmed)",
    "jockey_cup_wins": 0,
    "golden_ticket": false,
-   "campaign": "O'Brien repeat fly-in: Lillie Langtry win, Kilternan last, 52 days fresh, no Australian run; only four runs since last year's Cup second."
+   "campaign": "O'Brien repeat fly-in: Lillie Langtry win, Kilternan last, 52 days fresh, no Australian run; only four runs since last year's Cup second.",
+   "verdict": "Last year's runner-up, but 3.5kg more, gate 19, last in the Kilternan and wants a fast track."
   },
   {
    "no": 11,
@@ -711,7 +721,8 @@
    "gear": "cap change reported 31 Oct (unconfirmed)",
    "jockey_cup_wins": 0,
    "golden_ticket": true,
-   "campaign": "Maher Golden Ticket campaign: Metropolitan win then MV Gold Cup win ten days out (both slowly run), closer."
+   "campaign": "Maher Golden Ticket campaign: Metropolitan win then MV Gold Cup win ten days out (both slowly run), closer.",
+   "verdict": "Two slowly run wins including the MV Cup Golden Ticket; loves wet ground. Needs tempo to swoop at 3200m."
   },
   {
    "no": 12,
@@ -764,7 +775,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": false,
-   "campaign": "Boughey fly-in: Goodwood handicap win, Ebor 2nd, then 73 days fresh straight to the Cup from Werribee - the Cross Counter / Heartbreak City shape with no Australian run."
+   "campaign": "Boughey fly-in: Goodwood handicap win, Ebor 2nd, then 73 days fresh straight to the Cup from Werribee - the Cross Counter / Heartbreak City shape with no Australian run.",
+   "verdict": "Head second in a strongly run Ebor, 73 days fresh, Boughey's fly-in method mirrors O'Brien's. Rain helps."
   },
   {
    "no": 13,
@@ -815,7 +827,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": false,
-   "campaign": "Now a settled local: Herbert Power (last) and Geelong Cup (11th), on-pace type."
+   "campaign": "Now a settled local: Herbert Power (last) and Geelong Cup (11th), on-pace type.",
+   "verdict": "Two Cups, 12th and 16th; last in the Herbert Power. No."
   },
   {
    "no": 14,
@@ -883,7 +896,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": false,
-   "campaign": "Waller race-hardened local: Metropolitan, Caulfield Cup; Sydney Cup 2nd in autumn."
+   "campaign": "Waller race-hardened local: Metropolitan, Caulfield Cup; Sydney Cup 2nd in autumn.",
+   "verdict": "Sydney Cup second at the trip, gate 5, Waller race-hardening. Place hope at a price."
   },
   {
    "no": 15,
@@ -948,7 +962,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": false,
-   "campaign": "Maher race-hardened import: Naturalism win, Turnbull (heavy, failed), Caulfield Cup 6th as second favourite."
+   "campaign": "Maher race-hardened import: Naturalism win, Turnbull (heavy, failed), Caulfield Cup 6th as second favourite.",
+   "verdict": "Caulfield Cup sixth as second favourite; light weight, good gate, but wet ground is against him."
   },
   {
    "no": 16,
@@ -1016,7 +1031,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": true,
-   "campaign": "Baker hardened-local campaign: four straight wins through Sydney staying races then the Bendigo Cup six days out (Knight's Choice 2024 backup), ridden on speed."
+   "campaign": "Baker hardened-local campaign: four straight wins through Sydney staying races then the Bendigo Cup six days out (Knight's Choice 2024 backup), ridden on speed.",
+   "verdict": "Four straight wins, Bendigo Cup six days out like Knight's Choice 2024, wet-track stats 16: 4-5-2. Big class rise."
   },
   {
    "no": 17,
@@ -1079,7 +1095,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 1,
    "golden_ticket": false,
-   "campaign": "Hickman race-hardened: JRA Plate 2nd, Herbert Power 4th, MV Cup 9th."
+   "campaign": "Hickman race-hardened: JRA Plate 2nd, Herbert Power 4th, MV Cup 9th.",
+   "verdict": "Late inclusion, nine-year-old, 15th in 2023. Pass."
   },
   {
    "no": 18,
@@ -1142,7 +1159,8 @@
    "gear": "cap change reported 31 Oct (unconfirmed)",
    "jockey_cup_wins": 1,
    "golden_ticket": false,
-   "campaign": "O'Brien Rekindling-style fly-in: classic-generation 4yo, Epsom Derby 3rd, gelded, mid-summer break, one prep run (Kilternan), straight on the plane, 52 days fresh."
+   "campaign": "O'Brien Rekindling-style fly-in: classic-generation 4yo, Epsom Derby 3rd, gelded, mid-summer break, one prep run (Kilternan), straight on the plane, 52 days fresh.",
+   "verdict": "Rekindling profile from the Rekindling stable: Derby third, gelded, 53.5kg. Gate 24 and untried past 2420m."
   },
   {
    "no": 19,
@@ -1212,7 +1230,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": true,
-   "campaign": "O'Brien with an Australian run (unusual for him): MV Gold Cup attempt at a Golden Ticket, raced on speed and weakened, ten days to the Cup."
+   "campaign": "O'Brien with an Australian run (unusual for him): MV Gold Cup attempt at a Golden Ticket, raced on speed and weakened, ten days to the Cup.",
+   "verdict": "Proven marathon stayer who weakened in a slow MV Cup. Each-way roughie only on a strongly run race."
   },
   {
    "no": 20,
@@ -1275,7 +1294,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": true,
-   "campaign": "Handled like a European fly-in despite the Maher stable: UK base (Queen's Vase 4th, Bahrain Trophy win), first shipment to Werribee quarantine, ONE Australian run (Geelong Cup win) 13 days out - Americain / Dunaden / Media Puzzle shape, not Maher's usual 3-5 run build."
+   "campaign": "Handled like a European fly-in despite the Maher stable: UK base (Queen's Vase 4th, Bahrain Trophy win), first shipment to Werribee quarantine, ONE Australian run (Geelong Cup win) 13 days out - Americain / Dunaden / Media Puzzle shape, not Maher's usual 3-5 run build.",
+   "verdict": "Favourite. Trained from Werribee quarantine with one sustained on-pace Geelong Cup win, only six starts, 53kg. Americain / Dunaden shape."
   },
   {
    "no": 21,
@@ -1326,7 +1346,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": false,
-   "campaign": "Carberry: SA Derby 2nd in autumn, MV Gold Cup last."
+   "campaign": "Carberry: SA Derby 2nd in autumn, MV Gold Cup last.",
+   "verdict": "Last in the MV Cup. No."
   },
   {
    "no": 22,
@@ -1387,7 +1408,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": true,
-   "campaign": "Maher Golden Ticket campaign: Bart Cummings win on rain-affected Flemington (Almandin 2016 ticket) then MV Gold Cup 3rd under 57.5kg ten days out; forward type."
+   "campaign": "Maher Golden Ticket campaign: Bart Cummings win on rain-affected Flemington (Almandin 2016 ticket) then MV Gold Cup 3rd under 57.5kg ten days out; forward type.",
+   "verdict": "Bart Cummings winner on a heavy Flemington, unlucky MV Cup third under 57.5kg, drops to 52.5kg. The wet-track value."
   },
   {
    "no": 23,
@@ -1457,7 +1479,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": true,
-   "campaign": "Begg Golden Ticket campaign: Andrew Ramsden win in May, break, Naturalism / Herbert Power build, Crystal Mile sharpener ten days out."
+   "campaign": "Begg Golden Ticket campaign: Andrew Ramsden win in May, break, Naturalism / Herbert Power build, Crystal Mile sharpener ten days out.",
+   "verdict": "Andrew Ramsden ticket, odd mile sharpener. Pike rides; needs luck from the back."
   },
   {
    "no": 24,
@@ -1522,7 +1545,8 @@
    "gear": "none reported",
    "jockey_cup_wins": 0,
    "golden_ticket": true,
-   "campaign": "Maher Golden Ticket campaign: Archer Stakes win in September, Herbert Power, Tesio Stakes (2040m) sharpener ten days out; ridden last."
+   "campaign": "Maher Golden Ticket campaign: Archer Stakes win in September, Herbert Power, Tesio Stakes (2040m) sharpener ten days out; ridden last.",
+   "verdict": "Bottom weight, daughter of Shocking, closing well in slow races. Never past 2500m and a mare."
   }
  ]
 }

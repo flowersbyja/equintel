@@ -16,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from melbourne_cup.formguide import build_form_guide  # noqa: E402
 from melbourne_cup.model import Weights, predict, scenario_table  # noqa: E402
+from melbourne_cup.printable import build_printable  # noqa: E402
 from melbourne_cup.report import build_report  # noqa: E402
 
 
@@ -33,6 +34,7 @@ def main() -> None:
     ap.add_argument("--going-scale", type=float, default=0.45)
     ap.add_argument("--form-guide", default=None, help="write the multi-variable form guide here")
     ap.add_argument("--no-scenarios", action="store_true", help="skip the going / bias scenario table")
+    ap.add_argument("--printable", default=None, help="write the printable best-bets HTML form guide here")
     ap.add_argument("--sims", type=int, default=20000)
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--field", default="field_2026.json", help="field file inside melbourne_cup/cup_data")
@@ -54,6 +56,9 @@ def main() -> None:
     if args.form_guide:
         Path(args.form_guide).write_text(build_form_guide(pred), encoding="utf-8")
         print(f"form guide written to {args.form_guide}")
+    if args.printable:
+        Path(args.printable).write_text(build_printable(pred, scenarios), encoding="utf-8")
+        print(f"printable guide written to {args.printable}")
     if args.json:
         payload = {
             "race": pred.race,
