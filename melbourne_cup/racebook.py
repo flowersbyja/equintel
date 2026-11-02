@@ -167,7 +167,7 @@ h2 {{ font-family: var(--display); font-weight: 700; font-size: 22px; letter-spa
 .rtitle {{ flex: 1 1 320px; min-width: 0; }}
 .rname {{ font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: .01em; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
 .rno {{ display: inline-grid; place-items: center; min-width: 26px; height: 26px; padding: 0 5px; border-radius: 4px; background: var(--green); color: #fff; font-size: 16px; }}
-.stars {{ color: var(--gold); font-size: 15px; letter-spacing: .05em; }}
+.stars {{ color: var(--gold); font-size: 15px; letter-spacing: .05em; font-family: var(--body); }}
 .rsub {{ color: var(--muted); font-size: 12px; }}
 .rsilks {{ font-size: 11px; color: var(--muted); font-style: italic; }}
 .rnums {{ text-align: right; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; flex: 0 0 auto; }}
@@ -195,7 +195,7 @@ footer {{ margin-top: 16px; color: var(--muted); font-size: 11px; border-top: 1p
 <div class="page">
 <header class="mast"><div class="mast-inner">
   <div><div class="eyebrow">Flemington · Race 7 · 3:00pm AEDT · Tuesday 3 November 2026 · 3200m · Group 1 handicap</div><h1>Lexus Melbourne Cup racebook</h1></div>
-  <div class="facts">Track: {e(race['expected_track'])}. Rail +3m. 24 runners. Prices are a 31 Oct - 2 Nov consensus.</div>
+  <div class="facts">Track: {e(race['expected_track'])}. 24 runners. Prices are a 31 Oct - 2 Nov consensus.</div>
 </div></header>
 {rundown}
 <section class="field">
