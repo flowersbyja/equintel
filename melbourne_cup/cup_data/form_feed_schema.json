@@ -1,0 +1,25 @@
+{
+  "_notes": [
+    "Schema for the full Best Bets-style form feed. One record per runner, keyed by horse name. Populate from a form provider",
+    "(racing.com / racenet / punters export) with scripts/import_form.py, or by hand. Fields marked null are rendered as '-'.",
+    "stats grids are 'starts-wins-seconds-thirds' strings, e.g. '12: 3-2-1'."
+  ],
+  "runner_fields": {
+    "colour_sex_age": "e.g. 'b g 6'",
+    "sire_dam": "e.g. 'Frankel x Portfolio (Dubawi)'",
+    "owner": "string",
+    "colours": "official silks description, e.g. 'Emerald green, gold hoops, white cap'",
+    "silks_image": "optional URL or data URI of the silks image",
+    "career": "'31: 6-6-3'",
+    "prizemoney": "'$1,234,567'",
+    "stats": {"track": "Flemington", "distance": "3200m", "track_distance": "", "firm": "", "good": "", "soft": "", "heavy": "", "synthetic": "", "first_up": "", "second_up": "", "third_up": "", "jockey": "with this rider", "clockwise": "", "anticlockwise": "", "night": ""},
+    "form_last12": "list of run objects, most recent first",
+    "comment": "trainer / rider / stewards comments"
+  },
+  "run_fields": {
+    "date": "17Oct26", "track": "Caulfield", "race": "Caulfield Cup", "class": "G1 HCP", "dist": 2400, "going": "Good4",
+    "finish": 14, "field": 18, "margin": "10.0L", "weight": 56.5, "barrier": 9, "jockey": "R Dolan", "sp": "$34", "fav_sp": "$4.80 fav Cosmic Crusader",
+    "winner": "Kingswood", "second": "Saint George", "time": "2:28.21", "last600": "35.10", "pos_800": 12, "pos_400": 14, "in_running": "settled last, never a factor",
+    "gear": "", "steward_comment": ""
+  }
+}

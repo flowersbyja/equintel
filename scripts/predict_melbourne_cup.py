@@ -18,6 +18,7 @@ from melbourne_cup.formguide import build_form_guide  # noqa: E402
 from melbourne_cup.model import Weights, predict, scenario_table  # noqa: E402
 from melbourne_cup.printable import build_printable  # noqa: E402
 from melbourne_cup.racebook import build_racebook  # noqa: E402
+from melbourne_cup.formbook import build_formbook  # noqa: E402
 from melbourne_cup.report import build_report  # noqa: E402
 
 
@@ -37,6 +38,7 @@ def main() -> None:
     ap.add_argument("--no-scenarios", action="store_true", help="skip the going / bias scenario table")
     ap.add_argument("--printable", default=None, help="write the printable best-bets HTML form guide here")
     ap.add_argument("--racebook", default=None, help="write the Best Bets-style racebook (silks, last four, rundown) here")
+    ap.add_argument("--formbook", default=None, help="write the full 12-run form book here (needs cup_data/form_feed_2026.json)")
     ap.add_argument("--sims", type=int, default=20000)
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--field", default="field_2026.json", help="field file inside melbourne_cup/cup_data")
@@ -64,6 +66,9 @@ def main() -> None:
     if args.racebook:
         Path(args.racebook).write_text(build_racebook(pred, scenarios), encoding="utf-8")
         print(f"racebook written to {args.racebook}")
+    if args.formbook:
+        Path(args.formbook).write_text(build_formbook(pred), encoding="utf-8")
+        print(f"form book written to {args.formbook}")
     if args.json:
         payload = {
             "race": pred.race,
