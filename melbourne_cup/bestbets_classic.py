@@ -274,6 +274,6 @@ footer{{margin-top:16px;color:var(--muted);font-size:11px;border-top:1px solid v
 <div class="cats">{cat_html}</div>
 <p class="key"><b>Appears in the most colours:</b> {cons_html}.</p>
 <p class="key"><b>Model first four:</b> {' - '.join(str(x['no']) for x in t)} ({', '.join(e(x['horse']) for x in t)}).</p>
-<footer>Generated {generated}. Form compiled from published results; silks from published colour descriptions (grey = unconfirmed). Research only. Gamble responsibly.</footer>
+<footer>Generated {generated}. Form compiled from published results; silks from the ABC Melbourne Cup sweep grid. Research only. Gamble responsibly.</footer>
 </div>
 """

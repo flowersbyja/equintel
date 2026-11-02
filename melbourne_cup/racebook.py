@@ -25,29 +25,78 @@ def _fig(pos: int, field: int) -> str:
     return str(pos) if pos <= 9 else "0"
 
 
+def _checks(x, y, w, h, c1, c2, n=4):
+    cw, ch = w / n, h / n
+    out = []
+    for i in range(n):
+        for j in range(n):
+            out.append(f'<rect x="{x + i * cw:.1f}" y="{y + j * ch:.1f}" width="{cw:.1f}" height="{ch:.1f}" fill="{c1 if (i + j) % 2 == 0 else c2}"/>')
+    return "".join(out)
+
+
 def silks_svg(s: dict) -> str:
-    """Jacket + cap drawn in SVG from body / sleeves / cap colours and a simple pattern."""
+    """Jacket + cap drawn in SVG. Keys: body, sleeves, cap, pattern, pattern_color, sleeve_pattern, sleeve_color, cap_pattern, cap_color."""
     body, sleeves, cap = s.get("body", "#9e9e9e"), s.get("sleeves", "#9e9e9e"), s.get("cap", "#9e9e9e")
-    pat = s.get("pattern", "plain")
-    pc = s.get("pattern_color", "#ffffff")
-    overlay = ""
+    pat, pc = s.get("pattern", "plain"), s.get("pattern_color", "#ffffff")
+    sp, sc = s.get("sleeve_pattern", "plain"), s.get("sleeve_color", "#ffffff")
+    cp, cc = s.get("cap_pattern", "plain"), s.get("cap_color", "#ffffff")
+    ov = ""
     if pat == "hoops":
-        overlay = "".join(f'<rect x="14" y="{y}" width="20" height="3.2" fill="{pc}"/>' for y in (18, 25, 32))
+        ov = "".join(f'<rect x="14" y="{y}" width="20" height="3.4" fill="{pc}"/>' for y in (17, 24, 31, 38))
+    elif pat == "band":
+        ov = f'<rect x="14" y="23" width="20" height="5" fill="{pc}"/>'
     elif pat == "stripes":
-        overlay = "".join(f'<rect x="{x}" y="14" width="3" height="24" fill="{pc}"/>' for x in (17, 23, 29))
+        ov = "".join(f'<rect x="{x}" y="14" width="3" height="26" fill="{pc}"/>' for x in (18, 27))
     elif pat == "sash":
-        overlay = f'<polygon points="14,14 20,14 34,38 28,38" fill="{pc}"/>'
-    elif pat == "halves":
-        overlay = f'<rect x="24" y="14" width="10" height="24" fill="{pc}"/>'
-    elif pat == "diamond":
-        overlay = f'<polygon points="24,18 30,26 24,34 18,26" fill="{pc}"/>'
+        ov = f'<polygon points="14,14 20,14 34,38 28,38" fill="{pc}"/>'
+    elif pat == "dsashes":
+        ov = "".join(f'<polygon points="{14 + o},14 {18 + o},14 {34},{30 - o} {34},{34 - o}" fill="{pc}"/>' for o in (0, 8)) + f'<polygon points="14,26 14,30 26,40 30,40" fill="{pc}"/>'
+    elif pat == "check_sash":
+        ov = f'<polygon points="14,14 21,14 34,34 34,40 30,40" fill="{pc}"/>' + "".join(f'<rect x="{15 + i * 3}" y="{15 + i * 4}" width="2.6" height="2.6" fill="{body}"/>' for i in range(7))
+    elif pat == "star":
+        ov = f'<polygon points="24,18 26.2,24 32.5,24 27.4,27.7 29.3,33.7 24,30 18.7,33.7 20.6,27.7 15.5,24 21.8,24" fill="{pc}"/>'
+    elif pat == "stars":
+        ov = "".join(f'<polygon transform="translate({x},{y}) scale(0.45)" points="0,-8 2.4,-2.5 8,-2.5 3.6,1.5 5.2,7 0,3.6 -5.2,7 -3.6,1.5 -8,-2.5 -2.4,-2.5" fill="{pc}"/>' for x, y in ((19, 20), (29, 20), (24, 27), (19, 34), (29, 34)))
+    elif pat == "spots":
+        ov = "".join(f'<circle cx="{x}" cy="{y}" r="2.4" fill="{pc}"/>' for x, y in ((19, 20), (29, 20), (24, 27), (19, 34), (29, 34)))
+    elif pat == "spots3":
+        ov = "".join(f'<circle cx="{x}" cy="{y}" r="2.6" fill="{pc}"/>' for x, y in ((19, 22), (29, 22), (24, 30)))
+    elif pat == "horseshoe":
+        ov = f'<path d="M18 20 a6 6 0 1 0 12 0 v8 a6 6 0 0 1 -12 0 z" fill="none" stroke="{pc}" stroke-width="2.6"/>'
+    elif pat == "square":
+        ov = f'<rect x="19" y="21" width="10" height="10" fill="none" stroke="{pc}" stroke-width="2.2"/>'
+    elif pat == "mandala":
+        ov = "".join(f'<circle cx="24" cy="27" r="{r}" fill="none" stroke="{c}" stroke-width="1.6"/>' for r, c in ((9, pc), (6, s.get("pattern_color2", "#f2c200")), (3, pc)))
+    elif pat == "logo":
+        ov = f'<polygon points="21,22 27,22 24,17" fill="{pc}"/><rect x="21" y="23" width="6" height="2" fill="{pc}"/>'
+    # sleeves
+    sl = ""
+    if sp == "check":
+        sl = _checks(2, 14, 12, 16, sleeves, sc, 3) + _checks(34, 14, 12, 16, sleeves, sc, 3)
+    elif sp == "hoops":
+        sl = "".join(f'<rect x="{x}" y="{y}" width="12" height="3" fill="{sc}"/>' for x in (2, 34) for y in (17, 23, 29))
+    elif sp == "armband":
+        sl = "".join(f'<rect x="{x}" y="22" width="12" height="3.5" fill="{sc}"/>' for x in (2, 34))
+    elif sp == "stars":
+        sl = "".join(f'<circle cx="{x}" cy="{y}" r="1.4" fill="{sc}"/>' for x in (8, 40) for y in (18, 24, 30))
+    # cap
+    capfill = cap
+    capov = ""
+    if cp == "check":
+        capov = f'<clipPath id="c{abs(hash(str(s))) % 10000}"><path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z"/></clipPath><g clip-path="url(#c{abs(hash(str(s))) % 10000})">{_checks(14, 0, 22, 7, cap, cc, 4)}</g>'
+    elif cp == "halves":
+        capov = f'<path d="M24 0.2 a9 6 0 0 1 9 5.8 l1 0 h-10 z" fill="{cc}"/>'
+    elif cp == "stripe":
+        capov = f'<rect x="22.5" y="0" width="3" height="6" fill="{cc}"/>'
     grey = ' opacity="0.55"' if s.get("status") == "tbc" else ""
     return f'''<svg class="silks" viewBox="0 0 48 44" width="40" height="40" aria-label="{html.escape(s.get("desc", ""))}"{grey}>
 <rect x="2" y="14" width="12" height="16" rx="2" fill="{sleeves}" stroke="#333" stroke-width="1"/>
 <rect x="34" y="14" width="12" height="16" rx="2" fill="{sleeves}" stroke="#333" stroke-width="1"/>
+{sl}
 <rect x="14" y="14" width="20" height="26" rx="2" fill="{body}" stroke="#333" stroke-width="1"/>
-{overlay}
-<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="{cap}" stroke="#333" stroke-width="1"/>
+{ov}
+<path d="M15 2 a9 6 0 0 1 18 0 l1 4 h-20 z" fill="{capfill}" stroke="#333" stroke-width="1"/>
+{capov}
 <rect x="13" y="6" width="22" height="2.5" fill="#333"/>
 </svg>'''
 
@@ -202,9 +251,9 @@ footer {{ margin-top: 16px; color: var(--muted); font-size: 11px; border-top: 1p
   <h2>The field</h2>
   <div class="key"><span>Barrier in brackets after the name. Form figures oldest to newest, 0 = unplaced (10th or worse).</span>
     <span><i style="background:var(--r5)"></i>★★★★★ 12%+ win chance</span><span><i style="background:var(--r4)"></i>★★★★ 8%+</span><span><i style="background:var(--r3)"></i>★★★ 5%+</span><span><i style="background:var(--r2)"></i>★★ 2.5%+</span><span><i style="background:var(--r1)"></i>★ outsider</span>
-    <span>Greyed silks = colours not confirmed. ~ = race label inferred from published form figures.</span></div>
+    <span>Silks transcribed from the ABC sweep grid. ~ = race label inferred from published form figures.</span></div>
   {''.join(blocks)}
 </section>
-<footer>Generated {generated} from the equintel melbourne_cup model. Silks drawn from published colour descriptions where available; unconfirmed designs are drawn grey. Research model, not betting advice. Gamble responsibly.</footer>
+<footer>Generated {generated} from the equintel melbourne_cup model. Silks drawn from the ABC Melbourne Cup sweep grid. Research model, not betting advice. Gamble responsibly.</footer>
 </div>
 """

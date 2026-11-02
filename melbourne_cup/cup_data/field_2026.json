@@ -108,11 +108,15 @@
    "verdict": "Topweight fly-in from the Twilight Payment stable; handles any ground. 57.5kg is the catch.",
    "silks": {
     "body": "#ffffff",
-    "sleeves": "#e75480",
-    "cap": "#e75480",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "White and pink (H.O.S. Syndicate; design unverified)"
+    "sleeves": "#ffffff",
+    "cap": "#ffffff",
+    "pattern": "star",
+    "pattern_color": "#f4a3c4",
+    "cap_pattern": "halves",
+    "cap_color": "#f4a3c4",
+    "desc": "White, pink star, white cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -230,13 +234,16 @@
    "campaign": "Classic O'Brien fly-in via the Curragh Cup (won, like Rekindling and Twilight Payment) and Irish St Leger 4th, 51 days fresh, no Australian run. Hold-up closer, unlike Twilight Payment.",
    "verdict": "Curragh Cup winner on the exact O'Brien route, but a hold-up closer wanting firm ground, 57kg, gate 18.",
    "silks": {
-    "body": "#0a8a3a",
-    "sleeves": "#0a8a3a",
+    "body": "#2e9e4f",
+    "sleeves": "#2e9e4f",
     "cap": "#ffffff",
     "pattern": "hoops",
-    "pattern_color": "#f2c200",
+    "pattern_color": "#f2e13a",
+    "sleeve_pattern": "hoops",
+    "sleeve_color": "#f2e13a",
+    "desc": "Emerald green, gold hoops, hooped sleeves, white cap (J P McManus)",
     "status": "confirmed",
-    "desc": "Emerald green, gold hoops, white cap (JP McManus)"
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -351,12 +358,16 @@
    "campaign": "Same Symons/Laxon shape as 2024: Queensland winter, four Victorian runs rising in distance (Naturalism, Herbert Power 3rd, Caulfield Cup), ridden from the back; 5kg more than 2024.",
    "verdict": "2024 winner, same four-run build; Herbert Power third was good, 5kg more than 2024.",
    "silks": {
-    "body": "#ff5fa2",
-    "sleeves": "#b5e61d",
-    "cap": "#b5e61d",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "Pink, lime green sleeves and cap"
+    "body": "#c0268f",
+    "sleeves": "#f2e13a",
+    "cap": "#f2e13a",
+    "pattern": "star",
+    "pattern_color": "#111111",
+    "sleeve_pattern": "stars",
+    "sleeve_color": "#111111",
+    "desc": "Magenta, black star, yellow sleeves with black stars, yellow cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -478,12 +489,18 @@
    "campaign": "Maher Gold Trip route: five weight-for-age / Caulfield Cup runs (Underwood, Caulfield Cup, Cox Plate) as sharpeners, raced hard, ridden last.",
    "verdict": "Third last year; Gold Trip route through Caulfield Cup and Cox Plate, gate 1, Zahra. Needs the swoopers' race.",
    "silks": {
-    "body": "#9e9e9e",
-    "sleeves": "#9e9e9e",
-    "cap": "#9e9e9e",
-    "pattern": "plain",
-    "status": "tbc",
-    "desc": "colours TBC"
+    "body": "#1e5bc6",
+    "sleeves": "#1e5bc6",
+    "cap": "#111111",
+    "pattern": "stars",
+    "pattern_color": "#f2e13a",
+    "sleeve_pattern": "check",
+    "sleeve_color": "#ffffff",
+    "cap_pattern": "check",
+    "cap_color": "#ffffff",
+    "desc": "Royal blue, yellow stars, blue and white checked sleeves, checked cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -600,12 +617,18 @@
    "campaign": "Unusually light Waterhouse/Bott campaign: one run since May (Geelong Cup under 60.5kg), 13 days fresh, forward type.",
    "verdict": "Nine-year-old, one run since May under 60.5kg, gate 22. Past it for this.",
    "silks": {
-    "body": "#9e9e9e",
-    "sleeves": "#9e9e9e",
-    "cap": "#9e9e9e",
-    "pattern": "plain",
-    "status": "tbc",
-    "desc": "colours TBC"
+    "body": "#1e5bc6",
+    "sleeves": "#111111",
+    "cap": "#111111",
+    "pattern": "horseshoe",
+    "pattern_color": "#ffffff",
+    "sleeve_pattern": "check",
+    "sleeve_color": "#ffffff",
+    "cap_pattern": "check",
+    "cap_color": "#ffffff",
+    "desc": "Royal blue, white horseshoe, black and white checked sleeves and cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -708,12 +731,16 @@
    "campaign": "European base (Glorious Stakes win leading), quarantine at Werribee, one Australian run first-up in the Caulfield Cup (3rd on speed), 17 days to the Cup - the Protectionist / Delta Blues fly-in-with-one-run shape.",
    "verdict": "On-speed Caulfield Cup third first-up, handles all ground. The classic Delta Blues / Protectionist one-run import.",
    "silks": {
-    "body": "#1f7a3a",
-    "sleeves": "#5b2d8e",
-    "cap": "#5b2d8e",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "Green and purple (Racing Post); design unverified"
+    "body": "#6b2f9e",
+    "sleeves": "#2e9e4f",
+    "cap": "#2e9e4f",
+    "pattern": "stars",
+    "pattern_color": "#2e9e4f",
+    "cap_pattern": "halves",
+    "cap_color": "#6b2f9e",
+    "desc": "Purple, green stars, green sleeves, green and purple cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -816,12 +843,16 @@
    "campaign": "Maher race-hardened local: JRA Cup win leading, Caulfield Cup (eased), likely leader.",
    "verdict": "Likely leader, eased out of the Caulfield Cup, gate 21. Pace influence more than a chance.",
    "silks": {
-    "body": "#9e9e9e",
-    "sleeves": "#9e9e9e",
-    "cap": "#9e9e9e",
-    "pattern": "plain",
-    "status": "tbc",
-    "desc": "colours TBC"
+    "body": "#1e5bc6",
+    "sleeves": "#111111",
+    "cap": "#111111",
+    "pattern": "horseshoe",
+    "pattern_color": "#ffffff",
+    "sleeve_pattern": "check",
+    "sleeve_color": "#ffffff",
+    "desc": "Royal blue, white horseshoe, black and white checked sleeves, black cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -930,12 +961,17 @@
    "campaign": "English base (3 wins from 4), Werribee quarantine, one Australian run first-up in the Caulfield Cup ridden forward, 17 days to the Cup.",
    "verdict": "Forgive the wide first-up Caulfield Cup run; English form strong, but gate 23 and untried at the trip.",
    "silks": {
-    "body": "#5b2d8e",
-    "sleeves": "#1f6f8b",
+    "body": "#2e9e4f",
+    "sleeves": "#2e9e4f",
     "cap": "#2e9e4f",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "Purple, blue, green and yellow custom design (Sonny Glebe); layout unverified"
+    "pattern": "mandala",
+    "pattern_color": "#1e5bc6",
+    "pattern_color2": "#f2e13a",
+    "cap_pattern": "stripe",
+    "cap_color": "#1e5bc6",
+    "desc": "Green, blue and yellow mandala design, green patterned cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -1050,12 +1086,16 @@
    "campaign": "Waller race-hardened local: Naturalism, Turnbull, Caulfield Cup, ridden from the back.",
    "verdict": "Eight-year-old off two poor spring runs. Hard to make a case.",
    "silks": {
-    "body": "#1f7a3a",
-    "sleeves": "#c62828",
-    "cap": "#c62828",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "Green and red"
+    "body": "#2e9e4f",
+    "sleeves": "#2e9e4f",
+    "cap": "#2e9e4f",
+    "pattern": "band",
+    "pattern_color": "#d81e1e",
+    "cap_pattern": "halves",
+    "cap_color": "#d81e1e",
+    "desc": "Green, red band, green and red cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -1156,13 +1196,18 @@
    "campaign": "O'Brien repeat fly-in: Lillie Langtry win, Kilternan last, 52 days fresh, no Australian run; only four runs since last year's Cup second.",
    "verdict": "Last year's runner-up, but 3.5kg more, gate 19, last in the Kilternan and wants a fast track.",
    "silks": {
-    "body": "#0a8a3a",
-    "sleeves": "#0a8a3a",
-    "cap": "#ffffff",
+    "body": "#2e9e4f",
+    "sleeves": "#2e9e4f",
+    "cap": "#2e9e4f",
     "pattern": "hoops",
-    "pattern_color": "#f2c200",
+    "pattern_color": "#f2e13a",
+    "sleeve_pattern": "hoops",
+    "sleeve_color": "#f2e13a",
+    "cap_pattern": "halves",
+    "cap_color": "#f2e13a",
+    "desc": "Emerald green, gold hoops, hooped sleeves, green and gold cap (J P McManus)",
     "status": "confirmed",
-    "desc": "Emerald green, gold hoops, white cap (JP McManus)"
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -1268,12 +1313,18 @@
    "campaign": "Maher Golden Ticket campaign: Metropolitan win then MV Gold Cup win ten days out (both slowly run), closer.",
    "verdict": "Two slowly run wins including the MV Cup Golden Ticket; loves wet ground. Needs tempo to swoop at 3200m.",
    "silks": {
-    "body": "#1e3f8f",
-    "sleeves": "#1e3f8f",
-    "cap": "#1e3f8f",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "Blue (design unverified)"
+    "body": "#1e5bc6",
+    "sleeves": "#1e5bc6",
+    "cap": "#1e5bc6",
+    "pattern": "stars",
+    "pattern_color": "#f2e13a",
+    "sleeve_pattern": "check",
+    "sleeve_color": "#ffffff",
+    "cap_pattern": "check",
+    "cap_color": "#ffffff",
+    "desc": "Royal blue, yellow stars, blue and white checked sleeves and cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -1376,12 +1427,12 @@
    "campaign": "Boughey fly-in: Goodwood handicap win, Ebor 2nd, then 73 days fresh straight to the Cup from Werribee - the Cross Counter / Heartbreak City shape with no Australian run.",
    "verdict": "Head second in a strongly run Ebor, 73 days fresh, Boughey's fly-in method mirrors O'Brien's. Rain helps.",
    "silks": {
-    "body": "#c9a227",
-    "sleeves": "#1f6f8b",
-    "cap": "#1f6f8b",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "Old gold and peacock blue (Wathnan Racing)"
+    "body": "#1e5bc6",
+    "sleeves": "#d9c39a",
+    "cap": "#d81e1e",
+    "desc": "Royal blue, cream sleeves, red cap (Wathnan Racing)",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -1482,12 +1533,18 @@
    "campaign": "Now a settled local: Herbert Power (last) and Geelong Cup (11th), on-pace type.",
    "verdict": "Two Cups, 12th and 16th; last in the Herbert Power. No.",
    "silks": {
-    "body": "#9e9e9e",
-    "sleeves": "#9e9e9e",
-    "cap": "#9e9e9e",
-    "pattern": "plain",
-    "status": "tbc",
-    "desc": "colours TBC"
+    "body": "#8ec8ee",
+    "sleeves": "#8ec8ee",
+    "cap": "#8ec8ee",
+    "pattern": "square",
+    "pattern_color": "#1f2e6e",
+    "sleeve_pattern": "armband",
+    "sleeve_color": "#1f2e6e",
+    "cap_pattern": "stripe",
+    "cap_color": "#1f2e6e",
+    "desc": "Light blue, dark blue hollow square, light blue sleeves, light and dark blue cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -1605,12 +1662,18 @@
    "campaign": "Waller race-hardened local: Metropolitan, Caulfield Cup; Sydney Cup 2nd in autumn.",
    "verdict": "Sydney Cup second at the trip, gate 5, Waller race-hardening. Place hope at a price.",
    "silks": {
-    "body": "#1e3f8f",
-    "sleeves": "#ffffff",
-    "cap": "#1e3f8f",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "Blue and white (ABC); layout unverified"
+    "body": "#1f2e6e",
+    "sleeves": "#1f2e6e",
+    "cap": "#1f2e6e",
+    "pattern": "band",
+    "pattern_color": "#ffffff",
+    "sleeve_pattern": "armband",
+    "sleeve_color": "#ffffff",
+    "cap_pattern": "halves",
+    "cap_color": "#ffffff",
+    "desc": "Navy, white band, white armbands, navy and white cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -1725,12 +1788,18 @@
    "campaign": "Maher race-hardened import: Naturalism win, Turnbull (heavy, failed), Caulfield Cup 6th as second favourite.",
    "verdict": "Caulfield Cup sixth as second favourite; light weight, good gate, but wet ground is against him.",
    "silks": {
-    "body": "#1f7a3a",
-    "sleeves": "#f2c200",
-    "cap": "#c62828",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "Green and yellow, red cap (design unverified)"
+    "body": "#1f2e6e",
+    "sleeves": "#1f2e6e",
+    "cap": "#ffffff",
+    "pattern": "spots",
+    "pattern_color": "#ffffff",
+    "sleeve_pattern": "armband",
+    "sleeve_color": "#d9c39a",
+    "cap_pattern": "stripe",
+    "cap_color": "#1f2e6e",
+    "desc": "Navy, white spots, cream armbands, white and navy cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -1848,12 +1917,16 @@
    "campaign": "Baker hardened-local campaign: four straight wins through Sydney staying races then the Bendigo Cup six days out (Knight's Choice 2024 backup), ridden on speed.",
    "verdict": "Four straight wins, Bendigo Cup six days out like Knight's Choice 2024, wet-track stats 16: 4-5-2. Big class rise.",
    "silks": {
-    "body": "#9e9e9e",
-    "sleeves": "#9e9e9e",
-    "cap": "#9e9e9e",
-    "pattern": "plain",
-    "status": "tbc",
-    "desc": "colours TBC"
+    "body": "#2e9e4f",
+    "sleeves": "#2e9e4f",
+    "cap": "#f2e13a",
+    "pattern": "stripes",
+    "pattern_color": "#ffffff",
+    "sleeve_pattern": "check",
+    "sleeve_color": "#f2e13a",
+    "desc": "Green, white stripes, green and yellow checked sleeves, yellow cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -1966,12 +2039,14 @@
    "campaign": "Hickman race-hardened: JRA Plate 2nd, Herbert Power 4th, MV Cup 9th.",
    "verdict": "Late inclusion, nine-year-old, 15th in 2023. Pass.",
    "silks": {
-    "body": "#9e9e9e",
-    "sleeves": "#9e9e9e",
-    "cap": "#9e9e9e",
-    "pattern": "plain",
-    "status": "tbc",
-    "desc": "colours TBC"
+    "body": "#d81e1e",
+    "sleeves": "#1e5bc6",
+    "cap": "#d81e1e",
+    "pattern": "dsashes",
+    "pattern_color": "#f2e13a",
+    "desc": "Red and yellow diagonal stripes, royal blue sleeves, red cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -2084,12 +2159,18 @@
    "campaign": "O'Brien Rekindling-style fly-in: classic-generation 4yo, Epsom Derby 3rd, gelded, mid-summer break, one prep run (Kilternan), straight on the plane, 52 days fresh.",
    "verdict": "Rekindling profile from the Rekindling stable: Derby third, gelded, 53.5kg. Gate 24 and untried past 2420m.",
    "silks": {
-    "body": "#9e9e9e",
-    "sleeves": "#9e9e9e",
-    "cap": "#9e9e9e",
-    "pattern": "plain",
-    "status": "tbc",
-    "desc": "colours TBC"
+    "body": "#1f2e6e",
+    "sleeves": "#1f2e6e",
+    "cap": "#1f2e6e",
+    "pattern": "spots",
+    "pattern_color": "#ffffff",
+    "sleeve_pattern": "armband",
+    "sleeve_color": "#d9c39a",
+    "cap_pattern": "halves",
+    "cap_color": "#ffffff",
+    "desc": "Navy, white spots, cream armbands, navy and white cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -2209,12 +2290,16 @@
    "campaign": "O'Brien with an Australian run (unusual for him): MV Gold Cup attempt at a Golden Ticket, raced on speed and weakened, ten days to the Cup.",
    "verdict": "Proven marathon stayer who weakened in a slow MV Cup. Each-way roughie only on a strongly run race.",
    "silks": {
-    "body": "#9e9e9e",
-    "sleeves": "#9e9e9e",
-    "cap": "#9e9e9e",
-    "pattern": "plain",
-    "status": "tbc",
-    "desc": "colours TBC"
+    "body": "#ffffff",
+    "sleeves": "#ffffff",
+    "cap": "#ffffff",
+    "pattern": "star",
+    "pattern_color": "#f4a3c4",
+    "cap_pattern": "halves",
+    "cap_color": "#f4a3c4",
+    "desc": "White, pink star, white cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -2327,12 +2412,14 @@
    "campaign": "Handled like a European fly-in despite the Maher stable: UK base (Queen's Vase 4th, Bahrain Trophy win), first shipment to Werribee quarantine, ONE Australian run (Geelong Cup win) 13 days out - Americain / Dunaden / Media Puzzle shape, not Maher's usual 3-5 run build.",
    "verdict": "Favourite. Trained from Werribee quarantine with one sustained on-pace Geelong Cup win, only six starts, 53kg. Americain / Dunaden shape.",
    "silks": {
-    "body": "#1e3f8f",
-    "sleeves": "#1e3f8f",
-    "cap": "#1e3f8f",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "Blue (new Australian owners; design unverified)"
+    "body": "#1e5bc6",
+    "sleeves": "#1e5bc6",
+    "cap": "#8ec8ee",
+    "pattern": "dsashes",
+    "pattern_color": "#8ec8ee",
+    "desc": "Royal blue, light blue diagonal stripes, light blue cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -2433,12 +2520,14 @@
    "campaign": "Carberry: SA Derby 2nd in autumn, MV Gold Cup last.",
    "verdict": "Last in the MV Cup. No.",
    "silks": {
-    "body": "#9e9e9e",
-    "sleeves": "#9e9e9e",
-    "cap": "#9e9e9e",
-    "pattern": "plain",
-    "status": "tbc",
-    "desc": "colours TBC"
+    "body": "#1f2e6e",
+    "sleeves": "#1f2e6e",
+    "cap": "#1f2e6e",
+    "pattern": "spots3",
+    "pattern_color": "#f2e13a",
+    "desc": "Navy, three yellow spots, navy cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -2549,12 +2638,16 @@
    "campaign": "Maher Golden Ticket campaign: Bart Cummings win on rain-affected Flemington (Almandin 2016 ticket) then MV Gold Cup 3rd under 57.5kg ten days out; forward type.",
    "verdict": "Bart Cummings winner on a heavy Flemington, unlucky MV Cup third under 57.5kg, drops to 52.5kg. The wet-track value.",
    "silks": {
-    "body": "#c62828",
-    "sleeves": "#c62828",
-    "cap": "#1e3f8f",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "Red, blue cap"
+    "body": "#d81e1e",
+    "sleeves": "#d81e1e",
+    "cap": "#d81e1e",
+    "pattern": "logo",
+    "pattern_color": "#1f2e6e",
+    "sleeve_pattern": "armband",
+    "sleeve_color": "#ffffff",
+    "desc": "Red, navy logo, white armbands, red cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -2674,12 +2767,14 @@
    "campaign": "Begg Golden Ticket campaign: Andrew Ramsden win in May, break, Naturalism / Herbert Power build, Crystal Mile sharpener ten days out.",
    "verdict": "Andrew Ramsden ticket, odd mile sharpener. Pike rides; needs luck from the back.",
    "silks": {
-    "body": "#9e9e9e",
-    "sleeves": "#9e9e9e",
-    "cap": "#9e9e9e",
-    "pattern": "plain",
-    "status": "tbc",
-    "desc": "colours TBC"
+    "body": "#8ec8ee",
+    "sleeves": "#8ec8ee",
+    "cap": "#2e9e4f",
+    "pattern": "hoops",
+    "pattern_color": "#2e9e4f",
+    "desc": "Light blue, green hoops, light blue sleeves, green cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {
@@ -2794,12 +2889,16 @@
    "campaign": "Maher Golden Ticket campaign: Archer Stakes win in September, Herbert Power, Tesio Stakes (2040m) sharpener ten days out; ridden last.",
    "verdict": "Bottom weight, daughter of Shocking, closing well in slow races. Never past 2500m and a mare.",
    "silks": {
-    "body": "#111111",
-    "sleeves": "#f27d14",
-    "cap": "#f27d14",
-    "pattern": "plain",
-    "status": "approx",
-    "desc": "Black and orange"
+    "body": "#1f2e6e",
+    "sleeves": "#1f2e6e",
+    "cap": "#f28a1a",
+    "pattern": "check_sash",
+    "pattern_color": "#f28a1a",
+    "cap_pattern": "check",
+    "cap_color": "#111111",
+    "desc": "Navy, orange checked sash, navy sleeves, orange and black checked cap",
+    "status": "confirmed",
+    "source": "ABC Melbourne Cup sweep grid (user supplied screenshot)"
    },
    "last4": [
     {

@@ -4,7 +4,7 @@
   "sire_dam": "Study Of Man x (Rausing-bred)",
   "owner": "H.O.S. Syndicate",
   "career": "18: 3-?-?",
-  "colours": "White and pink (design unverified)",
+  "colours": "White, pink star, white cap",
   "stats": {
    "track": "Flemington 0: 0-0-0",
    "distance": "3200m 1: 0-0-0 (Dubai Gold Cup 4th)",
@@ -156,7 +156,7 @@
   "sire_dam": "Churchill x Gussy Goose",
   "owner": "J P McManus",
   "career": "flat + hurdles; 2026 flat 6: 2-2-0",
-  "colours": "Emerald green, gold hoops, white cap",
+  "colours": "Emerald green, gold hoops, hooped sleeves, white cap (J P McManus)",
   "stats": {
    "track": "Flemington 0: 0-0-0",
    "distance": "3200m 0: 0-0-0 (2816m 2: 1-0-0)",
@@ -306,7 +306,7 @@
   "colour_sex_age": "b g 7",
   "sire_dam": "Extreme Choice x Midnight Choice",
   "career": "31: 6-?-?",
-  "colours": "Pink, lime green sleeves and cap",
+  "colours": "Magenta, black star, yellow sleeves with black stars, yellow cap",
   "stats": {
    "track": "Flemington: 2024 Cup winner",
    "distance": "3200m 1: 1-0-0",
@@ -422,7 +422,7 @@
   "colour_sex_age": "b g 6",
   "sire_dam": "(GB import)",
   "career": "23: 5-5-?",
-  "colours": "colours TBC",
+  "colours": "Royal blue, yellow stars, blue and white checked sleeves, checked cap",
   "stats": {
    "track": "Flemington: Aus Cup Prelude winner 2025, Cup 3rd 2025",
    "distance": "3200m 1: 0-0-1",
@@ -554,7 +554,7 @@
   "colour_sex_age": "b g 9",
   "sire_dam": "Galiway x Vacillante",
   "career": "32: 10-5-6",
-  "colours": "colours TBC",
+  "colours": "Royal blue, white horseshoe, black and white checked sleeves and cap",
   "stats": {
    "track": "Flemington: Cup 14th 2023, 11th 2024, 6th 2025",
    "distance": "3200m 3: 0-0-0",
@@ -737,7 +737,7 @@
   "colour_sex_age": "b g 7",
   "sire_dam": "Lope De Vega x Tesoro",
   "career": "17: 5-2-2",
-  "colours": "Green and purple (Racing Post); design unverified",
+  "colours": "Purple, green stars, green sleeves, green and purple cap",
   "stats": {
    "track": "Flemington 0: 0-0-0",
    "distance": "3200m 0: 0-0-0 (2400m+ 2: 1-0-1)",
@@ -852,7 +852,7 @@
  "Royal Supremacy": {
   "colour_sex_age": "b g 6",
   "career": "last 10: 50x0331910",
-  "colours": "colours TBC",
+  "colours": "Royal blue, white horseshoe, black and white checked sleeves, black cap",
   "stats": {
    "track": "Flemington: 2025 Cup 15th",
    "distance": "3200m 1: 0-0-0",
@@ -984,7 +984,7 @@
   "colour_sex_age": "b g 5",
   "career": "11: 4-2-0",
   "owner": "Australian Bloodstock, D Gilbert et al",
-  "colours": "Purple, blue, green and yellow (custom; layout unverified)",
+  "colours": "Green, blue and yellow mandala design, green patterned cap",
   "stats": {
    "track": "Flemington 0: 0-0-0",
    "distance": "3200m 0: 0-0-0 (2671m 1: 1-0-0)",
@@ -1099,7 +1099,7 @@
  "Asterix": {
   "colour_sex_age": "b g 8",
   "career": "2400m 5: 3-?-?",
-  "colours": "Green and red",
+  "colours": "Green, red band, green and red cap",
   "stats": {
    "track": "Flemington: Turnbull 10th (heavy)",
    "distance": "3200m 0: 0-0-0; 2400m 5: 3-?-?",
@@ -1197,7 +1197,7 @@
   "colour_sex_age": "b m 8",
   "owner": "J P McManus",
   "career": "23: 8-2-5",
-  "colours": "Emerald green, gold hoops, white cap",
+  "colours": "Emerald green, gold hoops, hooped sleeves, green and gold cap (J P McManus)",
   "stats": {
    "track": "Flemington 1: 0-1-0 (2025 Cup 2nd)",
    "distance": "3200m 1: 0-1-0",
@@ -1313,7 +1313,7 @@
   "colour_sex_age": "b g 6",
   "sire_dam": "Belardo x Na Zdorovie",
   "career": "-",
-  "colours": "Blue (design unverified)",
+  "colours": "Royal blue, yellow stars, blue and white checked sleeves and cap",
   "stats": {
    "track": "Flemington 1: 1-0-0 (MV Gold Cup run at Flemington)",
    "distance": "3200m 1: 0-0-0 (Sydney Cup 9th)",
@@ -1411,7 +1411,7 @@
   "colour_sex_age": "b g 5",
   "owner": "Wathnan Racing",
   "career": "10: 2-1-1",
-  "colours": "Old gold and peacock blue (Wathnan); design unverified",
+  "colours": "Royal blue, cream sleeves, red cap (Wathnan Racing)",
   "stats": {
    "track": "Flemington 0: 0-0-0",
    "distance": "3200m 0: 0-0-0 (2800m 2: 1-1-0)",
@@ -1492,7 +1492,7 @@
  "Onesmoothoperator": {
   "colour_sex_age": "b g 9",
   "career": "-",
-  "colours": "colours TBC",
+  "colours": "Light blue, dark blue hollow square, light blue sleeves, light and dark blue cap",
   "stats": {
    "track": "Flemington: Cup 12th 2024, 16th 2025",
    "distance": "3200m 2: 0-0-0",
@@ -1623,7 +1623,7 @@
  "Soul Of Spain": {
   "colour_sex_age": "b g 6",
   "career": "26: 5-5-6",
-  "colours": "Blue and white (ABC); layout unverified",
+  "colours": "Navy, white band, white armbands, navy and white cap",
   "stats": {
    "track": "Flemington 0: 0-0-0",
    "distance": "3200m 1: 0-1-0 (Sydney Cup 2nd)",
@@ -1738,7 +1738,7 @@
  "Zahrann": {
   "colour_sex_age": "b g 5",
   "career": "6: 2-0-1",
-  "colours": "Green and yellow, red cap (design unverified)",
+  "colours": "Navy, white spots, cream armbands, white and navy cap",
   "stats": {
    "track": "Flemington 2: 0-0-1",
    "distance": "3200m 0: 0-0-0; 2400m 1: 0-0-0",
@@ -1835,7 +1835,7 @@
  "So You Are": {
   "colour_sex_age": "b g 5",
   "career": "27: 7-?-?",
-  "colours": "colours TBC (some yellow)",
+  "colours": "Green, white stripes, green and yellow checked sleeves, yellow cap",
   "stats": {
    "track": "Flemington 0: 0-0-0",
    "distance": "3200m 0: 0-0-0; 2600m 1: 1-0-0",
@@ -1932,7 +1932,7 @@
  "Future History": {
   "colour_sex_age": "b g 9",
   "career": "37: 6-?-?",
-  "colours": "colours TBC",
+  "colours": "Red and yellow diagonal stripes, royal blue sleeves, red cap",
   "stats": {
    "track": "Flemington: 2023 Cup 15th",
    "distance": "3200m 1: 0-0-0"
@@ -2029,7 +2029,7 @@
   "colour_sex_age": "b g 4 (NH 3yo)",
   "sire_dam": "Frankel x -",
   "career": "7: 2-2-1",
-  "colours": "colours TBC",
+  "colours": "Navy, white spots, cream armbands, navy and white cap",
   "stats": {
    "track": "Flemington 0: 0-0-0",
    "distance": "3200m 0: 0-0-0; beyond 2420m 0",
@@ -2143,7 +2143,7 @@
  "Kizlyar": {
   "colour_sex_age": "b g 5",
   "career": "8: 2-1-3",
-  "colours": "colours TBC",
+  "colours": "White, pink star, white cap",
   "stats": {
    "track": "Flemington 1: 0-0-0",
    "distance": "3200m 0: 0-0-0; 4000m 1: 1-0-0",
@@ -2276,7 +2276,7 @@
   "sire_dam": "Frankel x Portfolio",
   "owner": "DEG Racing, A R E Investments et al (ex King Charles III)",
   "career": "5: 2-1-0",
-  "colours": "Blue (design unverified)",
+  "colours": "Royal blue, light blue diagonal stripes, light blue cap",
   "stats": {
    "track": "Flemington 0: 0-0-0",
    "distance": "3200m 0: 0-0-0; 2600m+ 2: 1-0-0",
@@ -2375,7 +2375,7 @@
   "colour_sex_age": "b m 4",
   "sire_dam": "Grunt x -",
   "career": "VRC Oaks winner 2025",
-  "colours": "colours TBC",
+  "colours": "Navy, three yellow spots, navy cap",
   "stats": {
    "track": "Flemington: VRC Oaks winner 2025",
    "distance": "3200m 0: 0-0-0; 2500m 2: 0-1-0 (SA Derby 2nd)"
@@ -2488,7 +2488,7 @@
  "Mr Monaco": {
   "colour_sex_age": "b g 5",
   "career": "-",
-  "colours": "Red, blue cap (design unverified)",
+  "colours": "Red, navy logo, white armbands, red cap",
   "stats": {
    "track": "Flemington 2: 1-0-1 (Bart Cummings won, MV Gold Cup 3rd)",
    "distance": "3200m 1: 0-0-0 (Sydney Cup 11th, abnormal respiratory noise)",
@@ -2568,7 +2568,7 @@
  "Zakouma": {
   "colour_sex_age": "b g 6",
   "career": "18: 5-?-?",
-  "colours": "colours TBC",
+  "colours": "Light blue, green hoops, light blue sleeves, green cap",
   "stats": {
    "track": "Flemington: Andrew Ramsden winner",
    "distance": "3200m 0: 0-0-0; 2800m 1: 1-0-0",
@@ -2700,7 +2700,7 @@
   "colour_sex_age": "b m 5",
   "sire_dam": "Shocking x -",
   "career": "20: 7-3-1 (Flemington 9 starts)",
-  "colours": "Black and orange",
+  "colours": "Navy, orange checked sash, navy sleeves, orange and black checked cap",
   "stats": {
    "track": "Flemington 9: 3-?-? (Archer winner)",
    "distance": "3200m 0: 0-0-0; 2500m 2: 1-0-0",
