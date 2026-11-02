@@ -1,0 +1,95 @@
+{
+ "_notes": ["Written trainer-style analysis for the 2026 field. 'like_in_field' names the other trainer in this year's race whose method is closest, and which of their horses is the comparable."],
+ "trainers": {
+  "Joseph O'Brien": {
+    "runners": ["Sons And Lovers", "Trustyourinstinct", "Goodie Two Shoes", "James J Braddock", "Kizlyar"],
+    "style": "Everything is done in Ireland. The horse gets a mid-summer break, one or two September runs (Curragh Cup, Irish St Leger, Kilternan) and then straight on the plane; there is no Australian lead-up because O'Brien does not believe a 3200m horse needs one if the base was built at home. The Werribee routine is kept simple and short. He is a positional rider's trainer: Twilight Payment led throughout in 2020 and Master Of Reality raced on the pace in 2019, while Rekindling, Okita Soushi and Goodie Two Shoes were ridden midfield and produced late. He will run a lightly raced classic-generation horse (Rekindling 3yo, Master Of Reality 4yo, now James J Braddock) and he will bring the same older horse back year after year.",
+    "cup_record": "16 direct fly-ins since 2017: Rekindling won 2017, Twilight Payment won 2020, Master Of Reality 4th 2019, Okita Soushi 3rd 2024, Goodie Two Shoes 2nd 2025. Both winners won the Curragh Cup in their Cup year. Failures were favourites with top weights or big expectations: Yucatan 2018, Al Riffa 2025, Twilight Payment 2021 (57.5kg).",
+    "this_year": {
+      "Trustyourinstinct": "The one that fits the winning formula best on paper: Curragh Cup winner (like Rekindling and Twilight Payment), Irish St Leger run, straight in. The differences matter: he is a hold-up closer (the winners who came from behind were 3yos on 51kg, not 6yos on 57kg), 57kg is where Twilight Payment failed in 2021, and O'Brien has said he wants fast ground.",
+      "Sons And Lovers": "Textbook O'Brien shape, with the September Kilternan run and a Longchamp G2 base. The problem is 57.5kg: no O'Brien horse has placed carrying 57kg or more.",
+      "James J Braddock": "The Rekindling horse. Classic-generation, Derby third, gelded, one prep run after a summer break, 53.5kg. This is the exact profile that won in 2017, from the same stable, and O'Brien rates him above Sons And Lovers. Gate 24 and no run past 2420m are the risks.",
+      "Goodie Two Shoes": "The repeat visit, like Twilight Payment's second trip (which won). But she is a mare with 3.5kg more, drawn 19, and the trainer wants firm ground on a forecast soft track.",
+      "Kizlyar": "Not the O'Brien method at all: he was given an Australian lead-up (MV Gold Cup) to chase a Golden Ticket and weakened. First time O'Brien has done this."
+    },
+    "like_in_field": "George Boughey (Hopewell Rock) and, this year only, Ciaron Maher with Point Of Law: both built the base in Europe and used quarantine rather than a full Australian campaign. Boughey's is the closer copy (no Australian run at all)."
+  },
+  "Ciaron Maher": {
+    "runners": ["Point Of Law", "Middle Earth", "Juja Kibo", "Mr Monaco", "Shockletz", "Zahrann", "Royal Supremacy"],
+    "style": "A volume-and-data stable. Settled imports are race-hardened through the Victorian spring with three to five runs, usually including a weight-for-age sharpener (Underwood, Turnbull, Cox Plate) and the Caulfield Cup, and the ballot-exempt races (Archer, Bart Cummings, Geelong Cup, MV Gold Cup) are deliberately targeted to get a big team in. GPS, heart-rate and sectional data on every horse; jumps-racing background with stayers. The one win, Gold Trip 2022, came off Caulfield Cup then Cox Plate second. The placings have come from the MV Cup route (High Emocean, Ashrun) and from horses returning for a second Cup (Middle Earth).",
+    "cup_record": "26 runners, 1 win, 5 placings. Race-hardened via the Cox Plate: 3 runners, Gold Trip won, Sir Dragonet 4th. MV Cup / Herbert Power route: 9 runners, 0 wins, 3 placings. Caulfield Cup route without a sharpener: 6 runners, nothing. Never previously trained a horse from Werribee quarantine with one run.",
+    "this_year": {
+      "Middle Earth": "The Gold Trip campaign exactly: Underwood, Turnbull, Caulfield Cup, Cox Plate, five unplaced runs that are sharpeners not form lines, barrier 1, Mark Zahra. Third last year off a similar build. This is the horse Maher has done it with before.",
+      "Point Of Law": "Not a Maher-style preparation. UK base, first shipment to Werribee, one run from quarantine. That is the Americain / Dunaden / Media Puzzle method, used by French and Irish trainers who do it every year. Maher has never done it, and his stable's strength (race fitness through volume) does not apply here. He is relying on the horse's class and the Geelong Cup win.",
+      "Juja Kibo": "The MV Gold Cup Golden Ticket route Maher has used nine times for three placings and no win (High Emocean 3rd, Ashrun 4th). Both his wins this prep were slowly run.",
+      "Mr Monaco": "Bart Cummings ticket then MV Cup, the Almandin pathway, but Almandin went straight from the Bart Cummings to the Cup fresh; Maher added a hard run under 57.5kg ten days out.",
+      "Shockletz": "Archer ticket, Herbert Power, Tesio sharpener: a Maher-built campaign on a lightly weighted mare. Maher says she has been kept fresher than his others.",
+      "Zahrann": "Standard Maher race-hardening: Naturalism, Turnbull, Caulfield Cup. The template that has produced nothing for him (Jameka, Smokin' Romans, Royal Supremacy).",
+      "Royal Supremacy": "Same Caulfield Cup template, eased out of it. Pace influence."
+    },
+    "like_in_field": "Chris Waller (Soul Of Spain, Asterix) runs the same race-hardening method with a Sydney base; Waller's record with it is placings not wins. Point Of Law's campaign is closer to Roger Varian's Enfjaar and Harry Charlton's Wine Dark Sea than to the rest of Maher's team."
+  },
+  "Chris Waller": {
+    "runners": ["Soul Of Spain", "Asterix"],
+    "style": "Races horses into peak fitness through a long Sydney-then-Melbourne spring: four to six runs with high-class weight-for-age races as sharpeners. Verry Elleegant (Turnbull win, Caulfield Cup 4th, Cox Plate 7th) is the only win from 36 Cup runners; the method produces placings (Soulcombe, Sheraz, Finche, River Of Stars, Who Shot Thebarman). Sorts his team into form stayers and weight-for-age horses and rides them midfield to back.",
+    "cup_record": "36 runners, 1 win, 6 placings. Caulfield Cup route: 14 runners, 0 wins, 3 placings.",
+    "this_year": {
+      "Soul Of Spain": "A form stayer in Waller's own language: Sydney Cup second at the trip, then Metropolitan and Caulfield Cup as the build. That is exactly the Soulcombe / River Of Stars path, which has placed and not won.",
+      "Asterix": "Same build (Naturalism, Turnbull, Caulfield Cup) on an eight-year-old whose spring form has fallen away."
+    },
+    "like_in_field": "Ciaron Maher: the two big Australian stables prepare the same way. Soul Of Spain's comparable is Zahrann."
+  },
+  "George Boughey": {
+    "runners": ["Hopewell Rock"],
+    "style": "Young Newmarket trainer with an analytics-led, target-driven operation for Wathnan Racing. Hopewell Rock's year was built around big staying handicaps (Goodwood win, Ebor second) and then nothing: 73 days off and straight to the Cup from quarantine. That is the Cross Counter 2018 and Heartbreak City 2016 method, and in shape it is the same as Joseph O'Brien's, which is why the model treats him as an O'Brien-school runner.",
+    "cup_record": "First Cup runner. The direct fly-in school he belongs to has 3 wins and about 14 placings from roughly 75 runners since 2010.",
+    "this_year": {"Hopewell Rock": "Inexperienced (10 starts) but progressive, strongly run Ebor form, handles rain. Untried at 3200m and the trainer has never done this."},
+    "like_in_field": "Joseph O'Brien: same method, same September-then-fly shape. Hopewell Rock's comparables are Trustyourinstinct (older gelding) and James J Braddock (lightly raced)."
+  },
+  "Roger Varian": {
+    "runners": ["Enfjaar"],
+    "style": "Newmarket. Classic European one-run method: fitness built at home over the summer (Glorious Stakes win leading all the way), one Australian run from quarantine (Caulfield Cup third first-up after three months), 17 days to the Cup. Enfjaar is a front-runner, so this is the Delta Blues 2006 and Protectionist 2014 shape rather than the direct fly-in.",
+    "cup_record": "First Cup runner. The one-run import school has 2 wins (Americain, Dunaden via Geelong) and about 5 placings from 18 via the Caulfield Cup.",
+    "this_year": {"Enfjaar": "Ran the Caulfield Cup the way a horse that will improve into 3200m runs it: on speed, held together to the last 100m first-up. Handles all ground."},
+    "like_in_field": "Harry Charlton (Wine Dark Sea) is the identical method with a worse result; Maher's Point Of Law is the same shape via Geelong rather than Caulfield."
+  },
+  "Harry Charlton": {
+    "runners": ["Wine Dark Sea"],
+    "style": "Beckhampton. English base (three wins from four in 2026, all making the running on fast ground), quarantine, one Australian run first-up in the Caulfield Cup where he was forced wide and faded. Same method as Varian, applied to a horse that has never raced on anything softer than good-to-soft.",
+    "cup_record": "First Cup runner.",
+    "this_year": {"Wine Dark Sea": "Excuses from the Caulfield Cup, but gate 23, untried at the trip, and every win on fast ground on a forecast soft track."},
+    "like_in_field": "Roger Varian (Enfjaar)."
+  },
+  "John Symons & Sheila Laxon": {
+    "runners": ["Knight's Choice"],
+    "style": "Old-school race-hardening. Laxon won with Ethereal in 2001 through the Caulfield Cup; Knight's Choice in 2024 had four lead-ups rising in distance (Turnbull 16th, Caulfield Cup 14th, Bendigo Cup 5th) because, in Symons' words, if they did not run they would not get a run. The horse is ridden from the back and produced once. This year's build is the same shape (Naturalism, Herbert Power 3rd, Caulfield Cup 14th) but the stable has lost Macedon Lodge and moved.",
+    "cup_record": "2 wins from 4 runners (Ethereal 2001, Knight's Choice 2024).",
+    "this_year": {"Knight's Choice": "Same template, same jockey, 5kg more and a seven-year-old. The Herbert Power third was better than anything in the 2024 build."},
+    "like_in_field": "Bjorn Baker (So You Are) uses the same hardened-local, race-them-in method with a Bendigo Cup backup; Darren Weir's Prince Of Penzance is the historical match."
+  },
+  "Bjorn Baker": {
+    "runners": ["So You Are"],
+    "style": "Sydney trainer, first Cup runner. Has raced So You Are into form through the second-tier Sydney staying races (Tattersall's Cup, Colin Stephen, St Leger) and backed up six days out in the Bendigo Cup. Rachel King rides him on the speed every time. This is the Prince Of Penzance / Knight's Choice hardened-local method.",
+    "cup_record": "First Cup runner. The boutique hardened-local school has 2 wins and about 6 placings from 40 runners since 2010.",
+    "this_year": {"So You Are": "Four wins in a row and a wet-track record of 16: 4-5-2 on a soft forecast, but a big class rise and the first time at 3200m."},
+    "like_in_field": "Symons & Laxon (Knight's Choice)."
+  },
+  "Gai Waterhouse & Adrian Bott": {
+    "runners": ["Vauban"],
+    "style": "Forward-racing, fit horses; 'balance and momentum'. Fiorente won in 2013 off a Cox Plate third. Vauban has been handled lightly this year: one run (Geelong Cup under 60.5kg) since May, which is unlike the stable's normal build and unlike how Mullins prepared him in Europe.",
+    "cup_record": "14 runners, 1 win (Fiorente 2013), 1 placing (Fiorente 2012).",
+    "this_year": {"Vauban": "Three Cups for 14th, 11th and 6th; nine years old; fresh off one run and a wide gate."},
+    "like_in_field": "No real match; closest is Maher's Point Of Law in shape (one run from Geelong), but on a horse at the opposite end of his career."
+  },
+  "Grahame Begg": {
+    "runners": ["Zakouma"],
+    "style": "First Cup runner. Planned the year around the Andrew Ramsden Golden Ticket in May, gave the horse a break, then a conventional Heatherlie, Naturalism, Herbert Power build and an unusual Crystal Mile (1600m) sharpener ten days out rather than a 2500m race.",
+    "cup_record": "First Cup runner. Andrew Ramsden winners have placed but never won the Cup.",
+    "this_year": {"Zakouma": "Closing well in every lead-up from the back; needs a genuine tempo and luck. William Pike."},
+    "like_in_field": "Maher with Shockletz (ticket race, then a short sharpener ten days out)."
+  },
+  "Gregory Hickman": {"runners": ["Future History"], "style": "Sydney trainer, first Cup runner; took over a nine-year-old this year and raced him through JRA Plate, Herbert Power and MV Cup.", "cup_record": "First Cup runner.", "this_year": {"Future History": "Late inclusion, 15th in 2023 for Maher."}, "like_in_field": "Maher's MV Cup route (Juja Kibo, Mr Monaco) without the stable depth."},
+  "Tim Fitzsimmons": {"runners": ["Onesmoothoperator"], "style": "Took over from Brian Ellison after the 2025 Cup; Herbert Power and Geelong Cup lead-ups.", "cup_record": "First Cup runner.", "this_year": {"Onesmoothoperator": "Two Cups for 12th and 16th, last in the Herbert Power."}, "like_in_field": "Vauban's connections: an old import kept going."},
+  "Thomas Carberry": {"runners": ["Strictly Business"], "style": "First Cup runner with a four-year-old VRC Oaks winner; three poor open-class spring runs.", "cup_record": "First Cup runner.", "this_year": {"Strictly Business": "Last in the MV Cup."}, "like_in_field": "None."}
+ }
+}
