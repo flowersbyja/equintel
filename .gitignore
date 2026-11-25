@@ -14,3 +14,5 @@ notebooks/.ipynb_checkpoints/
 .vscode
 CLAUDE.md
 graphify-out
+# LTX-2.5 model files (too big for GitHub)
+tools/ltx/models/
